@@ -1,16 +1,24 @@
-body {
-    min-height: 100vh;
+:root {
+    --colNum: 8;
 }
 
-.grid {
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+#grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto-fill, auto);
-    grid-column-gap: 5px;;
+    grid-template-columns: repeat(var(--colNum), 1fr);
+    grid-column-gap: 5px;
     grid-row-gap: 5px;
+}
+
+.sort-options {
+    display: flex;
 }
 
 .grid-item {
     background: blue;
-    height: 100px;
+    height: 127px;
 }
