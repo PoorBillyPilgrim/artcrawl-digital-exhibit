@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, auto);
+    grid-column-gap: 5px;;
+    grid-row-gap: 5px;
+}
+
+.grid-item {
+    background: blue;
+    height: 100px;
+}

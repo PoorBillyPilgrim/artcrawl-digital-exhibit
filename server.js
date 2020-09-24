@@ -1,5 +1,6 @@
 const express = require('express');
 const data = require('./data/data.json');
+const path = require('path');
 
 const app = express();
 // Must match JSON keys exactly, capiatlize for single words and use bracket notation for keys > one word
@@ -7,6 +8,8 @@ const app = express();
 // console.log(data[0]['First Name']);
 
 app.set('view engine', 'ejs');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.render('index', { data: data });
