@@ -2,31 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>ART Crawl Exhibit</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Mobile Specific Metas
+  <meta charset="utf-8">
+  <title>ART Crawl Exhibit</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <div class="sort-options">
-        <button>Last Name</button>
-        <button>Major</button>
-        <button>Title</button>
+  <fieldset class="filters-group">
+    <legend class="filter-label">Sort</legend>
+    <div class="btn-group sort-options">
+      <label class="btn active">
+        <input type="radio" name="sort-value" value="last-name" /> Last Name
+      </label>
+      <label class="btn">
+        <input type="radio" name="sort-value" value="major" /> Major
+      </label>
+      <label class="btn">
+        <input type="radio" name="sort-value" value="title" /> Title
+      </label>
     </div>
-    <div id="grid">
-        <% data.forEach(item => { %>
-        <div class="grid-item"></div>
-        <% }) %>
-    </div>
+  </fieldset>
+  <div id="grid">
+    <% data.forEach(x => { %>
+    <figure class="art-crawl-item" data-last-name=<%= x['Last Name'] %> data-major=<%= x['Major'] %>
+      data-title=<%= x['Title of Artwork'] %>>
+      <img src="/images/<%= x['Last Name'] + x['Name'].match(regex)%>" />
+    </figure>
+    <% }) %>
+    <div class="sizer-element"></div>
+  </div>
 
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
+    integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/index.js"></script>
 </body>
 
 </html>
