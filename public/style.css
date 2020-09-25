@@ -1,5 +1,7 @@
-:root {
-    --colNum: 8;
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -7,18 +9,26 @@ body {
     margin: 0;
 }
 
-#grid {
-    display: grid;
-    grid-template-columns: repeat(var(--colNum), 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-}
-
 .sort-options {
     display: flex;
+    height: 10%;
 }
 
-.grid-item {
-    background: blue;
-    height: 127px;
+.art-crawl-item {
+    
+}
+
+figure {
+    margin: 0;
+}
+
+.sizer-element {
+    height: 10px;
+    width: 10px;
+    margin-left: 0;
+}
+
+img {
+    height: 50px;
+    width: 50px;
 }
