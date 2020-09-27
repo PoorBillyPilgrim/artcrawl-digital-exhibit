@@ -7,7 +7,7 @@ const regex = /\.jpeg|\.jpg|\.png/g;
 const app = express();
 // Must match JSON keys exactly, capiatlize for single words and use bracket notation for keys > one word
 // console.log(data[0].Username);
-// console.log(data[0]['First Name']);
+console.log(data.length);
 
 app.set('view engine', 'ejs');
 

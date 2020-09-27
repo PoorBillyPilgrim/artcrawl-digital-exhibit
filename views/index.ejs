@@ -31,9 +31,9 @@
   </fieldset>
   <div id="grid">
     <% data.forEach(x => { %>
-    <figure class="art-crawl-item" data-last-name=<%= x['Last Name'] %> data-major=<%= x['Major'] %>
-      data-title=<%= x['Title of Artwork'] %>>
-      <img src="/images/<%= x['Last Name'] + x['Name'].match(regex)%>" />
+    <figure class="art-crawl-item" data-last-name="<%= x['Last Name'] %>" data-major="<%= x['Major'] %>"
+      data-title="<%= x['Title of Artwork'] %>">
+      <img src="/thumbnails/<%= x['Last Name'] + '_tn' + x['Name'].match(regex)%>" />
     </figure>
     <% }) %>
     <div class="sizer-element"></div>
