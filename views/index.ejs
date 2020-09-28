@@ -8,16 +8,23 @@
   <meta name="author" content="">
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <fieldset class="filters-group">
+  <div id="metadata">
+    <button href="#" id="metadata-close" class="btn btn-primary">X</button>
+    <p id="metadata-title"></p>
+    <img id="metadata-img" src="" />
+  </div>
+  <fieldset class="filters-group container">
     <legend class="filter-label">Sort</legend>
-    <div class="btn-group sort-options">
+    <div class="btn-group sort-options row">
       <label class="btn active">
         <input type="radio" name="sort-value" value="last-name" /> Last Name
       </label>
@@ -29,31 +36,43 @@
       </label>
     </div>
   </fieldset>
-  <div id="grid">
-    <% for (let i = 0; i < data.length; i++) { %>
-    <figure class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>" data-major="<%= data[i]['Major'] %>"
-      data-title="<%= data[i]['Title of Artwork'] %>">
-      <% if (i < 30) { %>
-      <img src="<%= randomPhotos[i].urls.thumb%>" />
-      <% } else if (i >= 30 && i < 60) { %>
-      <img src="<%= randomPhotos[i - 30].urls.thumb%>" />
-      <% } else if (i >= 60 && i < 90) { %>
-      <img src="<%= randomPhotos[i - 60].urls.thumb%>" />
-      <% } else if (i >= 90 && i < 120) { %>
-      <img src="<%= randomPhotos[i - 90].urls.thumb%>" />
-      <% } else if (i >= 120 && i < 133) { %>
-      <img src="<%= randomPhotos[i - 120].urls.thumb%>" />
+  <div class="container">
+    <div id="grid" class="row">
+      <% for (let i = 0; i < data.length; i++) { %>
+      <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+        data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+        <% if (i < 30) { %>
+        <img src="<%= randomPhotos[i].urls.thumb%>" />
+        <% } else if (i >= 30 && i < 60) { %>
+        <img src="<%= randomPhotos[i - 30].urls.thumb%>" />
+        <% } else if (i >= 60 && i < 90) { %>
+        <img src="<%= randomPhotos[i - 60].urls.thumb%>" />
+        <% } else if (i >= 90 && i < 120) { %>
+        <img src="<%= randomPhotos[i - 90].urls.thumb%>" />
+        <% } else if (i >= 120 && i < 133) { %>
+        <img src="<%= randomPhotos[i - 120].urls.thumb%>" />
+        <% } %>
+      </figure>
       <% } %>
-    </figure>
-    <% } %>
-    <div class="sizer-element"></div>
+      <div class="sizer-element"></div>
+    </div>
   </div>
 
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
     integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/customShuffle.js"></script>
+  <script type="text/javascript" src="/js/metadata.js"></script>
 </body>
 
 </html>

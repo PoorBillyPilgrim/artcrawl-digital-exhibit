@@ -1,3 +1,42 @@
+:root {
+    --grid-items: 50px;
+}
+
+body {
+    background: var(--dark);
+    color: var(--light);
+}
+
+label.btn {
+    color: var(--light);
+}
+
+#metadata {
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.9);
+    padding: 1rem;
+    z-index: 20;
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  #metadata.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #metadata-img {
+      width: 250px;
+      height: 250px;
+  }
+
+/*
 *,
 ::before,
 ::after {
@@ -18,18 +57,27 @@ body {
 .grid {
     width: 100vw;
 }
+*/
+.container {
+    width: 50%;
+}
 
 figure {
-    margin: 0;
-    margin-bottom: -5.6px;
+    margin-bottom: 0;
+}
+
+figure:hover {
+    box-sizing: border-box;
+    border: 3px solid var(--yellow);
+    z-index: 1;
 }
 
 .sizer-element {
-    width: 55px;
+    width: var(--grid-items);
     margin-left: 0;
 }
 
 img {
-    height: 55px;
-    width: 55px;
+    height: var(--grid-items);
+    width: var(--grid-items);
 }
