@@ -1,5 +1,6 @@
 :root {
     --grid-items: 50px;
+    --grid-items-xl: 80px;
 }
 
 body {
@@ -80,4 +81,16 @@ figure:hover {
 img {
     height: var(--grid-items);
     width: var(--grid-items);
+}
+
+@media (min-width: 1800px) {
+    .sizer-element {
+        width: var(--grid-items-xl);
+        margin-left: 0;
+    }
+    
+    img {
+        height: var(--grid-items-xl);
+        width: var(--grid-items-xl);
+    }
 }
