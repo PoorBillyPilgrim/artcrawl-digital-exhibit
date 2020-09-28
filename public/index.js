@@ -7,7 +7,7 @@ class Grid {
         this.shuffle = new Shuffle(element, {
             itemSelector: '.art-crawl-item',
             sizer: element.querySelector('.sizer-element'),
-            speed: 1000
+            speed: 3500
         });
 
         this.addSorting();
