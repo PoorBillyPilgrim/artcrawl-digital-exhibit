@@ -4,74 +4,28 @@
 }
 
 body {
-    font-family: 'Amiri', serif;
+  font-family: 'Amiri', serif;
   background:  	#FFFAFA
 }
 
-/*
-label.btn {
-    color: var(--light);
-}
-*/
 #metadata {
-    position: absolute;
-    left: 30px;
-    top: 80px;
-    width: 45%;
-    height: auto;
+    width: auto;
     box-sizing: border-box;
-    padding: 1rem;
     z-index: 20;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
+    /* need max-width */
   }
 
   #metadata.active {
     opacity: 1;
-    /*transform: translate3d(0, 0, 0);*/
   }
-
-#metadata-data {
-  display: flex;
-  flex-direction: row;
-}
-
-#metadata-card {
-  display: flex;
-  flex-direction: column;
-}
 
   #metadata-img {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 400px;
+    /* need max-width */
   }
-
-/*
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    margin: 0;
-    padding: 0 25% 0;
-}
-
-.sort-options {
-    display: flex;
-    height: 10%;
-}
-
-.grid {
-    width: 100vw;
-}
-*/
-.container {
-    width: 50%;
-  margin-left: 50%;
-}
 
 figure {
     margin-bottom: 0;
@@ -101,7 +55,6 @@ img {
 
 @media (min-width: 1800px) {
 
-  
   .sizer-element {
         width: var(--grid-items-xl);
         margin-left: 0;

@@ -19,47 +19,53 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
-  <div id="metadata">
-    <div id="metadata-card">
-      <button href="#" id="metadata-close" class="btn btn-primary">X</button>
-      <img id="metadata-img" src="" />
-      <div id="metadata-data"></div>
+<body class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col">
+      <div id="metadata">
+        <div id="metadata-card">
+          <button href="#" id="metadata-close" class="btn btn-primary">X</button>
+          <img id="metadata-img" src="" />
+          <div id="metadata-data"></div>
+        </div>
+      </div>
     </div>
-  </div>
-  <fieldset class="filters-group container">
-    <legend class="filter-label" id="fadeOutTest">Sort</legend>
-    <div class="btn-group sort-options row">
-      <label class="btn active">
-        <input type="radio" name="sort-value" value="last-name" /> Last Name
-      </label>
-      <label class="btn">
-        <input type="radio" name="sort-value" value="major" /> Major
-      </label>
-      <label class="btn">
-        <input type="radio" name="sort-value" value="title" /> Title
-      </label>
-    </div>
-  </fieldset>
-  <div class="container">
-    <div id="grid" class="row">
-      <% for (let i = 0; i < data.length; i++) { %>
-      <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-        data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
-        <% if (i < 30) { %>
-        <img src="<%= randomPhotos[i].urls.thumb%>" />
-        <% } else if (i >= 30 && i < 60) { %>
-        <img src="<%= randomPhotos[i - 30].urls.thumb%>" />
-        <% } else if (i >= 60 && i < 90) { %>
-        <img src="<%= randomPhotos[i - 60].urls.thumb%>" />
-        <% } else if (i >= 90 && i < 120) { %>
-        <img src="<%= randomPhotos[i - 90].urls.thumb%>" />
-        <% } else if (i >= 120 && i < 133) { %>
-        <img src="<%= randomPhotos[i - 120].urls.thumb%>" />
-        <% } %>
-      </figure>
-      <% } %>
-      <div class="sizer-element"></div>
+    <div class="col">
+      <fieldset class="filters-group container">
+        <legend class="filter-label" id="fadeOutTest">Sort</legend>
+        <div class="btn-group sort-options row">
+          <label class="btn active">
+            <input type="radio" name="sort-value" value="last-name" /> Last Name
+          </label>
+          <label class="btn">
+            <input type="radio" name="sort-value" value="major" /> Major
+          </label>
+          <label class="btn">
+            <input type="radio" name="sort-value" value="title" /> Title
+          </label>
+        </div>
+      </fieldset>
+      <div class="container">
+        <div id="grid" class="row">
+          <% for (let i = 0; i < data.length; i++) { %>
+          <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+            data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+            <% if (i < 30) { %>
+            <img src="<%= randomPhotos[i].urls.thumb%>" />
+            <% } else if (i >= 30 && i < 60) { %>
+            <img src="<%= randomPhotos[i - 30].urls.thumb%>" />
+            <% } else if (i >= 60 && i < 90) { %>
+            <img src="<%= randomPhotos[i - 60].urls.thumb%>" />
+            <% } else if (i >= 90 && i < 120) { %>
+            <img src="<%= randomPhotos[i - 90].urls.thumb%>" />
+            <% } else if (i >= 120 && i < 133) { %>
+            <img src="<%= randomPhotos[i - 120].urls.thumb%>" />
+            <% } %>
+          </figure>
+          <% } %>
+          <div class="sizer-element"></div>
+        </div>
+      </div>
     </div>
   </div>
 
