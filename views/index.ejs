@@ -34,8 +34,8 @@
       <fieldset class="filters-group container">
         <legend class="filter-label" id="fadeOutTest">Sort</legend>
         <div class="btn-group sort-options row">
-          <label class="btn active">
-            <input type="radio" name="sort-value" value="last-name" /> Last Name
+          <label class="btn active" checked>
+            <input type="radio" name="sort-value" value="last-name"> Last Name
           </label>
           <label class="btn">
             <input type="radio" name="sort-value" value="major" /> Major
@@ -51,15 +51,15 @@
           <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
             data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
             <% if (i < 30) { %>
-            <img src="<%= randomPhotos[i].urls.thumb%>" />
+            <img src="<%= randomPhotos[i].urls.regular%>" />
             <% } else if (i >= 30 && i < 60) { %>
-            <img src="<%= randomPhotos[i - 30].urls.thumb%>" />
+            <img src="<%= randomPhotos[i - 30].urls.regular%>" />
             <% } else if (i >= 60 && i < 90) { %>
-            <img src="<%= randomPhotos[i - 60].urls.thumb%>" />
+            <img src="<%= randomPhotos[i - 60].urls.regular%>" />
             <% } else if (i >= 90 && i < 120) { %>
-            <img src="<%= randomPhotos[i - 90].urls.thumb%>" />
+            <img src="<%= randomPhotos[i - 90].urls.regular%>" />
             <% } else if (i >= 120 && i < 133) { %>
-            <img src="<%= randomPhotos[i - 120].urls.thumb%>" />
+            <img src="<%= randomPhotos[i - 120].urls.regular%>" />
             <% } %>
           </figure>
           <% } %>

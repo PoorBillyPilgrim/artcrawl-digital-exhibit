@@ -16,7 +16,7 @@ $(document).ready(function () {
                 $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
                 $('#metadata-img').attr('src', thumb);
                 $('#metadata.active').css('opacity', 1);
-            }, 250);
+            }, 550);
         } else {
             // render metadata in #metadata
             $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)

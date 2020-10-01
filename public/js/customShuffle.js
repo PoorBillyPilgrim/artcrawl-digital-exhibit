@@ -7,7 +7,8 @@ class Grid {
         this.shuffle = new Shuffle(element, {
             itemSelector: '.art-crawl-item',
             sizer: element.querySelector('.sizer-element'),
-            speed: 3500
+            speed: 2600, // 2.6 seconds
+            easing: 'cubic-bezier(.28,1.06,.54,.98)' // custom from https://cubic-bezier.com/#.28,1.06,.54,.98
         });
 
         this.addSorting();
