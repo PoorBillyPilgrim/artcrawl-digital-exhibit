@@ -11,10 +11,10 @@ body {
 #metadata {
     width: auto;
     box-sizing: border-box;
-    z-index: 20;
     opacity: 0;
     transition: opacity 0.5s ease-out;
     /* need max-width */
+    max-height: 50%;
   }
 
   #metadata.active {
@@ -22,9 +22,15 @@ body {
   }
 
   #metadata-img {
+    object-fit: scale-down;
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 500px;
     /* need max-width */
+  }
+
+  #metadata-data {
+    /* try and align this responsively with image*/
   }
 
 figure {

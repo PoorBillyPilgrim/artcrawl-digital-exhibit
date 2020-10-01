@@ -37,9 +37,11 @@ $(document).ready(function () {
     });
 
     // hide #metadata
+    /*
     $('#metadata-close').click(function () {
         $('#metadata.active').css('opacity', 0);
     })
+    */
 
     // reset highlights
     $('label.btn').click(function () {
