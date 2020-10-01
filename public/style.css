@@ -20,12 +20,10 @@ label.btn {
     width: 45%;
     height: auto;
     box-sizing: border-box;
-    
     padding: 1rem;
     z-index: 20;
     opacity: 0;
-    /* transform: translate3d(-100%, 0, 0); */
-    transition: opacity 0.25s ease-in-out; /*transform 0.25s ease-in-out;*/
+    transition: opacity 0.1s ease-in-out;
   }
 
   #metadata.active {

@@ -1,5 +1,6 @@
 // JQuery for #metadata div
 $(document).ready(function () {
+
     $('.art-crawl-item').click(function () {
         // get metadata
         let name, title, major, thumb;
@@ -9,25 +10,20 @@ $(document).ready(function () {
         major = $(this).attr('data-major');
         thumb = $(this).find('img').attr('src');
 
-        $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
-        $('#metadata-img').attr('src', thumb);
-        $('#metadata').addClass('active');
-
-        /*
         if ($('#metadata').hasClass('active')) {
-            $(this).fadeOut(125, 'linear', function () {
-                // fade #metadata back in
+            $('#metadata.active').css('opacity', 0);
+            setTimeout(function () {
                 $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
                 $('#metadata-img').attr('src', thumb);
-                $(this).fadeIn(125);
-            });
+                $('#metadata.active').css('opacity', 1);
+            }, 250);
         } else {
             // render metadata in #metadata
             $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
             $('#metadata-img').attr('src', thumb);
             $('#metadata').addClass('active');
         }
-        */
+
 
 
         // orange highlight on click
@@ -42,7 +38,7 @@ $(document).ready(function () {
 
     // hide #metadata
     $('#metadata-close').click(function () {
-        $('#metadata').removeClass('active');
+        $('#metadata.active').css('opacity', 0);
     })
 
     // reset highlights
