@@ -1,7 +1,44 @@
+// #metadata-img width is unavailable in DOM  because of object-fit: scale-down 
+// These functions grab #metadata-img width after scale down
+// https://stackoverflow.com/questions/37256745/object-fit-get-resulting-dimensions
+function getRenderedSize(contains, cWidth, cHeight, width, height, pos) {
+    var oRatio = width / height,
+        cRatio = cWidth / cHeight;
+    return function () {
+        if (contains ? (oRatio > cRatio) : (oRatio < cRatio)) {
+            this.width = cWidth;
+            this.height = cWidth / oRatio;
+        } else {
+            this.width = cHeight * oRatio;
+            this.height = cHeight;
+        }
+        this.left = (cWidth - this.width) * (pos / 100);
+        this.right = this.width + this.left;
+        return this;
+    }.call({});
+}
+
+function getImgSizeInfo(img) {
+    var pos = window.getComputedStyle(img).getPropertyValue('object-position').split(' ');
+    return getRenderedSize(true,
+        img.width,
+        img.height,
+        img.naturalWidth,
+        img.naturalHeight,
+        parseInt(pos[0]));
+}
+
 // JQuery for #metadata div
 $(document).ready(function () {
+    var obj;
+    $('#metadata-img').on('load', function (e) {
 
-    $('.art-crawl-item').click(function () {
+        obj = getImgSizeInfo(e.target);
+
+        console.log(`Left: ${obj.left}px, Right: ${obj.right}px`);
+
+    });
+    $('.art-crawl-item').click(function (obj) {
         // get metadata
         let name, title, major, thumb;
 
@@ -9,6 +46,14 @@ $(document).ready(function () {
         title = $(this).attr('data-title');
         major = $(this).attr('data-major');
         thumb = $(this).find('img').attr('src');
+
+        // get calculated width after scale down
+
+
+        console.log(`Left: ${obj.left}px, Right: ${obj.right}px, Width: ${obj.width}`);
+
+        $('#metadata-data').css('left', obj.left);
+        $('#metadata-data').css('right', obj.right);
 
         if ($('#metadata').hasClass('active')) {
             $('#metadata.active').css('opacity', 0);
