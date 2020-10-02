@@ -30,44 +30,66 @@ function getImgSizeInfo(img) {
 
 // JQuery for #metadata div
 $(document).ready(function () {
-    var obj;
-    $('#metadata-img').on('load', function (e) {
+    // on DOM load
+    let gridItem, name, title, major, img, obj;
 
-        obj = getImgSizeInfo(e.target);
+    gridItem = $('#0'); // gets first figure in shuffleJS grid
 
-        console.log(`Left: ${obj.left}px, Right: ${obj.right}px`);
+    name = gridItem.attr('data-last-name');
+    title = gridItem.attr('data-title');
+    major = gridItem.attr('data-major');
+    img = gridItem.find('img').attr('src');
 
-    });
-    $('.art-crawl-item').click(function (obj) {
+    $('#metadata-img').attr('src', img);
+
+    obj = getImgSizeInfo(document.querySelector('#metadata-img'));
+    console.log(obj)
+
+    $('#metadata-data').css('left', obj.left);
+    $('#metadata-data').css('max-width', obj.width);
+    $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
+
+
+
+
+    $('.art-crawl-item').click(function () {
         // get metadata
-        let name, title, major, thumb;
+        //let name, title, major, img;
 
-        name = $(this).attr('data-last-name');
+        name = $(this).attr('data-last-name'); // can create function to abstract and consolidate
         title = $(this).attr('data-title');
         major = $(this).attr('data-major');
-        thumb = $(this).find('img').attr('src');
+        img = $(this).find('img').attr('src');
 
         // get calculated width after scale down
+        /*var obj;
+        document.querySelector('#metadata-img').addEventListener('load', function (e) {
+            obj = getImgSizeInfo(e.target);
+        });
+        obj = getImgSizeInfo(document.querySelector('#metadata-img'));
 
+        console.log(`Left: ${obj.left}px, Right: ${obj.right}px, Width: ${obj.width}`);*/
 
-        console.log(`Left: ${obj.left}px, Right: ${obj.right}px, Width: ${obj.width}`);
+        //$('#metadata-data').css('left', obj.left);
+        //$('#metadata-data').css('right', obj.right);
 
-        $('#metadata-data').css('left', obj.left);
-        $('#metadata-data').css('right', obj.right);
+        // if ($('#metadata').hasClass('active')) {
+        $('#metadata.active').css('opacity', 0);
+        setTimeout(function () {
+            $('#metadata-img').attr('src', img);
+            obj = getImgSizeInfo(document.querySelector('#metadata-img'));
+            $('#metadata-data').css('left', obj.left);
+            $('#metadata-data').css('max-width', obj.width);
+            $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
 
-        if ($('#metadata').hasClass('active')) {
-            $('#metadata.active').css('opacity', 0);
-            setTimeout(function () {
-                $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
-                $('#metadata-img').attr('src', thumb);
-                $('#metadata.active').css('opacity', 1);
-            }, 550);
-        } else {
+            $('#metadata.active').css('opacity', 1);
+        }, 550);
+        /*} else {
             // render metadata in #metadata
             $('#metadata-data').html('<strong>' + name + '</strong>' + ', ' + title + ', ' + major)
-            $('#metadata-img').attr('src', thumb);
+            $('#metadata-img').attr('src', img);
             $('#metadata').addClass('active');
-        }
+        }*/
 
 
 
