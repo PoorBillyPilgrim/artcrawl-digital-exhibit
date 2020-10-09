@@ -32,15 +32,30 @@ function getImgSizeInfo(img) {
 
 // JQuery for #metadata div
 $(document).ready(function () {
+    var viewer;
 
+    // have tested successfully creating multiple viewers with new images on click
+    // however, there may be some loading issues. May need to consider turning these into async/await...
     $('.art-crawl-item').click(function () {
-        var viewer = OpenSeadragon({
+        let num;
+        num = Math.floor(Math.random() * 3);
+        console.log(num)
+        $('#openseadragon').toggleClass('show');
+        $('#openseadragon-close').removeClass('hide');
+        $('.artcrawl-container').addClass('hide');
+        viewer = OpenSeadragon({
             id: 'openseadragon',
             prefixUrl: '/images/openseadragon/images/',
-            tileSources: '/images/image0.dzi'
+            tileSources: '/images/image' + num + '.dzi'
         })
-        $('#openseadragon').toggleClass('show');
-        $('.artcrawl-container').addClass('hide');
+    })
+
+    $('#openseadragon-close').click(function () {
+        $('#openseadragon').removeClass('show');
+        $('#openseadragon-close').addClass('hide');
+        $('.artcrawl-container').removeClass('hide');
+        viewer.destroy();
+        viewer = null;
     })
 
 

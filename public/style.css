@@ -8,6 +8,10 @@ body {
   background:  	#FFFAFA
 }
 
+.hide {
+  display: none;
+}
+
 #openseadragon {
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
@@ -18,14 +22,28 @@ body {
   height: 100vh;
   width: 100%;
   background: var(--dark);
+  transition: opacity 0.25s ease-in-out;
+}
+
+#openseadragon-close {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  padding-top: 5px;
+  padding-right: 5px;
+
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#openseadragon-close:hover {
+  opacity: 0.5;
 }
 
 .artcrawl-container {
   transition: display 0.25s ease-in-out;
-}
-
-.artcrawl-container.hide {
-  display: none;
 }
 
 #metadata {
