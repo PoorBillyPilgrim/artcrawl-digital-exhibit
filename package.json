@@ -15,6 +15,7 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
+    "openseadragon": "^2.4.2",
     "shufflejs": "^5.2.3",
     "unsplash-js": "^6.3.0"
   },
