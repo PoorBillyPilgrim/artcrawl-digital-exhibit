@@ -20,20 +20,13 @@
 </head>
 
 <body class="">
-  <!--
-  <div class="" style="height: 100vh">
-    <div class="" style="display: hidden;">
-      <figure id="metadata" class="">
-        <img id="metadata-img" src="" />
-        <figcaption id="metadata-data" class="position-relative"></figcaption>
-      </figure>
-    </div>-->
-  <div class="">
+  <div id="openseadragon"></div>
+  <div class="artcrawl-container">
     <fieldset class="filters-group container">
-      <legend class="filter-label" id="fadeOutTest">Sort</legend>
-      <div class="btn-group sort-options row">
+      <legend>Sort</legend>
+      <div class="btn-group sort-options">
         <label class="btn active" checked>
-          <input type="radio" name="sort-value" value="last-name"> Last Name
+          <input type="radio" name="sort-value" value="last-name" /> Last Name
         </label>
         <label class="btn">
           <input type="radio" name="sort-value" value="major" /> Major
@@ -43,7 +36,7 @@
         </label>
       </div>
     </fieldset>
-    <div class="row">
+    <div class="row grid-container">
       <div id="grid" class="col">
         <% for (let i = 0; i < data.length; i++) { %>
         <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
@@ -79,6 +72,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
   <script type="text/javascript" src="/js/customShuffle.js"></script>
   <script type="text/javascript" src="/js/metadata.js"></script>
 </body>

@@ -1,11 +1,31 @@
 :root {
-    --grid-items: 65px;
+    --grid-items: 81px; /* 16 columns for .grid-container width === 1296px i.e. for my mac display (13.3-inch (1440 x 900))*/
     --grid-items-xl: 80px;
 }
 
 body {
   font-family: 'Amiri', serif;
   background:  	#FFFAFA
+}
+
+#openseadragon {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#openseadragon.show {
+  opacity: 1;
+  height: 100vh;
+  width: 100%;
+  background: var(--dark);
+}
+
+.artcrawl-container {
+  transition: display 0.25s ease-in-out;
+}
+
+.artcrawl-container.hide {
+  display: none;
 }
 
 #metadata {
@@ -29,10 +49,6 @@ body {
     /* need max-width */
   }
 
-  #metadata-data {
-    /* try and align this responsively with image*/
-  }
-
 .art-crawl-item {
     margin-bottom: 0;
 }
@@ -49,6 +65,10 @@ body {
     z-index: 1;
 }
 
+.grid-container {
+  padding-right: 5%;
+  padding-left: 5%;
+}
 
 .row {
   margin: 0;
@@ -59,7 +79,7 @@ body {
     margin-left: 0;
 }
 
-img {
+.art-crawl-item > img {
     height: var(--grid-items);
     width: var(--grid-items);
 }
@@ -71,7 +91,7 @@ img {
         margin-left: 0;
     }
     
-    img {
+    .art-crawl-item > img {
         height: var(--grid-items-xl);
         width: var(--grid-items-xl);
     }
