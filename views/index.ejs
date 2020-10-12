@@ -17,9 +17,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="/style.css">
+  <!-- Font Awesome 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 
 <body class="container-fluid">
+  <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
+  <div id="openseadragon"></div>
   <div class="row align-items-center" style="height: 100vh">
     <div class="col">
       <figure id="metadata" class="active">
@@ -42,21 +47,30 @@
           </label>
         </div>
       </fieldset>
-      <div class="container">
+      <div class="art-crawl-container container">
         <div id="grid" class="row">
           <% for (let i = 0; i < data.length; i++) { %>
-          <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-            data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+            <% let id; %>
             <% if (i < 30) { %>
-            <img src="<%= randomPhotos[i].urls.regular%>" />
+              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i].urls.regular%>" />
             <% } else if (i >= 30 && i < 60) { %>
-            <img src="<%= randomPhotos[i - 30].urls.regular%>" />
+              <figure id="<%=i - 30%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 30].urls.regular%>" />
             <% } else if (i >= 60 && i < 90) { %>
-            <img src="<%= randomPhotos[i - 60].urls.regular%>" />
+              <figure id="<%=i - 60 %>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 60].urls.regular%>" />
             <% } else if (i >= 90 && i < 120) { %>
-            <img src="<%= randomPhotos[i - 90].urls.regular%>" />
+              <figure id="<%=i - 90 %>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 90].urls.regular%>" />
             <% } else if (i >= 120 && i < 133) { %>
-            <img src="<%= randomPhotos[i - 120].urls.regular%>" />
+              <figure id="<%=i - 120%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 120].urls.regular%>" />
             <% } %>
           </figure>
           <% } %>

@@ -103,12 +103,31 @@ $(document).ready(function () {
 
     });
 
-    // hide #metadata
     /*
-    $('#metadata-close').click(function () {
-        $('#metadata.active').css('opacity', 0);
-    })
+    * OpenSeadragon Viewer
     */
+    var viewer; 
+    $('#metadata-img').click(function () {
+        let id;
+        id = $('.art-crawl-item.highlight').attr('id');
+        console.log(id);
+        $('#openseadragon').toggleClass('show');
+        $('#openseadragon-close').removeClass('hide');
+        $('.artcrawl-container').addClass('hide');
+        viewer = OpenSeadragon({
+            id: 'openseadragon',
+            prefixUrl: '/images/navImages/',
+            tileSources: '/images/image' + id + '.dzi',
+        })
+    });
+
+    $('#openseadragon-close').click(function () {
+        $('#openseadragon').removeClass('show');
+        $('#openseadragon-close').addClass('hide');
+        $('.artcrawl-container').removeClass('hide');
+        viewer.destroy();
+        viewer = null;
+    });
 
     // reset highlights
     $('label.btn').click(function () {
