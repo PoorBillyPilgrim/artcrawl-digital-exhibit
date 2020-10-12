@@ -17,6 +17,7 @@ body {
 #openseadragon {
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
+  width: 100%;
 }
 
 #openseadragon.show {
@@ -63,18 +64,10 @@ body {
     height: auto;
     max-height: 500px;
     /* need max-width */
-  }
-
-  #metadata-data {
-    /* try and align this responsively with image*/
+    cursor: zoom-in;
   }
 
 /* Sort Btns */
-.filters-group {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
 div.btn-group > label {
   border: 2px solid #000;
 }

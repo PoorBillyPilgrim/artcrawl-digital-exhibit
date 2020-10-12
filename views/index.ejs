@@ -22,9 +22,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 
-<body class="container-fluid">
+<body>
   <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
   <div id="openseadragon"></div>
+  <div class="container-fluid">
   <div class="artcrawl-container row align-items-center" style="height: 100vh">
     <div class="col">
       <figure id="metadata" class="active">
@@ -36,7 +37,7 @@
       <fieldset class="filters-group container">
         <legend class="filter-label" id="fadeOutTest">Sort</legend>
         <div class="btn-group sort-options row">
-          <label class="btn active" checked>
+          <label class="btn active">
             <input type="radio" name="sort-value" value="last-name"> Last Name
           </label>
           <label class="btn">
@@ -79,6 +80,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"

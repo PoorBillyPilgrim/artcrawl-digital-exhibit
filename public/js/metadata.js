@@ -40,6 +40,8 @@ $(document).ready(function () {
     major = gridItem.attr('data-major');
     img = gridItem.find('img').attr('src');
 
+    gridItem.addClass('highlight');
+
     $('#metadata-img').attr('src', img);
 
     obj = getImgSizeInfo(document.querySelector('#metadata-img'));
@@ -116,8 +118,8 @@ $(document).ready(function () {
         $('.artcrawl-container').addClass('hide');
         viewer = OpenSeadragon({
             id: 'openseadragon',
-            prefixUrl: '/images/navImages/',
-            tileSources: '/images/image' + id + '.dzi',
+            prefixUrl: '/images/dzi/images/navImages/',
+            tileSources: '/images/dzi/images/image' + id + '.dzi',
         })
     });
 
