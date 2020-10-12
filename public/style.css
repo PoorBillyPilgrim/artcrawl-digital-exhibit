@@ -1,11 +1,12 @@
 :root {
     --grid-items: 81px; /* 16 columns for .grid-container width === 1296px i.e. for my mac display (13.3-inch (1440 x 900))*/
     --grid-items-xl: 80px;
+    --light-color: #FFFAFA
 }
 
 body {
   font-family: 'Amiri', serif;
-  background:  	#FFFAFA
+  background: var(--light-color);
 }
 
 .hide {
@@ -21,7 +22,7 @@ body {
   opacity: 1;
   height: 100vh;
   width: 100%;
-  background: var(--dark);
+  background: #000;
   transition: opacity 0.25s ease-in-out;
 }
 
@@ -30,12 +31,12 @@ body {
   z-index: 3;
   top: 0;
   right: 0;
-  padding-top: 5px;
   padding-right: 5px;
 
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #fff;
   cursor: pointer;
+  transition: opacity 0.1s linear;
 }
 
 #openseadragon-close:hover {
@@ -67,8 +68,34 @@ body {
     /* need max-width */
   }
 
+/* Sort Btns */
+.filters-group {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+div.btn-group > label {
+  border: 2px solid #000;
+}
+
+div.btn-group > label:hover {
+  background-color: rgba(0,0,0,0.9);
+  color: var(--light-color);
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+div.btn-group > label.active {
+  background: #000;
+  color: var(--light-color);
+}
+
+/* Shuffle Grid */
 .art-crawl-item {
     margin-bottom: 0;
+    transition: 1s;
 }
 
 .art-crawl-item:hover {
