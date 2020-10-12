@@ -25,7 +25,7 @@
 <body class="container-fluid">
   <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
   <div id="openseadragon"></div>
-  <div class="row align-items-center" style="height: 100vh">
+  <div class="artcrawl-container row align-items-center" style="height: 100vh">
     <div class="col">
       <figure id="metadata" class="active">
         <img id="metadata-img" src="" />
@@ -47,7 +47,7 @@
           </label>
         </div>
       </fieldset>
-      <div class="art-crawl-container container">
+      <div class="container">
         <div id="grid" class="row">
           <% for (let i = 0; i < data.length; i++) { %>
             <% let id; %>
@@ -92,6 +92,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
   <script type="text/javascript" src="/js/customShuffle.js"></script>
   <script type="text/javascript" src="/js/metadata.js"></script>
 </body>
