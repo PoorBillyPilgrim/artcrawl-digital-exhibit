@@ -37,16 +37,16 @@ $(document).ready(function () {
     // have tested successfully creating multiple viewers with new images on click
     // however, there may be some loading issues. May need to consider turning these into async/await...
     $('.art-crawl-item').click(function () {
-        let num;
-        num = Math.floor(Math.random() * 3);
-        console.log(num)
+        let id;
+        id = $(this).attr('id');
+        // console.log(id);
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
         $('.artcrawl-container').addClass('hide');
         viewer = OpenSeadragon({
             id: 'openseadragon',
-            prefixUrl: '/images/openseadragon/images/',
-            tileSources: '/images/image' + num + '.dzi'
+            prefixUrl: '/images/navImages/',
+            tileSources: '/images/image' + id + '.dzi',
         })
     })
 
