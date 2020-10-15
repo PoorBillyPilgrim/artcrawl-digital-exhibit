@@ -1,0 +1,131 @@
+:root {
+    --grid-items: 50px;
+    --grid-items-xl: 80px;
+    --light-color: #FFFAFA;
+}
+
+body {
+  font-family: 'Amiri', serif;
+  background:  	var(--light-color);
+}
+
+/* OpenSeadragon Viewer */
+.hide {
+  display: none;
+}
+
+#openseadragon {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  width: 100%;
+}
+
+#openseadragon.show {
+  opacity: 1;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#openseadragon-close {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.1s linear;
+}
+
+#openseadragon-close:hover {
+  opacity: 0.5;
+}
+
+#metadata {
+    width: auto;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    /* need max-width */
+    max-height: 50%;
+  }
+
+  #metadata.active {
+    opacity: 1;
+  }
+
+  #metadata-img {
+    object-fit: scale-down;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    /* need max-width */
+    cursor: zoom-in;
+  }
+
+/* Sort Btns */
+.btn {
+  transition: .2s ease-in;
+}
+
+div.btn-group > label {
+  border: 2px solid #000;
+}
+
+div.btn-group > label:hover {
+  background-color: rgba(0,0,0,0.9);
+  color: var(--light-color);
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+div.btn-group > label.active {
+  background: #000;
+  color: var(--light-color);
+}
+
+/* Shuffle Grid */
+.art-crawl-item {
+    margin-bottom: 0;
+}
+
+.art-crawl-item:hover {
+    box-sizing: border-box;
+    border: 3px solid var(--yellow);
+    z-index: 1;
+}
+
+.highlight {
+      box-sizing: border-box;
+    border: 3px solid var(--yellow);
+    z-index: 1;
+}
+
+.sizer-element {
+    width: var(--grid-items);
+    margin-left: 0;
+}
+
+img {
+    height: var(--grid-items);
+    width: var(--grid-items);
+}
+
+@media (min-width: 1800px) {
+
+  .sizer-element {
+        width: var(--grid-items-xl);
+        margin-left: 0;
+    }
+    
+    img {
+        height: var(--grid-items-xl);
+        width: var(--grid-items-xl);
+    }
+}

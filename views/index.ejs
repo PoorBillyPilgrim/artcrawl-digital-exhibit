@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ART Crawl Exhibit</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <!-- Font Awesome 
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+
+<body>
+  <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
+  <div id="openseadragon"></div>
+  <div class="container-fluid">
+  <div class="artcrawl-container row align-items-center" style="height: 100vh">
+    <div class="col">
+      <figure id="metadata" class="active">
+        <img id="metadata-img" src="" />
+        <figcaption id="metadata-caption" class="position-relative"></figcaption>
+      </figure>
+    </div>
+    <div class="col">
+      <fieldset class="filters-group container">
+        <legend class="filter-label" id="fadeOutTest">Sort</legend>
+        <div class="btn-group sort-options row">
+          <label class="btn active">
+            <input type="radio" name="sort-value" value="last-name"> Last Name
+          </label>
+          <label class="btn">
+            <input type="radio" name="sort-value" value="major" /> Major
+          </label>
+          <label class="btn">
+            <input type="radio" name="sort-value" value="title" /> Title
+          </label>
+        </div>
+      </fieldset>
+      <div class="container">
+        <div id="grid" class="row">
+          <% for (let i = 0; i < data.length; i++) { %>
+            <% let id; %>
+            <% if (i < 30) { %>
+              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i].urls.regular%>" />
+            <% } else if (i >= 30 && i < 60) { %>
+              <figure id="<%=i - 30%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 30].urls.regular%>" />
+            <% } else if (i >= 60 && i < 90) { %>
+              <figure id="<%=i - 60 %>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 60].urls.regular%>" />
+            <% } else if (i >= 90 && i < 120) { %>
+              <figure id="<%=i - 90 %>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 90].urls.regular%>" />
+            <% } else if (i >= 120 && i < 133) { %>
+              <figure id="<%=i - 120%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
+              <img src="<%= randomPhotos[i - 120].urls.regular%>" />
+            <% } %>
+          </figure>
+          <% } %>
+          <div class="sizer-element"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
+    integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
+  <script type="text/javascript" src="/js/customShuffle.js"></script>
+  <script type="text/javascript" src="/js/metadata.js"></script>
+</body>
+
+</html>
