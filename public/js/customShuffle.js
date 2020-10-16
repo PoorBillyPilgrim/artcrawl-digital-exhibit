@@ -1,5 +1,5 @@
 var Shuffle = window.Shuffle;
-var grid;
+
 // https://codepen.io/Vestride/pen/ZVWmMX -- from Shuffle.js website
 class Grid {
     constructor(element) {
@@ -63,30 +63,6 @@ class Grid {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    //window.grid = new Grid(document.getElementById('grid'));
-    grid = new Grid(document.getElementById('grid'));
-    console.log('Shuffle grid loaded.')
+    window.grid = new Grid(document.getElementById('grid'));
+    console.log('Shuffle grid loaded!')
 });
-var gridUpdate = debounce(function () {
-    window.grid.shuffle.update();
-    console.log('grid reset.')
-}, 250);
-
-// window.addEventListener('resize', gridUpdate);
-
-// debounce function to use with window resize
-// https://davidwalsh.name/javascript-debounce-function
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};

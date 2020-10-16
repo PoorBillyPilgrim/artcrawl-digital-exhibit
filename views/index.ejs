@@ -17,27 +17,21 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="/style.css">
-  <!-- Font Awesome 
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 
-<body>
-  <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
-  <div id="openseadragon"></div>
-  <div class="container-fluid">
-  <div class="artcrawl-container row align-items-center" style="height: 100vh">
+<body class="container-fluid">
+  <div class="row align-items-center" style="height: 100vh">
     <div class="col">
       <figure id="metadata" class="active">
         <img id="metadata-img" src="" />
-        <figcaption id="metadata-caption" class="position-relative"></figcaption>
+        <figcaption id="metadata-data" class="position-relative"></figcaption>
       </figure>
     </div>
     <div class="col">
       <fieldset class="filters-group container">
         <legend class="filter-label" id="fadeOutTest">Sort</legend>
         <div class="btn-group sort-options row">
-          <label class="btn active">
+          <label class="btn active" checked>
             <input type="radio" name="sort-value" value="last-name"> Last Name
           </label>
           <label class="btn">
@@ -51,27 +45,18 @@
       <div class="container">
         <div id="grid" class="row">
           <% for (let i = 0; i < data.length; i++) { %>
-            <% let id; %>
+          <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+            data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
             <% if (i < 30) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
-              <img src="<%= randomPhotos[i].urls.regular%>" />
+            <img src="<%= randomPhotos[i].urls.regular%>" />
             <% } else if (i >= 30 && i < 60) { %>
-              <figure id="<%=i - 30%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
-              <img src="<%= randomPhotos[i - 30].urls.regular%>" />
+            <img src="<%= randomPhotos[i - 30].urls.regular%>" />
             <% } else if (i >= 60 && i < 90) { %>
-              <figure id="<%=i - 60 %>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
-              <img src="<%= randomPhotos[i - 60].urls.regular%>" />
+            <img src="<%= randomPhotos[i - 60].urls.regular%>" />
             <% } else if (i >= 90 && i < 120) { %>
-              <figure id="<%=i - 90 %>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
-              <img src="<%= randomPhotos[i - 90].urls.regular%>" />
+            <img src="<%= randomPhotos[i - 90].urls.regular%>" />
             <% } else if (i >= 120 && i < 133) { %>
-              <figure id="<%=i - 120%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>">
-              <img src="<%= randomPhotos[i - 120].urls.regular%>" />
+            <img src="<%= randomPhotos[i - 120].urls.regular%>" />
             <% } %>
           </figure>
           <% } %>
@@ -80,7 +65,6 @@
       </div>
     </div>
   </div>
-</div>
 
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
@@ -94,7 +78,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
   <script type="text/javascript" src="/js/customShuffle.js"></script>
   <script type="text/javascript" src="/js/metadata.js"></script>
 </body>
