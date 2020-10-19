@@ -21,7 +21,7 @@ class Grid {
 
     onAlways() {
         console.log('all images are loaded');
-        this.shuffle.layout();
+        this.shuffle.update();
     };
 
     addSorting() {
