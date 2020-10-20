@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 // #metadata-img width is unavailable in DOM because of object-fit: scale-down 
 // These functions grab #metadata-img width after scale down
@@ -32,6 +32,7 @@ function getImgSizeInfo(img) {
 
 // This will grab all the data-* attributes of an HTML element
 // Not sure if I will use or not...
+/*
 function getDataNames() {
     var el = document.getElementById('0');
     var arr = el.getAttributeNames();
@@ -42,6 +43,7 @@ function getDataNames() {
         }
     });
 }
+*/
 
 function getDataAttributes(gridItem) {
     return {
@@ -77,17 +79,17 @@ function debounce(func, wait, immediate) {
 
 function handleHighlight() {
     var gridItemID;
-    gridItemID = $('.art-crawl-item.highlight').attr('id')
+    gridItemID = $('.art-crawl-item.highlight').attr('id');
     $('.art-crawl-item').removeClass('highlight');
-    setTimeout(function() {
-        $('#' + gridItemID).addClass('highlight');
+    setTimeout(function() {   
+        $("#" + gridItemID).addClass('highlight');
     }, 2700); // grid speed is set to 2650ms
 }
 
-var Metadata = function () {
-    let viewer, img, dataAttributes, gridItemID;
+var Metadata = (function () {
+    let viewer, img, dataAttributes, gridItemID, dziID;
 
-    Metadata.prototype.init = function () {
+    const init = function() {
         
         // #metadata first loads with metadata of first grid item
         dataAttributes = getDataAttributes($('#0'));
@@ -96,43 +98,45 @@ var Metadata = function () {
         $('#metadata-img').attr('src', img);
         $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
 
-        this.openViewer();
-        this.closeViewer();
-        this.renderMetadata();
-        this.onResize();
-        this.handleSortChange();
+        openViewer();
+        closeViewer();
+        renderMetadata();
+        onResize();
+        handleSortChange();
 
     }
 
-    Metadata.prototype.openViewer = function () {
+    const openViewer = function() {
         $('#metadata-img').click(function () {
-            gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            dziID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
             $('#openseadragon').toggleClass('show');
             $('#openseadragon-close').removeClass('hide');
             $('.artcrawl-container').addClass('hide');
             viewer = OpenSeadragon({
                 id: 'openseadragon',
                 prefixUrl: '/images/dzi/images/navImages/',
-                tileSources: '/images/dzi/images/image' + gridItemID + '.dzi'
+                tileSources: '/images/dzi/images/image' + dziID + '.dzi'
             });
         });
     }
 
-    Metadata.prototype.closeViewer = function () {
+    const closeViewer = function() {
         $('#openseadragon-close').click(function () {
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
             viewer.destroy();
             viewer = null;
-        
+            
+            gridItemID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
             $('.art-crawl-item').removeClass('highlight');
-            grid.shuffle.update();
-            $('#' + $('.art-crawl-item.highlight').attr('id')).addClass('highlight');
+            //grid.shuffle.update();
+            shuffle.update();
+            $("#" + gridItemID).addClass('highlight');
         });
     }
 
-    Metadata.prototype.renderMetadata = function () {
+    const renderMetadata = function() {
         $('.art-crawl-item').click(function () {
         
             dataAttributes = getDataAttributes($(this));
@@ -155,14 +159,14 @@ var Metadata = function () {
         });
     }
 
-    Metadata.prototype.onResize = function () {
+    const onResize = function() {
         let $metadataImg;
         $('#metadata').click(function () {
             $metadataImg = document.querySelector('#metadata-img');
         });
         $(window).resize(debounce(function () {
             
-            gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            gridItemID = $('.art-crawl-item.highlight').attr('id');
             dataAttributes = getDataAttributes($('#' + gridItemID));
             img = $('#' + gridItemID).find('img').attr('src');
 
@@ -183,25 +187,25 @@ var Metadata = function () {
             
             // adds highlight back after 2.7s
             setTimeout(function () {
-                grid.shuffle.update();
-                if (gridItemID !== '0') {
-                    $('#' + gridItemID).addClass('highlight');
-                }
+                //grid.shuffle.update();
+                $('#' + gridItemID).addClass('highlight');
             }, 2700);
+            //grid.shuffle.update();
+            shuffle.update();
         }, 1000, true));
     }
 
-    Metadata.prototype.handleSortChange = function () {
+    const handleSortChange = function() {
         const btnGroup = document.querySelector('.sort-options');
         if (!btnGroup) { return; }
         btnGroup.addEventListener('click', handleHighlight);
     }
-};
 
-$(function() {
-    var metadata = new Metadata();
-    metadata.init();
-});
+    return {
+        init: init
+    }
+})();
+
 
 
 
