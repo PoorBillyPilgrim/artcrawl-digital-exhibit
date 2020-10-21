@@ -129,6 +129,7 @@ var Metadata = (function () {
             viewer = null;
             
             gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            console.log(gridItemID);
             $('.art-crawl-item').removeClass('highlight');
             shuffle.update();
             $("#" + gridItemID).addClass('highlight');
