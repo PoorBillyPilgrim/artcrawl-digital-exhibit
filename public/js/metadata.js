@@ -93,7 +93,7 @@ var Metadata = (function () {
         
         // #metadata first loads with metadata of first grid item
         dataAttributes = getDataAttributes($('#0'));
-        console.log(dataAttributes)
+        // console.log(dataAttributes)
         img = $('#0').find('img').attr('src');
         $('#metadata-img').attr('src', img);
         $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
@@ -130,7 +130,6 @@ var Metadata = (function () {
             
             gridItemID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
             $('.art-crawl-item').removeClass('highlight');
-            //grid.shuffle.update();
             shuffle.update();
             $("#" + gridItemID).addClass('highlight');
         });
@@ -176,7 +175,7 @@ var Metadata = (function () {
 
             // fades in $metadata after 0.55s
             setTimeout(function() {
-                console.log($metadataImg)
+                // console.log($metadataImg)
                 $('#metadata-img').attr('src', img);
                 renderMetadataImg($('#metadata-caption'), dataAttributes, $metadataImg);
                 $('#metadata-caption').css('opacity', 1);
