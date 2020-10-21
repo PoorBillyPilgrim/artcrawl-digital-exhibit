@@ -128,7 +128,7 @@ var Metadata = (function () {
             viewer.destroy();
             viewer = null;
             
-            gridItemID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
+            gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
             $('.art-crawl-item').removeClass('highlight');
             shuffle.update();
             $("#" + gridItemID).addClass('highlight');
