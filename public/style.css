@@ -67,27 +67,53 @@ body {
     cursor: zoom-in;
   }
 
-/* Sort Btns */
-.btn {
-  transition: .2s ease-in;
+/* Fieldset */
+legend {
+  font-size: 1rem;
+} 
+
+input, label.btn {
+  font-size: 0.8rem;
 }
 
-div.btn-group > label {
+label.btn {
   border: 2px solid #000;
+  transition: .2s ease-in;
+  padding: .35rem .25rem; 
 }
 
-div.btn-group > label:hover {
+label.btn:hover {
   background-color: rgba(0,0,0,0.9);
   color: var(--light-color);
 }
+label.active {
+  background: #000;
+  color: var(--light-color);
+}
 
+/* Sort */
 input[type="radio"] {
   appearance: none;
 }
 
-div.btn-group > label.active {
-  background: #000;
-  color: var(--light-color);
+.sort-options {
+  width: 100%;
+}
+
+/* Search */
+input[type="search"] {
+  max-width: 100%;
+  border: 2px solid #000;
+  border-radius: .25rem;
+}
+
+/* Filter */
+.filter-options {
+  text-align: center;
+}
+
+.filter-btn {
+  width: 75%;
 }
 
 /* Shuffle Grid */

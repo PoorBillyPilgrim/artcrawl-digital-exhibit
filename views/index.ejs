@@ -34,20 +34,32 @@
       </figure>
     </div>
     <div class="col">
-      <fieldset class="filters-group container">
-        <legend class="filter-label" id="fadeOutTest">Sort</legend>
-        <div class="btn-group sort-options row">
-          <label class="btn active">
-            <input type="radio" name="sort-value" value="last-name"> Last Name
+      <div class="row">
+        <fieldset class="filters-group col">
+          <legend>Sort</legend>
+          <div class="btn-group sort-options">
+            <label class="btn active">
+              <input type="radio" name="sort-value" value="last-name"> Last Name
+            </label>
+            <label class="btn">
+              <input type="radio" name="sort-value" value="major" /> Major
+            </label>
+            <label class="btn">
+              <input type="radio" name="sort-value" value="title" /> Title
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="col">
+          <legend>Search</legend>
+          <input type="search" />
+        </fieldset>
+        <fieldset class="col filter-options">
+          <legend>Filter</legend>
+          <label class="btn filter-btn">
+            <input type="radio" name="filter-value" value="major" /> Major
           </label>
-          <label class="btn">
-            <input type="radio" name="sort-value" value="major" /> Major
-          </label>
-          <label class="btn">
-            <input type="radio" name="sort-value" value="title" /> Title
-          </label>
-        </div>
-      </fieldset>
+        </fieldset>
+      </div>
       <div class="container">
         <div id="grid" class="row">
           <% for (let i = 0; i < data.length; i++) { %>
