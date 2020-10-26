@@ -35,7 +35,7 @@
     </div>
     <div class="col">
       <div class="row">
-        <fieldset class="filters-group col">
+        <fieldset class="col sort-group">
           <legend>Sort</legend>
           <div class="btn-group sort-options">
             <label class="btn active">
@@ -53,11 +53,16 @@
           <legend>Search</legend>
           <input type="search" />
         </fieldset>
-        <fieldset class="col filter-options">
+        <fieldset class="col filters-group">
           <legend>Filter</legend>
-          <label class="btn filter-btn">
-            <input type="radio" name="filter-value" value="major" /> Major
-          </label>
+            <div class="btn-group filter-options">
+              <label class="btn all-btn">
+                <input type="radio" name="filter-value" value="all" /> Show All
+              </label>
+              <label class="btn filter-btn">
+                <input type="radio" name="filter-value" value="major" /> Major
+              </label>
+            </div>
         </fieldset>
       </div>
       <div class="container">
@@ -65,23 +70,23 @@
           <% for (let i = 0; i < data.length; i++) { %>
             <% let id; %>
             <% if (i < 30) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
                 data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i%>">
               <img src="<%= randomPhotos[i].urls.regular%>" />
             <% } else if (i >= 30 && i < 60) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
                 data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 30%>">
               <img src="<%= randomPhotos[i - 30].urls.regular%>" />
             <% } else if (i >= 60 && i < 90) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
                 data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 60 %>">
               <img src="<%= randomPhotos[i - 60].urls.regular%>" />
             <% } else if (i >= 90 && i < 120) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
                 data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 90 %>">
               <img src="<%= randomPhotos[i - 90].urls.regular%>" />
             <% } else if (i >= 120 && i < 133) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-last-name="<%= data[i]['Last Name'] %>"
+              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
                 data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 120%>">
               <img src="<%= randomPhotos[i - 120].urls.regular%>" />
             <% } %>
