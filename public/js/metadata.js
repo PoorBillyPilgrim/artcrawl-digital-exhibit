@@ -90,7 +90,6 @@ var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID, dziID;
 
     const init = function() {
-        
         // #metadata first loads with metadata of first grid item
         dataAttributes = getDataAttributes($('#0'));
         // console.log(dataAttributes)
@@ -104,6 +103,8 @@ var Metadata = (function () {
         onResize();
         handleSortChange();
 
+        // grid loads incorrectly when highlight is added on init
+        // $('#0').addClass('highlight');
     }
 
     const openViewer = function() {

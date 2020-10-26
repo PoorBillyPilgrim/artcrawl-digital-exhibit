@@ -14,7 +14,11 @@ const Grid = (function() {
         
         const imgLoad = imagesLoaded(element);
         imgLoad.on('always', onAlways);
-        addSorting();
+        
+        // add Sort and Filter
+        addGridEvent('.sort-options', _handleSortChange);
+        addGridEvent('.filter-options', _handleFilterChange);
+        
     }
 
     const onAlways = function() {
@@ -22,13 +26,14 @@ const Grid = (function() {
         shuffle.update();
     };
 
-    const addSorting = function() {
-        const btnGroup = document.querySelector('.sort-options');
-        if (!btnGroup) { return; }
-        btnGroup.addEventListener('change', _handleSortChange);
+    const addGridEvent = function(group, eventHandler) {
+        const sortGroup = document.querySelector(group);
+        if (!sortGroup) { return; }
+        sortGroup.addEventListener('change', eventHandler);
     }
-    const _handleSortChange = function(event) {
-        // add + remove 'active' class from btns
+
+    // add + remove 'active' class from btns
+    const _handleActiveBtn = function (event) {
         const btns = Array.from(event.currentTarget.children);
         btns.forEach(btn => {
             if (btn.querySelector('input').value === event.target.value) {
@@ -37,6 +42,9 @@ const Grid = (function() {
                 btn.classList.remove('active');
             }
         });
+    }
+    const _handleSortChange = function(event) {
+        _handleActiveBtn(event);
 
         const { value } = event.target;
         let options = {};
@@ -67,6 +75,21 @@ const Grid = (function() {
         // this binds it to Grid
         shuffle.sort(options);
     }
+
+    const _handleFilterChange = function(event) {
+        const { value } = event.target;
+        const highlight = document.querySelector('.highlight');
+        if (value === 'major') {
+            console.log(highlight.getAttribute('data-major'));
+            // shuffle.filter('Computer Science');
+            shuffle.filter(function (element) {
+                return element.getAttribute('data-major') === highlight.getAttribute('data-major');
+              });
+        } else {
+            shuffle.filter();
+        }
+    }
+
     return {
         init: init
     }

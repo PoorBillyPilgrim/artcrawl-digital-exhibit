@@ -91,6 +91,11 @@ label.active {
   color: var(--light-color);
 }
 
+fieldset.col {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* Sort */
 input[type="radio"] {
   appearance: none;
@@ -108,7 +113,7 @@ input[type="search"] {
 }
 
 /* Filter */
-.filter-options {
+.filters-group {
   text-align: center;
 }
 
