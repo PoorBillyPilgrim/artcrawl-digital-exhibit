@@ -15,9 +15,11 @@ const Grid = (function() {
         const imgLoad = imagesLoaded(element);
         imgLoad.on('always', onAlways);
         
-        // add Sort and Filter
-        addGridEvent('.sort-options', _handleSortChange);
-        addGridEvent('.filter-options', _handleFilterChange);
+        // Sort, Search, and Filter
+        addGridEvent('.sort-options', 'change', _handleSortChange);
+        addGridEvent('.filter-options', 'change', _handleFilterChange);
+        addGridEvent('#search', 'input', _handleSearchInput);
+        addGridEvent('#search', 'keydown', _handleSearchKeydown); // Only to prevent form submission on "Enter" key press
         
     }
 
@@ -26,10 +28,10 @@ const Grid = (function() {
         shuffle.update();
     };
 
-    const addGridEvent = function(group, eventHandler) {
-        const sortGroup = document.querySelector(group);
-        if (!sortGroup) { return; }
-        sortGroup.addEventListener('change', eventHandler);
+    const addGridEvent = function(shuffleInput, event, eventHandler) {
+        const input = document.querySelector(shuffleInput);
+        if (!input) { return; }
+        input.addEventListener(event, eventHandler);
     }
 
     // add + remove 'active' class from btns
@@ -77,16 +79,44 @@ const Grid = (function() {
     }
 
     const _handleFilterChange = function(event) {
+        _handleActiveBtn(event);
+
         const { value } = event.target;
         const highlight = document.querySelector('.highlight');
+
+        function filterByMajor(element) {
+            return element.getAttribute('data-major') === highlight.getAttribute('data-major');
+        }
+
         if (value === 'major') {
-            console.log(highlight.getAttribute('data-major'));
-            // shuffle.filter('Computer Science');
-            shuffle.filter(function (element) {
-                return element.getAttribute('data-major') === highlight.getAttribute('data-major');
-              });
+            shuffle.filter(filterByMajor);
         } else {
             shuffle.filter();
+        }
+    }
+
+    const _handleSearchInput = function(event) {
+        const searchText = event.target.value.toLowerCase();
+        const majorFilterBtn = document.querySelector('#major-filter');
+
+        shuffle.filter(function(element) {
+            const lastName = element.getAttribute('data-last-name').toLowerCase();
+
+            if (majorFilterBtn.classList.contains('active')) {
+                const major = document.querySelector('.highlight').getAttribute('data-major');
+                return element.getAttribute('data-major') === major && lastName.indexOf(searchText) !== -1; // && finds first falsy value. 'data-major' therefore must go first
+            } else {
+                return lastName.indexOf(searchText) !== -1;
+            }
+        });
+    }
+
+    const _handleSearchKeydown = function(event) {
+        // To prevent form submission on "Enter" press down
+        // https://stackoverflow.com/questions/905222/prevent-form-submission-on-enter-key-press
+        // but if there is only one input, then form submit is always present. Have to place a "dummy" hidden input underneath.
+        if (event.which == 13 || event.keyCode == 13 || event.key === "Enter") {
+            return false;
         }
     }
 
