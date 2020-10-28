@@ -3,7 +3,7 @@ const express = require('express');
 const data = require('./data/data.json');
 const randomPhotos = require('./data/randomPhotos.json');
 const path = require('path');
-const regex = /\.jpeg|\.jpg|\.png/g;
+// const regex = /\.jpeg|\.jpg|\.png/g; this was needed for the actual art crawl submissions
 
 const port = process.env.PORT || 3000;
 
@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('index', {
         data: data,
-        regex: regex,
         randomPhotos: randomPhotos
     });
 });
