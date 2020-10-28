@@ -101,10 +101,9 @@ var Metadata = (function () {
         closeViewer();
         renderMetadata();
         onResize();
-        handleSortChange();
+        //handleSortChange();
 
-        // grid loads incorrectly when highlight is added on init
-        // $('#0').addClass('highlight');
+        $('#0').addClass('highlight');
     }
 
     const openViewer = function() {
@@ -184,7 +183,7 @@ var Metadata = (function () {
                 $('#metadata.active').css('opacity', 1);
             }, 550);
 
-            $('#' + gridItemID).removeClass('highlight');
+            /*$('#' + gridItemID).removeClass('highlight');
             
             // adds highlight back after 2.7s
             setTimeout(function () {
@@ -192,10 +191,11 @@ var Metadata = (function () {
                 $('#' + gridItemID).addClass('highlight');
             }, 2700);
             //grid.shuffle.update();
-            shuffle.update();
+            shuffle.update(); */
         }, 1000, true));
     }
 
+    // I don't think I need now after adding highlight to .art-crawl-item > img
     const handleSortChange = function() {
         const btnGroup = document.querySelector('.sort-options');
         if (!btnGroup) { return; }
