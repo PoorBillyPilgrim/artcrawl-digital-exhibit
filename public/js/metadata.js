@@ -90,12 +90,25 @@ var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID, dziID;
 
     const init = function() {
-        // #metadata first loads with metadata of first grid item
-        dataAttributes = getDataAttributes($('#0'));
-        // console.log(dataAttributes)
-        img = $('#0').find('img').attr('src');
+        const loc = window.location;
+        let id;
+        if (loc.hash) {
+            // parse hash params
+            // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
+            let hash = loc.hash.substr(1);
+            let params = _getHashParams(hash);
+            id = params.id;
+            dataAttributes = getDataAttributes($('#' + id));
+        } else {
+            // #metadata first loads with metadata of first grid item
+            id = '0';
+            dataAttributes = getDataAttributes($('#0'));
+        }
+
+        img = $('#' + id).find('img').attr('src');
         $('#metadata-img').attr('src', img);
         $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
+
 
         openViewer();
         closeViewer();
@@ -103,36 +116,64 @@ var Metadata = (function () {
         onResize();
         //handleSortChange();
 
-        $('#0').addClass('highlight');
+        $('#' + id).addClass('highlight');
     }
 
+    function _initViewer(id) {
+        $('#openseadragon').toggleClass('show');
+        $('#openseadragon-close').removeClass('hide');
+        $('.artcrawl-container').addClass('hide');
+        viewer = OpenSeadragon({
+            id: 'openseadragon',
+            prefixUrl: '/images/dzi/images/navImages/',
+            tileSources: '/images/dzi/images/image' + id + '.dzi'
+        });
+    }
+    
+    function _getHashParams(arr) {
+        return arr.split('&').reduce(function(result, item) {
+            let parts = item.split('=');
+            result[parts[0]] = parts[1];
+            return result;
+        }, {});
+    }
+    
     const openViewer = function() {
+        const loc = window.location;
+        if (loc.hash) {
+            // parse hash params
+            // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
+            let hash = loc.hash.substr(1);
+            let params = _getHashParams(hash);
+            _initViewer(params.dziID);
+        }
+
         $('#metadata-img').click(function () {
             dziID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
-            $('#openseadragon').toggleClass('show');
-            $('#openseadragon-close').removeClass('hide');
-            $('.artcrawl-container').addClass('hide');
-            viewer = OpenSeadragon({
-                id: 'openseadragon',
-                prefixUrl: '/images/dzi/images/navImages/',
-                tileSources: '/images/dzi/images/image' + dziID + '.dzi'
-            });
+            gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            _initViewer(dziID);
+            
+            // Still need to populate first parameter 'state' with a valid entry
+            history.pushState({undefined: undefined}, undefined, window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID); 
         });
     }
 
     const closeViewer = function() {
         $('#openseadragon-close').click(function () {
+            let params = _getHashParams(window.location.hash.substr(1));
+            
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
             viewer.destroy();
             viewer = null;
             
-            gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
-            console.log(gridItemID);
-            $('.art-crawl-item').removeClass('highlight');
+            history.pushState({undefined: undefined}, undefined, window.location.pathname); // resets URL to root
+
+            //gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            //$('.art-crawl-item').removeClass('highlight');
             shuffle.update();
-            $("#" + gridItemID).addClass('highlight');
+            $("#" + params.id).addClass('highlight');
         });
     }
 
