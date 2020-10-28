@@ -259,33 +259,26 @@ $(document).ready(function () {
     var $metadata, $metadataImg, $gridItem;
     var img;
     var dataAttributes, gridItemID;
-
     gridItemID = '0'; // gets first figure in shuffleJS grid
     $metadata = $('#metadata-caption');
     $metadataImg = $('#metadata-img');
     
-
     dataAttributes = getDataAttributes($('#' + gridItemID));
     // ({name, title, major} = getDataAttributes($gridItem)); A destructuring alternative
     img = $('#' + gridItemID).find('img').attr('src');
-
     $metadataImg.attr('src', img);
     $metadataImg.on('load', renderMetadataImg($metadata, dataAttributes));
     // $gridItem.addClass('highlight')
-
     $('.art-crawl-item').click(function () {
         
         dataAttributes = getDataAttributes($(this));
         img = $(this).find('img').attr('src');
-
         $('#metadata.active').css('opacity', 0);
         setTimeout(function () {
             $metadataImg.attr('src', img);
             renderMetadataImg($metadata, dataAttributes);
-
             $('#metadata.active').css('opacity', 1);
         }, 550);
-
         // orange highlight on click
         if (!$(this).hasClass('highlight')) {
             $('.art-crawl-item').removeClass('highlight');
@@ -293,9 +286,7 @@ $(document).ready(function () {
         } else {
             $(this).addClass('highlight');
         }
-
     });
-
     /*
     * OpenSeadragon Viewer
     
@@ -314,7 +305,6 @@ $(document).ready(function () {
             tileSources: '/images/dzi/images/image' + $artCrawlItemHighlight + '.dzi',
         })
     });
-
     // on viewer close
     $('#openseadragon-close').click(function () {
         $('#openseadragon').removeClass('show');
@@ -329,18 +319,15 @@ $(document).ready(function () {
         
         $('#' + $artCrawlItemHighlight).addClass('highlight');
     });
-
     // handle highlight on grid sort
     const btnGroup = document.querySelector('.sort-options');
     if (!btnGroup) { return; }
     btnGroup.addEventListener('click', handleHighlight);
-
     // handle highlight on window resize
     $(window).resize(debounce(function () {
             
             $metadata = $('#metadata-caption');
             gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
-
             dataAttributes = getDataAttributes($('#' + gridItemID));
             img = $('#' + gridItemID).find('img').attr('src');
             console.log(gridItemID);
@@ -350,7 +337,6 @@ $(document).ready(function () {
             // fadeout metadata
             $metadata.css('opacity', 0);         
             $('#metadata.active').css('opacity', 0);
-
             // fades in $metadata after 0.55s
             setTimeout(function () {
                 $metadataImg.attr('src', img);
@@ -359,9 +345,6 @@ $(document).ready(function () {
                 $('#metadata.active').css('opacity', 1);
                 
             }, 550);
-
-
-
             $('#' + gridItemID).removeClass('highlight');
             
             // adds highlight back after 2.7s
@@ -373,4 +356,3 @@ $(document).ready(function () {
             }, 2700);
         }, 1000, true)); 
 }); */
-
