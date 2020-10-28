@@ -34,12 +34,12 @@
       </figure>
     </div>
     <div class="col">
-      <div class="row">
-        <fieldset class="col sort-group">
+      <div class="row ">
+        <fieldset class="col-lg sort-group">
           <legend>Sort</legend>
-          <div class="btn-group sort-options">
+          <div class="btn-group flex-wrap sort-options">
             <label class="btn active">
-              <input type="radio" name="sort-value" value="last-name"> Last Name
+              <input type="radio" name="sort-value" value="last-name"> Name
             </label>
             <label class="btn">
               <input type="radio" name="sort-value" value="major" /> Major
@@ -49,17 +49,17 @@
             </label>
           </div>
         </fieldset>
-        <fieldset class="col">
-          <legend>Search</legend>
-          <input type="search" />
-        </fieldset>
-        <fieldset class="col filters-group">
+        <form class="col-lg search-options">
+          <label>Search<input id="search" type="search"/></label>
+          <input type="search" style="display: none;"/>
+        </form>
+        <fieldset class="col-lg filters-group">
           <legend>Filter</legend>
-            <div class="btn-group filter-options">
-              <label class="btn all-btn">
-                <input type="radio" name="filter-value" value="all" /> Show All
+            <div class="btn-group flex-wrap filter-options">
+              <label class="btn active">
+                <input type="radio" name="filter-value" value="all" /> All
               </label>
-              <label class="btn filter-btn">
+              <label id="major-filter" class="btn">
                 <input type="radio" name="filter-value" value="major" /> Major
               </label>
             </div>
