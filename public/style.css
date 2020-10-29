@@ -60,6 +60,7 @@ body {
 
   #metadata-img {
     object-fit: scale-down;
+    -o-object-fit: scale-down;
     width: 100%;
     height: auto;
     max-height: 500px;
@@ -99,6 +100,8 @@ label.active {
 
 /* Sort */
 input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 
@@ -116,7 +119,7 @@ input[type="search"] {
 
 /* Shuffle Grid */
 .art-crawl-item {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .art-crawl-item > img:hover, 
@@ -125,13 +128,13 @@ input[type="search"] {
 }
 
 .sizer-element {
-    width: var(--grid-items);
-    margin-left: 0;
+  width: var(--grid-items);
+  margin-left: 0;
 }
 
 .art-crawl-item > img {
-    height: var(--grid-items);
-    width: var(--grid-items);
+  height: var(--grid-items);
+  width: var(--grid-items);
 }
 
 @media (min-width: 1800px) {
