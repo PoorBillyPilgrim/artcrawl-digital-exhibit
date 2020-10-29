@@ -144,7 +144,7 @@ input[type="search"] {
         margin-left: 0;
     }
     
-    img {
+    .art-crawl-item > img {
         height: var(--grid-items-xl);
         width: var(--grid-items-xl);
     }
