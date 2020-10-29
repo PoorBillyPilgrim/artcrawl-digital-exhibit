@@ -11,6 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet">  -->
+  <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet"> 
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -27,35 +29,39 @@
   <div id="openseadragon"></div>
   <div class="container-fluid">
   <div class="artcrawl-container row align-items-center" style="height: 100vh">
-    <div class="col">
+    <div class="col-md">
       <figure id="metadata" class="active">
         <img id="metadata-img" src="" />
         <figcaption id="metadata-caption" class="position-relative"></figcaption>
       </figure>
     </div>
-    <div class="col">
+    <div class="col-md">
       <div class="row ">
-        <fieldset class="col-lg sort-group">
+        <fieldset class="col-xl-6 group sort-group">
           <legend>Sort</legend>
-          <div class="btn-group flex-wrap sort-options">
+          <div class="btn-group flex-wrap options">
             <label class="btn active">
-              <input type="radio" name="sort-value" value="last-name"> Name
+              <input type="radio" name="sort-value" value="last-name" /> Name
+              <div class="slide"></div>
             </label>
             <label class="btn">
               <input type="radio" name="sort-value" value="major" /> Major
+              <div class="slide"></div>
             </label>
             <label class="btn">
               <input type="radio" name="sort-value" value="title" /> Title
+              <div class="slide"></div>
             </label>
           </div>
         </fieldset>
-        <form class="col-lg search-options">
-          <label>Search<input id="search" type="search" autocomplete="off"/></label>
+        <form class="col-lg-6 col-xl-3 group options">
+          <label for="search">Search</label>
+          <input id="search" type="search" autocomplete="off"/>
           <input type="search" style="display: none;"/>
         </form>
-        <fieldset class="col-lg filters-group">
+        <fieldset class="col-lg-6 col-xl-3 group filters-group">
           <legend>Filter</legend>
-            <div class="btn-group flex-wrap filter-options">
+            <div class="btn-group flex-wrap options">
               <label class="btn active">
                 <input type="radio" name="filter-value" value="all" /> All
               </label>

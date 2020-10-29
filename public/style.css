@@ -9,6 +9,10 @@ body {
   background:  	var(--light-color);
 }
 
+.btn {
+  border-radius: 0;
+}
+
 /* OpenSeadragon Viewer */
 .hide {
   display: none;
@@ -70,16 +74,44 @@ body {
 /* Filter, Search, Sort */
 label {
   display: block;
+  margin-bottom: 0;
+  /* font-family: 'Vampiro One', cursive;*/
 }
 
-legend {
+legend,
+label[for='search'] {
   font-size: 1rem;
   margin-bottom: 0;
-} 
+  /* font-family: 'Vampiro One', cursive;*/
+}
 
-input, 
-label.btn {
-  font-size: 0.8rem;
+.group {
+  margin-bottom: 0.5rem;
+}
+
+.options {
+  width: 100%;
+}
+
+input#search {
+  height: 37px;
+}
+.slide {
+  background: black;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -100px;
+  opacity: 0;
+  transition: 0.5s all ease-in;
+}
+
+.slide:hover {
+  opacity: 1;
+  right: 0;
 }
 
 label.btn {
@@ -88,10 +120,11 @@ label.btn {
   /* padding: .35rem .25rem; */
 }
 
-label.btn:hover {
+/*label.btn:hover {
   background-color: rgba(0,0,0,0.9);
   color: var(--light-color);
-}
+}*/
+
 label.active {
   background: #000;
   color: var(--light-color);
@@ -102,10 +135,6 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.sort-options {
-  width: 100%;
 }
 
 /* Search */
