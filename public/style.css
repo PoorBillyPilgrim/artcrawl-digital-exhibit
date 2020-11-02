@@ -96,6 +96,7 @@ label[for='search'] {
 input#search {
   height: 37px;
 }
+/*
 .slide {
   background: black;
   height: inherit;
@@ -112,7 +113,7 @@ input#search {
 .slide:hover {
   opacity: 1;
   right: 0;
-}
+}*/
 
 label.btn {
   border: 1.5px solid #000;
@@ -120,10 +121,10 @@ label.btn {
   /* padding: .35rem .25rem; */
 }
 
-/*label.btn:hover {
+label.btn:hover {
   background-color: rgba(0,0,0,0.9);
   color: var(--light-color);
-}*/
+}
 
 label.active {
   background: #000;
