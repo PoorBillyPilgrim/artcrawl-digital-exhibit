@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 // Must match JSON keys exactly, capiatlize for single words and use bracket notation for keys > one word
-// console.log(data[0].Username);
+// console.log(data[1].Username);
 //console.log(data.length);
 //console.log(randomPhotos.length);
 
