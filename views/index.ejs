@@ -37,9 +37,9 @@
     </div>
     <div class="col-md">
       <div class="row ">
-        <fieldset class="col-xl-6 group sort-group">
+        <fieldset id="sort-group" class="col-xl-6 group">
           <legend>Sort</legend>
-          <div class="btn-group flex-wrap options">
+          <div id="sort-options" class="btn-group flex-wrap options">
             <label class="btn active">
               <input type="radio" name="sort-value" value="last-name" /> Name
               <div class="slide"></div>
@@ -59,9 +59,9 @@
           <input id="search" type="search" autocomplete="off"/>
           <input type="search" style="display: none;"/>
         </form>
-        <fieldset class="col-lg-6 col-xl-3 group filters-group">
+        <fieldset id="filters-group" class="col-lg-6 col-xl-3 group">
           <legend>Filter</legend>
-            <div class="btn-group flex-wrap options">
+            <div id="filter-options" class="btn-group flex-wrap options">
               <label class="btn active">
                 <input type="radio" name="filter-value" value="all" /> All
               </label>
@@ -70,6 +70,7 @@
               </label>
             </div>
         </fieldset>
+        <button id="color-btn">add color</button>
       </div>
       <div class="container">
         <div id="grid" class="row">
