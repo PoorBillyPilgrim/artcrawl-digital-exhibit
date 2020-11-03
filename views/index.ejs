@@ -27,6 +27,8 @@
 <body>
   <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
   <div id="openseadragon"></div>
+  <div id="legend" class="hide">
+  </div>
   <div class="container-fluid">
   <div class="artcrawl-container row align-items-center" style="height: 100vh">
     <div class="col-md">
@@ -37,23 +39,24 @@
     </div>
     <div class="col-md">
       <div class="row ">
-        <fieldset id="sort-group" class="col-xl-6 group">
+        <fieldset id="sort-group" class="col-lg-8 col-xl-4 group">
           <legend>Sort</legend>
           <div id="sort-options" class="btn-group flex-wrap options">
-            <label class="btn active">
+            <label class="btn btn-outline-dark active">
               <input type="radio" name="sort-value" value="last-name" /> Name
               <div class="slide"></div>
             </label>
-            <label class="btn">
+            <label class="btn btn-outline-dark">
               <input type="radio" name="sort-value" value="major" /> Major
               <div class="slide"></div>
             </label>
-            <label class="btn">
+            <label class="btn btn-outline-dark">
               <input type="radio" name="sort-value" value="title" /> Title
               <div class="slide"></div>
             </label>
           </div>
         </fieldset>
+        <button id="color-btn" class="btn col-lg-4 col-xl-2">College</button>
         <form class="col-lg-6 col-xl-3 group options">
           <label for="search">Search</label>
           <input id="search" type="search" autocomplete="off"/>
@@ -62,15 +65,14 @@
         <fieldset id="filters-group" class="col-lg-6 col-xl-3 group">
           <legend>Filter</legend>
             <div id="filter-options" class="btn-group flex-wrap options">
-              <label class="btn active">
+              <label class="btn  btn-outline-dark active">
                 <input type="radio" name="filter-value" value="all" /> All
               </label>
-              <label id="major-filter" class="btn">
+              <label id="major-filter" class="btn btn-outline-dark">
                 <input type="radio" name="filter-value" value="major" /> Major
               </label>
             </div>
         </fieldset>
-        <button id="color-btn">add color</button>
       </div>
       <div class="container">
         <div id="grid" class="row">
