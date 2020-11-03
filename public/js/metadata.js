@@ -166,7 +166,10 @@ var Metadata = (function () {
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
-            $('#legend').removeClass('hide');
+            if($('.art-crawl-item > img').hasClass('active')) {
+                $('#legend').removeClass('hide');
+            }
+            
             viewer.destroy();
             viewer = null;
             
@@ -205,6 +208,7 @@ var Metadata = (function () {
 
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css({'background-color': activeColor});
+            
         });
     }
 
