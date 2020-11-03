@@ -16,8 +16,8 @@ const Grid = (function() {
         imgLoad.on('always', onAlways);
         
         // Sort, Search, and Filter
-        addGridEvent('.sort-options', 'change', _handleSortChange);
-        addGridEvent('.filter-options', 'change', _handleFilterChange);
+        addGridEvent('#sort-options', 'change', _handleSortChange);
+        addGridEvent('#filter-options', 'change', _handleFilterChange);
         addGridEvent('#search', 'input', _handleSearchInput);
         addGridEvent('#search', 'keydown', _handleSearchKeydown); // Only to prevent form submission on "Enter" key press
         
@@ -35,8 +35,9 @@ const Grid = (function() {
     }
 
     // add + remove 'active' class from btns
-    const _handleActiveBtn = function (event) {
+    function _handleActiveBtn(event) {
         const btns = Array.from(event.currentTarget.children);
+        console.log(btns)
         btns.forEach(btn => {
             if (btn.querySelector('input').value === event.target.value) {
                 btn.classList.add('active');
