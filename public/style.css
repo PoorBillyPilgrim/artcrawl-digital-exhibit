@@ -9,7 +9,8 @@ body {
   background:  	var(--light-color);
 }
 
-.btn {
+.btn,
+#search {
   border-radius: 0;
 }
 
@@ -77,6 +78,7 @@ body {
     object-fit: scale-down;
     width: 100%;
     height: auto;
+    padding-top: 15px;
     max-height: 500px;
     /* need max-width */
     cursor: zoom-in;
@@ -100,7 +102,7 @@ label[for='search'] {
 }
 
 .group {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .options {
@@ -162,7 +164,7 @@ input[type="search"] {
 
 /* Color Button */
 #color-btn {
-  margin: 1.5rem 0;
+  margin: 0 15px;
   background: rgb(32,201,151);
   background: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
   color: var(--light-color);
@@ -198,6 +200,31 @@ input[type="search"] {
 .art-crawl-item > img {
     height: var(--grid-items);
     width: var(--grid-items);
+}
+
+@media (min-width: 992px) {
+  #color-btn {
+    margin: 1.5rem 0;
+  }
+
+  .group {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  #sort-btn-1,
+  #sort-btn-2 {
+    border-bottom-width: 0.5px;
+  }
+  
+  #sort-btn-3 {
+    border-top-width: 0;
+  }
+
+  #color-btn {
+    height: 37px;
+  }
 }
 
 @media (min-width: 1800px) {
