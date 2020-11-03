@@ -151,6 +151,7 @@ var Metadata = (function () {
         $('#metadata-img').click(function () {
             dziID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
             gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            $('#legend').addClass('hide');
             _initViewer(dziID);
             
             // Still need to populate first parameter 'state' with a valid entry
@@ -165,6 +166,7 @@ var Metadata = (function () {
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
+            $('#legend').removeClass('hide');
             viewer.destroy();
             viewer = null;
             
@@ -179,9 +181,12 @@ var Metadata = (function () {
 
     const renderMetadata = function() {
         $('.art-crawl-item').click(function () {
-        
+            
+            //$('.art-crawl-item.highlight > img').css({'opacity': '0'});
+            //
             dataAttributes = getDataAttributes($(this));
             img = $(this).find('img').attr('src');
+            //$('#metadata-span').css('background-color', '')
     
             $('#metadata.active').css('opacity', 0);
             setTimeout(function () {
@@ -197,6 +202,9 @@ var Metadata = (function () {
             } else {
                 $(this).addClass('highlight');
             }
+
+            let activeColor = $('.art-crawl-item.highlight').css('background-color');
+            $('#legend').css({'background-color': activeColor});
         });
     }
 
