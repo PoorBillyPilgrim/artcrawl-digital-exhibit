@@ -219,6 +219,27 @@ var Metadata = (function () {
         });
         $(window).resize(debounce(function () {
             
+            if ($(window).width() != width || $(window).height() != height) {
+                gridItemID = $('.art-crawl-item.highlight').attr('id');
+                dataAttributes = getDataAttributes($('#' + gridItemID));
+                img = $('#' + gridItemID).find('img').attr('src');
+    
+                // fadeout metadata
+                $('#metadata-caption').css('opacity', 0);         
+                $('#metadata.active').css('opacity', 0);
+    
+                // fades in $metadata after 0.55s
+                setTimeout(function() {
+                    // console.log($metadataImg)
+                    $('#metadata-img').attr('src', img);
+                    renderMetadataImg($('#metadata-caption'), dataAttributes, $metadataImg);
+                    $('#metadata-caption').css('opacity', 1);
+                    $('#metadata.active').css('opacity', 1);
+                }, 550);
+
+            }
+
+            /*
             gridItemID = $('.art-crawl-item.highlight').attr('id');
             dataAttributes = getDataAttributes($('#' + gridItemID));
             img = $('#' + gridItemID).find('img').attr('src');
@@ -234,7 +255,7 @@ var Metadata = (function () {
                 renderMetadataImg($('#metadata-caption'), dataAttributes, $metadataImg);
                 $('#metadata-caption').css('opacity', 1);
                 $('#metadata.active').css('opacity', 1);
-            }, 550);
+            }, 550); */
 
             /*$('#' + gridItemID).removeClass('highlight');
             
