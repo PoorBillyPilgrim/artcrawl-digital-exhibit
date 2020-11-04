@@ -214,7 +214,7 @@ var Metadata = (function () {
 
     const onResize = function() {
         let $metadataImg;
-        let width = $(window).width(), height = $(window).height();
+        
         $('#metadata').click(function () {
             $metadataImg = document.querySelector('#metadata-img');
         });
