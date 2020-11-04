@@ -219,7 +219,7 @@ var Metadata = (function () {
         });
         $(window).resize(debounce(function () {
             
-            if ($(window).width() != width || $(window).height() != height) {
+            if ($(window).width() != width) {
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 dataAttributes = getDataAttributes($('#' + gridItemID));
                 img = $('#' + gridItemID).find('img').attr('src');
