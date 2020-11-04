@@ -214,9 +214,11 @@ var Metadata = (function () {
 
     const onResize = function() {
         let $metadataImg;
+        let width = $(window).width(), height = $(window).height();
         $('#metadata').click(function () {
             $metadataImg = document.querySelector('#metadata-img');
         });
+<<<<<<< HEAD
         let width;
         width = $(window).width();
         console.log(width);
@@ -268,6 +270,34 @@ var Metadata = (function () {
             }, 2700);
             //grid.shuffle.update();
             shuffle.update(); */
+=======
+
+        let width;
+        width = $(window).width();
+        
+        $(window).resize(debounce(function () {
+            // Because mobile browsers register scroll as window resize,
+            // this checks for only change in width
+            // https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
+            if ($(window).width() != width) {
+                gridItemID = $('.art-crawl-item.highlight').attr('id');
+                dataAttributes = getDataAttributes($('#' + gridItemID));
+                img = $('#' + gridItemID).find('img').attr('src');
+    
+                // fadeout metadata
+                $('#metadata-caption').css('opacity', 0);         
+                $('#metadata.active').css('opacity', 0);
+    
+                // fades in $metadata after 0.55s
+                setTimeout(function() {
+                    // console.log($metadataImg)
+                    $('#metadata-img').attr('src', img);
+                    renderMetadataImg($('#metadata-caption'), dataAttributes, $metadataImg);
+                    $('#metadata-caption').css('opacity', 1);
+                    $('#metadata.active').css('opacity', 1);
+                }, 750);
+            }
+>>>>>>> square-grid-dev
         }, 1000, true));
     }
 
@@ -282,6 +312,7 @@ var Metadata = (function () {
         init: init
     }
 })();
+<<<<<<< HEAD
 
 
 
@@ -391,3 +422,5 @@ $(document).ready(function () {
             }, 2700);
         }, 1000, true)); 
 }); */
+=======
+>>>>>>> square-grid-dev
