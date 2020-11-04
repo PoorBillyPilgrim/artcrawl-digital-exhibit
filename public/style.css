@@ -153,6 +153,15 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  /* don't hide from screen readers: https://discourse.wicg.io/t/a-way-to-hide-text-visually-but-not-from-screen-readers/510/7 */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* Search */
