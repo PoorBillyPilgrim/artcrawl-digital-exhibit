@@ -217,8 +217,9 @@ var Metadata = (function () {
         $('#metadata').click(function () {
             $metadataImg = document.querySelector('#metadata-img');
         });
+        let width = $(window).width();
+        console.log(width);
         $(window).resize(debounce(function () {
-            
             if ($(window).width() != width) {
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 dataAttributes = getDataAttributes($('#' + gridItemID));
