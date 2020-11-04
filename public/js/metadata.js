@@ -217,7 +217,8 @@ var Metadata = (function () {
         $('#metadata').click(function () {
             $metadataImg = document.querySelector('#metadata-img');
         });
-        let width = $(window).width();
+        let width;
+        width = $(window).width();
         console.log(width);
         $(window).resize(debounce(function () {
             if ($(window).width() != width) {
