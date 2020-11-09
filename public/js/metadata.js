@@ -93,7 +93,10 @@ var Metadata = (function () {
     const init = function() {
         const loc = window.location;
         let id;
-        if (loc.hash) {
+        if (loc.hash === '#artcrawl') {
+            id = '0';
+            dataAttributes = getDataAttributes($('#0'));
+        } else if (loc.hash) {
             // parse hash params
             // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
             let hash = loc.hash.substr(1);
@@ -200,8 +203,6 @@ var Metadata = (function () {
     const renderMetadata = function() {
         $('.art-crawl-item').click(function () {
             
-            //$('.art-crawl-item.highlight > img').css({'opacity': '0'});
-            //
             dataAttributes = getDataAttributes($(this));
             img = $(this).find('img').attr('src');
             //$('#metadata-span').css('background-color', '')
