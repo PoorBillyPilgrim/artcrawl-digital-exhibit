@@ -10,6 +10,16 @@ body {
   background:  	var(--light-color);
 }
 
+.btn,
+#search {
+  border-radius: 0;
+}
+
+.hide {
+  display: none;
+}
+
+/* Hero */
 #hero {
   height: 100vh;
   width: 100%;
@@ -27,23 +37,15 @@ h1 {
   font-size: 5rem;
 }
 
-#hero > p {
-  position: absolute;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
-  text-align: center;
+#hero > a {
+  color: var(--custom-dark);
 }
 
-.btn,
-#search {
-  border-radius: 0;
+#hero > a:hover {
+  color: var(--cyan);
 }
 
-.hide {
-  display: none;
-}
-
+/* HTML Overlay for Viewer */
 #html-overlay {
   position: absolute;
   color: white;
@@ -53,10 +55,7 @@ h1 {
 /* Legend */
 #legend {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 100%;
   height: 50px;
   width: 50px;
 }
