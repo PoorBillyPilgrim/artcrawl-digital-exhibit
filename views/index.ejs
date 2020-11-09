@@ -25,12 +25,20 @@
 </head>
 
 <body>
+  <div id="hero">
+    <h1>Clough ART Crawl</h1>
+    <p>Scroll \/</p>
+  </div>
   <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
   <div id="openseadragon"></div>
-  <div id="legend" class="hide">
+  <div id="html-overlay" class="hide">
+    <p><%= data[0]['Last Name'] %></p>
+    <p><%= data[0]['Title of Artwork'] %></p>
+    <p><%= data[0]['Artist Statement'] %></p>
+  </div>
   </div>
   <div class="container-fluid">
-  <div class="artcrawl-container row align-items-center" style="height: 100vh">
+  <div id="artcrawl" class="artcrawl-container row align-items-center" style="height: 100vh">
     <div class="col-md">
       <figure id="metadata" class="active">
         <img id="metadata-img" src="" />
@@ -77,23 +85,23 @@
             <% let id; %>
             <% if (i < 30) { %>
               <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i%>">
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
               <img src="<%= randomPhotos[i].urls.regular%>" />
             <% } else if (i >= 30 && i < 60) { %>
               <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 30%>">
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 30%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
               <img src="<%= randomPhotos[i - 30].urls.regular%>" />
             <% } else if (i >= 60 && i < 90) { %>
               <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 60 %>">
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 60 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
               <img src="<%= randomPhotos[i - 60].urls.regular%>" />
             <% } else if (i >= 90 && i < 120) { %>
               <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 90 %>">
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 90 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
               <img src="<%= randomPhotos[i - 90].urls.regular%>" />
             <% } else if (i >= 120 && i < 133) { %>
               <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 120%>">
+                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 120%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
               <img src="<%= randomPhotos[i - 120].urls.regular%>" />
             <% } %>
           </figure>
@@ -121,6 +129,7 @@
   <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
   <script type="text/javascript" src="/js/grid.js"></script>
   <script type="text/javascript" src="/js/metadata.js"></script>
+  <script type="text/javascript" src="/js/test.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
 </body>
 
