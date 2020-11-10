@@ -124,6 +124,7 @@ var Metadata = (function () {
         renderMetadata();
         onResize();
         renderColor();
+        handleHero();
         //handleSortChange();
 
         $('#' + id).addClass('highlight');
@@ -293,6 +294,25 @@ var Metadata = (function () {
         });
     }
 
+    const handleHero = function() {
+        $('#hero > a').click(function(event) {
+            event.preventDefault();
+    
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1250);
+
+            $('.art-crawl-item').removeClass('highlight');
+            id = '0';
+            dataAttributes = getDataAttributes($('#0'));
+            img = $('#' + id).find('img').attr('src');
+            $('#metadata-img').attr('src', img);
+            $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
+            $('#' + id).addClass('highlight');
+    
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
+        });
+    }
     // I don't think I need now after adding highlight to .art-crawl-item > img
     const handleSortChange = function() {
         const btnGroup = document.querySelector('.sort-options');
