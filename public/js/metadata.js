@@ -313,12 +313,6 @@ var Metadata = (function () {
             history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
         });
     }
-    // I don't think I need now after adding highlight to .art-crawl-item > img
-    const handleSortChange = function() {
-        const btnGroup = document.querySelector('.sort-options');
-        if (!btnGroup) { return; }
-        btnGroup.addEventListener('click', handleHighlight);
-    }
 
     return {
         init: init
