@@ -48,8 +48,11 @@ h1 {
 /* HTML Overlay for Viewer */
 #html-overlay {
   position: absolute;
-  color: white;
+  color: var(--light-color);
+  background-color: var(--custom-dark);
   width: 300px;
+  margin: 10px;
+  opacity: 0.75;
 }
 
 /* Legend */
