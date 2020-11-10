@@ -94,17 +94,22 @@ var Metadata = (function () {
         const loc = window.location;
         let id;
         if (loc.hash === '#artcrawl') {
+            // if hash is #artcrawl, load first item in #grid
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
         } else if (loc.hash) {
-            // parse hash params
+            // if hash contains an id, load item with corresponding data-dzi-id attribute
             // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
             let hash = loc.hash.substr(1);
             let params = _getHashParams(hash);
             id = params.id;
             dataAttributes = getDataAttributes($('#' + id));
+            let redirect = loc.hash;
+            loc.hash = 'artcrawl';
+            loc.hash = redirect;
         } else {
-            // #metadata first loads with metadata of first grid item
+            // default 
+            // load first item in #grid
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
         }
@@ -150,8 +155,11 @@ var Metadata = (function () {
     }
     
     const openViewer = function() {
-        const loc = window.location;
-        if (loc.hash) {
+        // const loc = window.location;
+        
+        // this currently opens viewer if hash has params
+        // may change this so that hash params directs to grid, not viewer
+        /* if (loc.hash) {
             $('#hero').addClass('hide');
             // parse hash params
             // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
@@ -159,7 +167,7 @@ var Metadata = (function () {
             let params = _getHashParams(hash);
             // add dataAttributes to #html-overlay
             _initViewer(params.dziID);
-        }
+        } */
 
         $('#metadata-img').click(function () {
             dziID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
@@ -168,8 +176,7 @@ var Metadata = (function () {
             $('#hero').addClass('hide');
             _initViewer(dziID);
             
-            // Still need to populate first parameter 'state' with a valid entry
-            history.pushState({undefined: undefined}, undefined, window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID); 
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID + '&viewer=true'); 
         });
     }
 
@@ -190,10 +197,10 @@ var Metadata = (function () {
             
             window.location.hash = 'artcrawl';
 
-            history.pushState({undefined: undefined}, undefined, window.location.pathname); // resets URL to root
+            gridItemID = $('.art-crawl-item.highlight').attr('id');
+            dziID = $('.art-crawl-item.highlight').attr('data-dzi-id');
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID);
 
-            //gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
-            //$('.art-crawl-item').removeClass('highlight');
             shuffle.update();
             $("#" + params.id).addClass('highlight');
             $('<div id="html-overlay" class="hide">' + '</div>').insertBefore('#legend');
@@ -212,6 +219,10 @@ var Metadata = (function () {
                 $('#metadata-img').attr('src', img);
                 renderMetadataImg($('#metadata-caption'), dataAttributes);
                 $('#metadata.active').css('opacity', 1);
+
+                gridItemID = $('.art-crawl-item.highlight').attr('id');
+                dziID = $('.art-crawl-item.highlight').attr('data-dzi-id');
+                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID);
             }, 550);
     
             // orange highlight on click
@@ -224,6 +235,7 @@ var Metadata = (function () {
 
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css({'background-color': activeColor});
+
             
         });
     }
