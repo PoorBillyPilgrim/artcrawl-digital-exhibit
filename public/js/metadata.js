@@ -87,6 +87,13 @@ function handleHighlight() {
     }, 2700); // grid speed is set to 2650ms
 }
 
+function createHtmlOverlay(title, artist, description, major) {
+    function p(text) {
+        return '<p>' + text + '</p>'
+    };
+    return p(title) + p(artist) + p(description) + p(major);
+}
+
 var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID, dziID;
 
@@ -173,6 +180,11 @@ var Metadata = (function () {
         $('#metadata-img').click(function () {
             dziID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
             gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+
+            $ID = $('#' + gridItemID);
+            let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-last-name'), $ID.attr('data-artist-statment'), $ID.attr('data-major'));
+            $('#html-overlay').append(html);
+
             $('#legend').addClass('hide');
             $('#hero').addClass('hide');
             _initViewer(dziID);
