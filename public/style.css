@@ -47,12 +47,37 @@ h1 {
 
 /* HTML Overlay for Viewer */
 #html-overlay {
-  position: absolute;
   color: var(--light-color);
   background-color: var(--custom-dark);
-  width: 300px;
-  margin: 10px;
-  opacity: 0.75;
+  margin-left: 0.5rem;
+  padding: 1rem;
+  max-width: 300px;
+}
+
+#html-overlay > p {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+#html-overlay > :first-child {
+  margin-top: 0.5rem;
+  line-height: 1;
+  font-size: 2.1rem;
+}
+
+#html-overlay > :nth-child(2) {
+  margin-bottom: 0;
+}
+
+#html-overlay > :nth-child(2),
+#html-overlay > :nth-child(3) {
+  font-family: Verdana, Geneva, sans-serif;
+  opacity: 0.5;
+}
+
+#html-overlay > :last-child {
+  font-family: Verdana, Geneva, sans-serif;
+  margin-bottom: 0;
 }
 
 /* Legend */
@@ -235,11 +260,12 @@ input[type="search"] {
   border: 4px solid var(--yellow);
 }
 
-.art-crawl-item > img.active {
+.art-crawl-item > img.show-color {
   opacity: 0;
 }
 
-.art-crawl-item > img.active:hover {
+.art-crawl-item > img.show-color:hover,
+.art-crawl-item > .hide-color {
   opacity: 1;
 }
 
