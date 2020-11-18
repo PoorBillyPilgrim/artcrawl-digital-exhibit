@@ -138,7 +138,7 @@ var Metadata = (function () {
         renderMetadata();
         onResize();
         renderColor();
-        handleHero();
+        handleScroll();
         //handleSortChange();
 
         $('#' + id).addClass('highlight');
@@ -336,8 +336,29 @@ var Metadata = (function () {
         });
     }
 
-    const handleHero = function() {
+    const handleScroll = function() {
         $('#hero > a').click(function(event) {
+            event.preventDefault();
+    
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1250);
+
+            /*
+            $('.art-crawl-item').removeClass('highlight');
+            id = '0';
+            dataAttributes = getDataAttributes($('#0'));
+            img = $('#' + id).find('img').attr('src');
+            $('#metadata-img').attr('src', img);
+            $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
+            $('#' + id).addClass('highlight');
+            */
+            
+            history.pushState({undefined: undefined}, 'Art Crawl', window.location.hash = '#about');
+            //history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
+        });
+
+        $('#about-link').click(function(event) {
             event.preventDefault();
     
             $('html, body').animate({
@@ -351,7 +372,7 @@ var Metadata = (function () {
             $('#metadata-img').attr('src', img);
             $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
             $('#' + id).addClass('highlight');
-    
+            
             history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
         });
     }
