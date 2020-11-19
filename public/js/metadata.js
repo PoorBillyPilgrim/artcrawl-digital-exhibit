@@ -192,8 +192,9 @@ var Metadata = (function () {
             let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-last-name'), $ID.attr('data-major'), $ID.attr('data-artist-statement'));
             $('#html-overlay').append(html);
 
-            $('#legend').addClass('hide');
             $('#hero').addClass('hide');
+            $('#about').addClass('hide');
+            $('#legend').addClass('hide');
             _initViewer(dziID);
             
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID + '&viewer=true'); 
@@ -208,6 +209,7 @@ var Metadata = (function () {
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
             $('#hero').removeClass('hide');
+            $('#about').removeClass('hide');
             if($('.art-crawl-item > img').hasClass('active')) {
                 $('#legend').removeClass('hide');
             }
