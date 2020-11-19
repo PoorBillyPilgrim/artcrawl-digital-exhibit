@@ -246,6 +246,8 @@ input[type="search"] {
   margin: 0 15px;
   background: rgb(32,201,151);
   background: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
   color: var(--light-color);
   opacity: 1;
   transition: opacity .15s ease-in;
@@ -291,6 +293,16 @@ input[type="search"] {
 
   .group {
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about {
+    height: 100vh;
+  }
+  
+  #about > .row {
+    height: 100%;
   }
 }
 
