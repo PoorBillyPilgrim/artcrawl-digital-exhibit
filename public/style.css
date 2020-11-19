@@ -88,7 +88,7 @@ h1 {
 /* Legend */
 #legend {
   position: absolute;
-  top: 100%;
+  top: 0;
   height: 50px;
   width: 50px;
 }
