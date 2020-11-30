@@ -44,99 +44,95 @@
 
 <body>
   <div id="hero" class="border-bottom">
-    <a href="#about"><h1>Clough ART Crawl</h1></a>
-  </div>
-  <div id="about" class="container">
-    <div class="row align-items-center">
-      <div class="col-xl">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Pharetra convallis posuere morbi leo urna. Faucibus scelerisque eleifend donec pretium. Auctor urna nunc id cursus metus aliquam. Quam vulputate dignissim suspendisse in. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Tortor dignissim convallis aenean et tortor at risus. Bibendum est ultricies integer quis auctor. Cursus euismod quis viverra nibh cras pulvinar mattis. Nisi vitae suscipit tellus mauris. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Varius duis at consectetur lorem donec. Eu sem integer vitae justo eget magna fermentum. Lacus sed turpis tincidunt id aliquet risus. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Dolor sit amet consectetur adipiscing elit duis tristique. Leo in vitae turpis massa sed elementum tempus. At tellus at urna condimentum mattis pellentesque id nibh. Sapien faucibus et molestie ac feugiat sed.</p>
-
-        <p>Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Nulla pellentesque dignissim enim sit amet venenatis urna cursus. In dictum non consectetur a erat nam at lectus. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Consectetur a erat nam at lectus urna. Duis at consectetur lorem donec. <a id="about-link" href="#artcrawl">Check it out</a></p>
-      </div>
-      <div class="col-xl">
-        <img class="about-img d-block mx-auto" src="https://via.placeholder.com/600x500" />
-      </div>
-    </div>
+    <a href="#artcrawl"><h1>Clough ART Crawl</h1></a>
   </div>
   <a id="openseadragon-close" class="hide"><i class="fas fa-times"></i></a>
   <div id="openseadragon"></div>
   <div id="html-overlay" class="hide"></div>
-  <div class="container-fluid border-top">
-  <div id="artcrawl" class="artcrawl-container row align-items-center" style="height: 100vh">
-    <div class="col-md">
-      <figure id="metadata" class="active">
-        <div id="legend" class="hide"></div>
-        <img id="metadata-img" src="" />
-        <figcaption id="metadata-caption" class="position-relative"></figcaption>
-      </figure>
+  <div id="about" class="hide position-fixed">
+    <div id="about-card" class="position-relative">
+      <h2>About</h2>
+      <a id="about-close" class="position-absolute"><i class="fas fa-times"></i></a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Pharetra convallis posuere morbi leo urna. Faucibus scelerisque eleifend donec pretium. Auctor urna nunc id cursus metus aliquam. Quam vulputate dignissim suspendisse in. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Tortor dignissim convallis aenean et tortor at risus.</p>
+      <p><strong>Directions:</strong> Bibendum est ultricies integer quis auctor. Cursus euismod quis viverra nibh cras pulvinar mattis. Nisi vitae suscipit tellus mauris. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Varius duis at consectetur lorem donec. Eu sem integer vitae justo eget magna fermentum. Lacus sed turpis tincidunt id aliquet risus. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Dolor sit amet consectetur adipiscing elit duis tristique. Leo in vitae turpis massa sed elementum tempus. At tellus at urna condimentum mattis pellentesque id nibh. Sapien faucibus et molestie ac feugiat sed.</p>
     </div>
-    <div class="col-md">
-      <div class="row ">
-        <fieldset id="sort-group" class="col-lg-8 col-xl-4 group">
-          <legend>Sort</legend>
-          <div id="sort-options" class="btn-group flex-wrap options">
-            <label id="sort-btn-1" class="btn active">
-              <input type="radio" name="sort-value" value="last-name" /> Name
-            </label>
-            <label id="sort-btn-2" class="btn">
-              <input type="radio" name="sort-value" value="major" /> Major
-            </label>
-            <label id="sort-btn-3" class="btn">
-              <input type="radio" name="sort-value" value="title" /> Title
-            </label>
-          </div>
-        </fieldset>
-        <button id="color-btn" class="btn col-lg-4 col-xl-2">College</button>
-        <form class="col-lg-6 col-xl-3 group options">
-          <label for="search">Search</label>
-          <input id="search" type="search" autocomplete="off"/>
-          <input type="search" style="display: none;"/>
-        </form>
-        <fieldset id="filters-group" class="col-lg-6 col-xl-3 group">
-          <legend>Filter</legend>
-            <div id="filter-options" class="btn-group flex-wrap options">
-              <label class="btn active">
-                <input type="radio" name="filter-value" value="all" /> All
+  </div>
+  <div class="container-fluid border-top">
+    <div id="artcrawl" class="artcrawl-container row align-items-center" style="height: 100vh">
+      <div class="col-md">
+        <figure id="metadata" class="active">
+          <div id="legend" class="hide"></div>
+          <img id="metadata-img" src="" />
+          <figcaption id="metadata-caption" class="position-relative"></figcaption>
+        </figure>
+      </div>
+      <div class="col-md">
+        <div class="row ">
+          <fieldset id="sort-group" class="col-lg-8 col-xl-4 group">
+            <legend>Sort</legend>
+            <div id="sort-options" class="btn-group flex-wrap options">
+              <label id="sort-btn-1" class="btn active">
+                <input type="radio" name="sort-value" value="last-name" /> Name
               </label>
-              <label id="major-filter" class="btn">
-                <input type="radio" name="filter-value" value="major" /> Major
+              <label id="sort-btn-2" class="btn">
+                <input type="radio" name="sort-value" value="major" /> Major
+              </label>
+              <label id="sort-btn-3" class="btn">
+                <input type="radio" name="sort-value" value="title" /> Title
               </label>
             </div>
-        </fieldset>
-      </div>
-      <div class="container">
-        <div id="grid" class="row mx-auto">
-          <% for (let i = 0; i < data.length; i++) { %>
-            <% let id; %>
-            <% if (i < 30) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
-              <img src="<%= randomPhotos[i].urls.regular%>" />
-            <% } else if (i >= 30 && i < 60) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 30%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
-              <img src="<%= randomPhotos[i - 30].urls.regular%>" />
-            <% } else if (i >= 60 && i < 90) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 60 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
-              <img src="<%= randomPhotos[i - 60].urls.regular%>" />
-            <% } else if (i >= 90 && i < 120) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 90 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
-              <img src="<%= randomPhotos[i - 90].urls.regular%>" />
-            <% } else if (i >= 120 && i < 133) { %>
-              <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
-                data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 120%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
-              <img src="<%= randomPhotos[i - 120].urls.regular%>" />
+          </fieldset>
+          <button id="color-btn" class="btn col-lg-4 col-xl-2">College</button>
+          <form class="col-lg-6 col-xl-3 group options">
+            <label for="search">Search</label>
+            <input id="search" type="search" autocomplete="off"/>
+            <input type="search" style="display: none;"/>
+          </form>
+          <fieldset id="filters-group" class="col-lg-6 col-xl-3 group">
+            <legend>Filter</legend>
+              <div id="filter-options" class="btn-group flex-wrap options">
+                <label class="btn active">
+                  <input type="radio" name="filter-value" value="all" /> All
+                </label>
+                <label id="major-filter" class="btn">
+                  <input type="radio" name="filter-value" value="major" /> Major
+                </label>
+              </div>
+          </fieldset>
+        </div>
+        <div class="container">
+          <div id="grid" class="row mx-auto">
+            <% for (let i = 0; i < data.length; i++) { %>
+              <% let id; %>
+              <% if (i < 30) { %>
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                <img src="<%= randomPhotos[i].urls.regular%>" />
+              <% } else if (i >= 30 && i < 60) { %>
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 30%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                <img src="<%= randomPhotos[i - 30].urls.regular%>" />
+              <% } else if (i >= 60 && i < 90) { %>
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 60 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                <img src="<%= randomPhotos[i - 60].urls.regular%>" />
+              <% } else if (i >= 90 && i < 120) { %>
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 90 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                <img src="<%= randomPhotos[i - 90].urls.regular%>" />
+              <% } else if (i >= 120 && i < 133) { %>
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 120%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                <img src="<%= randomPhotos[i - 120].urls.regular%>" />
+              <% } %>
+            </figure>
             <% } %>
-          </figure>
-          <% } %>
-          <div class="sizer-element"></div>
+            <div class="sizer-element"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <i id="info" class="fas fa-info-circle fixed-bottom"></i>
 </div>
 
   <!-- JS -->
