@@ -53,6 +53,11 @@ h1:hover {
 /* About */
 #about {
   width: 100%;
+  padding: 30px;
+}
+
+.about-img {
+  width: 100%;
 }
 
 /* HTML Overlay for Viewer */
@@ -309,6 +314,10 @@ input[type="search"] {
   
   #about > .row {
     height: 100%;
+  }
+
+  .about-img {
+    width: auto;
   }
 }
 
