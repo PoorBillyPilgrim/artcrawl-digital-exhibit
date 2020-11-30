@@ -19,6 +19,12 @@ body {
   display: none;
 }
 
+#info {
+  bottom: 5px;
+  left: 5px;
+  font-size: 2.5rem;
+}
+
 /* Hero */
 #hero {
   height: 100vh;
@@ -53,11 +59,26 @@ h1:hover {
 /* About */
 #about {
   width: 100%;
-  padding: 30px;
+  height: 100%;
+  z-index: 1050;
+  top: 0;
+  left: 0;
 }
 
-.about-img {
-  width: 100%;
+#about-card {
+  border: solid 2px var(--custom-dark);
+  background: var(--light-color);
+  padding: 15px;
+  height: 100%;
+  margin: auto;
+  width: auto;
+}
+
+#about-close {
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: var(--custom-dark);
 }
 
 /* HTML Overlay for Viewer */
@@ -308,16 +329,10 @@ input[type="search"] {
 }
 
 @media (min-width: 1200px) {
-  #about {
-    height: 100vh;
-  }
-  
-  #about > .row {
-    height: 100%;
-  }
-
-  .about-img {
-    width: auto;
+  #about-card {
+    height: 90%;
+    margin: 1.75rem auto;
+    max-width: 1000px;
   }
 }
 
