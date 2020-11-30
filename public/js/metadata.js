@@ -136,6 +136,7 @@ var Metadata = (function () {
         openViewer();
         closeViewer();
         renderMetadata();
+        handleAbout()
         onResize();
         renderColor();
         handleScroll();
@@ -274,6 +275,16 @@ var Metadata = (function () {
         });
     }
 
+    const handleAbout = function() {
+        $('#about-close').click(function() {
+            $('#about').addClass('hide');
+        });
+
+        $('#info').click(function() {
+            $('#about').removeClass('hide');
+        })
+    }
+
     const onResize = function() {
         let $metadataImg;
         
@@ -346,7 +357,11 @@ var Metadata = (function () {
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 1250);
 
-            /*
+            if(window.location.hash == "") {
+                setTimeout(function() {
+                    $('#about').removeClass('hide');
+                }, 1250);
+            }
             $('.art-crawl-item').removeClass('highlight');
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
@@ -354,10 +369,8 @@ var Metadata = (function () {
             $('#metadata-img').attr('src', img);
             $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
             $('#' + id).addClass('highlight');
-            */
             
-            history.pushState({undefined: undefined}, 'Art Crawl', window.location.hash = '#about');
-            //history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
         });
 
         $('#about-link').click(function(event) {
