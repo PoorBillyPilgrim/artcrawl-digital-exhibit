@@ -78,11 +78,15 @@ h1:hover {
 }
 
 #about-close {
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
+  top: 12px;
+  right: 12px;
+  font-size: 2rem;
   color: var(--custom-dark);
   cursor: pointer;
+}
+
+#about-close:hover {
+  opacity: 0.5;
 }
 
 /* HTML Overlay for Viewer */
