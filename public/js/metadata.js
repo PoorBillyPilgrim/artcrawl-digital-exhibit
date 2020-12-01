@@ -134,6 +134,7 @@ var Metadata = (function () {
             loc.hash = 'artcrawl';
             loc.hash = redirect;
             animateEnter();
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + params.dziID + '&id=' + id);
         } else {
             // default 
             // load first item in #grid
@@ -226,7 +227,7 @@ var Metadata = (function () {
             //$('#hero').removeClass('hide');
             //$('#about').removeClass('hide');
             $('#info').removeClass('hide');
-            if($('.art-crawl-item > img').hasClass('active')) {
+            if($('.art-crawl-item > img').hasClass('show-color')) {
                 $('#legend').removeClass('hide');
             }
             
