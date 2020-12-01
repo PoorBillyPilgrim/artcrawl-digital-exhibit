@@ -101,6 +101,18 @@ function createHtmlOverlay(title, artist,  major, description) {
     return html;
 }
 
+function animateEnter() {
+    $('#hero').css('opacity', '0');
+    setTimeout(function() {
+        $('#hero').addClass('hide');
+        $('#artcrawl').removeClass('hide');
+        $('#artcrawl').css('opacity', '1');
+        $('#about').removeClass('hide');
+        $('#about').css('opacity', '1');
+        $('#info').removeClass('hide');
+    }, 1000);
+}
+
 var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID, dziID;
 
@@ -121,6 +133,7 @@ var Metadata = (function () {
             let redirect = loc.hash;
             loc.hash = 'artcrawl';
             loc.hash = redirect;
+            animateEnter();
         } else {
             // default 
             // load first item in #grid
@@ -139,7 +152,7 @@ var Metadata = (function () {
         handleAbout()
         onResize();
         renderColor();
-        handleScroll();
+        //handleScroll();
         //handleSortChange();
 
         $('#' + id).addClass('highlight');
@@ -195,6 +208,7 @@ var Metadata = (function () {
 
             $('#hero').addClass('hide');
             $('#about').addClass('hide');
+            $('#info').addClass('hide');
             $('#legend').addClass('hide');
             _initViewer(dziID);
             
@@ -209,8 +223,9 @@ var Metadata = (function () {
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
-            $('#hero').removeClass('hide');
-            $('#about').removeClass('hide');
+            //$('#hero').removeClass('hide');
+            //$('#about').removeClass('hide');
+            $('#info').removeClass('hide');
             if($('.art-crawl-item > img').hasClass('active')) {
                 $('#legend').removeClass('hide');
             }
@@ -276,13 +291,17 @@ var Metadata = (function () {
     }
 
     const handleAbout = function() {
+        $('h1').click(function() {
+            animateEnter();
+        });
+        
         $('#about-close').click(function() {
             $('#about').addClass('hide');
         });
 
-        $('#info').click(function() {
-            $('#about').removeClass('hide');
-        })
+        $('#info > i').click(function() {
+            $('#about').toggleClass('hide');
+        });
     }
 
     const onResize = function() {
@@ -359,7 +378,7 @@ var Metadata = (function () {
 
             if(window.location.hash == "") {
                 setTimeout(function() {
-                    $('#about').removeClass('hide');
+                    $('#about-card').removeClass('hide');
                 }, 1250);
             }
             $('.art-crawl-item').removeClass('highlight');
