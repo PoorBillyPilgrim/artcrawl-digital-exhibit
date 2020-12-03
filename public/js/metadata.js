@@ -47,7 +47,8 @@ function getDataNames() {
 
 function getDataAttributes(gridItem) {
     return {
-        name: gridItem.attr('data-last-name'), 
+        firstName: gridItem.attr('data-first-name'),
+        lastName: gridItem.attr('data-last-name'), 
         title: gridItem.attr('data-title'),
         major: gridItem.attr('data-major'),
         statement: gridItem.attr('data-artist-statement')
@@ -60,7 +61,7 @@ function renderMetadataImg($metadata, dataAttributes, $metadataImg = document.qu
         'left': imgSize.left,
         'max-width': imgSize.width
     });
-    $metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.name + ', ' + dataAttributes.major)
+    $metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major)
 }
 
 function debounce(func, wait, immediate) {
@@ -87,7 +88,7 @@ function handleHighlight() {
     }, 2700); // grid speed is set to 2650ms
 }
 
-function createHtmlOverlay(title, artist,  major, description) {
+function createHtmlOverlay(title, name, major, description) {
     function p(text) {
         return '<p>' + text + '</p>'
     };
@@ -166,8 +167,8 @@ var Metadata = (function () {
         $('.artcrawl-container').addClass('hide');
         viewer = OpenSeadragon({
             id: 'openseadragon',
-            prefixUrl: '/images/dzi/images/navImages/',
-            tileSources: '/images/dzi/images/image' + id + '.dzi',
+            prefixUrl: '/images/openseadragonNav/',
+            tileSources: '/images/dzi/' + id + '.dzi',
             overlays:[{
                 id: 'html-overlay',
                 x: 1,
@@ -204,7 +205,7 @@ var Metadata = (function () {
             gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
 
             $ID = $('#' + gridItemID);
-            let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-last-name'), $ID.attr('data-major'), $ID.attr('data-artist-statement'));
+            let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-first-name') + ' ' + $ID.attr('data-last-name'), $ID.attr('data-major'), $ID.attr('data-artist-statement'));
             $('#html-overlay').append(html);
 
             $('#hero').addClass('hide');
@@ -341,7 +342,7 @@ var Metadata = (function () {
     }
 
     const renderColor = function() {
-        let colors = {"Industrial Design":{"count":2,"color":"#f257c1"},"BME":{"count":5,"color":"#2f538e"},"Mechanical Engineering":{"count":13,"color":"#4c4eb2"},"Physics and LMC":{"count":1,"color":"#e076d2"},"Computer Science":{"count":18,"color":"#295b93"},"Architecture":{"count":6,"color":"#b4fcae"},"Chemical & Biomolecular Engineering":{"count":1,"color":"#83fc9d"},"Industrial Engineering":{"count":3,"color":"#6d22b7"},"LMC":{"count":1,"color":"#ef5f7a"},"Electrical Engineering":{"count":3,"color":"#db6087"},"Aerospace":{"count":1,"color":"#9f63ed"},"Master of City and Regional Planning":{"count":1,"color":"#04edbe"},"Neuroscience":{"count":5,"color":"#d863c5"},"physics":{"count":1,"color":"#e1e569"},"Computer Science (PhD)":{"count":1,"color":"#3ffc8a"},"Biomedical Engineering":{"count":10,"color":"#ba5d1b"},"CS":{"count":1,"color":"#5df4e5"},"Civil Engineering":{"count":3,"color":"#b0f716"},"Aerospace Engineering":{"count":5,"color":"#ffba66"},"Architect":{"count":2,"color":"#00c197"},"Biochemistry":{"count":3,"color":"#af68ed"},"ME":{"count":4,"color":"#b7daf7"},"Biomedical Engineering & ALIS":{"count":1,"color":"#fcdf6c"},"Industrial & Systems Engineering":{"count":1,"color":"#cc186c"},"Business Administration":{"count":4,"color":"#df6cfc"},"Chemical Engineering":{"count":2,"color":"#ed2bff"},"Biology":{"count":4,"color":"#f9978e"},"Robotics":{"count":1,"color":"#ef6eb3"},"Bioinformatics":{"count":1,"color":"#c67d0f"},"English":{"count":1,"color":"#359099"},"Computer Engineer":{"count":1,"color":"#e0003f"},"ALIS":{"count":1,"color":"#28cc7f"},"Mathematics":{"count":1,"color":"#5d22cc"},"Computer Engineering":{"count":2,"color":"#98e559"},"Materials Science and Engineering":{"count":2,"color":"#ed6a9a"},"BMED":{"count":1,"color":"#d0afed"},"MSE":{"count":1,"color":"#f699ff"},"EE":{"count":1,"color":"#d33295"},"Online Master of Science in Analytics":{"count":1,"color":"#dc59f9"},"ECE":{"count":1,"color":"#75efe5"},"ARCHITECTURE":{"count":1,"color":"#3c36b5"},"HTS":{"count":1,"color":"#6be845"},"M.S. Global Media and Cultures":{"count":1,"color":"#8de8c0"},"Physics":{"count":2,"color":"#55db57"},"Computational Media":{"count":2,"color":"#3f70af"},"Master of Architecture":{"count":1,"color":"#ea4c3a"},"Environmental Engineering":{"count":2,"color":"#edb0a8"},"Literature, Media and Communication":{"count":1,"color":"#b516f4"},"AE":{"count":1,"color":"#b9ed95"},"Chemical and Biomolecular Engineering":{"count":1,"color":"#d3ef97"},"Literature, Media, and Communication":{"count":1,"color":"#f4c6ff"},"Psychology":{"count":1,"color":"#f9eeae"}};
+        let colors = {"Industrial Design":{"count":3,"color":"#f7aaf2"},"BME":{"count":5,"color":"#ea7e90"},"Mechanical Engineering":{"count":13,"color":"#28e257"},"Physics and LMC":{"count":1,"color":"#2b3bef"},"Computer Science":{"count":18,"color":"#daa2e8"},"Architecture":{"count":6,"color":"#152487"},"Chemical & Biomolecular Engineering":{"count":1,"color":"#8015b2"},"Industrial Engineering":{"count":3,"color":"#f2756f"},"LMC":{"count":1,"color":"#fc562d"},"Electrical Engineering":{"count":3,"color":"#577fd6"},"Aerospace":{"count":1,"color":"#abbce8"},"Master of City and Regional Planning":{"count":1,"color":"#fcc7d3"},"Neuroscience":{"count":5,"color":"#349fb5"},"physics":{"count":1,"color":"#60db8d"},"Computer Science (PhD)":{"count":1,"color":"#e086de"},"Biomedical Engineering":{"count":10,"color":"#9ff4e3"},"CS":{"count":1,"color":"#efca0e"},"Civil Engineering":{"count":3,"color":"#efb3ac"},"Aerospace Engineering":{"count":6,"color":"#ff9bb2"},"Architect":{"count":2,"color":"#f8c6ff"},"Biochemistry":{"count":3,"color":"#9e7ed6"},"ME":{"count":4,"color":"#fcdfbf"},"Biomedical Engineering & ALIS":{"count":1,"color":"#4b92f4"},"Industrial & Systems Engineering":{"count":1,"color":"#230489"},"Business Administration":{"count":5,"color":"#f9c866"},"Chemical Engineering":{"count":2,"color":"#ce27bd"},"Biology":{"count":4,"color":"#d99df9"},"Robotics":{"count":1,"color":"#1eb573"},"Bioinformatics":{"count":1,"color":"#ef757f"},"English":{"count":1,"color":"#9def4a"},"Computer Engineer":{"count":1,"color":"#6cfcce"},"ALIS":{"count":1,"color":"#f7bffc"},"Mathematics":{"count":1,"color":"#232b82"},"Computer Engineering":{"count":2,"color":"#8bf4b0"},"Materials Science and Engineering":{"count":2,"color":"#32bc37"},"BMED":{"count":1,"color":"#0f9e33"},"MSE":{"count":1,"color":"#ead162"},"EE":{"count":1,"color":"#db8967"},"Online Master of Science in Analytics":{"count":1,"color":"#b1deef"},"ECE":{"count":1,"color":"#18036d"},"ARCHITECTURE":{"count":1,"color":"#daa9f2"},"HTS":{"count":1,"color":"#176e82"},"M.S. Global Media and Cultures":{"count":1,"color":"#a295e2"},"Physics":{"count":2,"color":"#2dc922"},"Computational Media":{"count":2,"color":"#37efcd"},"Master of Architecture":{"count":1,"color":"#c69ce2"},"Environmental Engineering":{"count":2,"color":"#2eb71f"},"Literature, Media and Communication":{"count":1,"color":"#d81a92"},"AE":{"count":1,"color":"#79e554"},"Music Technology":{"count":1,"color":"#e069d2"},"Biomedical engineering":{"count":1,"color":"#f43a3d"},"Chemical and Biomolecular Engineering":{"count":1,"color":"#114dff"},"Literature, Media, and Communication":{"count":1,"color":"#efa7ab"},"Psychology":{"count":1,"color":"#5b15db"}};
 
         $('#color-btn').click(function() {
             

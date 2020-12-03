@@ -105,23 +105,23 @@
             <% for (let i = 0; i < data.length; i++) { %>
               <% let id; %>
               <% if (i < 30) { %>
-                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="<%= randomPhotos[i].urls.regular%>" />
               <% } else if (i >= 30 && i < 60) { %>
-                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 30%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="<%= randomPhotos[i - 30].urls.regular%>" />
               <% } else if (i >= 60 && i < 90) { %>
-                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 60 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="<%= randomPhotos[i - 60].urls.regular%>" />
               <% } else if (i >= 90 && i < 120) { %>
-                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 90 %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="<%= randomPhotos[i - 90].urls.regular%>" />
               <% } else if (i >= 120 && i < 133) { %>
-                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-last-name="<%= data[i]['Last Name'] %>"
+                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-dzi-id="<%=i - 120%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="<%= randomPhotos[i - 120].urls.regular%>" />
               <% } %>

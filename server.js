@@ -4,7 +4,7 @@ const data = require('./data/data.json');
 const randomPhotos = require('./data/randomPhotos.json');
 const majors = require('./data/majors.json')
 const path = require('path');
-// const regex = /\.jpeg|\.jpg|\.png/g; this was needed for the actual art crawl submissions
+// const regex = /.(jpeg|jpg|png)/; this was needed for the actual art crawl submissions
 
 const port = process.env.PORT || 3000;
 

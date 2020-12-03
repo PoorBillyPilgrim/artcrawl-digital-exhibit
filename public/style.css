@@ -183,7 +183,7 @@ h1:hover {
     width: 100%;
     height: auto;
     padding-top: 15px;
-    max-height: 500px;
+    max-height: 600px;
     /* need max-width */
     cursor: zoom-in;
   }
