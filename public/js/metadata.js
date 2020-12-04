@@ -135,7 +135,7 @@ var Metadata = (function () {
             loc.hash = 'artcrawl';
             loc.hash = redirect;
             animateEnter();
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + params.dziID + '&id=' + id);
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + params.username + '&id=' + id);
         } else {
             // default 
             // load first item in #grid
@@ -143,7 +143,7 @@ var Metadata = (function () {
             dataAttributes = getDataAttributes($('#0'));
         }
 
-        img = $('#' + id).find('img').attr('src');
+        img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata-img').attr('src', img);
         $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
 
@@ -201,8 +201,8 @@ var Metadata = (function () {
         } */
 
         $('#metadata-img').click(function () {
-            dziID = $('.art-crawl-item.highlight').attr('data-dzi-id') || '0';
-            gridItemID = $('.art-crawl-item.highlight').attr('id') || '0';
+            let dzi = $('.art-crawl-item.highlight').attr('data-username');
+            gridItemID = $('.art-crawl-item.highlight').attr('id');
 
             $ID = $('#' + gridItemID);
             let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-first-name') + ' ' + $ID.attr('data-last-name'), $ID.attr('data-major'), $ID.attr('data-artist-statement'));
@@ -212,9 +212,9 @@ var Metadata = (function () {
             $('#about').addClass('hide');
             $('#info').addClass('hide');
             $('#legend').addClass('hide');
-            _initViewer(dziID);
+            _initViewer(dzi);
             
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID + '&viewer=true'); 
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + dzi + '&id=' + gridItemID + '&viewer=true'); 
         });
     }
 
@@ -238,8 +238,8 @@ var Metadata = (function () {
             window.location.hash = 'artcrawl';
 
             gridItemID = $('.art-crawl-item.highlight').attr('id');
-            dziID = $('.art-crawl-item.highlight').attr('data-dzi-id');
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID);
+            let username = $('.art-crawl-item.highlight').attr('data-username');
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
 
             shuffle.update();
             $("#" + params.id).addClass('highlight');
@@ -251,7 +251,8 @@ var Metadata = (function () {
         $('.art-crawl-item').click(function (event) {
             
             dataAttributes = getDataAttributes($(this));
-            img = $(this).find('img').attr('src');
+            img = $(this).find('img').attr('src').replace('thumbnails', 'artcrawl');
+            //console.log(img);
     
             $('#metadata.active').css('opacity', 0);
             setTimeout(function () {
@@ -260,9 +261,9 @@ var Metadata = (function () {
                 $('#metadata.active').css('opacity', 1);
 
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
-                dziID = $('.art-crawl-item.highlight').attr('data-dzi-id');
-                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#dziID=' + dziID + '&id=' + gridItemID);
-            }, 550);
+                let username = $('.art-crawl-item.highlight').attr('data-username');
+                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+            }, 1000);
             
 
             /*function handleShowColor(selector, opacity) {
@@ -323,7 +324,7 @@ var Metadata = (function () {
             if ($(window).width() != width) {
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 dataAttributes = getDataAttributes($('#' + gridItemID));
-                img = $('#' + gridItemID).find('img').attr('src');
+                img = $('#' + gridItemID).find('img').attr('src').replace('thumbnails', 'artcrawl');
     
                 // fadeout metadata
                 $('#metadata-caption').css('opacity', 0);         
@@ -408,8 +409,9 @@ var Metadata = (function () {
             $('#metadata-img').attr('src', img);
             $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
             $('#' + id).addClass('highlight');
+           // let username = $('')
             
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + id);
         });
     }
 
