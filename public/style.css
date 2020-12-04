@@ -178,8 +178,9 @@ h1:hover {
   }
 
   #metadata-img {
-    object-fit: scale-down;
-    -o-object-fit: scale-down;
+    /* object-fit: scale-down;
+    -o-object-fit: scale-down;*/
+    object-fit: contain;
     width: 100%;
     height: auto;
     padding-top: 15px;

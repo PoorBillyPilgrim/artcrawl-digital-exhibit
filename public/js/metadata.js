@@ -263,7 +263,7 @@ var Metadata = (function () {
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 let username = $('.art-crawl-item.highlight').attr('data-username');
                 history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
-            }, 1000);
+            }, 550);
             
 
             /*function handleShowColor(selector, opacity) {
