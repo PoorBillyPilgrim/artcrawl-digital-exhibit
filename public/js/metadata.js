@@ -255,10 +255,16 @@ var Metadata = (function () {
             //console.log(img);
     
             $('#metadata.active').css('opacity', 0);
-            setTimeout(function () {
+            
+            setTimeout(function() {
                 $('#metadata-img').attr('src', img);
-                renderMetadataImg($('#metadata-caption'), dataAttributes);
+            }, 250)
+            
+            setTimeout(function () {
+    
+                
                 $('#metadata.active').css('opacity', 1);
+                renderMetadataImg($('#metadata-caption'), dataAttributes);
 
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 let username = $('.art-crawl-item.highlight').attr('data-username');

@@ -168,7 +168,7 @@ h1:hover {
     width: auto;
     box-sizing: border-box;
     opacity: 0;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0.5s ease-in-out;
     /* need max-width */
     max-height: 50%;
   }
