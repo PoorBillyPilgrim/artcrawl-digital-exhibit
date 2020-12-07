@@ -189,8 +189,9 @@ h1:hover {
     cursor: zoom-in;
   }
 
-  /*#metadata-span {
-  }*/
+  #metadata-caption {
+    font-size: 1.25rem;
+  }
 
 /* Filter, Search, Sort */
 label {
