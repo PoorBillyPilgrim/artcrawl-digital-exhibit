@@ -145,9 +145,11 @@ var Metadata = (function () {
 
         img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata-img').attr('src', img);
-        setTimeout(function() {
+        let loadedImg = document.querySelector('#metadata-img');
+        loadedImg.addEventListener('load', function(event) {
+            console.log('image loaded.');
             renderMetadataImg($('#metadata-caption'), dataAttributes);
-        }, 100);
+       })
 
 
         openViewer();
@@ -264,19 +266,21 @@ var Metadata = (function () {
             
             setTimeout(function () {
                 $('#metadata-img').attr('src', img);
-                
                 $('#metadata.active').css('opacity', 1);
-                
-
+                let loadedImg = document.querySelector('#metadata-img');
+                loadedImg.addEventListener('load', function(event) {
+                     console.log('image loaded.');
+                     renderMetadataImg($('#metadata-caption'), dataAttributes);
+                });
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 let username = $('.art-crawl-item.highlight').attr('data-username');
                 history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
-                //renderMetadataImg($('#metadata-caption'), dataAttributes);
             }, 550);
 
+            /*
             setTimeout(function() {
                 renderMetadataImg($('#metadata-caption'), dataAttributes);
-            }, 700)
+            }, 700) */
             
 
             /*function handleShowColor(selector, opacity) {
