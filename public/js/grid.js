@@ -25,7 +25,6 @@ const Grid = (function() {
 
     const onAlways = function() {
         console.log('all images are loaded');
-        shuffle.update();
     };
 
     const addGridEvent = function(shuffleInput, event, eventHandler) {

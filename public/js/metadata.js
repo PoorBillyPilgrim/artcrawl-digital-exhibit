@@ -145,7 +145,9 @@ var Metadata = (function () {
 
         img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata-img').attr('src', img);
-        $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
+        setTimeout(function() {
+            renderMetadataImg($('#metadata-caption'), dataAttributes);
+        }, 100);
 
 
         openViewer();
