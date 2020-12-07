@@ -256,20 +256,25 @@ var Metadata = (function () {
     
             $('#metadata.active').css('opacity', 0);
             
-            setTimeout(function() {
+            /*setTimeout(function() {
                 $('#metadata-img').attr('src', img);
-            }, 250)
+            }, 250) */
             
             setTimeout(function () {
-    
+                $('#metadata-img').attr('src', img);
                 
                 $('#metadata.active').css('opacity', 1);
-                renderMetadataImg($('#metadata-caption'), dataAttributes);
+                
 
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 let username = $('.art-crawl-item.highlight').attr('data-username');
                 history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+                //renderMetadataImg($('#metadata-caption'), dataAttributes);
             }, 550);
+
+            setTimeout(function() {
+                renderMetadataImg($('#metadata-caption'), dataAttributes);
+            }, 700)
             
 
             /*function handleShowColor(selector, opacity) {
