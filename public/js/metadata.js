@@ -149,7 +149,7 @@ var Metadata = (function () {
         loadedImg.addEventListener('load', function(event) {
             console.log('image loaded.');
             renderMetadataImg($('#metadata-caption'), dataAttributes);
-       })
+       });
 
 
         openViewer();
@@ -244,6 +244,13 @@ var Metadata = (function () {
             gridItemID = $('.art-crawl-item.highlight').attr('id');
             let username = $('.art-crawl-item.highlight').attr('data-username');
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+
+            let dataAttributes = getDataAttributes($('#' + gridItemID));
+            let loadedImg = document.querySelector('#metadata-img');
+            loadedImg.addEventListener('load', function(event) {
+                console.log('image loaded.');
+                renderMetadataImg($('#metadata-caption'), dataAttributes);
+           });
 
             shuffle.update();
             $("#" + params.id).addClass('highlight');
