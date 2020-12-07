@@ -100,13 +100,16 @@ const Grid = (function() {
         const majorFilterBtn = document.querySelector('#major-filter');
 
         shuffle.filter(function(element) {
+            const firstName = element.getAttribute('data-first-name').toLowerCase();
             const lastName = element.getAttribute('data-last-name').toLowerCase();
+            const title = element.getAttribute('data-title').toLowerCase();
+            const major = element.getAttribute('data-major').toLowerCase();
 
             if (majorFilterBtn.classList.contains('active')) {
-                const major = document.querySelector('.highlight').getAttribute('data-major');
-                return element.getAttribute('data-major') === major && lastName.indexOf(searchText) !== -1; // && finds first falsy value. 'data-major' therefore must go first
+                const majorHighlight = document.querySelector('.highlight').getAttribute('data-major');
+                return element.getAttribute('data-major') === majorHighlight && firstName.startsWith(searchText) || lastName.startsWith(searchText) || title.startsWith(searchText) || major.startsWith(searchText); // && finds first falsy value. 'data-major' therefore must go first
             } else {
-                return lastName.indexOf(searchText) !== -1;
+                return firstName.startsWith(searchText) || lastName.startsWith(searchText) || title.startsWith(searchText) || major.startsWith(searchText);
             }
         });
     }
