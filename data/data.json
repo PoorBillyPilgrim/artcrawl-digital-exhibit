@@ -9,6 +9,24 @@
     "Image File": "bahn35.jpg"
   },
   {
+    "Username": "mah9",
+    "First Name": "Mahdi",
+    "Last Name": "Al-Husseini",
+    "Major": "Computer Science",
+    "Title of Artwork": "COMMUNITY",
+    "Artist Statement": "COMMUNITY themed NEON ZM1350 panaplex display within a black acrylic and anodized aluminum housing",
+    "Image File": "mah9.jpg"
+  },
+  {
+    "Username": "basgari3",
+    "First Name": "Bahar",
+    "Last Name": "Asgari",
+    "Major": "ECE",
+    "Title of Artwork": "Together We Are Visible",
+    "Artist Statement": "Four people are dancing together in a field of irises. They reflect each other's positive feelings to get visible and stronger.",
+    "Image File": "basgari3.jpg"
+  },
+  {
     "Username": "savery9",
     "First Name": "Savannah",
     "Last Name": "Avery",
@@ -17,12 +35,38 @@
     "Image File": "savery9.jpg"
   },
   {
+    "Username": "jbell71",
+    "First Name": "Jennifer",
+    "Last Name": "Bell",
+    "Major": "Mechanical Engineering",
+    "Title of Artwork": "One with Nature",
+    "Artist Statement": "Getting outside was always a normal part of my life; but, at GT --through the ORGT community-- it has become part of who I am.",
+    "Image File": "jbell71.jpg"
+  },
+  {
     "Username": "abellonia3",
     "First Name": "Athina",
     "Last Name": "Bellonia",
     "Major": "Mechanical Engineering",
     "Title of Artwork": "Mont Blanc",
     "Image File": "abellonia3.jpg"
+  },
+  {
+    "Username": "ebolton8",
+    "First Name": "Ethan",
+    "Last Name": "Bolton",
+    "Major": "Computer Science",
+    "Title of Artwork": "Turtle Drawings",
+    "Artist Statement": "Alabama",
+    "Image File": "ebolton8.png"
+  },
+  {
+    "Username": "bbove3",
+    "First Name": "Brady",
+    "Last Name": "Bove",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "Kite Strings",
+    "Image File": "bbove3.png"
   },
   {
     "Username": "lboyter3",
@@ -57,6 +101,15 @@
     "Title of Artwork": "Ultimately, we all walk alone.",
     "Artist Statement": "Image captured by Suraj Buddhavarapu in Naples, Italy (March 2019)",
     "Image File": "sbuddhavarapu6.jpg"
+  },
+  {
+    "Username": "mbunch6",
+    "First Name": "Michelle",
+    "Last Name": "Bunch",
+    "Major": "Master of Architecture",
+    "Title of Artwork": "S-Building",
+    "Artist Statement": "S-Building's whimsical operable elements allow changing relationships between rooms to become visible in its immediate context.",
+    "Image File": "mbunch6.jpg"
   },
   {
     "Username": "kburgener6",
@@ -119,6 +172,24 @@
     "Image File": "ychen3241.jpg"
   },
   {
+    "Username": "schoi417",
+    "First Name": "SooHoon",
+    "Last Name": "Choi",
+    "Major": "BME",
+    "Title of Artwork": "Indigenous Man",
+    "Artist Statement": "Although I am not Filipino, growing up in the Philippines has made it my home.",
+    "Image File": "schoi417.jpg"
+  },
+  {
+    "Username": "cchu67",
+    "First Name": "Cassandra",
+    "Last Name": "Chu",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "State of Mind",
+    "Artist Statement": "A series of 4 paintings that delves into modern issues and depictions of different mental states in a surreal manner.",
+    "Image File": "cchu67.jpg"
+  },
+  {
     "Username": "fclever3",
     "First Name": "Faye",
     "Last Name": "Clever",
@@ -136,12 +207,45 @@
     "Image File": "acoenen3.jpg"
   },
   {
+    "Username": "pcolon7",
+    "First Name": "Paola",
+    "Last Name": "Colon",
+    "Major": "Industrial Engineering",
+    "Title of Artwork": "Preciosa",
+    "Image File": "pcolon7.png"
+  },
+  {
+    "Username": "scdc3",
+    "First Name": "Shashwati",
+    "Last Name": "da Cunha",
+    "Major": "Chemical and Biomolecular Engineering",
+    "Title of Artwork": "ocean III",
+    "Image File": "scdc3.png"
+  },
+  {
     "Username": "adas81",
     "First Name": "Abhishek",
     "Last Name": "Das",
     "Major": "Computer Science (PhD)",
     "Title of Artwork": "Shelter",
     "Image File": "adas81.jpg"
+  },
+  {
+    "Username": "adaugherty7",
+    "First Name": "Anna",
+    "Last Name": "Daugherty",
+    "Major": "Environmental Engineering",
+    "Title of Artwork": "Reflections",
+    "Image File": "adaugherty7.jpg"
+  },
+  {
+    "Username": "mdelurgio3",
+    "First Name": "Matteo",
+    "Last Name": "De Lurgio",
+    "Major": "Aerospace Engineering",
+    "Title of Artwork": "Teapot #11",
+    "Artist Statement": "My pottery bridges art and design, with the aim of creating functional pieces to elevate everyday mundanity.",
+    "Image File": "mdelurgio3.jpg"
   },
   {
     "Username": "ndeshmukh30",
@@ -178,6 +282,14 @@
     "Image File": "adutta39.jpg"
   },
   {
+    "Username": "edworkin3",
+    "First Name": "Elizabeth",
+    "Last Name": "Dworkin",
+    "Major": "Computer Science",
+    "Title of Artwork": "Jessica the Lesser",
+    "Image File": "edworkin3.png"
+  },
+  {
     "Username": "ymep3",
     "First Name": "Yeimy",
     "Last Name": "Espino",
@@ -201,6 +313,14 @@
     "Major": "ME",
     "Title of Artwork": "acceptance",
     "Image File": "mferoz6.jpeg"
+  },
+  {
+    "Username": "cflannelly3",
+    "First Name": "Conor",
+    "Last Name": "Flannelly",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "Sleepsong",
+    "Image File": "cflannelly3.png"
   },
   {
     "Username": "jfu85",
@@ -228,6 +348,32 @@
     "Image File": "mgeller6.jpg"
   },
   {
+    "Username": "cgeng6",
+    "First Name": "Chris",
+    "Last Name": "Geng",
+    "Major": "Architecture",
+    "Title of Artwork": "PLAYSCAPE",
+    "Artist Statement": "These simple geometries, based on the fabric of the southern architectural language creates an playscape for many uses.",
+    "Image File": "cgeng6.jpg"
+  },
+  {
+    "Username": "sgomes31",
+    "First Name": "Sofia",
+    "Last Name": "Gomes",
+    "Major": "Literature, Media and Communication",
+    "Title of Artwork": "Embrace me",
+    "Artist Statement": "To embrace yourself is to find the path within you own lines.",
+    "Image File": "sgomes31.png"
+  },
+  {
+    "Username": "ngoredatar3",
+    "First Name": "Nissim",
+    "Last Name": "Gore-Datar",
+    "Major": "Environmental Engineering",
+    "Title of Artwork": "Refrain, 2019",
+    "Image File": "ngoredatar3.png"
+  },
+  {
     "Username": "agupta354",
     "First Name": "Avani",
     "Last Name": "Gupta",
@@ -235,6 +381,14 @@
     "Title of Artwork": "A Bittersweet Remembrance",
     "Artist Statement": "Life in its physical form disappears but, it leaves behind imprints on your memory, which form your identity.",
     "Image File": "agupta354.jpg"
+  },
+  {
+    "Username": "kmh7",
+    "First Name": "Kyra",
+    "Last Name": "Halbert-Elliott",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "Lineage",
+    "Image File": "kmh7.png"
   },
   {
     "Username": "ahasan33",
@@ -263,12 +417,29 @@
     "Image File": "zholderness3.jpeg"
   },
   {
+    "Username": "mhoover32",
+    "First Name": "Madison",
+    "Last Name": "Hoover",
+    "Major": "Computer Science",
+    "Title of Artwork": "e-Pikachu",
+    "Artist Statement": "If Pikachu were to be created today, here is my artistic rendering of how her identity and style might change in 2020.",
+    "Image File": "mhoover32.jpg"
+  },
+  {
     "Username": "khsu38",
     "First Name": "Carol",
     "Last Name": "Hsu",
     "Major": "Computer Science",
     "Title of Artwork": "Ho-ho-ho-land",
     "Image File": "khsu38.jpg"
+  },
+  {
+    "Username": "tjackson86",
+    "First Name": "Thomas",
+    "Last Name": "Jackson",
+    "Major": "AE",
+    "Title of Artwork": "Out in the dunes",
+    "Image File": "tjackson86.jpg"
   },
   {
     "Username": "ijain32",
@@ -288,6 +459,32 @@
     "Image File": "jjajeh3.jpg"
   },
   {
+    "Username": "ljarrel6",
+    "First Name": "Laura",
+    "Last Name": "Jarrel",
+    "Major": "BME",
+    "Title of Artwork": "Plaza de Bocairent",
+    "Artist Statement": "A sleepy afternoon in Bocairent, Valencia, Spain.",
+    "Image File": "ljarrel6.jpg"
+  },
+  {
+    "Username": "bjarrett7",
+    "First Name": "Brooke",
+    "Last Name": "Jarrett",
+    "Major": "Industrial Design",
+    "Title of Artwork": "the box",
+    "Artist Statement": "I love colors, textures, mixing different media, utilizing trash, and creating fun compositions.",
+    "Image File": "bjarrett7.jpg"
+  },
+  {
+    "Username": "jjoiner33",
+    "First Name": "Jhazzmyn",
+    "Last Name": "Joiner",
+    "Major": "Literature, Media, and Communication",
+    "Title of Artwork": "I am Love",
+    "Image File": "jjoiner33.png"
+  },
+  {
     "Username": "kjoseph32",
     "First Name": "Katherine",
     "Last Name": "Joseph",
@@ -295,6 +492,14 @@
     "Title of Artwork": "Glass Fire",
     "Artist Statement": "Taken at the Chihuly Garden and Glass Museum in Seattle",
     "Image File": "kjoseph32.jpg"
+  },
+  {
+    "Username": "pkamat7",
+    "First Name": "Prerana",
+    "Last Name": "Kamat",
+    "Major": "ARCHITECTURE",
+    "Title of Artwork": "Parity",
+    "Image File": "pkamat7.png"
   },
   {
     "Username": "skhatri31",
@@ -324,6 +529,30 @@
     "Image File": "skim923.jpg"
   },
   {
+    "Username": "mkindler3",
+    "First Name": "Morris",
+    "Last Name": "Kindler",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "Revelation",
+    "Image File": "mkindler3.png"
+  },
+  {
+    "Username": "rkiriazes3",
+    "First Name": "Becca",
+    "Last Name": "Kiriazes",
+    "Major": "Civil Engineering",
+    "Title of Artwork": "Georgia Peach",
+    "Image File": "rkiriazes3.jpeg"
+  },
+  {
+    "Username": "jknight43",
+    "First Name": "Connors",
+    "Last Name": "Knight",
+    "Major": "Architecture",
+    "Title of Artwork": "pharoah",
+    "Image File": "jknight43.png"
+  },
+  {
     "Username": "akrug6",
     "First Name": "Avielle",
     "Last Name": "Krug",
@@ -342,12 +571,90 @@
     "Image File": "akulkarni317.jpg"
   },
   {
+    "Username": "akushner6",
+    "First Name": "Alissa",
+    "Last Name": "Kushner",
+    "Major": "Mechanical Engineering",
+    "Title of Artwork": "Tuesday",
+    "Artist Statement": "Students lose sight of themselves more each day, as their piles of work become ever more insurmountable.",
+    "Image File": "akushner6.png"
+  },
+  {
+    "Username": "ili32",
+    "First Name": "Ivan",
+    "Last Name": "Li",
+    "Major": "ME",
+    "Title of Artwork": "Joining In",
+    "Image File": "ili32.jpeg"
+  },
+  {
+    "Username": "rli369",
+    "First Name": "Randy",
+    "Last Name": "Li",
+    "Major": "Computational Media",
+    "Title of Artwork": "Randy's Great Wave off Kanagawa",
+    "Artist Statement": "My abstract take on \"The Great Wave off Kanagawa\".",
+    "Image File": "rli369.jpg"
+  },
+  {
     "Username": "wliu88",
     "First Name": "Weiyu",
     "Last Name": "Liu",
     "Major": "Robotics",
     "Title of Artwork": "A couple under the arch",
     "Image File": "wliu88.jpg"
+  },
+  {
+    "Username": "sloop3",
+    "First Name": "Samantha",
+    "Last Name": "Loop",
+    "Major": "Computer Science",
+    "Title of Artwork": "Gaunt",
+    "Artist Statement": "Losing 10 pounds might have made my self-image tank. Sorry for cutting up the catalogs, Athleta.",
+    "Image File": "sloop3.jpg"
+  },
+  {
+    "Username": "cloyd6",
+    "First Name": "Cameron",
+    "Last Name": "Loyd",
+    "Major": "Mechanical Engineering",
+    "Title of Artwork": "북촌한옥 Village",
+    "Image File": "cloyd6.jpg"
+  },
+  {
+    "Username": "vescarra3",
+    "First Name": "Victoria",
+    "Last Name": "Lozano",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "Flowering Brain",
+    "Artist Statement": "This piece explores the concept of the brain as the production center of complex thoughts -- where they blossom.",
+    "Image File": "vescarra3.jpeg"
+  },
+  {
+    "Username": "mmann33",
+    "First Name": "Mason",
+    "Last Name": "Mann",
+    "Major": "Music Technology",
+    "Title of Artwork": "eeeëêe eeeeeEEE",
+    "Artist Statement": "This piece explores the beautiful creatures and forms that inhabit the digital world :~)",
+    "Image File": "mmann33.png"
+  },
+  {
+    "Username": "kmassa3",
+    "First Name": "Katie",
+    "Last Name": "Massa",
+    "Major": "Architecture",
+    "Title of Artwork": "Keys",
+    "Artist Statement": "Keys are ordinary object that we often never pay attention to, but they can act as reminders that we belong in many places...",
+    "Image File": "kmassa3.jpg"
+  },
+  {
+    "Username": "smcculler6",
+    "First Name": "Savonte",
+    "Last Name": "McCuller",
+    "Major": "Psychology",
+    "Title of Artwork": "We",
+    "Image File": "smcculler6.png"
   },
   {
     "Username": "pmehta77",
@@ -373,6 +680,15 @@
     "Major": "Mechanical Engineering",
     "Title of Artwork": "Living Under the Stars.",
     "Image File": "jmesser7.jpg"
+  },
+  {
+    "Username": "imiller34",
+    "First Name": "Isabel",
+    "Last Name": "Miller",
+    "Major": "Business Administration",
+    "Title of Artwork": "Is my identity my own, or simply a detail in society's landscape?",
+    "Artist Statement": "Structural yet abstract just like our communities, it is also filled with small details of my life, my identity within society's",
+    "Image File": "imiller34.jpg"
   },
   {
     "Username": "lmora7",
@@ -427,6 +743,23 @@
     "Image File": "kneselu3.jpg"
   },
   {
+    "Username": "rnichani3",
+    "First Name": "Rhea",
+    "Last Name": "Nichani (I would prefer my work to be anonymous if possible)",
+    "Major": "Neuroscience",
+    "Title of Artwork": "The Paradox of Identity",
+    "Image File": "rnichani3.png"
+  },
+  {
+    "Username": "mniemczyk3",
+    "First Name": "Molly",
+    "Last Name": "Niemczyk",
+    "Major": "Business Administration",
+    "Title of Artwork": "The Creek in the Woods Behind Her House",
+    "Artist Statement": "In those woods, the line between who she was, and who she wanted to be, blurred a little.",
+    "Image File": "mniemczyk3.png"
+  },
+  {
     "Username": "aoreilly7",
     "First Name": "Alexa",
     "Last Name": "O'Reilly",
@@ -442,6 +775,14 @@
     "Title of Artwork": "Identity",
     "Artist Statement": "I consider myself an upcycling designer.My clothes are made from recycled materials and this identity motivates me to design.",
     "Image File": "icheiffou3.jpg"
+  },
+  {
+    "Username": "mperrier3",
+    "First Name": "Mael-Sanh",
+    "Last Name": "Perrier",
+    "Major": "Materials Science and Engineering",
+    "Title of Artwork": "Heaven's Door",
+    "Image File": "mperrier3.png"
   },
   {
     "Username": "rpineau3",
@@ -461,6 +802,14 @@
     "Image File": "pprabakaran8.jpg"
   },
   {
+    "Username": "zrahman30",
+    "First Name": "Zarif",
+    "Last Name": "Rahman",
+    "Major": "Electrical Engineering",
+    "Title of Artwork": "Perishable Land - Agua Caliente Indian Reservation",
+    "Image File": "zrahman30.jpg"
+  },
+  {
     "Username": "srapoport3",
     "First Name": "Samuel",
     "Last Name": "Rapoport",
@@ -478,6 +827,23 @@
     "Image File": "kreed43.jpg"
   },
   {
+    "Username": "wrobinson39",
+    "First Name": "Wesley",
+    "Last Name": "Robinson",
+    "Major": "Biochemistry",
+    "Title of Artwork": "Belong Everywhere",
+    "Image File": "wrobinson39.png"
+  },
+  {
+    "Username": "mrodriguez86",
+    "First Name": "Daniela",
+    "Last Name": "Rodriguez",
+    "Major": "M.S. Global Media and Cultures",
+    "Title of Artwork": "Solidarity in Days Off",
+    "Artist Statement": "Women do not even need grass to share joyful meals outside, they just manage to it.",
+    "Image File": "mrodriguez86.jpg"
+  },
+  {
     "Username": "hromanos3",
     "First Name": "Hannah",
     "Last Name": "Romanos",
@@ -486,12 +852,56 @@
     "Image File": "hromanos3.jpg"
   },
   {
+    "Username": "prosado3",
+    "First Name": "Paola",
+    "Last Name": "Rosado",
+    "Major": "Computer Engineering",
+    "Title of Artwork": "Who?",
+    "Artist Statement": "Broken and locked... a key waits in the distance to tell me who I am.",
+    "Image File": "prosado3.png"
+  },
+  {
     "Username": "aroy86",
     "First Name": "Agniva",
     "Last Name": "Roy",
     "Major": "Mathematics",
     "Title of Artwork": "Water under the bridge",
     "Image File": "aroy86.jpg"
+  },
+  {
+    "Username": "aruss31",
+    "First Name": "Abigail",
+    "Last Name": "Russ",
+    "Major": "Physics",
+    "Title of Artwork": "Out of the Binary",
+    "Artist Statement": "Georgia",
+    "Image File": "aruss31.png"
+  },
+  {
+    "Username": "csabater3",
+    "First Name": "Carlos",
+    "Last Name": "Sabater",
+    "Major": "Biomedical Engineering",
+    "Title of Artwork": "Twelve Places",
+    "Artist Statement": "'Twelve Places' is a representation of the similarity and familiarity across distinct influences on our lives.",
+    "Image File": "csabater3.png"
+  },
+  {
+    "Username": "asanseverino3",
+    "First Name": "Anthony",
+    "Last Name": "Sanseverino",
+    "Major": "Civil Engineering",
+    "Title of Artwork": "Snowy Slopes",
+    "Image File": "asanseverino3.jpg"
+  },
+  {
+    "Username": "ssaravanan31",
+    "First Name": "Sajni",
+    "Last Name": "Saravanan",
+    "Major": "Aerospace Engineering",
+    "Title of Artwork": "Ramen",
+    "Artist Statement": "A reflection of consumerism in college, inspired by Andy Warhol's Campbell's Soup Cans and Marilyn Monroe works.",
+    "Image File": "ssaravanan31.png"
   },
   {
     "Username": "asatinoff3",
@@ -528,6 +938,24 @@
     "Image File": "vshah78.jpg"
   },
   {
+    "Username": "lshaheen3",
+    "First Name": "Laura",
+    "Last Name": "Shaheen",
+    "Major": "Mechanical Engineering",
+    "Title of Artwork": "This Must be the Place",
+    "Artist Statement": "Alexa - play Wildflowers by Tom Petty. Or ~alternatively~ try out this playlist: https://tinyurl.com/artcrawl2020",
+    "Image File": "lshaheen3.jpg"
+  },
+  {
+    "Username": "sshaikh35",
+    "First Name": "Sania",
+    "Last Name": "Shaikh",
+    "Major": "Computer Science",
+    "Title of Artwork": "Saim's Cousin",
+    "Artist Statement": "Though beauty of modern America is that its essence is indefinable, here is my America as an Indian American.",
+    "Image File": "sshaikh35.png"
+  },
+  {
     "Username": "nshanmugan3",
     "First Name": "Nishalini",
     "Last Name": "Shanmugan",
@@ -535,6 +963,14 @@
     "Title of Artwork": "We are the Others",
     "Artist Statement": "\"The world is smaller than you think, and the people in it are more beautiful than you think.\" -Betram van Munster",
     "Image File": "nshanmugan3.jpg"
+  },
+  {
+    "Username": "ksingal3",
+    "First Name": "Krishma",
+    "Last Name": "Singal",
+    "Major": "Physics",
+    "Title of Artwork": "Patterns of the Self against the World",
+    "Image File": "ksingal3.jpg"
   },
   {
     "Username": "esinner3",
@@ -551,6 +987,15 @@
     "Major": "BME",
     "Title of Artwork": "豫园",
     "Image File": "ismith43.jpg"
+  },
+  {
+    "Username": "hhaufschild3",
+    "First Name": "Haley",
+    "Last Name": "Steele",
+    "Major": "Biology",
+    "Title of Artwork": "Wrought acceptance",
+    "Artist Statement": "Loosely inspired by John Donne’s Meditation 17.",
+    "Image File": "hhaufschild3.jpg"
   },
   {
     "Username": "wsyre3",
@@ -595,12 +1040,46 @@
     "Image File": "jternullo3.jpg"
   },
   {
+    "Username": "arentz6",
+    "First Name": "Alyssa",
+    "Last Name": "Thompson",
+    "Major": "HTS",
+    "Title of Artwork": "No Borders",
+    "Artist Statement": "Inspired by space race era Soviet propaganda and the knowledge that we have far more in common than we have separating us.",
+    "Image File": "arentz6.jpg"
+  },
+  {
+    "Username": "pthompson64",
+    "First Name": "Paige",
+    "Last Name": "Thompson",
+    "Major": "Computational Media",
+    "Title of Artwork": "Who Are You?",
+    "Artist Statement": "I love this piece. Art keeps me grounded and this painting serves as a reminder of my creativity and sense of self.",
+    "Image File": "pthompson64.jpg"
+  },
+  {
+    "Username": "cunachukwu3",
+    "First Name": "Christin",
+    "Last Name": "Unachukwu",
+    "Major": "Biochemistry",
+    "Title of Artwork": "'I Contain Multitudes'",
+    "Image File": "cunachukwu3.png"
+  },
+  {
     "Username": "psvh3",
     "First Name": "Pearson",
     "Last Name": "Van Horn",
     "Major": "ME",
     "Title of Artwork": "catarata rio celeste",
     "Image File": "psvh3.jpg"
+  },
+  {
+    "Username": "swalters37",
+    "First Name": "Samuel",
+    "Last Name": "Walters",
+    "Major": "Mechanical Engineering",
+    "Title of Artwork": "\"So tell me about yourself.\"",
+    "Image File": "swalters37.png"
   },
   {
     "Username": "swhite88",
@@ -654,6 +1133,15 @@
     "Image File": "yyang779.jpg"
   },
   {
+    "Username": "szm7",
+    "First Name": "Samantha",
+    "Last Name": "Zhan-Moodie",
+    "Major": "Biomedical engineering",
+    "Title of Artwork": "Renaissance Chair",
+    "Artist Statement": "Inspired by the History of Chairs class",
+    "Image File": "szm7.jpg"
+  },
+  {
     "Username": "szheng98",
     "First Name": "Shuang",
     "Last Name": "Zheng",
@@ -669,493 +1157,5 @@
     "Title of Artwork": "Flying Dreams Together",
     "Artist Statement": "Each person has a dream he/she truly wants to pursue, and in pursuing those dreams, we reveal ourselves to the world.",
     "Image File": "ozheng3.jpg"
-  },
-  {
-    "Username": "basgari3",
-    "First Name": "Bahar",
-    "Last Name": "Asgari",
-    "Major": "ECE",
-    "Title of Artwork": "Together We Are Visible",
-    "Artist Statement": "Four people are dancing together in a field of irises. They reflect each other's positive feelings to get visible and stronger.",
-    "Image File": "basgari3.jpg"
-  },
-  {
-    "Username": "jbell71",
-    "First Name": "Jennifer",
-    "Last Name": "Bell",
-    "Major": "Mechanical Engineering",
-    "Title of Artwork": "One with Nature",
-    "Artist Statement": "Getting outside was always a normal part of my life; but, at GT --through the ORGT community-- it has become part of who I am.",
-    "Image File": "jbell71.jpg"
-  },
-  {
-    "Username": "schoi417",
-    "First Name": "SooHoon",
-    "Last Name": "Choi",
-    "Major": "BME",
-    "Title of Artwork": "Indigenous Man",
-    "Artist Statement": "Although I am not Filipino, growing up in the Philippines has made it my home.",
-    "Image File": "schoi417.jpg"
-  },
-  {
-    "Username": "cchu67",
-    "First Name": "Cassandra",
-    "Last Name": "Chu",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "State of Mind",
-    "Artist Statement": "A series of 4 paintings that delves into modern issues and depictions of different mental states in a surreal manner.",
-    "Image File": "cchu67.jpg"
-  },
-  {
-    "Username": "edworkin3",
-    "First Name": "Elizabeth",
-    "Last Name": "Dworkin",
-    "Major": "Computer Science",
-    "Title of Artwork": "Jessica the Lesser",
-    "Image File": "edworkin3.png"
-  },
-  {
-    "Username": "ljarrel6",
-    "First Name": "Laura",
-    "Last Name": "Jarrel",
-    "Major": "BME",
-    "Title of Artwork": "Plaza de Bocairent",
-    "Artist Statement": "A sleepy afternoon in Bocairent, Valencia, Spain.",
-    "Image File": "ljarrel6.jpg"
-  },
-  {
-    "Username": "pkamat7",
-    "First Name": "Prerana",
-    "Last Name": "Kamat",
-    "Major": "ARCHITECTURE",
-    "Title of Artwork": "Parity",
-    "Image File": "pkamat7.png"
-  },
-  {
-    "Username": "rkiriazes3",
-    "First Name": "Becca",
-    "Last Name": "Kiriazes",
-    "Major": "Civil Engineering",
-    "Title of Artwork": "Georgia Peach",
-    "Image File": "rkiriazes3.jpeg"
-  },
-  {
-    "Username": "akushner6",
-    "First Name": "Alissa",
-    "Last Name": "Kushner",
-    "Major": "Mechanical Engineering",
-    "Title of Artwork": "Tuesday",
-    "Artist Statement": "Students lose sight of themselves more each day, as their piles of work become ever more insurmountable.",
-    "Image File": "akushner6.png"
-  },
-  {
-    "Username": "ili32",
-    "First Name": "Ivan",
-    "Last Name": "Li",
-    "Major": "ME",
-    "Title of Artwork": "Joining In",
-    "Image File": "ili32.jpeg"
-  },
-  {
-    "Username": "sloop3",
-    "First Name": "Samantha",
-    "Last Name": "Loop",
-    "Major": "Computer Science",
-    "Title of Artwork": "Gaunt",
-    "Artist Statement": "Losing 10 pounds might have made my self-image tank. Sorry for cutting up the catalogs, Athleta.",
-    "Image File": "sloop3.jpg"
-  },
-  {
-    "Username": "cloyd6",
-    "First Name": "Cameron",
-    "Last Name": "Loyd",
-    "Major": "Mechanical Engineering",
-    "Title of Artwork": "북촌한옥 Village",
-    "Image File": "cloyd6.jpg"
-  },
-  {
-    "Username": "vescarra3",
-    "First Name": "Victoria",
-    "Last Name": "Lozano",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "Flowering Brain",
-    "Artist Statement": "This piece explores the concept of the brain as the production center of complex thoughts -- where they blossom.",
-    "Image File": "vescarra3.jpeg"
-  },
-  {
-    "Username": "kmassa3",
-    "First Name": "Katie",
-    "Last Name": "Massa",
-    "Major": "Architecture",
-    "Title of Artwork": "Keys",
-    "Artist Statement": "Keys are ordinary object that we often never pay attention to, but they can act as reminders that we belong in many places...",
-    "Image File": "kmassa3.jpg"
-  },
-  {
-    "Username": "mniemczyk3",
-    "First Name": "Molly",
-    "Last Name": "Niemczyk",
-    "Major": "Business Administration",
-    "Title of Artwork": "The Creek in the Woods Behind Her House",
-    "Artist Statement": "In those woods, the line between who she was, and who she wanted to be, blurred a little.",
-    "Image File": "mniemczyk3.png"
-  },
-  {
-    "Username": "zrahman30",
-    "First Name": "Zarif",
-    "Last Name": "Rahman",
-    "Major": "Electrical Engineering",
-    "Title of Artwork": "Perishable Land - Agua Caliente Indian Reservation",
-    "Image File": "zrahman30.jpg"
-  },
-  {
-    "Username": "arentz6",
-    "First Name": "Alyssa",
-    "Last Name": "Thompson",
-    "Major": "HTS",
-    "Title of Artwork": "No Borders",
-    "Artist Statement": "Inspired by space race era Soviet propaganda and the knowledge that we have far more in common than we have separating us.",
-    "Image File": "arentz6.jpg"
-  },
-  {
-    "Username": "mrodriguez86",
-    "First Name": "Daniela",
-    "Last Name": "Rodriguez",
-    "Major": "M.S. Global Media and Cultures",
-    "Title of Artwork": "Solidarity in Days Off",
-    "Artist Statement": "Women do not even need grass to share joyful meals outside, they just manage to it.",
-    "Image File": "mrodriguez86.jpg"
-  },
-  {
-    "Username": "csabater3",
-    "First Name": "Carlos",
-    "Last Name": "Sabater",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "Twelve Places",
-    "Artist Statement": "'Twelve Places' is a representation of the similarity and familiarity across distinct influences on our lives.",
-    "Image File": "csabater3.png"
-  },
-  {
-    "Username": "lshaheen3",
-    "First Name": "Laura",
-    "Last Name": "Shaheen",
-    "Major": "Mechanical Engineering",
-    "Title of Artwork": "This Must be the Place",
-    "Artist Statement": "Alexa - play Wildflowers by Tom Petty. Or ~alternatively~ try out this playlist: https://tinyurl.com/artcrawl2020",
-    "Image File": "lshaheen3.jpg"
-  },
-  {
-    "Username": "ksingal3",
-    "First Name": "Krishma",
-    "Last Name": "Singal",
-    "Major": "Physics",
-    "Title of Artwork": "Patterns of the Self against the World",
-    "Image File": "ksingal3.jpg"
-  },
-  {
-    "Username": "hhaufschild3",
-    "First Name": "Haley",
-    "Last Name": "Steele",
-    "Major": "Biology",
-    "Title of Artwork": "Wrought acceptance",
-    "Artist Statement": "Loosely inspired by John Donne’s Meditation 17.",
-    "Image File": "hhaufschild3.jpg"
-  },
-  {
-    "Username": "pthompson64",
-    "First Name": "Paige",
-    "Last Name": "Thompson",
-    "Major": "Computational Media",
-    "Title of Artwork": "Who Are You?",
-    "Artist Statement": "I love this piece. Art keeps me grounded and this painting serves as a reminder of my creativity and sense of self.",
-    "Image File": "pthompson64.jpg"
-  },
-  {
-    "Username": "mah9",
-    "First Name": "Mahdi",
-    "Last Name": "Al-Husseini",
-    "Major": "Computer Science",
-    "Title of Artwork": "COMMUNITY",
-    "Artist Statement": "COMMUNITY themed NEON ZM1350 panaplex display within a black acrylic and anodized aluminum housing",
-    "Image File": "mah9.jpg"
-  },
-  {
-    "Username": "ebolton8",
-    "First Name": "Ethan",
-    "Last Name": "Bolton",
-    "Major": "Computer Science",
-    "Title of Artwork": "Turtle Drawings",
-    "Artist Statement": "Alabama",
-    "Image File": "ebolton8.png"
-  },
-  {
-    "Username": "mbunch6",
-    "First Name": "Michelle",
-    "Last Name": "Bunch",
-    "Major": "Master of Architecture",
-    "Title of Artwork": "S-Building",
-    "Artist Statement": "S-Building's whimsical operable elements allow changing relationships between rooms to become visible in its immediate context.",
-    "Image File": "mbunch6.jpg"
-  },
-  {
-    "Username": "adaugherty7",
-    "First Name": "Anna",
-    "Last Name": "Daugherty",
-    "Major": "Environmental Engineering",
-    "Title of Artwork": "Reflections",
-    "Image File": "adaugherty7.jpg"
-  },
-  {
-    "Username": "cgeng6",
-    "First Name": "Chris",
-    "Last Name": "Geng",
-    "Major": "Architecture",
-    "Title of Artwork": "PLAYSCAPE",
-    "Artist Statement": "These simple geometries, based on the fabric of the southern architectural language creates an playscape for many uses.",
-    "Image File": "cgeng6.jpg"
-  },
-  {
-    "Username": "sgomes31",
-    "First Name": "Sofia",
-    "Last Name": "Gomes",
-    "Major": "Literature, Media and Communication",
-    "Title of Artwork": "Embrace me",
-    "Artist Statement": "To embrace yourself is to find the path within you own lines.",
-    "Image File": "sgomes31.png"
-  },
-  {
-    "Username": "mhoover32",
-    "First Name": "Madison",
-    "Last Name": "Hoover",
-    "Major": "Computer Science",
-    "Title of Artwork": "e-Pikachu",
-    "Artist Statement": "If Pikachu were to be created today, here is my artistic rendering of how her identity and style might change in 2020.",
-    "Image File": "mhoover32.jpg"
-  },
-  {
-    "Username": "tjackson86",
-    "First Name": "Thomas",
-    "Last Name": "Jackson",
-    "Major": "AE",
-    "Title of Artwork": "Out in the dunes",
-    "Image File": "tjackson86.jpg"
-  },
-  {
-    "Username": "jknight43",
-    "First Name": "Connors",
-    "Last Name": "Knight",
-    "Major": "Architecture",
-    "Title of Artwork": "pharoah",
-    "Image File": "jknight43.png"
-  },
-  {
-    "Username": "rli369",
-    "First Name": "Randy",
-    "Last Name": "Li",
-    "Major": "Computational Media",
-    "Title of Artwork": "Randy's Great Wave off Kanagawa",
-    "Artist Statement": "My abstract take on \"The Great Wave off Kanagawa\".",
-    "Image File": "rli369.jpg"
-  },
-  {
-    "Username": "prosado3",
-    "First Name": "Paola",
-    "Last Name": "Rosado",
-    "Major": "Computer Engineering",
-    "Title of Artwork": "Who?",
-    "Artist Statement": "Broken and locked... a key waits in the distance to tell me who I am.",
-    "Image File": "prosado3.png"
-  },
-  {
-    "Username": "aruss31",
-    "First Name": "Abigail",
-    "Last Name": "Russ",
-    "Major": "Physics",
-    "Title of Artwork": "Out of the Binary",
-    "Artist Statement": "Georgia",
-    "Image File": "aruss31.png"
-  },
-  {
-    "Username": "asanseverino3",
-    "First Name": "Anthony",
-    "Last Name": "Sanseverino",
-    "Major": "Civil Engineering",
-    "Title of Artwork": "Snowy Slopes",
-    "Image File": "asanseverino3.jpg"
-  },
-  {
-    "Username": "ssaravanan31",
-    "First Name": "Sajni",
-    "Last Name": "Saravanan",
-    "Major": "Aerospace Engineering",
-    "Title of Artwork": "Ramen",
-    "Artist Statement": "A reflection of consumerism in college, inspired by Andy Warhol's Campbell's Soup Cans and Marilyn Monroe works.",
-    "Image File": "ssaravanan31.png"
-  },
-  {
-    "Username": "sshaikh35",
-    "First Name": "Sania",
-    "Last Name": "Shaikh",
-    "Major": "Computer Science",
-    "Title of Artwork": "Saim's Cousin",
-    "Artist Statement": "Though beauty of modern America is that its essence is indefinable, here is my America as an Indian American.",
-    "Image File": "sshaikh35.png"
-  },
-  {
-    "Username": "cunachukwu3",
-    "First Name": "Christin",
-    "Last Name": "Unachukwu",
-    "Major": "Biochemistry",
-    "Title of Artwork": "'I Contain Multitudes'",
-    "Image File": "cunachukwu3.png"
-  },
-  {
-    "Username": "mdelurgio3",
-    "First Name": "Matteo",
-    "Last Name": "De Lurgio",
-    "Major": "Aerospace Engineering",
-    "Title of Artwork": "Teapot #11",
-    "Artist Statement": "My pottery bridges art and design, with the aim of creating functional pieces to elevate everyday mundanity.",
-    "Image File": "mdelurgio3.jpg"
-  },
-  {
-    "Username": "bjarrett7",
-    "First Name": "Brooke",
-    "Last Name": "Jarrett",
-    "Major": "Industrial Design",
-    "Title of Artwork": "the box",
-    "Artist Statement": "I love colors, textures, mixing different media, utilizing trash, and creating fun compositions.",
-    "Image File": "bjarrett7.jpg"
-  },
-  {
-    "Username": "mmann33",
-    "First Name": "Mason",
-    "Last Name": "Mann",
-    "Major": "Music Technology",
-    "Title of Artwork": "eeeëêe eeeeeEEE",
-    "Artist Statement": "This piece explores the beautiful creatures and forms that inhabit the digital world :~)",
-    "Image File": "mmann33.png"
-  },
-  {
-    "Username": "imiller34",
-    "First Name": "Isabel",
-    "Last Name": "Miller",
-    "Major": "Business Administration",
-    "Title of Artwork": "Is my identity my own, or simply a detail in society's landscape?",
-    "Artist Statement": "Structural yet abstract just like our communities, it is also filled with small details of my life, my identity within society's",
-    "Image File": "imiller34.jpg"
-  },
-  {
-    "Username": "szm7",
-    "First Name": "Samantha",
-    "Last Name": "Zhan-Moodie",
-    "Major": "Biomedical engineering",
-    "Title of Artwork": "Renaissance Chair",
-    "Artist Statement": "Inspired by the History of Chairs class",
-    "Image File": "szm7.jpg"
-  },
-  {
-    "Username": "bbove3",
-    "First Name": "Brady",
-    "Last Name": "Bove",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "Kite Strings",
-    "Image File": "bbove3.png"
-  },
-  {
-    "Username": "pcolon7",
-    "First Name": "Paola",
-    "Last Name": "Colon",
-    "Major": "Industrial Engineering",
-    "Title of Artwork": "Preciosa",
-    "Image File": "pcolon7.png"
-  },
-  {
-    "Username": "scdc3",
-    "First Name": "Shashwati",
-    "Last Name": "da Cunha",
-    "Major": "Chemical and Biomolecular Engineering",
-    "Title of Artwork": "ocean III",
-    "Image File": "scdc3.png"
-  },
-  {
-    "Username": "cflannelly3",
-    "First Name": "Conor",
-    "Last Name": "Flannelly",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "Sleepsong",
-    "Image File": "cflannelly3.png"
-  },
-  {
-    "Username": "ngoredatar3",
-    "First Name": "Nissim",
-    "Last Name": "Gore-Datar",
-    "Major": "Environmental Engineering",
-    "Title of Artwork": "Refrain, 2019",
-    "Image File": "ngoredatar3.png"
-  },
-  {
-    "Username": "kmh7",
-    "First Name": "Kyra",
-    "Last Name": "Halbert-Elliott",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "Lineage",
-    "Image File": "kmh7.png"
-  },
-  {
-    "Username": "jjoiner33",
-    "First Name": "Jhazzmyn",
-    "Last Name": "Joiner",
-    "Major": "Literature, Media, and Communication",
-    "Title of Artwork": "I am Love",
-    "Image File": "jjoiner33.png"
-  },
-  {
-    "Username": "mkindler3",
-    "First Name": "Morris",
-    "Last Name": "Kindler",
-    "Major": "Biomedical Engineering",
-    "Title of Artwork": "Revelation",
-    "Image File": "mkindler3.png"
-  },
-  {
-    "Username": "smcculler6",
-    "First Name": "Savonte",
-    "Last Name": "McCuller",
-    "Major": "Psychology",
-    "Title of Artwork": "We",
-    "Image File": "smcculler6.png"
-  },
-  {
-    "Username": "rnichani3",
-    "First Name": "Rhea",
-    "Last Name": "Nichani (I would prefer my work to be anonymous if possible)",
-    "Major": "Neuroscience",
-    "Title of Artwork": "The Paradox of Identity",
-    "Image File": "rnichani3.png"
-  },
-  {
-    "Username": "mperrier3",
-    "First Name": "Mael-Sanh",
-    "Last Name": "Perrier",
-    "Major": "Materials Science and Engineering",
-    "Title of Artwork": "Heaven's Door",
-    "Image File": "mperrier3.png"
-  },
-  {
-    "Username": "wrobinson39",
-    "First Name": "Wesley",
-    "Last Name": "Robinson",
-    "Major": "Biochemistry",
-    "Title of Artwork": "Belong Everywhere",
-    "Image File": "wrobinson39.png"
-  },
-  {
-    "Username": "swalters37",
-    "First Name": "Samuel",
-    "Last Name": "Walters",
-    "Major": "Mechanical Engineering",
-    "Title of Artwork": "\"So tell me about yourself.\"",
-    "Image File": "swalters37.png"
   }
 ]
