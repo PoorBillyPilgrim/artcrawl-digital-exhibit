@@ -318,7 +318,7 @@ var Metadata = (function () {
     }
 
     const handleAbout = function() {
-        $('h1').click(function() {
+        $('#hero > div > div > button').click(function() {
             animateEnter();
         });
         
