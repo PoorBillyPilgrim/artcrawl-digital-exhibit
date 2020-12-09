@@ -111,9 +111,6 @@ function animateEnter() {
         $('#about').removeClass('hide');
         $('#about').css('opacity', '1');
         $('#info').removeClass('hide');
-        let id = '0';
-        let username = $('#' + id).attr('data-username');
-        history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + id);
     }, 1000);
 }
 
@@ -127,6 +124,7 @@ var Metadata = (function () {
             // if hash is #artcrawl, load first item in #grid
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + dataAttributes.username + '&id=' + id);
         } else if (loc.hash) {
             // if hash contains an id, load item with corresponding data-dzi-id attribute
             // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
@@ -143,6 +141,7 @@ var Metadata = (function () {
             // load first item in #grid
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + dataAttributes.username + '&id=' + id);
         }
 
         img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
@@ -157,6 +156,7 @@ var Metadata = (function () {
         openViewer();
         closeViewer();
         renderMetadata();
+        handleGallery();
         handleAbout()
         onResize();
         renderColor();
@@ -275,10 +275,10 @@ var Metadata = (function () {
             
             setTimeout(function () {
                 $('#metadata-img').attr('src', img);
-                $('#metadata.active').css('opacity', 1);
+                // $('#metadata.active').css('opacity', 1);
                 let loadedImg = document.querySelector('#metadata-img');
                 loadedImg.addEventListener('load', function(event) {
-                     console.log('image loaded.');
+                     $('#metadata.active').css('opacity', 1);
                      renderMetadataImg($('#metadata-caption'), dataAttributes);
                 });
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
@@ -313,10 +313,60 @@ var Metadata = (function () {
 
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css({'background-color': activeColor});
-
-
-            
         });
+    }
+
+    const handleGallery = function() {
+        let params = _getHashParams(window.location.hash.substr(1));
+        let lastGridItem = document.querySelector('#grid').children.length - 2;
+        let gallery = parseInt(params.id);
+        let dataAttributes;
+        $('.left').click(function() {
+            gallery -= 1;
+            if (gallery < 0) {
+                gallery = lastGridItem;
+            }
+            console.log(gallery);
+            dataAttributes = getDataAttributes($('#' + gallery));
+            console.log(dataAttributes);
+            img = $('#' + gallery).find('img').attr('src').replace('thumbnails', 'artcrawl');
+            $('#metadata.active').css('opacity', 0);
+            setTimeout(function () {
+                $('#metadata-img').attr('src', img);
+                let loadedImg = document.querySelector('#metadata-img');
+                loadedImg.addEventListener('load', function(event) {
+                     $('#metadata.active').css('opacity', 1);
+                     renderMetadataImg($('#metadata-caption'), dataAttributes);
+                });
+                gridItemID = $('.art-crawl-item.highlight').attr('id');
+                let username = $('.art-crawl-item.highlight').attr('data-username');
+                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+            }, 550);
+        });
+
+        $('.right').click(function() {
+            gallery += 1;
+            if (gallery > lastGridItem) {
+                gallery = 0;
+            }
+            console.log(gallery)
+            dataAttributes = getDataAttributes($('#' + gallery));
+            console.log(dataAttributes);
+            img = $('#' + gallery).find('img').attr('src').replace('thumbnails', 'artcrawl');
+            $('#metadata.active').css('opacity', 0);
+            setTimeout(function () {
+                $('#metadata-img').attr('src', img);
+                let loadedImg = document.querySelector('#metadata-img');
+                loadedImg.addEventListener('load', function(event) {
+                     $('#metadata.active').css('opacity', 1);
+                     renderMetadataImg($('#metadata-caption'), dataAttributes);
+                });
+                gridItemID = $('.art-crawl-item.highlight').attr('id');
+                let username = $('.art-crawl-item.highlight').attr('data-username');
+                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+            }, 550);
+        });
+        
     }
 
     const handleAbout = function() {
