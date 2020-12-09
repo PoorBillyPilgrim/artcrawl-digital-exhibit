@@ -111,6 +111,9 @@ function animateEnter() {
         $('#about').removeClass('hide');
         $('#about').css('opacity', '1');
         $('#info').removeClass('hide');
+        let id = '0';
+        let username = $('#' + id).attr('data-username');
+        history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + id);
     }, 1000);
 }
 
@@ -127,8 +130,7 @@ var Metadata = (function () {
         } else if (loc.hash) {
             // if hash contains an id, load item with corresponding data-dzi-id attribute
             // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
-            let hash = loc.hash.substr(1);
-            let params = _getHashParams(hash);
+            let params = _getHashParams(loc.hash.substr(1)); // remove '#'
             id = params.id;
             dataAttributes = getDataAttributes($('#' + id));
             let redirect = loc.hash;
