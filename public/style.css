@@ -63,6 +63,7 @@ h1 {
   border: solid #000 5px;
   border-image-slice: 1;
   font-size: 1.5rem;
+  background: var(--light-color);
 }
 
 #hero > div > div > button:hover {
