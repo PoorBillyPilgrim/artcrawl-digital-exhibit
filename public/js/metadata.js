@@ -115,7 +115,7 @@ function animateEnter() {
 }
 
 var Metadata = (function () {
-    let viewer, img, dataAttributes, gridItemID, dziID;
+    let viewer, img, dataAttributes, gridItemID;
 
     const init = function() {
         const loc = window.location;
@@ -128,7 +128,7 @@ var Metadata = (function () {
         } else if (loc.hash) {
             // if hash contains an id, load item with corresponding data-dzi-id attribute
             // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
-            let params = _getHashParams(loc.hash.substr(1)); // remove '#'
+            let params = getHashParams(loc.hash.substr(1)); // remove '#'
             id = params.id;
             dataAttributes = getDataAttributes($('#' + id));
             let redirect = loc.hash;
@@ -144,7 +144,7 @@ var Metadata = (function () {
             history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + dataAttributes.username + '&id=' + id);
         }
 
-        img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
+        let img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata-img').attr('src', img);
         let loadedImg = document.querySelector('#metadata-img');
         loadedImg.addEventListener('load', function(event) {
@@ -160,13 +160,11 @@ var Metadata = (function () {
         handleAbout()
         onResize();
         renderColor();
-        //handleScroll();
-        //handleSortChange();
 
         $('#' + id).addClass('highlight');
     }
 
-    function _initViewer(id) {
+    function initViewer(id) {
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
         $('#html-overlay').removeClass('hide');
@@ -183,7 +181,7 @@ var Metadata = (function () {
         });
     }
     
-    function _getHashParams(arr) {
+    function getHashParams(arr) {
         return arr.split('&').reduce(function(result, item) {
             let parts = item.split('=');
             result[parts[0]] = parts[1];
@@ -207,7 +205,7 @@ var Metadata = (function () {
         } */
 
         $('#metadata-img').click(function () {
-            let dzi = $('.art-crawl-item.highlight').attr('data-username');
+            let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
 
             $ID = $('#' + gridItemID);
@@ -218,7 +216,7 @@ var Metadata = (function () {
             $('#about').addClass('hide');
             $('#info').addClass('hide');
             $('#legend').addClass('hide');
-            _initViewer(dzi);
+            initViewer(username);
             
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + dzi + '&id=' + gridItemID + '&viewer=true'); 
         });
@@ -226,7 +224,7 @@ var Metadata = (function () {
 
     const closeViewer = function() {
         $('#openseadragon-close').click(function () {
-            let params = _getHashParams(window.location.hash.substr(1));
+            let params = getHashParams(window.location.hash.substr(1));
             
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
@@ -260,53 +258,31 @@ var Metadata = (function () {
         });
     }
 
-    const renderMetadata = function() {
-        $('.art-crawl-item').click(function (event) {
-            
-            dataAttributes = getDataAttributes($(this));
-            img = $(this).find('img').attr('src').replace('thumbnails', 'artcrawl');
-            //console.log(img);
+    function changeImage(id) {
+        dataAttributes = getDataAttributes($(id));
+        img = $(id).find('img').attr('src').replace('thumbnails', 'artcrawl');
+        $('#metadata.active').css('opacity', 0);
     
-            $('#metadata.active').css('opacity', 0);
-            
-            /*setTimeout(function() {
-                $('#metadata-img').attr('src', img);
-            }, 250) */
-            
-            setTimeout(function () {
-                $('#metadata-img').attr('src', img);
-                // $('#metadata.active').css('opacity', 1);
-                let loadedImg = document.querySelector('#metadata-img');
-                loadedImg.addEventListener('load', function(event) {
-                     $('#metadata.active').css('opacity', 1);
-                     renderMetadataImg($('#metadata-caption'), dataAttributes);
-                });
-                gridItemID = $('.art-crawl-item.highlight').attr('id');
-                let username = $('.art-crawl-item.highlight').attr('data-username');
-                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
-            }, 550);
+        setTimeout(function () {
+            $('#metadata-img').attr('src', img);
+            let loadedImg = document.querySelector('#metadata-img');
+            loadedImg.addEventListener('load', function(event) {
+                 $('#metadata.active').css('opacity', 1);
+                 renderMetadataImg($('#metadata-caption'), dataAttributes);
+            });
+            gridItemID = $('.art-crawl-item.highlight').attr('id');
+            let username = $('.art-crawl-item.highlight').attr('data-username');
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+        }, 550);
+    }
 
-            /*
-            setTimeout(function() {
-                renderMetadataImg($('#metadata-caption'), dataAttributes);
-            }, 700) */
-            
-
-            /*function handleShowColor(selector, opacity) {
-                if(selector.classList.contains('show-color')) {
-                    selector.style.opacity = opacity;
-                }
-            }*/
+    const renderMetadata = function() {
+        $('.art-crawl-item').click(function (event) {    
+            changeImage(this);
             // orange highlight on click
             if (!$(this).hasClass('highlight')) {
-                //let imgBefore = document.querySelector('.highlight').firstElementChild;
-                //handleShowColor(imgBefore, 0) // doesn't work
-                // console.log($('.art-crawl-item.highlight'))
                 $('.art-crawl-item').removeClass('highlight');
                 $(this).addClass('highlight');
-                //let imgAfter = event.currentTarget.firstElementChild;
-                // console.log($('.art-crawl-item.highlight'))
-                //handleShowColor(imgAfter, 1); // doesn't work
             } else {
                 $(this).addClass('highlight');
             }
@@ -320,28 +296,12 @@ var Metadata = (function () {
         let params = _getHashParams(window.location.hash.substr(1));
         let lastGridItem = document.querySelector('#grid').children.length - 2;
         let gallery = parseInt(params.id);
-        let dataAttributes;
         $('.left').click(function() {
             gallery -= 1;
             if (gallery < 0) {
                 gallery = lastGridItem;
             }
-            console.log(gallery);
-            dataAttributes = getDataAttributes($('#' + gallery));
-            console.log(dataAttributes);
-            img = $('#' + gallery).find('img').attr('src').replace('thumbnails', 'artcrawl');
-            $('#metadata.active').css('opacity', 0);
-            setTimeout(function () {
-                $('#metadata-img').attr('src', img);
-                let loadedImg = document.querySelector('#metadata-img');
-                loadedImg.addEventListener('load', function(event) {
-                     $('#metadata.active').css('opacity', 1);
-                     renderMetadataImg($('#metadata-caption'), dataAttributes);
-                });
-                gridItemID = $('.art-crawl-item.highlight').attr('id');
-                let username = $('.art-crawl-item.highlight').attr('data-username');
-                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
-            }, 550);
+            changeImage('#' + gallery);
         });
 
         $('.right').click(function() {
@@ -349,22 +309,7 @@ var Metadata = (function () {
             if (gallery > lastGridItem) {
                 gallery = 0;
             }
-            console.log(gallery)
-            dataAttributes = getDataAttributes($('#' + gallery));
-            console.log(dataAttributes);
-            img = $('#' + gallery).find('img').attr('src').replace('thumbnails', 'artcrawl');
-            $('#metadata.active').css('opacity', 0);
-            setTimeout(function () {
-                $('#metadata-img').attr('src', img);
-                let loadedImg = document.querySelector('#metadata-img');
-                loadedImg.addEventListener('load', function(event) {
-                     $('#metadata.active').css('opacity', 1);
-                     renderMetadataImg($('#metadata-caption'), dataAttributes);
-                });
-                gridItemID = $('.art-crawl-item.highlight').attr('id');
-                let username = $('.art-crawl-item.highlight').attr('data-username');
-                history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
-            }, 550);
+            changeImage('#' + gallery);
         });
         
     }
