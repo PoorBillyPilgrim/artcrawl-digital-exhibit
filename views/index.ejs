@@ -44,8 +44,8 @@
 
 <body>
   <div id="hero" class="position-absolute">
-    <div>
-      <h1>Clough ART Crawl</h1>
+    <div class="">
+        <h1>Clough ART Crawl</h1>
       <div>
         <button>explore the exhibit</button>
       </div>
@@ -68,13 +68,15 @@
       <div class="col-md position-relative">
         <figure id="metadata" class="active">
           <img id="metadata-img" src="" />
+          <i class="fas fa-arrow-circle-left left"></i>
+          <i class="fas fa-arrow-circle-right right"></i>
           <figcaption id="metadata-caption" class="position-relative"></figcaption>
         </figure>
       </div>
       <div class="col-md">
         <div class="row ">
           <fieldset id="sort-group" class="col-lg-8 col-xl-4 group">
-            <legend>Shuffle</legend>
+            <legend>shuffle</legend>
             <div id="sort-options" class="btn-group flex-wrap options">
               <label id="sort-btn-1" class="btn active">
                 <input type="radio" name="sort-value" value="last-name" /> Name
@@ -89,12 +91,12 @@
           </fieldset>
           <button id="color-btn" class="btn col-lg-4 col-xl-2">College</button>
           <form class="col-lg-6 col-xl-3 group options">
-            <label for="search">Search</label>
+            <label for="search">artist, title, or major</label>
             <input id="search" type="search" autocomplete="off"/>
             <input type="search" style="display: none;"/>
           </form>
           <fieldset id="filters-group" class="col-lg-6 col-xl-3 group">
-            <legend>Filter</legend>
+            <legend>filter</legend>
               <div id="filter-options" class="btn-group flex-wrap options">
                 <label class="btn active">
                   <input type="radio" name="filter-value" value="all" /> All
