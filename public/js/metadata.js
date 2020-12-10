@@ -102,18 +102,6 @@ function createHtmlOverlay(title, name, major, description) {
     return html;
 }
 
-function animateEnter() {
-    $('#hero').css('opacity', '0');
-    setTimeout(function() {
-        $('#hero').addClass('hide');
-        $('#artcrawl').removeClass('hide');
-        $('#artcrawl').css('opacity', '1');
-        $('#about').removeClass('hide');
-        $('#about').css('opacity', '1');
-        $('#info').removeClass('hide');
-    }, 1000);
-}
-
 var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID;
 
@@ -141,7 +129,6 @@ var Metadata = (function () {
             // load first item in #grid
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + dataAttributes.username + '&id=' + id);
         }
 
         let img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
@@ -152,12 +139,11 @@ var Metadata = (function () {
             renderMetadataImg($('#metadata-caption'), dataAttributes);
        });
 
-
         openViewer();
         closeViewer();
         renderMetadata();
-        handleGallery();
-        handleAbout()
+        //handleGallery(id);
+        handleAbout();
         onResize();
         renderColor();
 
@@ -190,20 +176,6 @@ var Metadata = (function () {
     }
     
     const openViewer = function() {
-        // const loc = window.location;
-        
-        // this currently opens viewer if hash has params
-        // may change this so that hash params directs to grid, not viewer
-        /* if (loc.hash) {
-            $('#hero').addClass('hide');
-            // parse hash params
-            // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
-            let hash = loc.hash.substr(1);
-            let params = _getHashParams(hash);
-            // add dataAttributes to #html-overlay
-            _initViewer(params.dziID);
-        } */
-
         $('#metadata-img').click(function () {
             let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
@@ -259,6 +231,7 @@ var Metadata = (function () {
     }
 
     function changeImage(id) {
+        console.log(id)
         dataAttributes = getDataAttributes($(id));
         img = $(id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata.active').css('opacity', 0);
@@ -273,6 +246,7 @@ var Metadata = (function () {
             gridItemID = $('.art-crawl-item.highlight').attr('id');
             let username = $('.art-crawl-item.highlight').attr('data-username');
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+            handleGallery(window.location.hash.substr(1));
         }, 550);
     }
 
@@ -286,30 +260,54 @@ var Metadata = (function () {
             } else {
                 $(this).addClass('highlight');
             }
-
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css({'background-color': activeColor});
         });
+
+
     }
 
-    const handleGallery = function() {
-        let params = _getHashParams(window.location.hash.substr(1));
+    function animateEnter() {
+        $('#hero').css('opacity', '0');
+        setTimeout(function() {
+            $('#hero').addClass('hide');
+            $('#artcrawl').removeClass('hide');
+            $('#artcrawl').css('opacity', '1');
+            $('#about').removeClass('hide');
+            $('#about').css('opacity', '1');
+            $('#info').removeClass('hide');
+            handleGallery(window.location.hash.substr(1));
+        }, 1000);
+    }
+
+    const handleGallery = function(hash) {
+        let params = getHashParams(hash);
         let lastGridItem = document.querySelector('#grid').children.length - 2;
         let gallery = parseInt(params.id);
         $('.left').click(function() {
+            let highlights = Array.from(document.querySelectorAll('.highlight'));
+            for (let highlight of highlights) {
+                highlight.classList.remove('highlight');
+            }
             gallery -= 1;
             if (gallery < 0) {
                 gallery = lastGridItem;
             }
             changeImage('#' + gallery);
+            $('#' + gallery).addClass('highlight');
         });
 
         $('.right').click(function() {
+            let highlights = Array.from(document.querySelectorAll('.highlight'));
+            for (let highlight of highlights) {
+                highlight.classList.remove('highlight');
+            }
             gallery += 1;
             if (gallery > lastGridItem) {
                 gallery = 0;
             }
             changeImage('#' + gallery);
+            $('#' + gallery).addClass('highlight');
         });
         
     }
@@ -317,6 +315,9 @@ var Metadata = (function () {
     const handleAbout = function() {
         $('#hero > div > div > button').click(function() {
             animateEnter();
+            let id = '0';
+            let username = $('#' + id).attr('data-username');
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + id);
         });
         
         $('#about-close').click(function() {
@@ -330,11 +331,9 @@ var Metadata = (function () {
 
     const onResize = function() {
         let $metadataImg;
-        
         $('#metadata').click(function () {
             $metadataImg = document.querySelector('#metadata-img');
         });
-
         let width;
         width = $(window).width();
         
