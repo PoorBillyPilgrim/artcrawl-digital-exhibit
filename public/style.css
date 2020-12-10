@@ -48,10 +48,13 @@ body {
 h1 {
   margin: auto;
   text-align: center;
-  font-size: 5rem;
-  
-  cursor: pointer;
+  font-size: 7rem;
 }
+
+.h1-bg {
+  background: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
+}
+
 #hero > div > div {
   text-align: center;
 }
