@@ -16,10 +16,10 @@ const Grid = (function() {
         imgLoad.on('always', onAlways);
         
         // Sort, Search, and Filter
-        addGridEvent('#sort-options', 'change', _handleSortChange);
-        addGridEvent('#filter-options', 'change', _handleFilterChange);
-        addGridEvent('#search', 'input', _handleSearchInput);
-        addGridEvent('#search', 'keydown', _handleSearchKeydown); // Only to prevent form submission on "Enter" key press
+        addGridEvent('#sort-options', 'change', handleSortChange);
+        addGridEvent('#filter-options', 'change', handleFilterChange);
+        addGridEvent('#search', 'input', handleSearchInput);
+        addGridEvent('#search', 'keydown', handleSearchKeydown); // Only to prevent form submission on "Enter" key press
         
     }
 
@@ -34,7 +34,7 @@ const Grid = (function() {
     }
 
     // add + remove 'active' class from btns
-    function _handleActiveBtn(event) {
+    function handleActiveBtn(event) {
         const btns = Array.from(event.currentTarget.children);
         console.log(btns)
         btns.forEach(btn => {
@@ -45,8 +45,8 @@ const Grid = (function() {
             }
         });
     }
-    const _handleSortChange = function(event) {
-        _handleActiveBtn(event);
+    const handleSortChange = function(event) {
+        handleActiveBtn(event);
 
         const { value } = event.target;
         let options = {};
@@ -78,8 +78,8 @@ const Grid = (function() {
         shuffle.sort(options);
     }
 
-    const _handleFilterChange = function(event) {
-        _handleActiveBtn(event);
+    const handleFilterChange = function(event) {
+        handleActiveBtn(event);
 
         const { value } = event.target;
         const highlight = document.querySelector('.highlight');
@@ -95,7 +95,7 @@ const Grid = (function() {
         }
     }
 
-    const _handleSearchInput = function(event) {
+    const handleSearchInput = function(event) {
         const searchText = event.target.value.toLowerCase();
         const majorFilterBtn = document.querySelector('#major-filter');
 
@@ -114,7 +114,7 @@ const Grid = (function() {
         });
     }
 
-    const _handleSearchKeydown = function(event) {
+    const handleSearchKeydown = function(event) {
         // To prevent form submission on "Enter" press down
         // https://stackoverflow.com/questions/905222/prevent-form-submission-on-enter-key-press
         // but if there is only one input, then form submit is always present. Have to place a "dummy" hidden input underneath.
@@ -127,111 +127,3 @@ const Grid = (function() {
         init: init
     }
 })();
-
-/*
-var grid;
-// https://codepen.io/Vestride/pen/ZVWmMX -- from Shuffle.js website
-class Grid {
-    constructor(element) {
-        this.element = element;
-        this.shuffle = new Shuffle(this.element, {
-            itemSelector: '.art-crawl-item',
-            sizer: element.querySelector('.sizer-element'),
-            speed: 2600, // 2.6 seconds
-            easing: 'cubic-bezier(.28,1.06,.54,.98)' // custom from https://cubic-bezier.com/#.28,1.06,.54,.98
-        });
-
-        this.addSorting();
-        
-        // on img load
-        // https://github.com/Vestride/Shuffle/issues/100
-        var imgLoad = imagesLoaded(element);
-        imgLoad.on('always',this.onAlways.bind(this));
-    }
-
-    onAlways() {
-        console.log('all images are loaded');
-        this.shuffle.update();
-    };
-
-    addSorting() {
-        const btnGroup = document.querySelector('.sort-options');
-        if (!btnGroup) { return; }
-        btnGroup.addEventListener('change', this._handleSortChange.bind(this));
-    }
-
-    _handleSortChange(event) {
-        // add + remove 'active' class from btns
-        const btns = Array.from(event.currentTarget.children);
-        btns.forEach(btn => {
-            if (btn.querySelector('input').value === event.target.value) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
-
-        const { value } = event.target;
-        let options = {};
-
-        function sortByLastName(element) {
-            return element.getAttribute('data-last-name').toLowerCase();
-        }
-
-        function sortByMajor(element) {
-            return element.getAttribute('data-major').toLowerCase();
-        }
-
-        function sortByTitle(element) {
-            return element.getAttribute('data-title').toLowerCase();
-        }
-
-        if (value === 'last-name') {
-            options = { by: sortByLastName };
-        } else if (value === 'major') {
-            options = { by: sortByMajor };
-        } else if (value === 'title') {
-            options = { by: sortByTitle };
-        } else {
-            options = {};
-        };
-
-        // shuffle.sort(options) sorts based on the options object provided.
-        // this binds it to Grid
-        this.shuffle.sort(options);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    //window.grid = new Grid(document.getElementById('grid'));
-    grid = new Grid(document.getElementById('grid'));
-    console.log('Shuffle grid loaded.')
-});
-
-
-
-
-
-var gridUpdate = debounce(function () {
-    grid.shuffle.update();
-    console.log('grid reset.')
-}, 250);
-
-// window.addEventListener('resize', gridUpdate);
-
-// debounce function to use with window resize
-// https://davidwalsh.name/javascript-debounce-function
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-}; */
