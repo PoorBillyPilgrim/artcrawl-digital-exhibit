@@ -3,104 +3,7 @@
 // #metadata-img width is unavailable in DOM because of object-fit: scale-down 
 // These functions grab #metadata-img width after scale down
 // https://stackoverflow.com/questions/37256745/object-fit-get-resulting-dimensions
-function getRenderedSize(contains, cWidth, cHeight, width, height, pos) {
-    var oRatio = width / height,
-        cRatio = cWidth / cHeight;
-    return function () {
-        if (contains ? (oRatio > cRatio) : (oRatio < cRatio)) {
-            this.width = cWidth;
-            this.height = cWidth / oRatio;
-        } else {
-            this.width = cHeight * oRatio;
-            this.height = cHeight;
-        }
-        this.left = (cWidth - this.width) * (pos / 100);
-        this.right = this.width + this.left;
-        return this;
-    }.call({});
-}
 
-function getImgSizeInfo(img) {
-    var pos = window.getComputedStyle(img).getPropertyValue('object-position').split(' ');
-    return getRenderedSize(true,
-        img.width,
-        img.height,
-        img.naturalWidth,
-        img.naturalHeight,
-        parseInt(pos[0]));
-}
-
-// This will grab all the data-* attributes of an HTML element
-// Not sure if I will use or not...
-/*
-function getDataNames() {
-    var el = document.getElementById('0');
-    var arr = el.getAttributeNames();
-    var dataArr = [];
-    arr.forEach(x => {
-        if (x.includes('data-')) {
-            dataArr.push(x);
-        }
-    });
-}
-*/
-
-function getDataAttributes(gridItem) {
-    return {
-        firstName: gridItem.attr('data-first-name'),
-        lastName: gridItem.attr('data-last-name'), 
-        title: gridItem.attr('data-title'),
-        major: gridItem.attr('data-major'),
-        statement: gridItem.attr('data-artist-statement')
-    }
-}
-
-function renderMetadataImg($metadata, dataAttributes, $metadataImg = document.querySelector('#metadata-img')) {
-    var imgSize = getImgSizeInfo($metadataImg);
-    $metadata.css({
-        'left': imgSize.left,
-        'max-width': imgSize.width
-    });
-    $metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major)
-}
-
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
-
-function handleHighlight() {
-    var gridItemID;
-    gridItemID = $('.art-crawl-item.highlight').attr('id');
-    $('.art-crawl-item').removeClass('highlight');
-    setTimeout(function() {   
-        $("#" + gridItemID).addClass('highlight');
-    }, 2700); // grid speed is set to 2650ms
-}
-
-function createHtmlOverlay(title, name, major, description) {
-    function p(text) {
-        return '<p>' + text + '</p>'
-    };
-    let html = "";
-    for (let i = 0; i < arguments.length; i++) {
-        console.log(arguments[i])
-        if(arguments[i] != "") {
-            html += p(arguments[i]);
-        }
-    }
-    return html;
-}
 
 var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID;
@@ -135,14 +38,12 @@ var Metadata = (function () {
         $('#metadata-img').attr('src', img);
         let loadedImg = document.querySelector('#metadata-img');
         loadedImg.addEventListener('load', function(event) {
-            console.log('image loaded.');
             renderMetadataImg($('#metadata-caption'), dataAttributes);
        });
 
         openViewer();
         closeViewer();
         renderMetadata();
-        //handleGallery(id);
         handleAbout();
         onResize();
         renderColor();
@@ -150,6 +51,106 @@ var Metadata = (function () {
         $('#' + id).addClass('highlight');
     }
 
+    function getRenderedSize(contains, cWidth, cHeight, width, height, pos) {
+        var oRatio = width / height,
+            cRatio = cWidth / cHeight;
+        return function () {
+            if (contains ? (oRatio > cRatio) : (oRatio < cRatio)) {
+                this.width = cWidth;
+                this.height = cWidth / oRatio;
+            } else {
+                this.width = cHeight * oRatio;
+                this.height = cHeight;
+            }
+            this.left = (cWidth - this.width) * (pos / 100);
+            this.right = this.width + this.left;
+            return this;
+        }.call({});
+    }
+    
+    function getImgSizeInfo(img) {
+        var pos = window.getComputedStyle(img).getPropertyValue('object-position').split(' ');
+        return getRenderedSize(true,
+            img.width,
+            img.height,
+            img.naturalWidth,
+            img.naturalHeight,
+            parseInt(pos[0]));
+    }
+    
+    // This will grab all the data-* attributes of an HTML element
+    // Not sure if I will use or not...
+    /*
+    function getDataNames() {
+        var el = document.getElementById('0');
+        var arr = el.getAttributeNames();
+        var dataArr = [];
+        arr.forEach(x => {
+            if (x.includes('data-')) {
+                dataArr.push(x);
+            }
+        });
+    }
+    */
+    
+    function getDataAttributes(gridItem) {
+        return {
+            firstName: gridItem.attr('data-first-name'),
+            lastName: gridItem.attr('data-last-name'), 
+            title: gridItem.attr('data-title'),
+            major: gridItem.attr('data-major'),
+            statement: gridItem.attr('data-artist-statement')
+        }
+    }
+    
+    function renderMetadataImg($metadata, dataAttributes, $metadataImg = document.querySelector('#metadata-img')) {
+        var imgSize = getImgSizeInfo($metadataImg);
+        $metadata.css({
+            'left': imgSize.left,
+            'max-width': imgSize.width
+        });
+        $metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major);
+        let arrowHeight = parseInt($('#metadata-img').css('height')) / 2;
+        $('#metadata > .row').css({ 'bottom': arrowHeight })
+    }
+    
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+    
+    function handleHighlight() {
+        var gridItemID;
+        gridItemID = $('.art-crawl-item.highlight').attr('id');
+        $('.art-crawl-item').removeClass('highlight');
+        setTimeout(function() {   
+            $("#" + gridItemID).addClass('highlight');
+        }, 2700); // grid speed is set to 2650ms
+    }
+    
+    function createHtmlOverlay(title, name, major, description) {
+        function p(text) {
+            return '<p>' + text + '</p>'
+        };
+        let html = "";
+        for (let i = 0; i < arguments.length; i++) {
+            if (arguments[i] != "") {
+                html += p(arguments[i]);
+            }
+        }
+        return html;
+    }
+    
     function initViewer(id) {
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
@@ -175,6 +176,24 @@ var Metadata = (function () {
         }, {});
     }
     
+    
+    
+    function animateEnter() {
+        $('#hero').css('opacity', '0');
+        setTimeout(function() {
+            $('#hero').addClass('hide');
+    
+            $('#artcrawl').removeClass('hide');
+            $('#artcrawl').css('opacity', '1');
+    
+            $('#about').removeClass('hide');
+            $('#about').css('opacity', '1');
+    
+            $('#info').removeClass('hide');
+            
+        }, 1000);
+    }
+    
     const openViewer = function() {
         $('#metadata-img').click(function () {
             let username = $('.art-crawl-item.highlight').attr('data-username');
@@ -190,7 +209,7 @@ var Metadata = (function () {
             $('#legend').addClass('hide');
             initViewer(username);
             
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + dzi + '&id=' + gridItemID + '&viewer=true'); 
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', '#username=' + username + '&id=' + gridItemID + '&viewer=true'); 
         });
     }
 
@@ -230,85 +249,52 @@ var Metadata = (function () {
         });
     }
 
-    function changeImage(id) {
-        console.log(id)
-        dataAttributes = getDataAttributes($(id));
-        img = $(id).find('img').attr('src').replace('thumbnails', 'artcrawl');
-        $('#metadata.active').css('opacity', 0);
-    
-        setTimeout(function () {
-            $('#metadata-img').attr('src', img);
-            let loadedImg = document.querySelector('#metadata-img');
-            loadedImg.addEventListener('load', function(event) {
-                 $('#metadata.active').css('opacity', 1);
-                 renderMetadataImg($('#metadata-caption'), dataAttributes);
-            });
-            gridItemID = $('.art-crawl-item.highlight').attr('id');
-            let username = $('.art-crawl-item.highlight').attr('data-username');
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
-            handleGallery(window.location.hash.substr(1));
-        }, 550);
-    }
-
     const renderMetadata = function() {
-        $('.art-crawl-item').click(function (event) {    
-            changeImage(this);
-            // orange highlight on click
-            if (!$(this).hasClass('highlight')) {
-                $('.art-crawl-item').removeClass('highlight');
-                $(this).addClass('highlight');
-            } else {
-                $(this).addClass('highlight');
-            }
-            let activeColor = $('.art-crawl-item.highlight').css('background-color');
-            $('#legend').css({'background-color': activeColor});
-        });
-
-
-    }
-
-    function animateEnter() {
-        $('#hero').css('opacity', '0');
-        setTimeout(function() {
-            $('#hero').addClass('hide');
-            $('#artcrawl').removeClass('hide');
-            $('#artcrawl').css('opacity', '1');
-            $('#about').removeClass('hide');
-            $('#about').css('opacity', '1');
-            $('#info').removeClass('hide');
-            handleGallery(window.location.hash.substr(1));
-        }, 1000);
-    }
-
-    const handleGallery = function(hash) {
-        let params = getHashParams(hash);
-        let lastGridItem = document.querySelector('#grid').children.length - 2;
-        let gallery = parseInt(params.id);
-        $('.left').click(function() {
+        
+        function changeImage(id) {
+            id = $(id);
+            console.log(id)
+            dataAttributes = getDataAttributes(id);
+            img = id.find('img').attr('src').replace('thumbnails', 'artcrawl');
+            $('#metadata.active').css('opacity', 0);
             let highlights = Array.from(document.querySelectorAll('.highlight'));
             for (let highlight of highlights) {
                 highlight.classList.remove('highlight');
             }
-            gallery -= 1;
-            if (gallery < 0) {
-                gallery = lastGridItem;
+        
+            setTimeout(function () {
+                $('#metadata-img').attr('src', img);
+                let loadedImg = document.querySelector('#metadata-img');
+                loadedImg.addEventListener('load', function(event) {
+                     $('#metadata.active').css('opacity', 1);
+                     renderMetadataImg($('#metadata-caption'), dataAttributes);
+                });
+                $(id).addClass('highlight');            
+                let gridItemID = id.attr('id');
+                let username = id.attr('data-username');
+                let activeColor = id.css('background-color');
+                $('#legend').css({'background-color': activeColor});
+                history.pushState({'item_id': gridItemID}, 'Art Crawl', '#username=' + username + '&id=' + gridItemID);
+            }, 550);
+        }
+        
+        $('.gallery').click(function() {
+            if(this.classList.contains('art-crawl-item')) {
+                changeImage(this);
+            } else if (this.classList.contains('left') || this.classList.contains('right')) {
+                let lastGridItem = document.querySelector('#grid').children.length - 2;
+                let params = getHashParams(window.location.hash.substr(1));
+                let id = parseInt(params.id);
+                if (this.classList.contains('left')) {
+                    id -= 1;
+                    if (id < 0) id = lastGridItem; 
+                } else if (this.classList.contains('right')) {
+                    id += 1;
+                    if(id > lastGridItem) id = 0; 
+                }
+                changeImage('#' + id);
             }
-            changeImage('#' + gallery);
-            $('#' + gallery).addClass('highlight');
-        });
-
-        $('.right').click(function() {
-            let highlights = Array.from(document.querySelectorAll('.highlight'));
-            for (let highlight of highlights) {
-                highlight.classList.remove('highlight');
-            }
-            gallery += 1;
-            if (gallery > lastGridItem) {
-                gallery = 0;
-            }
-            changeImage('#' + gallery);
-            $('#' + gallery).addClass('highlight');
-        });
+        })
         
     }
 
