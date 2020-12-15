@@ -198,19 +198,37 @@ h1 {
   }
 
   #metadata-img {
-    /* object-fit: scale-down;
-    -o-object-fit: scale-down;*/
+    -o-object-fit: contain;
     object-fit: contain;
     width: 100%;
     height: auto;
     padding-top: 15px;
     max-height: 600px;
-    /* need max-width */
+    
     cursor: zoom-in;
   }
 
   #metadata-caption {
     font-size: 1.25rem;
+  }
+
+  #metadata > .row {
+    position: relative;
+    padding: 0 15px;
+    height: 0;
+  }
+
+  #metadata > .row > div {
+    height: 2rem;
+    width: 2rem;
+    background: var(--custom-dark)
+  }
+
+  i.gallery {
+    color: var(--light-color);
+    opacity: 0.75;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
 /* Filter, Search, Sort */
