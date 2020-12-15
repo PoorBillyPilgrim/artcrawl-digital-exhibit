@@ -68,8 +68,14 @@
       <div class="col-md position-relative">
         <figure id="metadata" class="active">
           <img id="metadata-img" src="" />
-          <i class="fas fa-arrow-circle-left left"></i>
-          <i class="fas fa-arrow-circle-right right"></i>
+          <div class="row justify-content-between">
+            <div>
+              <i class="fas fa-arrow-circle-left gallery left"></i>
+            </div>
+            <div>
+              <i class="fas fa-arrow-circle-right gallery right"></i>
+            </div>
+            </div>
           <figcaption id="metadata-caption" class="position-relative"></figcaption>
         </figure>
       </div>
@@ -110,7 +116,7 @@
         <div class="container">
           <div id="grid" class="row mx-auto">
             <% for (let i = 0; i < data.length; i++) { %>
-                <figure id="<%=i%>" class="art-crawl-item" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
+                <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="/images/thumbnails/<%= data[i]['Image File']%>" />
             </figure>
