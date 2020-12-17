@@ -185,11 +185,11 @@ h1 {
 }
 
 #metadata {
+    position: relative;
     width: auto;
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    /* need max-width */
     max-height: 50%;
   }
 
@@ -218,17 +218,30 @@ h1 {
     height: 0;
   }
 
-  #metadata > .row > div {
+  /*#metadata > .row > div {
+    position: relative;
     height: 2rem;
     width: 2rem;
-    background: var(--custom-dark)
-  }
+    background: var(--custom-dark);
+    border-radius: 100%;
+  }*/
 
   i.gallery {
+    position: relative;
     color: var(--light-color);
     opacity: 0.75;
     font-size: 1.5rem;
     cursor: pointer;
+    border: solid 5px var(--custom-dark);
+    background: var(--custom-dark); 
+  }
+  
+  i.right {
+    border-radius: 100% 0 0 100%;
+  }
+
+  i.left {
+    border-radius: 0 100% 100% 0;
   }
 
 /* Filter, Search, Sort */
@@ -242,6 +255,7 @@ legend,
 label[for='search'] {
   font-size: 1rem;
   margin-bottom: 0;
+  text-align: right;
   /* font-family: 'Vampiro One', cursive;*/
 }
 
@@ -256,24 +270,6 @@ label[for='search'] {
 input#search {
   height: 37px;
 }
-/*
-.slide {
-  background: black;
-  height: inherit;
-  width: inherit;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: -100px;
-  opacity: 0;
-  transition: 0.5s all ease-in;
-}
-
-.slide:hover {
-  opacity: 1;
-  right: 0;
-}*/
 
 label.btn {
   border: 1.5px solid var(--custom-dark);
