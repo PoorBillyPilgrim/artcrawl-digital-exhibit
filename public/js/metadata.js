@@ -381,50 +381,6 @@ var Metadata = (function () {
         });
     }
 
-    const handleScroll = function() {
-        $('#hero > a').click(function(event) {
-            event.preventDefault();
-    
-            $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1250);
-
-            if(window.location.hash == "") {
-                setTimeout(function() {
-                    $('#about-card').removeClass('hide');
-                }, 1250);
-            }
-            $('.art-crawl-item').removeClass('highlight');
-            id = '0';
-            dataAttributes = getDataAttributes($('#0'));
-            img = $('#' + id).find('img').attr('src');
-            $('#metadata-img').attr('src', img);
-            $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
-            $('#' + id).addClass('highlight');
-            
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#dziID=' + id + '&id=' + id);
-        });
-
-        $('#about-link').click(function(event) {
-            event.preventDefault();
-    
-            $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top
-            }, 1250);
-
-            $('.art-crawl-item').removeClass('highlight');
-            id = '0';
-            dataAttributes = getDataAttributes($('#0'));
-            img = $('#' + id).find('img').attr('src');
-            $('#metadata-img').attr('src', img);
-            $('#metadata-img').on('load', renderMetadataImg($('#metadata-caption'), dataAttributes));
-            $('#' + id).addClass('highlight');
-           // let username = $('')
-            
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + id);
-        });
-    }
-
     return {
         init: init
     }
