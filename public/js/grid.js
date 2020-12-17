@@ -36,7 +36,6 @@ const Grid = (function() {
     // add + remove 'active' class from btns
     function handleActiveBtn(event) {
         const btns = Array.from(event.currentTarget.children);
-        console.log(btns)
         btns.forEach(btn => {
             if (btn.querySelector('input').value === event.target.value) {
                 btn.classList.add('active');
