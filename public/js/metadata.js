@@ -111,7 +111,11 @@ var Metadata = (function () {
         });
         $metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major);
         let arrowHeight = parseInt($('#metadata-img').css('height')) / 2;
-        $('#metadata > .row').css({ 'bottom': arrowHeight })
+        $('#metadata > .row').css({ 
+            'bottom': arrowHeight,
+        });
+        $('i.left').css({'left': imgSize.left});
+        $('i.right').css({'right': imgSize.left});
     }
     
     function debounce(func, wait, immediate) {
