@@ -78,21 +78,6 @@ var Metadata = (function () {
             parseInt(pos[0]));
     }
     
-    // This will grab all the data-* attributes of an HTML element
-    // Not sure if I will use or not...
-    /*
-    function getDataNames() {
-        var el = document.getElementById('0');
-        var arr = el.getAttributeNames();
-        var dataArr = [];
-        arr.forEach(x => {
-            if (x.includes('data-')) {
-                dataArr.push(x);
-            }
-        });
-    }
-    */
-    
     function getDataAttributes(gridItem) {
         return {
             firstName: gridItem.attr('data-first-name'),
@@ -155,6 +140,30 @@ var Metadata = (function () {
         return html;
     }
     
+    function getHashParams(arr) {
+        return arr.split('&').reduce(function(result, item) {
+            let parts = item.split('=');
+            result[parts[0]] = parts[1];
+            return result;
+        }, {});
+    }
+    
+    function animateEnter() {
+        $('#hero').css('opacity', '0');
+        setTimeout(function() {
+            $('#hero').addClass('hide');
+    
+            $('#artcrawl').removeClass('hide');
+            $('#artcrawl').css('opacity', '1');
+    
+            $('#about').removeClass('hide');
+            $('#about').css('opacity', '1');
+    
+            $('#info').removeClass('hide');
+            
+        }, 1000);
+    }
+
     function initViewer(id) {
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
@@ -172,38 +181,12 @@ var Metadata = (function () {
         });
     }
     
-    function getHashParams(arr) {
-        return arr.split('&').reduce(function(result, item) {
-            let parts = item.split('=');
-            result[parts[0]] = parts[1];
-            return result;
-        }, {});
-    }
-    
-    
-    
-    function animateEnter() {
-        $('#hero').css('opacity', '0');
-        setTimeout(function() {
-            $('#hero').addClass('hide');
-    
-            $('#artcrawl').removeClass('hide');
-            $('#artcrawl').css('opacity', '1');
-    
-            $('#about').removeClass('hide');
-            $('#about').css('opacity', '1');
-    
-            $('#info').removeClass('hide');
-            
-        }, 1000);
-    }
-    
     const openViewer = function() {
         $('#metadata-img').click(function () {
             let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
 
-            $ID = $('#' + gridItemID);
+            let $ID = $('#' + gridItemID);
             let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-first-name') + ' ' + $ID.attr('data-last-name'), $ID.attr('data-major'), $ID.attr('data-artist-statement'));
             $('#html-overlay').append(html);
 
@@ -211,6 +194,7 @@ var Metadata = (function () {
             $('#about').addClass('hide');
             $('#info').addClass('hide');
             $('#legend').addClass('hide');
+
             initViewer(username);
             
             history.pushState({'item_id': gridItemID}, 'Art Crawl', '#username=' + username + '&id=' + gridItemID + '&viewer=true'); 
@@ -224,8 +208,6 @@ var Metadata = (function () {
             $('#openseadragon').removeClass('show');
             $('#openseadragon-close').addClass('hide');
             $('.artcrawl-container').removeClass('hide');
-            //$('#hero').removeClass('hide');
-            //$('#about').removeClass('hide');
             $('#info').removeClass('hide');
             if($('.art-crawl-item > img').hasClass('show-color')) {
                 $('#legend').removeClass('hide');
@@ -328,9 +310,11 @@ var Metadata = (function () {
         width = $(window).width();
         
         $(window).resize(debounce(function () {
-            // Because mobile browsers register scroll as window resize,
-            // this checks for only change in width
-            // https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
+            /**
+             * Because mobile browsers register scroll as window resize,
+             * this checks for only change in width
+             * https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
+             * */
             if ($(window).width() != width) {
                 gridItemID = $('.art-crawl-item.highlight').attr('id');
                 dataAttributes = getDataAttributes($('#' + gridItemID));
@@ -342,7 +326,6 @@ var Metadata = (function () {
     
                 // fades in $metadata after 0.55s
                 setTimeout(function() {
-                    // console.log($metadataImg)
                     $('#metadata-img').attr('src', img);
                     renderMetadataImg($('#metadata-caption'), dataAttributes, $metadataImg);
                     $('#metadata-caption').css('opacity', 1);
@@ -359,15 +342,8 @@ var Metadata = (function () {
             
             let hlImg = document.querySelector('.highlight').firstElementChild;
             let item  = document.querySelector('.art-crawl-item');
-           // console.log(img.classList.contains('show-color'))
+
             $('.art-crawl-item > img').toggleClass('show-color');
-            /* if(hlImg.classList.contains('show-color')) {
-                hlImg.style.opacity = 0;
-                console.log(hlImg.style.opacity)
-            } else {
-                hlImg.style.opacity = 1;
-            } */
-            // $('.art-crawl-item.highlight > img').css('opacity', 1); // need to toggle
             $('#legend').toggleClass('hide');
 
             let figures = document.querySelectorAll('.art-crawl-item');

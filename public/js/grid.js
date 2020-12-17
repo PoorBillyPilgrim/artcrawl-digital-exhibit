@@ -1,5 +1,3 @@
-//var Shuffle = window.Shuffle;
-
 const Grid = (function() {
     //let shuffle;
     const init = function() {
