@@ -63,9 +63,10 @@
       <p><strong>Directions:</strong> Bibendum est ultricies integer quis auctor. Cursus euismod quis viverra nibh cras pulvinar mattis. Nisi vitae suscipit tellus mauris. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Varius duis at consectetur lorem donec. Eu sem integer vitae justo eget magna fermentum. Lacus sed turpis tincidunt id aliquet risus. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Dolor sit amet consectetur adipiscing elit duis tristique. Leo in vitae turpis massa sed elementum tempus. At tellus at urna condimentum mattis pellentesque id nibh. Sapien faucibus et molestie ac feugiat sed.</p>
     </div>
   </div>
-  <div class="container-fluid">
-    <div id="artcrawl" class="artcrawl-container row align-items-center" style="height: 100vh">
-      <div class="col-md position-relative">
+  <div class="container-fluid" style="height: 100vh;">
+    <h2 class="row">Clough Art Crawl</h2>
+    <div id="artcrawl" class="artcrawl-container row align-items-center">
+      <div class="col-xl position-relative">
         <figure id="metadata" class="active">
           <img id="metadata-img" src="" />
           <div class="row justify-content-between">
@@ -75,9 +76,11 @@
           <figcaption id="metadata-caption" class="position-relative"></figcaption>
         </figure>
       </div>
-      <div class="col-md">
-        <div class="row ">
-          <fieldset id="sort-group" class="col-lg-8 col-xl-4 group">
+      <div class="col-xl">
+        <div class="row flex-wrap">
+        <div class="col-2 col-xl-12 order-xl-first">
+          <div class="row">
+          <fieldset id="sort-group" class="col-lg-12 col-xl-4 group">
             <legend>shuffle</legend>
             <div id="sort-options" class="btn-group flex-wrap options">
               <label id="sort-btn-1" class="btn active">
@@ -91,13 +94,13 @@
               </label>
             </div>
           </fieldset>
-          <button id="color-btn" class="btn col-lg-4 col-xl-2">college</button>
-          <form class="col-lg-6 col-xl-3 group options">
+          <button id="color-btn" class="btn col-lg col-xl-2">college</button>
+          <form class="col-lg col-xl-3 group options">
             <label for="search">artist, title, or major</label>
             <input id="search" type="search" autocomplete="off"/>
             <input type="search" style="display: none;"/>
           </form>
-          <fieldset id="filters-group" class="col-lg-6 col-xl-3 group">
+          <fieldset id="filters-group" class="col-lg col-xl-3 group">
             <legend>filter</legend>
               <div id="filter-options" class="btn-group flex-wrap options">
                 <label class="btn active">
@@ -109,8 +112,9 @@
               </div>
           </fieldset>
         </div>
-        <div class="container">
-          <div id="grid" class="row mx-auto">
+        </div>
+        <div class="col order-first">
+          <div id="grid" class="">
             <% for (let i = 0; i < data.length; i++) { %>
                 <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
                   data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
@@ -119,6 +123,7 @@
             <% } %>
             <div class="sizer-element"></div>
           </div>
+        </div>
         </div>
       </div>
     </div>
