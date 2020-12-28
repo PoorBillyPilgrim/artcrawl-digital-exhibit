@@ -229,19 +229,19 @@ h1 {
   i.gallery {
     position: relative;
     color: var(--light-color);
-    opacity: 0.75;
     font-size: 1.5rem;
     cursor: pointer;
-    border: solid 5px var(--custom-dark);
-    background: var(--custom-dark); 
+    text-shadow: 0 0 10px var(--custom-dark);
   }
   
   i.right {
     border-radius: 100% 0 0 100%;
+    padding-right: 5px;
   }
 
   i.left {
     border-radius: 0 100% 100% 0;
+    padding-left: 5px;
   }
 
 /* Filter, Search, Sort */
