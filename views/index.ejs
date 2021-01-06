@@ -78,23 +78,26 @@
       </div>
       <div class="col-xl">
         <div class="row flex-wrap">
-        <div class="col-2 col-xl-12 order-xl-first">
+        <div class="col-sm-3 col-xl-12 order-first order-sm-last order-xl-first">
           <div class="row">
-          <fieldset id="sort-group" class="col-lg-12 col-xl-4 group">
-            <legend>shuffle</legend>
-            <div id="sort-options" class="btn-group flex-wrap options">
-              <label id="sort-btn-1" class="btn active">
-                <input type="radio" name="sort-value" value="last-name" /> name
-              </label>
-              <label id="sort-btn-2" class="btn">
-                <input type="radio" name="sort-value" value="major" /> major
-              </label>
-              <label id="sort-btn-3" class="btn">
-                <input type="radio" name="sort-value" value="title" /> title
-              </label>
-            </div>
-          </fieldset>
-          <button id="color-btn" class="btn col-lg col-xl-2">college</button>
+            <fieldset id="sort-group" class="col-lg-12 col-xl-4 group">
+              <legend>shuffle</legend>
+              <div id="sort-options" class="btn-group flex-wrap options">
+                <label id="sort-btn-1" class="btn active">
+                  <input type="radio" name="sort-value" value="last-name" /> name
+                </label>
+                <label id="sort-btn-2" class="btn">
+                  <input type="radio" name="sort-value" value="major" /> major
+                </label>
+                <label id="sort-btn-3" class="btn">
+                  <input type="radio" name="sort-value" value="title" /> title
+                </label>
+              </div>
+            </fieldset>
+          <div class="col-lg col-xl-2">
+            <label for="color-btn">color</label>
+            <button id="color-btn" class="btn">college</button>
+          </div>
           <form class="col-lg col-xl-3 group options">
             <label for="search">artist, title, or major</label>
             <input id="search" type="search" autocomplete="off"/>
@@ -113,7 +116,7 @@
           </fieldset>
         </div>
         </div>
-        <div class="col order-first">
+        <div class="col">
           <div id="grid" class="">
             <% for (let i = 0; i < data.length; i++) { %>
                 <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
