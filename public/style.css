@@ -87,6 +87,7 @@ h2.header {
   position: relative;
   z-index: 1;
   top: 7.5px;
+  left: 55px;
 }
 
 /* About */
