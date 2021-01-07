@@ -1,5 +1,5 @@
 :root {
-    --grid-items: 50px;
+    --grid-items: 53px;
     --grid-items-xl: 65px;
     --light-color: #FFFAFA;
     --custom-dark: #171717;
@@ -80,7 +80,14 @@ h1 {
 
 #hero > div > div > button:hover {
   border-image-source: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
-} 
+}
+
+/* Header */
+h2.header {
+  position: relative;
+  z-index: 1;
+  top: 7.5px;
+}
 
 /* About */
 #about {
@@ -207,8 +214,7 @@ h1 {
     width: 100%;
     height: auto;
     padding-top: 15px;
-    max-height: 600px;
-    
+    max-height: 500px;
     cursor: zoom-in;
   }
 
