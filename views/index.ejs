@@ -63,17 +63,23 @@
       <p><strong>Directions:</strong> Bibendum est ultricies integer quis auctor. Cursus euismod quis viverra nibh cras pulvinar mattis. Nisi vitae suscipit tellus mauris. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Varius duis at consectetur lorem donec. Eu sem integer vitae justo eget magna fermentum. Lacus sed turpis tincidunt id aliquet risus. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Dolor sit amet consectetur adipiscing elit duis tristique. Leo in vitae turpis massa sed elementum tempus. At tellus at urna condimentum mattis pellentesque id nibh. Sapien faucibus et molestie ac feugiat sed.</p>
     </div>
   </div>
-  <div class="container-fluid" style="height: 100vh;">
+  <div id="artcrawl-container" class="container-fluid" style="height: 100vh;">
     <h2 class="row header d-inline-flex">Clough Art Crawl</h2>
-    <div id="artcrawl" class="artcrawl-container row align-items-center">
-      <div class="col-xl position-relative">
+    <div id="artcrawl" class="row align-items-center">
+      <div class="slider col-xl d-flex justify-content-center align-items-center">   
+        <figure>
+          <img id="prev-img" class="slider-img" src=""/>
+        </figure>
         <figure id="metadata" class="active">
-          <img id="metadata-img" src="" />
+          <img id="metadata-img" class="slider-img" src="" />
           <div class="row justify-content-between">
             <i class="fas fa-arrow-circle-left gallery left"></i>
             <i class="fas fa-arrow-circle-right gallery right"></i>
           </div>
           <figcaption id="metadata-caption" class="position-relative"></figcaption>
+        </figure>
+        <figure>
+          <img id="next-img" class="slider-img" src=""/>
         </figure>
       </div>
       <div class="col-xl">

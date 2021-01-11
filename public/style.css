@@ -209,10 +209,22 @@ h2.header {
     opacity: 1;
   }
 
-  #metadata-img {
+  /*#metadata-img {
     -o-object-fit: contain;
     object-fit: contain;
     width: 100%;
+    min-width: 100%;
+    height: auto;
+    padding-top: 15px;
+    max-height: 500px;
+    cursor: zoom-in;
+  }*/
+
+  .slider-img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
+    min-width: 100%;
     height: auto;
     padding-top: 15px;
     max-height: 500px;
