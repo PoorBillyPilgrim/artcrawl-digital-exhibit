@@ -231,6 +231,10 @@ h2.header {
     cursor: zoom-in;
   }
 
+  .splide {
+    width: 100%;
+  }
+
   #metadata-caption {
     font-size: 1.25rem;
   }

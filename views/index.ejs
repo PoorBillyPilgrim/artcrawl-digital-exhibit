@@ -36,7 +36,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="/js/vendor/splide-2.4.21/dist/css/splide-core.min.css">
+  <link rel="stylesheet" href="/js/vendor/splide-2.4.21/dist/css/splide.min.css">
   <link rel="stylesheet" href="/style.css">
   <!-- Font Awesome 
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -67,7 +67,20 @@
   <div id="artcrawl-container" class="container-fluid" style="height: 100vh;">
     <h2 class="row header d-inline-flex">Clough Art Crawl</h2>
     <div id="artcrawl" class="row align-items-center">
-      <div class="slider col-xl d-flex justify-content-center align-items-center">   
+      <div class="slider col-xl-6 d-flex justify-content-center align-items-center">
+        <div class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+                <% for (let i = 0; i < data.length; i++) { %>
+                  <li class="splide__slide">
+                    <img class="slider-img" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>"/>
+                    <p><em><%=data[i]['Title of Artwork']%></em>, <%=data[i]['First Name']%> <%=data[i]['Last Name']%>, <%=data[i]['Major']%></p>
+                  </li>
+                <% } %>
+            </ul>
+          </div>
+        </div>
+        <!--
         <figure id="metadata" class="active">
           <img id="metadata-img" class="slider-img" src="" />
           <div class="row justify-content-between">
@@ -76,8 +89,9 @@
           </div>
           <figcaption id="metadata-caption" class="position-relative"></figcaption>
         </figure>
+        -->
       </div>
-      <div class="col-xl">
+      <div class="col-xl-6">
         <div class="row flex-wrap">
         <div class="col-sm-3 col-xl-12 order-first order-sm-last order-xl-first">
           <div class="row">
@@ -150,10 +164,10 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
-  <script type="test/javascript" src="/js/vendor/splide-2.4.21/dist/js/splide.min.js"></script>"
+  <script type="text/javascript" src="/js/vendor/splide-2.4.21/dist/js/splide.min.js"></script>
   <script type="text/javascript" src="/js/grid.js"></script>
   <script type="text/javascript" src="/js/metadata.js"></script>
-  <script type="text/javascript" src="/js/test.js"></script>
+  <script type="text/javascript" src="/js/slider.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
 </body>
 

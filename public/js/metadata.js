@@ -40,10 +40,10 @@ var Metadata = (function () {
         let nextImg = $('#1').find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#prev-img').attr('src', prevImg);
         $('#next-img').attr('src', nextImg);
-        let loadedImg = document.querySelector('#metadata-img');
-        loadedImg.addEventListener('load', function(event) {
+        //let loadedImg = document.querySelector('#metadata-img');
+        /*loadedImg.addEventListener('load', function(event) {
             renderMetadataImg($('#metadata-caption'), dataAttributes);
-       });
+       });*/
 
         openViewer();
         closeViewer();
@@ -225,11 +225,11 @@ var Metadata = (function () {
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
 
             let dataAttributes = getDataAttributes($('#' + gridItemID));
-            let loadedImg = document.querySelector('#metadata-img');
+            /*let loadedImg = document.querySelector('#metadata-img');
             loadedImg.addEventListener('load', function(event) {
                 console.log('image loaded.');
                 renderMetadataImg($('#metadata-caption'), dataAttributes);
-           });
+           });*/
 
             shuffle.update();
             $("#" + params.id).addClass('highlight');
@@ -252,11 +252,11 @@ var Metadata = (function () {
         
             setTimeout(function () {
                 $('#metadata-img').attr('src', img);
-                let loadedImg = document.querySelector('#metadata-img');
+                /*let loadedImg = document.querySelector('#metadata-img');
                 loadedImg.addEventListener('load', function(event) {
                      $('#metadata.active').css('opacity', 1);
                      renderMetadataImg($('#metadata-caption'), dataAttributes);
-                });
+                });*/
                 $(id).addClass('highlight');            
                 let gridItemID = id.attr('id');
                 let username = id.attr('data-username');
