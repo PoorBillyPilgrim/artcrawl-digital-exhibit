@@ -220,7 +220,10 @@ h2.header {
     cursor: zoom-in;
   }*/
 
-  .slider-img {
+  .splide {
+    width: 100%;
+  }
+  .splide__slide > img {
     -o-object-fit: contain;
     object-fit: contain;
     width: 100%;
@@ -231,9 +234,10 @@ h2.header {
     cursor: zoom-in;
   }
 
-  .splide {
-    width: 100%;
+  .splide__slide > p {
+    position: relative;
   }
+
 
   #metadata-caption {
     font-size: 1.25rem;

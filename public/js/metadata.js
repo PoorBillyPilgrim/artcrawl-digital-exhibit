@@ -92,19 +92,19 @@ var Metadata = (function () {
         }
     }
     
-    function renderMetadataImg($metadata, dataAttributes, $metadataImg = document.querySelector('#metadata-img')) {
+    function renderMetadataImg($metadata, /*dataAttributes,*/$metadataImg) {
         var imgSize = getImgSizeInfo($metadataImg);
         $metadata.css({
             'left': imgSize.left,
             'max-width': imgSize.width
         });
-        $metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major);
-        let arrowHeight = parseInt($('#metadata-img').css('height')) / 2;
-        $('#metadata > .row').css({ 
+        //$metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major);
+        //let arrowHeight = parseInt($('#metadata-img').css('height')) / 2;
+        /*$('#metadata > .row').css({ 
             'bottom': arrowHeight,
-        });
-        $('i.left').css({'left': imgSize.left});
-        $('i.right').css({'right': imgSize.left});
+        });*/
+        //$('.splide__arrow--prev').css({'left': imgSize.left});
+        //$('.splide__arrow--next').css({'right': imgSize.left});
     }
     
     function debounce(func, wait, immediate) {
@@ -369,6 +369,8 @@ var Metadata = (function () {
     }
 
     return {
-        init: init
+        init: init,
+        renderMetadataImg: renderMetadataImg,
+        getImgSizeInfo: getImgSizeInfo
     }
 })();
