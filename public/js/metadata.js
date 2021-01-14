@@ -98,13 +98,6 @@ var Metadata = (function () {
             'left': imgSize.left,
             'max-width': imgSize.width
         });
-        //$metadata.html('<em>' + dataAttributes.title + '</em>, ' + dataAttributes.firstName + ' ' + dataAttributes.lastName + ', ' + dataAttributes.major);
-        //let arrowHeight = parseInt($('#metadata-img').css('height')) / 2;
-        /*$('#metadata > .row').css({ 
-            'bottom': arrowHeight,
-        });*/
-        //$('.splide__arrow--prev').css({'left': imgSize.left});
-        //$('.splide__arrow--next').css({'right': imgSize.left});
     }
     
     function debounce(func, wait, immediate) {
@@ -186,7 +179,8 @@ var Metadata = (function () {
     }
     
     const openViewer = function() {
-        $('#metadata-img').click(function () {
+        $('.is-active > img').click(function () {
+            let id = this.attributes["data-id"].value;
             let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
 
@@ -241,14 +235,10 @@ var Metadata = (function () {
         
         function changeImage(id) {
             id = $(id);
-            console.log(id)
             dataAttributes = getDataAttributes(id);
             img = id.find('img').attr('src').replace('thumbnails', 'artcrawl');
             $('#metadata.active').css('opacity', 0);
-            let highlights = Array.from(document.querySelectorAll('.highlight'));
-            for (let highlight of highlights) {
-                highlight.classList.remove('highlight');
-            }
+ 
         
             setTimeout(function () {
                 $('#metadata-img').attr('src', img);
@@ -263,7 +253,7 @@ var Metadata = (function () {
                 let activeColor = id.css('background-color');
                 $('#legend').css({'background-color': activeColor});
                 history.pushState({'item_id': gridItemID}, 'Art Crawl', '#username=' + username + '&id=' + gridItemID);
-            }, 550);
+            }, 400);
         }
         
         $('.gallery').click(function() {
@@ -304,10 +294,6 @@ var Metadata = (function () {
     }
 
     const onResize = function() {
-        let $metadataImg;
-        $('#metadata').click(function () {
-            $metadataImg = document.querySelector('#metadata-img');
-        });
         let width;
         width = $(window).width();
         
@@ -318,20 +304,12 @@ var Metadata = (function () {
              * https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
              * */
             if ($(window).width() != width) {
-                gridItemID = $('.art-crawl-item.highlight').attr('id');
-                dataAttributes = getDataAttributes($('#' + gridItemID));
-                img = $('#' + gridItemID).find('img').attr('src').replace('thumbnails', 'artcrawl');
-    
-                // fadeout metadata
-                $('#metadata-caption').css('opacity', 0);         
-                $('#metadata.active').css('opacity', 0);
-    
-                // fades in $metadata after 0.55s
                 setTimeout(function() {
-                    $('#metadata-img').attr('src', img);
-                    renderMetadataImg($('#metadata-caption'), dataAttributes, $metadataImg);
-                    $('#metadata-caption').css('opacity', 1);
-                    $('#metadata.active').css('opacity', 1);
+                    let activeImg = document.querySelector('.is-active > img')
+                    renderMetadataImg($(activeImg.nextElementSibling), activeImg);
+                    let imgSize = getImgSizeInfo(activeImg);
+                    $('.splide__arrow--prev').css({'left': imgSize.left});
+                    $('.splide__arrow--next').css({'right': imgSize.left});
                 }, 750);
             }
         }, 1000, true));
