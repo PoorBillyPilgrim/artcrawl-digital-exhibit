@@ -9,7 +9,7 @@ var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID;
 
     const init = function() {
-        const loc = window.location;
+        /*const loc = window.location;
         let id;
         if (loc.hash === '#artcrawl') {
             // if hash is #artcrawl, load first item in #grid
@@ -25,14 +25,14 @@ var Metadata = (function () {
             let redirect = loc.hash;
             loc.hash = 'artcrawl';
             loc.hash = redirect;
-            animateEnter();
+            //animateEnter();
             history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + params.username + '&id=' + id);
         } else {
             // default 
             // load first item in #grid
             id = '0';
             dataAttributes = getDataAttributes($('#0'));
-        }
+        }*/
 
         /*let img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata-img').attr('src', img);
@@ -50,7 +50,7 @@ var Metadata = (function () {
         onResize();
         renderColor();
 
-        $('#' + id).addClass('highlight');
+        //$('#' + id).addClass('highlight');
     }
 
     function getRenderedSize(contains, cWidth, cHeight, width, height, pos) {
@@ -113,14 +113,6 @@ var Metadata = (function () {
         };
     };
     
-    function handleHighlight() {
-        var gridItemID;
-        gridItemID = $('.art-crawl-item.highlight').attr('id');
-        $('.art-crawl-item').removeClass('highlight');
-        setTimeout(function() {   
-            $("#" + gridItemID).addClass('highlight');
-        }, 2700); // grid speed is set to 2650ms
-    }
     
     function createHtmlOverlay(title, name, major, description) {
         function p(text) {
@@ -147,9 +139,12 @@ var Metadata = (function () {
         $('#hero').css('opacity', '0');
         setTimeout(function() {
             $('#hero').addClass('hide');
-    
-            $('#artcrawl').removeClass('hide');
-            $('#artcrawl').css('opacity', '1');
+            
+            $('#artcrawl-container').removeClass('hide');
+            $('#artcrawl-container').css('opacity', '1');
+
+            //$('#artcrawl').removeClass('hide');
+            //$('#artcrawl').css('opacity', '1');
     
             $('#about').removeClass('hide');
             $('#about').css('opacity', '1');
@@ -249,24 +244,6 @@ var Metadata = (function () {
             }, 400);
         }
         
-        /*$('.gallery').click(function() {
-            if(this.classList.contains('art-crawl-item')) {
-                changeImage(this);
-            } else if (this.classList.contains('left') || this.classList.contains('right')) {
-                let lastGridItem = document.querySelector('#grid').children.length - 2;
-                let params = getHashParams(window.location.hash.substr(1));
-                let id = parseInt(params.id);
-                if (this.classList.contains('left')) {
-                    id -= 1;
-                    if (id < 0) id = lastGridItem; 
-                } else if (this.classList.contains('right')) {
-                    id += 1;
-                    if(id > lastGridItem) id = 0; 
-                }
-                changeImage('#' + id);
-            }
-        })*/
-        
     }
 
     const handleAbout = function() {
@@ -274,7 +251,7 @@ var Metadata = (function () {
             animateEnter();
             let id = '0';
             let username = $('#' + id).attr('data-username');
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + id);
+            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#id=' + id);
         });
         
         $('#about-close').click(function() {
@@ -329,11 +306,7 @@ var Metadata = (function () {
         $('#legend').css('background-color', colorOnLoad);
 
         $('#color-btn').click(function() {
-            
-
             $('.art-crawl-item > img').toggleClass('show-color');
-            //$('#legend').toggleClass('hide');
-            
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css('background-color', activeColor);
         });
