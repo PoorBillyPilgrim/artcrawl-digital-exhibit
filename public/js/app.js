@@ -3,6 +3,6 @@ $(function() {
     let shuffle;
 
     const grid = Grid.init();
-    const metadata = Metadata.init();
     const slider = Slider.init();
+    const metadata = Metadata.init();
 });

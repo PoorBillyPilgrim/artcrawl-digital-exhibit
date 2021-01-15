@@ -34,16 +34,14 @@ var Metadata = (function () {
             dataAttributes = getDataAttributes($('#0'));
         }
 
-        let img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
+        /*let img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#metadata-img').attr('src', img);
         let prevImg = $('#135').find('img').attr('src').replace('thumbnails', 'artcrawl');
         let nextImg = $('#1').find('img').attr('src').replace('thumbnails', 'artcrawl');
         $('#prev-img').attr('src', prevImg);
-        $('#next-img').attr('src', nextImg);
-        //let loadedImg = document.querySelector('#metadata-img');
-        /*loadedImg.addEventListener('load', function(event) {
-            renderMetadataImg($('#metadata-caption'), dataAttributes);
-       });*/
+        $('#next-img').attr('src', nextImg);*/
+        //splide.go(parseInt(id));
+        
 
         openViewer();
         closeViewer();
@@ -195,7 +193,7 @@ var Metadata = (function () {
 
             initViewer(username);
             
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', '#username=' + username + '&id=' + gridItemID + '&viewer=true'); 
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', '#id=' + gridItemID + '&viewer=true'); 
         });
     }
 
@@ -216,14 +214,9 @@ var Metadata = (function () {
 
             gridItemID = $('.art-crawl-item.highlight').attr('id');
             let username = $('.art-crawl-item.highlight').attr('data-username');
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#username=' + username + '&id=' + gridItemID);
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#id=' + gridItemID);
 
             let dataAttributes = getDataAttributes($('#' + gridItemID));
-            /*let loadedImg = document.querySelector('#metadata-img');
-            loadedImg.addEventListener('load', function(event) {
-                console.log('image loaded.');
-                renderMetadataImg($('#metadata-caption'), dataAttributes);
-           });*/
 
             shuffle.update();
             $("#" + params.id).addClass('highlight');
@@ -256,7 +249,7 @@ var Metadata = (function () {
             }, 400);
         }
         
-        $('.gallery').click(function() {
+        /*$('.gallery').click(function() {
             if(this.classList.contains('art-crawl-item')) {
                 changeImage(this);
             } else if (this.classList.contains('left') || this.classList.contains('right')) {
@@ -272,7 +265,7 @@ var Metadata = (function () {
                 }
                 changeImage('#' + id);
             }
-        })
+        })*/
         
     }
 
