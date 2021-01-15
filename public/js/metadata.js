@@ -179,8 +179,8 @@ var Metadata = (function () {
     }
     
     const openViewer = function() {
-        $('.is-active > img').click(function () {
-            let id = this.attributes["data-id"].value;
+        $('.splide__slide').click(function () {
+            //let id = this.attributes["data-id"].value;
             let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
 

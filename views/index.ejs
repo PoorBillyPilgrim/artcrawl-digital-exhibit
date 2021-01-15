@@ -73,9 +73,9 @@
             <ul class="splide__list">
                 <% for (let i = 0; i < data.length; i++) { %>
                   <li class="splide__slide">
-                    
-                    <img class="" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>"/>
-                    
+                    <div class="splide__slide__container" data-id="<%=i%>">
+                    <img class="" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>"/>
+                    </div>
                     <p><em><%=data[i]['Title of Artwork']%></em>, <%=data[i]['First Name']%> <%=data[i]['Last Name']%>, <%=data[i]['Major']%></p>
                   </li>
                 <% } %>

@@ -220,28 +220,43 @@ h2.header {
     cursor: zoom-in;
   }*/
 
-  .splide {
-    width: 100%;
-  }
-  .splide__slide > img {
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 100%;
-    min-width: 100%;
-    height: auto;
-    padding-top: 15px;
-    max-height: 500px;
-    cursor: zoom-in;
-  }
+/* Slider */
+.splide {
+  width: 100%;
+}
 
-  .splide__slide > p {
-    position: relative;
-  }
+/*.splide__slide > img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  max-height: 500px;
+  cursor: zoom-in;
+}*/
 
+.splide__slide__container {
+  cursor: zoom-in;
+}
 
-  #metadata-caption {
-    font-size: 1.25rem;
-  }
+.splide__slide > p {
+  position: relative;
+  font-size: 1.25rem;
+  left: 0;
+}
+
+.splide__arrow {
+  transition: top 0.5s;
+}
+
+.splide__arrow--prev,
+.splide__slide > p {
+  transition: left 0.5s;
+}
+
+.splide__arrow--next {
+  transition: right 0.5s;
+}
 
   #metadata > .row {
     position: relative;
