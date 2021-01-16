@@ -29,25 +29,11 @@ body {
   height: 6vh;
 }
 
-.info__btn {
-  /*background: #212529;
-  border-radius: 50%;*/
-  height: 5vh;
-  width: 5vh;
-}
-
-.info__btn--txt {
-  position: relative;
-  top: 1vh;
-  left: 1.5vh;
-  color: var(--light-color);
-  margin: 0;
-}
-
-#footer > div > i {
+.footer__btn {
   width: 2.5rem;
-  cursor: pointer;
   font-size: 5.2vh;
+  color: var(--custom-dark);
+  cursor: pointer;
 }
 
 /* Hero */
@@ -313,7 +299,8 @@ h2.header {
 
 /* Filter, Search, Sort */
 .controls {
-  margin-top: 7px;
+  height: 20vh;
+  padding-top: 7px;
 }
 
 .control {

@@ -64,7 +64,6 @@ var Slider = (function() {
 
 
         splide.on('move', function(event) {
-            console.log(event)
             let highlights = Array.from(document.querySelectorAll('.highlight'));
             for (let highlight of highlights) {
                 highlight.classList.remove('highlight');
@@ -80,7 +79,7 @@ var Slider = (function() {
             //$('.splide__arrow--next').css({'right': imgSize.left});
         });
     
-        splide.on('moved', function() {
+        splide.on('moved', function(event) {
             
             let activeImg = document.querySelector('.is-active > img');
             Metadata.renderMetadataImg($(activeImg.nextElementSibling), activeImg)
@@ -89,17 +88,22 @@ var Slider = (function() {
             //$('.splide__arrow--prev').css({'left': imgSize.left});
             //$('.splide__arrow--next').css({'right': imgSize.left});
             let id = activeImg.attributes["data-id"].value;
-            $('#' + id).addClass('highlight');
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#id=' + id);
+            $('#' + event).addClass('highlight');
+            history.pushState({'item_id': event}, 'Art Crawl', window.location.hash = '#id=' + event);
             changeLegendColor();
         });
 
         $('.gallery').click(function() {
+            if(window.innerWidth < 575) {
+                $('#grid-container').toggleClass('hide');
+                $('.slider').toggleClass('hide');
+                $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
+                splide.refresh();
+            }
             let id = parseInt(this.attributes["id"].value);
             splide.go(id);
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#id=' + id);
             changeLegendColor();
-        })
+        });
     
     }
 

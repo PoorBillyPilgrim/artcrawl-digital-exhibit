@@ -266,10 +266,9 @@ var Metadata = (function () {
 
     const toggleGridSlider = function() {
         $('.footer-btns > .grid-slider-toggle').click(function() {
-            $('#grid-container').toggleClass('hide', 'order-first');
-            $('.grid-col').toggleClass('order-last', 'order-first');
+            $('#grid-container').toggleClass('hide');
             $('.slider').toggleClass('hide');
-            $('#footer').toggleClass('order-2', 'order-last');
+            $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
             shuffle.update();
         });
     }
