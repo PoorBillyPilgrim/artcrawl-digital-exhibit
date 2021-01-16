@@ -68,8 +68,8 @@
       <div id="legend" class=""></div>
       <h2 class="header">Clough Art Crawl</h2>
     </div>
-    <div class="row align-items-center">
-      <div class="slider col-xl-6 d-flex justify-content-center align-items-center">
+    <div id="artcrawl" class="row align-items-center">
+      <div class="slider order-first col-xl-6 justify-content-center align-items-center">
         <div class="splide">
           <div class="splide__track">
             <ul class="splide__list">
@@ -84,22 +84,12 @@
             </ul>
           </div>
         </div>
-        <!--
-        <figure id="metadata" class="active">
-          <img id="metadata-img" class="slider-img" src="" />
-          <div class="row justify-content-between">
-            <i class="fas fa-arrow-circle-left gallery left"></i>
-            <i class="fas fa-arrow-circle-right gallery right"></i>
-          </div>
-          <figcaption id="metadata-caption" class="position-relative"></figcaption>
-        </figure>
-        -->
       </div>
-      <div class="col-xl-6">
+      <div id="grid-container" class="hide order-last col-xl-6">
         <div class="row flex-wrap">
         <div class="col-sm-3 col-xl-12 order-first order-sm-last order-xl-first">
-          <div class="row">
-            <fieldset id="sort-group" class="col-lg-12 col-xl-4 group">
+          <div class="controls row">
+            <fieldset id="sort-group" class="control col-lg-12 col-xl-4 group">
               <legend>shuffle</legend>
               <div id="sort-options" class="btn-group flex-wrap options">
                 <label id="sort-btn-1" class="btn active">
@@ -113,29 +103,29 @@
                 </label>
               </div>
             </fieldset>
-          <div class="col-lg col-xl-2">
-            <label for="color-btn">color</label>
-            <button id="color-btn" class="btn">college</button>
+            <div class="control order-last col-lg col-xl-2">
+              <label for="color-btn">color</label>
+              <button id="color-btn" class="btn">college</button>
+            </div>
+            <form class="control col-lg col-xl-3 group">
+              <label for="search">artist, title, or major</label>
+              <input id="search" type="search" autocomplete="off"/>
+              <input type="search" style="display: none;"/>
+            </form>
+            <fieldset id="filters-group" class="control col-lg col-xl-3 group">
+              <legend>filter</legend>
+                <div id="filter-options" class="btn-group flex-wrap options">
+                  <label class="btn active">
+                    <input type="radio" name="filter-value" value="all" /> all
+                  </label>
+                  <label id="major-filter" class="btn">
+                    <input type="radio" name="filter-value" value="major" /> major
+                  </label>
+                </div>
+            </fieldset>
           </div>
-          <form class="col-lg col-xl-3 group options">
-            <label for="search">artist, title, or major</label>
-            <input id="search" type="search" autocomplete="off"/>
-            <input type="search" style="display: none;"/>
-          </form>
-          <fieldset id="filters-group" class="col-lg col-xl-3 group">
-            <legend>filter</legend>
-              <div id="filter-options" class="btn-group flex-wrap options">
-                <label class="btn active">
-                  <input type="radio" name="filter-value" value="all" /> all
-                </label>
-                <label id="major-filter" class="btn">
-                  <input type="radio" name="filter-value" value="major" /> major
-                </label>
-              </div>
-          </fieldset>
         </div>
-        </div>
-        <div class="col">
+        <div class="grid-col order-first col">
           <div id="grid" class="">
             <% for (let i = 0; i < data.length; i++) { %>
                 <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
@@ -148,9 +138,13 @@
         </div>
         </div>
       </div>
-    </div>
-    <div id="info" class="hide">
-      <i class="fas fa-info-circle fixed-bottom"></i>
+      <div id="footer" class="hide col order-2">
+        <div class="footer-btns row justify-content-end align-items-center">
+            <i class="grid-slider-toggle fas fa-th"></i>
+            <i class="fas fa-info-circle"></i>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
 

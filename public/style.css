@@ -1,8 +1,9 @@
 :root {
-    --grid-items: 50px;
+    --grid-items: 60px;
     --grid-items-xl: 65px;
     --light-color: #FFFAFA;
     --custom-dark: #171717;
+    --legend: 9vh;
 }
 
 body {
@@ -20,15 +21,33 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
-#info > i {
-  bottom: 5px;
-  left: 5px;
-  font-size: 2.5rem;
+/* Footer */
+#footer > .row {
+  height: 6vh;
+}
+
+.info__btn {
+  /*background: #212529;
+  border-radius: 50%;*/
+  height: 5vh;
+  width: 5vh;
+}
+
+.info__btn--txt {
+  position: relative;
+  top: 1vh;
+  left: 1.5vh;
+  color: var(--light-color);
+  margin: 0;
+}
+
+#footer > div > i {
   width: 2.5rem;
   cursor: pointer;
+  font-size: 5.2vh;
 }
 
 /* Hero */
@@ -84,12 +103,12 @@ h1 {
 
 /* Header */
 #header {
-  height: 10vh;
+  height: var(--legend);
 }
 
 #legend {
   height: 100%;
-  width: 50px;
+  width: var(--legend);
 }
 
 h2.header {
@@ -219,6 +238,10 @@ h2.header {
   }*/
 
 /* Slider */
+.slider {
+  display: flex;
+}
+
 .splide {
   width: 100%;
 }
@@ -289,10 +312,36 @@ h2.header {
   }
 
 /* Filter, Search, Sort */
+.controls {
+  margin-top: 7px;
+}
+
+.control {
+  width: 50%;
+}
+
+.options {
+  width: 100%;
+}
+
 label {
   display: block;
   margin-bottom: 0;
-  /* font-family: 'Vampiro One', cursive;*/
+}
+
+#sort-options > label,
+#filter-options > label,
+#color-btn {
+  padding: 5px;
+}
+
+.controls > fieldset > legend {
+  text-align: left;
+}
+
+label[for='search'],
+label[for='color-btn'] {
+  text-align: right;
 }
 
 legend,
@@ -300,20 +349,10 @@ label[for='search'],
 label[for='color-btn'] {
   font-size: 1rem;
   margin-bottom: 0;
-  text-align: right;
-  /* font-family: 'Vampiro One', cursive;*/
 }
 
 .group {
   margin-bottom: 0;
-}
-
-.options {
-  width: 100%;
-}
-
-input#search {
-  height: 37px;
 }
 
 label.btn {
@@ -373,15 +412,21 @@ input[type="search"] {
 }
 
 /* Shuffle Grid */
+#grid {
+  width: 750px;
+  margin-left: -15px;
+}
+
+.grid-col {
+  height: 65vh;
+  overflow: scroll;
+}
+
 #artcrawl-container {
   height: 100vh;
   opacity: 0;
   transition: opacity 1s linear;
 }  
-
-#artcrawl {
-  z-index: 2;
-}
 
 .art-crawl-item {
   margin-bottom: 0;

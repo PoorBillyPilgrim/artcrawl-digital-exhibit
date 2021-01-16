@@ -1,5 +1,4 @@
 const Grid = (function() {
-    //let shuffle;
     const init = function() {
         const element = document.getElementById('grid');
         const sizer = element.querySelector('.sizer-element')

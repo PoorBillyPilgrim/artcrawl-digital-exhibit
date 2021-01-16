@@ -8,7 +8,7 @@ var Slider = (function() {
             height: '650px',
             breakpoints: {
                 640: {
-                    height: '90vh',
+                    height: '85vh',
                     fixedHeight: '90%'
                 }
             }
@@ -34,7 +34,7 @@ var Slider = (function() {
                 $('#about').removeClass('hide');
                 $('#about').css('opacity', '1');
         
-                $('#info').removeClass('hide');
+                $('#footer').removeClass('hide');
                 
             }, 1000);
         }

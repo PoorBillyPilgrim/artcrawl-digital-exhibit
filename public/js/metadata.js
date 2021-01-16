@@ -47,6 +47,7 @@ var Metadata = (function () {
         closeViewer();
         renderMetadata();
         handleAbout();
+        toggleGridSlider();
         onResize();
         renderColor();
 
@@ -149,7 +150,7 @@ var Metadata = (function () {
             $('#about').removeClass('hide');
             $('#about').css('opacity', '1');
     
-            $('#info').removeClass('hide');
+            $('#footer').removeClass('hide');
             
         }, 1000);
     }
@@ -258,8 +259,18 @@ var Metadata = (function () {
             $('#about').addClass('hide');
         });
 
-        $('#info > i').click(function() {
+        $('.footer-btns > .fa-info-circle').click(function() {
             $('#about').toggleClass('hide');
+        });
+    }
+
+    const toggleGridSlider = function() {
+        $('.footer-btns > .grid-slider-toggle').click(function() {
+            $('#grid-container').toggleClass('hide', 'order-first');
+            $('.grid-col').toggleClass('order-last', 'order-first');
+            $('.slider').toggleClass('hide');
+            $('#footer').toggleClass('order-2', 'order-last');
+            shuffle.update();
         });
     }
 
