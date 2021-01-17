@@ -9,40 +9,6 @@ var Metadata = (function () {
     let viewer, img, dataAttributes, gridItemID;
 
     const init = function() {
-        /*const loc = window.location;
-        let id;
-        if (loc.hash === '#artcrawl') {
-            // if hash is #artcrawl, load first item in #grid
-            id = '0';
-            dataAttributes = getDataAttributes($('#0'));
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + dataAttributes.username + '&id=' + id);
-        } else if (loc.hash) {
-            // if hash contains an id, load item with corresponding data-dzi-id attribute
-            // https://stackoverflow.com/questions/23699666/javascript-get-and-set-url-hash-parameters
-            let params = getHashParams(loc.hash.substr(1)); // remove '#'
-            id = params.id;
-            dataAttributes = getDataAttributes($('#' + id));
-            let redirect = loc.hash;
-            loc.hash = 'artcrawl';
-            loc.hash = redirect;
-            //animateEnter();
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#username=' + params.username + '&id=' + id);
-        } else {
-            // default 
-            // load first item in #grid
-            id = '0';
-            dataAttributes = getDataAttributes($('#0'));
-        }*/
-
-        /*let img = $('#' + id).find('img').attr('src').replace('thumbnails', 'artcrawl');
-        $('#metadata-img').attr('src', img);
-        let prevImg = $('#135').find('img').attr('src').replace('thumbnails', 'artcrawl');
-        let nextImg = $('#1').find('img').attr('src').replace('thumbnails', 'artcrawl');
-        $('#prev-img').attr('src', prevImg);
-        $('#next-img').attr('src', nextImg);*/
-        //splide.go(parseInt(id));
-        
-
         openViewer();
         closeViewer();
         renderMetadata();
@@ -50,8 +16,6 @@ var Metadata = (function () {
         toggleGridSlider();
         onResize();
         renderColor();
-
-        //$('#' + id).addClass('highlight');
     }
 
     function getRenderedSize(contains, cWidth, cHeight, width, height, pos) {
@@ -91,7 +55,7 @@ var Metadata = (function () {
         }
     }
     
-    function renderMetadataImg($metadata, /*dataAttributes,*/$metadataImg) {
+    function renderMetadataImg($metadata, $metadataImg) {
         var imgSize = getImgSizeInfo($metadataImg);
         $metadata.css({
             'left': imgSize.left,
@@ -140,16 +104,10 @@ var Metadata = (function () {
         $('#hero').css('opacity', '0');
         setTimeout(function() {
             $('#hero').addClass('hide');
-            
             $('#artcrawl-container').removeClass('hide');
             $('#artcrawl-container').css('opacity', '1');
-
-            //$('#artcrawl').removeClass('hide');
-            //$('#artcrawl').css('opacity', '1');
-    
             $('#about').removeClass('hide');
             $('#about').css('opacity', '1');
-    
             $('#footer').removeClass('hide');
             
         }, 1000);

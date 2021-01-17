@@ -4,5 +4,5 @@ $(function() {
 
     const grid = Grid.init();
     const slider = Slider.init();
-    const metadata = Metadata.init();
+    //const metadata = Metadata.init();
 });

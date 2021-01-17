@@ -64,7 +64,7 @@
     </div>
   </div>
   <div id="artcrawl-container" class="container-fluid">
-    <div id="header" class="row align-items-center">
+    <div id="header" class="row align-items-center justify-content-md-between">
       <div id="legend" class=""></div>
       <h2 class="header">Clough Art Crawl</h2>
     </div>
@@ -87,7 +87,7 @@
       </div>
       <div id="grid-container" class="hide order-last col-xl-6">
         <div class="row flex-wrap">
-        <div class="col-sm-3 col-xl-12 order-sm-last order-xl-first">
+        <div class="col-xl-12 order-sm-last order-xl-first">
           <div class="controls row">
             <fieldset id="sort-group" class="control col-lg-12 col-xl-4 group">
               <legend>shuffle</legend>
@@ -103,11 +103,11 @@
                 </label>
               </div>
             </fieldset>
-            <div class="control order-last col-lg col-xl-2">
+            <div id="color-group" class="control order-last col-lg col-xl-2">
               <label for="color-btn">color</label>
               <button id="color-btn" class="btn">college</button>
             </div>
-            <form class="control col-lg col-xl-3 group">
+            <form id="search-group" class="control col-lg col-xl-3 group">
               <label for="search">artist, title, or major</label>
               <input id="search" type="search" autocomplete="off"/>
               <input type="search" style="display: none;"/>
@@ -139,7 +139,7 @@
         </div>
       </div>
       <div id="footer" class="hide col order-last">
-        <div class="footer-btns row justify-content-end">
+        <div class="footer__btns row justify-content-end align-items-md-end">
             <div class="grid-slider-toggle">
               <i class="footer__btn fas fa-th"></i>
               <i class="hide footer__btn fas fa-images"></i>
