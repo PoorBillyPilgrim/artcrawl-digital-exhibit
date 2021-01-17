@@ -16,6 +16,10 @@ var Slider = (function() {
                 },
                 992: {
                     height: '80vh'
+                },
+                1200: {
+                    height: '84vh',
+                    fixedHeight: '100%'
                 }
             }
         }).mount();
@@ -40,8 +44,9 @@ var Slider = (function() {
         openViewer();
         closeViewer();
         handleAbout();
-        toggleGridSlider();
+        toggleGridSlider(splide);
         renderColor();
+        //onResize();
     }
 
     function getHashParams(arr) {
@@ -98,6 +103,21 @@ var Slider = (function() {
         });
     }
 
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+
     const handleSplideEvents = function(splide) {
         splide.on('move', function() {
             let highlights = Array.from(document.querySelectorAll('.highlight'));
@@ -113,7 +133,7 @@ var Slider = (function() {
         });
 
         $('.gallery').click(function() {
-            if(window.innerWidth < 992) {
+            if(window.innerWidth < 1200) {
                 $('#grid-container').toggleClass('hide');
                 $('.slider').toggleClass('hide');
                 $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
@@ -180,16 +200,49 @@ var Slider = (function() {
             $('#about').addClass('hide');
         });
 
-        $('.footer-btns > .fa-info-circle').click(function() {
+        $('i.fa-info-circle').click(function() {
             $('#about').toggleClass('hide');
         });
     }
 
-    const toggleGridSlider = function() {
+    const toggleGridSlider = function(splide) {
+        let isResized = false;
+        let w = window.innerWidth;
+        window.addEventListener('resize', function() {
+            isResized = true;
+        });
+        
         $('.footer__btns > .grid-slider-toggle').click(function() {
             $('#grid-container').toggleClass('hide');
             $('.slider').toggleClass('hide');
             $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
+            // when resizing with grid showing, b/c slider is hidden, the slider has no way to refresh b/c it has no height
+            // after click, slider becomes visible and refreshes with appropriate height
+            
+            const changeFooterBtnSize = (h) => $('.footer__btns').css({'height':h});
+            const handleGridToggle = (slider, grid) => {
+                if($('#grid-toggle').hasClass('hide')) {
+                    changeFooterBtnSize(slider);
+                } else {
+                    changeFooterBtnSize(grid);
+                }
+            }
+            
+            if (w >= 768 && w <= 992) {
+                handleGridToggle('7vh', '12vh');
+            } else if (w > 992 && w <= 1200) {
+                handleGridToggle('10vh', '6vh');
+                if($('#grid-toggle').hasClass('hide')) {
+                    $('.footer__btns').css({'padding-top': '5vh'});
+                    $('.footer__btn').css({'font-size': '6vh'});
+                } else {
+                    $('.footer__btns').css({'padding-top': '0'});
+                    $('.footer__btn').css({'font-size': '5.5vh'});
+                }
+            }
+            if (isResized) {
+                splide.refresh();
+            }
             shuffle.update();
         });
     }
@@ -218,6 +271,22 @@ var Slider = (function() {
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css('background-color', activeColor);
         });
+    }
+
+    const onResize = function() {
+        let width;
+        width = $(window).width();
+        
+        $(window).resize(debounce(function () {
+            /**
+             * Because mobile browsers register scroll as window resize,
+             * this checks for only change in width
+             * https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
+             * */
+            if ($(window).width() != width) {
+                splide.refresh();
+            }
+        }, 100, true));
     }
 
     return {

@@ -89,7 +89,7 @@
         <div class="row flex-wrap">
         <div class="col-xl-12 order-sm-last order-xl-first">
           <div class="controls row">
-            <fieldset id="sort-group" class="control col-lg-12 col-xl-4 group">
+            <fieldset id="sort-group" class="control col-lg col-xl-4 group">
               <legend>shuffle</legend>
               <div id="sort-options" class="btn-group flex-wrap options">
                 <label id="sort-btn-1" class="btn active">
@@ -103,7 +103,7 @@
                 </label>
               </div>
             </fieldset>
-            <div id="color-group" class="control order-last col-lg col-xl-2">
+            <div id="color-group" class="control order-last col-lg-2 col-xl-2">
               <label for="color-btn">color</label>
               <button id="color-btn" class="btn">college</button>
             </div>
@@ -141,10 +141,12 @@
       <div id="footer" class="hide col order-last">
         <div class="footer__btns row justify-content-end align-items-md-end">
             <div class="grid-slider-toggle">
-              <i class="footer__btn fas fa-th"></i>
-              <i class="hide footer__btn fas fa-images"></i>
+              <i id="grid-toggle" class="footer__btn fas fa-th"></i>
+              <i id="slider-toggle" class="hide footer__btn fas fa-images"></i>
             </div>
-            <i class="footer__btn fas fa-info-circle"></i>
+            <div>
+              <i class="footer__btn fas fa-info-circle"></i>
+            </div>
           </div>
         </div>
       </div>
