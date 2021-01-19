@@ -5,7 +5,7 @@ var Slider = (function() {
             rewind: true,
             lazyLoad: 'nearby',
             pagination: false,
-            height: '650px',
+            height: '82.5vh',
             breakpoints: {
                 640: {
                     height: '85vh',
@@ -119,17 +119,27 @@ var Slider = (function() {
     };
 
     const handleSplideEvents = function(splide) {
+        function toggleSplideText(opacity) {
+            let splideText = Array.from(document.querySelectorAll('.splide__slide > p'));
+            splideText.forEach(p => {
+                p.style.opacity = opacity;
+            });
+        }
+        
         splide.on('move', function() {
             let highlights = Array.from(document.querySelectorAll('.highlight'));
             for (let highlight of highlights) {
                 highlight.classList.remove('highlight');
             }
+
+            toggleSplideText('0');
         });
     
         splide.on('moved', function(event) {
             $('#' + event).addClass('highlight');
             history.pushState({'item_id': event}, 'Art Crawl', window.location.hash = '#id=' + event);
             changeLegendColor();
+            toggleSplideText('1');
         });
 
         $('.gallery').click(function() {
@@ -208,6 +218,14 @@ var Slider = (function() {
     const toggleGridSlider = function(splide) {
         let isResized = false;
 
+        const onDesktopResize = () => {
+            if (window.innerWidth >= 1200) {
+                $('.grid-slider-toggle').addClass('hide');
+                $('#grid-container').removeClass('hide');
+                shuffle.update();
+            }
+        }
+
         const changeCSS = (elements, w) => {
             let breakpoint;
             if (w >= 768 && w < 992) {
@@ -247,9 +265,14 @@ var Slider = (function() {
             }}
         ];
 
+        onDesktopResize();
+
         window.addEventListener('resize', function() {
             isResized = true;
-            changeCSS(breakpoints, window.innerWidth);
+            onDesktopResize();
+            if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+                changeCSS(breakpoints, window.innerWidth);
+            }
         });
         
         
@@ -258,7 +281,9 @@ var Slider = (function() {
             $('.slider').toggleClass('hide');
             $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
 
-            changeCSS(breakpoints, window.innerWidth);
+            if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+                changeCSS(breakpoints, window.innerWidth);
+            }
 
             if (isResized) {
                 splide.refresh();
