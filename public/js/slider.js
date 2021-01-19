@@ -193,7 +193,7 @@ var Slider = (function() {
     const handleAbout = function() {
         $('#hero > div > div > button').click(function() {
             animateEnter();
-            history.pushState({'item_id': id}, 'Art Crawl', window.location.hash = '#id=0');
+            history.pushState({'item_id': '0'}, 'Art Crawl', window.location.hash = '#id=0');
         });
         
         $('#about-close').click(function() {
@@ -207,42 +207,63 @@ var Slider = (function() {
 
     const toggleGridSlider = function(splide) {
         let isResized = false;
-        let w = window.innerWidth;
+
+        const changeCSS = (elements, w) => {
+            let breakpoint;
+            if (w >= 768 && w < 992) {
+                breakpoint = 768;
+            } else if (w >= 992 && w < 1200) {
+                breakpoint = 992;
+            }
+
+            if($('#grid-toggle').hasClass('hide')) {
+                let prop, val;
+                elements.forEach(el => {  
+                    console.log(breakpoint)              
+                    prop = el.prop, val = el.view[breakpoint].val.grid;
+                    document.querySelector(el.el).style[prop] = val;
+                });
+            } else {
+                let prop, val;
+                elements.forEach(el => {                
+                    prop = el.prop, val = el.view[breakpoint].val.slider;
+                    document.querySelector(el.el).style[prop] = val;
+                });
+            }
+        }
+            
+        let breakpoints = [
+            {el: '.footer__btns', prop: 'height', view: {
+                768: {val: {grid: '7vh', slider: '12vh'}},
+                992: {val: {grid: '10vh', slider: '6vh'}},
+            }},
+            {el: '.footer__btns', prop: 'padding-top', view: {
+                768: {val: {grid: '0', slider: '0'}},
+                992: {val: {grid: '5vh', slider: '0'}},
+            }},
+            {el: '.footer__btn', prop: 'font-size', view: {
+                768: {val: {grid: '10vh', slider: '5vh'}},
+                992: {val: {grid: '6vh', slider: '5.5vh'}}
+            }}
+        ];
+
         window.addEventListener('resize', function() {
             isResized = true;
+            changeCSS(breakpoints, window.innerWidth);
         });
+        
         
         $('.footer__btns > .grid-slider-toggle').click(function() {
             $('#grid-container').toggleClass('hide');
             $('.slider').toggleClass('hide');
             $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
-            // when resizing with grid showing, b/c slider is hidden, the slider has no way to refresh b/c it has no height
-            // after click, slider becomes visible and refreshes with appropriate height
-            
-            const changeFooterBtnSize = (h) => $('.footer__btns').css({'height':h});
-            const handleGridToggle = (slider, grid) => {
-                if($('#grid-toggle').hasClass('hide')) {
-                    changeFooterBtnSize(slider);
-                } else {
-                    changeFooterBtnSize(grid);
-                }
-            }
-            
-            if (w >= 768 && w <= 992) {
-                handleGridToggle('7vh', '12vh');
-            } else if (w > 992 && w <= 1200) {
-                handleGridToggle('10vh', '6vh');
-                if($('#grid-toggle').hasClass('hide')) {
-                    $('.footer__btns').css({'padding-top': '5vh'});
-                    $('.footer__btn').css({'font-size': '6vh'});
-                } else {
-                    $('.footer__btns').css({'padding-top': '0'});
-                    $('.footer__btn').css({'font-size': '5.5vh'});
-                }
-            }
+
+            changeCSS(breakpoints, window.innerWidth);
+
             if (isResized) {
                 splide.refresh();
             }
+
             shuffle.update();
         });
     }
