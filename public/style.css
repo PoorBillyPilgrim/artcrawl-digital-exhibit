@@ -416,6 +416,7 @@ input[type="search"] {
 .grid-col {
   height: 65vh;
   overflow: scroll;
+  padding-left: 0;
 }
 
 #artcrawl-container {
@@ -503,6 +504,11 @@ input[type="search"] {
 
 /* Tablet */
 @media (min-width: 768px) {
+  /* About */
+  #about-card {
+    box-shadow: 1px 1px 50px -20px var(--custom-dark);
+  }
+  
   /* Header */
   #header {
     height: var(--legend-md);
@@ -549,6 +555,44 @@ input[type="search"] {
   }
 }
 
+/* iPhone 6/7/8 Plus, iPhone X/XS - Landscape */
+@media (min-width: 812px) and (max-width: 1024px) {
+  /* Header */
+  #header {
+    height: var(--legend-lg);
+  }
+
+  #legend {
+    width: var(--legend-lg);
+  }
+
+  /* Footer */
+  .footer__btns {
+    height: 9vh;
+  }
+  
+  .footer__btn {
+    font-size: 9vh;
+  }
+
+  /* Grid */
+  #grid {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Filters */
+  #sort-group, 
+  #color-group, 
+  #filters-group {
+    display: none;
+  }
+
+  .controls {
+    height: 10vh;
+  }
+}
+
 /* Large Devices */
 @media (min-width: 992px) {
   /* Header */
@@ -587,8 +631,14 @@ input[type="search"] {
 
   /* Filters */
   .controls {
-    height: 8vh;
+    height: 13.5vh;
     padding-top: 2.5;
+  }
+
+  #sort-group,
+  #color-group,
+  #filters-group {
+    display: initial;
   }
   
   .controls > fieldset > legend {

@@ -40,6 +40,8 @@ var Slider = (function() {
             id = '0';
         }
 
+        $('#' + id).addClass('highlight');
+
         handleSplideEvents(splide);
         openViewer();
         closeViewer();
@@ -121,6 +123,7 @@ var Slider = (function() {
     const handleSplideEvents = function(splide) {
         function toggleSplideText(opacity) {
             let splideText = Array.from(document.querySelectorAll('.splide__slide > p'));
+
             splideText.forEach(p => {
                 p.style.opacity = opacity;
             });
@@ -219,10 +222,20 @@ var Slider = (function() {
         let isResized = false;
 
         const onDesktopResize = () => {
-            if (window.innerWidth >= 1200) {
+            if (window.innerWidth < 1200 && $('#slider-toggle').hasClass('hide')) {
+                return;
+            } else if (window.innerWidth >= 1200) {
                 $('.grid-slider-toggle').addClass('hide');
+                $('.slider').removeClass('hide');
                 $('#grid-container').removeClass('hide');
+                splide.refresh();
                 shuffle.update();
+            }  else if (window.innerWidth < 1200) {
+                $('.slider').addClass('hide');
+                $('#grid-container').removeClass('hide');
+                $('.grid-slider-toggle').removeClass('hide');
+                $('#slider-toggle').removeClass('hide');
+                $('#grid-toggle').addClass('hide');
             }
         }
 
@@ -248,16 +261,18 @@ var Slider = (function() {
                     document.querySelector(el.el).style[prop] = val;
                 });
             }
+
+            console.log('css changed')
         }
             
         let breakpoints = [
             {el: '.footer__btns', prop: 'height', view: {
                 768: {val: {grid: '7vh', slider: '12vh'}},
-                992: {val: {grid: '10vh', slider: '6vh'}},
+                992: {val: {grid: '6vh', slider: '6vh'}},
             }},
             {el: '.footer__btns', prop: 'padding-top', view: {
                 768: {val: {grid: '0', slider: '0'}},
-                992: {val: {grid: '5vh', slider: '0'}},
+                992: {val: {grid: '0', slider: '0'}},
             }},
             {el: '.footer__btn', prop: 'font-size', view: {
                 768: {val: {grid: '10vh', slider: '5vh'}},
@@ -265,12 +280,12 @@ var Slider = (function() {
             }}
         ];
 
-        onDesktopResize();
+        //onDesktopResize();
 
         window.addEventListener('resize', function() {
             isResized = true;
             onDesktopResize();
-            if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+            if (window.innerWidth >= 768 && window.innerWidth < 812 && window.innerWidth > 1024 && window.innerWidth < 1200) {
                 changeCSS(breakpoints, window.innerWidth);
             }
         });
