@@ -46,7 +46,7 @@ var Slider = (function() {
         openViewer();
         closeViewer();
         handleAbout();
-        toggleGridSlider(splide);
+        handleView(splide);
         renderColor();
         //onResize();
     }
@@ -150,6 +150,7 @@ var Slider = (function() {
                 $('#grid-container').toggleClass('hide');
                 $('.slider').toggleClass('hide');
                 $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
+                $('.footer__btns').toggleClass('grid-view slider-view');
                 splide.refresh();
             }
             let id = parseInt(this.attributes["id"].value);
@@ -218,27 +219,65 @@ var Slider = (function() {
         });
     }
 
-    const toggleGridSlider = function(splide) {
+    const handleView = function(splide) {
         let isResized = false;
 
-        const onDesktopResize = () => {
-            if (window.innerWidth < 1200 && $('#slider-toggle').hasClass('hide')) {
+        function toggleFooterView() {
+            let isResized = false;
+            window.addEventListener('resize', function(event) {
+                isResized = true;
+            });
+
+            function toggleGridView() {
+                if (window.location.hash) {
+                    $('#grid-container').addClass('hide');
+                    $('#slider-toggle').addClass('hide');
+                    $('#about-toggle').addClass('slider-view');
+                    $('.footer__btns').addClass('slider-view');
+                } else {
+                    $('.slider').addClass('hide');
+                    $('#grid-toggle').addClass('hide');
+                    $('#about-toggle').addClass('grid-view');
+                    $('.footer__btns').addClass('grid-view');
+                }
+            }
+            
+            if (window.innerWidth <= 812 && isResized) {
                 return;
-            } else if (window.innerWidth >= 1200) {
+            } else if (window.innerWidth <= 812) {                
+                toggleGridView();
+            } else if (window.innerWidth < 1200) {
+                if (window.innerWidth >= 1024) {
+                    toggleGridView();
+                }
+            }
+
+            
+            
+            
+            /*else if (window.innerWidth < 1200 && $('.footer__btn').hasClass('hide')) {
+                $('#about-toggle').removeClass('full-view');
+                $('#grid-container').addClass('hide');
+                $('.grid-slider-toggle').removeClass('hide');
+            } */
+            
+            /*else if (window.innerWidth >= 1200) {
+                $('#about-toggle').addClass('full-view');
                 $('.grid-slider-toggle').addClass('hide');
                 $('.slider').removeClass('hide');
                 $('#grid-container').removeClass('hide');
                 splide.refresh();
                 shuffle.update();
             }  else if (window.innerWidth < 1200) {
+                $('#about-toggle').removeClass('full-view');
                 $('.slider').addClass('hide');
                 $('#grid-container').removeClass('hide');
                 $('.grid-slider-toggle').removeClass('hide');
                 $('#slider-toggle').removeClass('hide');
                 $('#grid-toggle').addClass('hide');
-            }
+            }*/
         }
-
+        
         const changeCSS = (elements, w) => {
             let breakpoint;
             if (w >= 768 && w < 992) {
@@ -261,11 +300,9 @@ var Slider = (function() {
                     document.querySelector(el.el).style[prop] = val;
                 });
             }
-
-            console.log('css changed')
         }
             
-        let breakpoints = [
+        /*let breakpoints = [
             {el: '.footer__btns', prop: 'height', view: {
                 768: {val: {grid: '7vh', slider: '12vh'}},
                 992: {val: {grid: '6vh', slider: '6vh'}},
@@ -278,16 +315,18 @@ var Slider = (function() {
                 768: {val: {grid: '10vh', slider: '5vh'}},
                 992: {val: {grid: '6vh', slider: '5.5vh'}}
             }}
-        ];
+        ];*/
 
-        //onDesktopResize();
 
-        window.addEventListener('resize', function() {
+        // on load
+        toggleFooterView();
+
+        window.addEventListener('resize', function(event) {
             isResized = true;
-            onDesktopResize();
-            if (window.innerWidth >= 768 && window.innerWidth < 812 && window.innerWidth > 1024 && window.innerWidth < 1200) {
+            
+            /*if (window.innerWidth >= 768 && window.innerWidth < 812 && window.innerWidth > 1024 && window.innerWidth < 1200) {
                 changeCSS(breakpoints, window.innerWidth);
-            }
+            }*/
         });
         
         
@@ -295,15 +334,17 @@ var Slider = (function() {
             $('#grid-container').toggleClass('hide');
             $('.slider').toggleClass('hide');
             $('.grid-slider-toggle > .footer__btn').toggleClass('hide');
+            $('#about-toggle').toggleClass('grid-view slider-view');
+            $('.footer__btns').toggleClass('grid-view slider-view');
 
-            if (window.innerWidth >= 768 && window.innerWidth < 1200) {
+            /*if (window.innerWidth >= 768 && window.innerWidth < 1200) {
                 changeCSS(breakpoints, window.innerWidth);
-            }
+            }*/
 
-            if (isResized) {
+            /*if (isResized) {
                 splide.refresh();
-            }
-
+            }*/
+            splide.refresh();
             shuffle.update();
         });
     }
