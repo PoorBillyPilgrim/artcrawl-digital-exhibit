@@ -681,7 +681,7 @@ input[type="search"] {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   /* Header */
   #header {
     height: var(--legend-xl);
@@ -689,6 +689,19 @@ input[type="search"] {
 
   #legend {
     width: var(--legend-xl);
+  }
+
+  h2.header {
+    padding-left: 15px;
+  }
+
+  /* Footer */
+  .footer__btns {
+    height: 7vh;
+  }
+
+  .footer__btn {
+    font-size: 5vh;
   }
   
   /* Grid */

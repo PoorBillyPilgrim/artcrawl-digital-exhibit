@@ -44,7 +44,7 @@ var Slider = (function() {
 
         handleSplideEvents(splide);
         openViewer();
-        closeViewer();
+        closeViewer(splide);
         handleAbout();
         handleView(splide);
         renderColor();
@@ -96,11 +96,16 @@ var Slider = (function() {
         viewer = OpenSeadragon({
             id: 'openseadragon',
             prefixUrl: '/images/openseadragonNav/',
-            tileSources: '/images/dzi/' + id + '.dzi',
+            tileSources: [{
+                tileSource: '/images/dzi/' + id + '.dzi'
+            }],
+            viewportMargins: {
+                right: 300
+            },
             overlays:[{
                 id: 'html-overlay',
                 x: 1,
-                y: 0
+                y: 0,
             }]
         });
     }
@@ -176,11 +181,11 @@ var Slider = (function() {
 
             initViewer(username);
             
-            history.pushState({'item_id': gridItemID}, 'Art Crawl', '#id=' + gridItemID + '&viewer=true'); 
+            history.pushState({'item_id': gridItemID}, 'Art Crawl', '#id=' + gridItemID); 
         });
     }
 
-    const closeViewer = function() {
+    const closeViewer = function(splide) {
         $('#openseadragon-close').click(function () {
             let params = getHashParams(window.location.hash.substr(1));
             
@@ -199,6 +204,7 @@ var Slider = (function() {
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#id=' + gridItemID);
 
             shuffle.update();
+            splide.refresh();
             $("#" + params.id).addClass('highlight');
             $('<div id="html-overlay" class="hide">' + '</div>').insertBefore('#legend');
         });
@@ -223,12 +229,9 @@ var Slider = (function() {
         let isResized = false;
 
         function toggleFooterView() {
-            let isResized = false;
-            window.addEventListener('resize', function(event) {
-                isResized = true;
-            });
 
             function toggleGridView() {
+                $('.grid-slider-toggle').removeClass('hide');
                 if (window.location.hash) {
                     $('#grid-container').addClass('hide');
                     $('#slider-toggle').addClass('hide');
@@ -241,94 +244,27 @@ var Slider = (function() {
                     $('.footer__btns').addClass('grid-view');
                 }
             }
-            
-            if (window.innerWidth <= 812 && isResized) {
-                return;
-            } else if (window.innerWidth <= 812) {                
-                toggleGridView();
-            } else if (window.innerWidth < 1200) {
-                if (window.innerWidth >= 1024) {
+
+            function handleWindowSize() {
+                if (window.innerWidth >= 1280) {
+                    $('.grid-slider-toggle').addClass('hide');
+                    $('#grid-container').removeClass('hide');
+                    shuffle.update();
+                } else {
                     toggleGridView();
                 }
             }
+            // on load
+            handleWindowSize();
 
-            
-            
-            
-            /*else if (window.innerWidth < 1200 && $('.footer__btn').hasClass('hide')) {
-                $('#about-toggle').removeClass('full-view');
-                $('#grid-container').addClass('hide');
-                $('.grid-slider-toggle').removeClass('hide');
-            } */
-            
-            /*else if (window.innerWidth >= 1200) {
-                $('#about-toggle').addClass('full-view');
-                $('.grid-slider-toggle').addClass('hide');
-                $('.slider').removeClass('hide');
-                $('#grid-container').removeClass('hide');
-                splide.refresh();
-                shuffle.update();
-            }  else if (window.innerWidth < 1200) {
-                $('#about-toggle').removeClass('full-view');
-                $('.slider').addClass('hide');
-                $('#grid-container').removeClass('hide');
-                $('.grid-slider-toggle').removeClass('hide');
-                $('#slider-toggle').removeClass('hide');
-                $('#grid-toggle').addClass('hide');
-            }*/
+            // on resize
+            window.addEventListener('resize', function(event) {
+                handleWindowSize();
+            });
         }
-        
-        const changeCSS = (elements, w) => {
-            let breakpoint;
-            if (w >= 768 && w < 992) {
-                breakpoint = 768;
-            } else if (w >= 992 && w < 1200) {
-                breakpoint = 992;
-            }
-
-            if($('#grid-toggle').hasClass('hide')) {
-                let prop, val;
-                elements.forEach(el => {  
-                    console.log(breakpoint)              
-                    prop = el.prop, val = el.view[breakpoint].val.grid;
-                    document.querySelector(el.el).style[prop] = val;
-                });
-            } else {
-                let prop, val;
-                elements.forEach(el => {                
-                    prop = el.prop, val = el.view[breakpoint].val.slider;
-                    document.querySelector(el.el).style[prop] = val;
-                });
-            }
-        }
-            
-        /*let breakpoints = [
-            {el: '.footer__btns', prop: 'height', view: {
-                768: {val: {grid: '7vh', slider: '12vh'}},
-                992: {val: {grid: '6vh', slider: '6vh'}},
-            }},
-            {el: '.footer__btns', prop: 'padding-top', view: {
-                768: {val: {grid: '0', slider: '0'}},
-                992: {val: {grid: '0', slider: '0'}},
-            }},
-            {el: '.footer__btn', prop: 'font-size', view: {
-                768: {val: {grid: '10vh', slider: '5vh'}},
-                992: {val: {grid: '6vh', slider: '5.5vh'}}
-            }}
-        ];*/
-
 
         // on load
         toggleFooterView();
-
-        window.addEventListener('resize', function(event) {
-            isResized = true;
-            
-            /*if (window.innerWidth >= 768 && window.innerWidth < 812 && window.innerWidth > 1024 && window.innerWidth < 1200) {
-                changeCSS(breakpoints, window.innerWidth);
-            }*/
-        });
-        
         
         $('.footer__btns > .grid-slider-toggle').click(function() {
             $('#grid-container').toggleClass('hide');
@@ -337,13 +273,6 @@ var Slider = (function() {
             $('#about-toggle').toggleClass('grid-view slider-view');
             $('.footer__btns').toggleClass('grid-view slider-view');
 
-            /*if (window.innerWidth >= 768 && window.innerWidth < 1200) {
-                changeCSS(breakpoints, window.innerWidth);
-            }*/
-
-            /*if (isResized) {
-                splide.refresh();
-            }*/
             splide.refresh();
             shuffle.update();
         });
