@@ -89,6 +89,13 @@ var Slider = (function() {
     }
 
     function initViewer(id) {
+        let right;
+        if (window.innerWidth < 1200) {
+            right = 0;
+        } else {
+            right = 300
+        }
+
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
         $('#html-overlay').removeClass('hide');
@@ -100,7 +107,7 @@ var Slider = (function() {
                 tileSource: '/images/dzi/' + id + '.dzi'
             }],
             viewportMargins: {
-                right: 300
+                right: right
             },
             overlays:[{
                 id: 'html-overlay',
