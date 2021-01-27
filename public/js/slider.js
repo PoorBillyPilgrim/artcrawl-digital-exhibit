@@ -259,6 +259,7 @@ var Slider = (function() {
                     shuffle.update();
                 } else {
                     toggleGridView();
+                    splide.refresh();
                 }
             }
             // on load
