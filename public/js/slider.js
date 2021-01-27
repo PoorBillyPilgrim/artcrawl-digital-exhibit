@@ -234,6 +234,9 @@ var Slider = (function() {
 
     const handleView = function(splide) {
         let isResized = false;
+        let height, width;
+        height = $(window).height();
+        width = $(window).width();
 
         function toggleFooterView() {
 
@@ -258,9 +261,14 @@ var Slider = (function() {
                     $('#grid-container').removeClass('hide');
                     shuffle.update();
                 } else {
-                    toggleGridView();
-                    splide.refresh();
+                    if ($(window).height() != height && $(window).width() == width) {
+                        return;
+                    } else {
+                        toggleGridView();
+                    }
                 }
+                height = $(window).height();
+                width = $(window).width();
             }
             // on load
             handleWindowSize();
@@ -310,22 +318,6 @@ var Slider = (function() {
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css('background-color', activeColor);
         });
-    }
-
-    const onResize = function() {
-        let width;
-        width = $(window).width();
-        
-        $(window).resize(debounce(function () {
-            /**
-             * Because mobile browsers register scroll as window resize,
-             * this checks for only change in width
-             * https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
-             * */
-            if ($(window).width() != width) {
-                splide.refresh();
-            }
-        }, 100, true));
     }
 
     return {
