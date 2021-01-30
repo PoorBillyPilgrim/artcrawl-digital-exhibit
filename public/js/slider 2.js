@@ -44,7 +44,7 @@ var Slider = (function() {
 
         handleSplideEvents(splide);
         openViewer();
-        closeViewer(splide);
+        closeViewer();
         handleAbout();
         handleView(splide);
         renderColor();
@@ -89,13 +89,6 @@ var Slider = (function() {
     }
 
     function initViewer(id) {
-        let right;
-        if (window.innerWidth < 1200) {
-            right = 0;
-        } else {
-            right = 300
-        }
-
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
         $('#html-overlay').removeClass('hide');
@@ -106,15 +99,14 @@ var Slider = (function() {
             tileSources: [{
                 tileSource: '/images/dzi/' + id + '.dzi'
             }],
-            viewportMargins: {
-                right: right
-            },
             overlays:[{
                 id: 'html-overlay',
                 x: 1,
-                y: 0,
+                y: 1
             }]
         });
+
+        console.log(viewer.viewport.getBounds(true));
     }
 
     function debounce(func, wait, immediate) {
@@ -192,7 +184,7 @@ var Slider = (function() {
         });
     }
 
-    const closeViewer = function(splide) {
+    const closeViewer = function() {
         $('#openseadragon-close').click(function () {
             let params = getHashParams(window.location.hash.substr(1));
             
@@ -211,7 +203,6 @@ var Slider = (function() {
             history.pushState({'item_id': gridItemID}, 'Art Crawl', window.location.hash = '#id=' + gridItemID);
 
             shuffle.update();
-            splide.refresh();
             $("#" + params.id).addClass('highlight');
             $('<div id="html-overlay" class="hide">' + '</div>').insertBefore('#legend');
         });
@@ -234,10 +225,6 @@ var Slider = (function() {
 
     const handleView = function(splide) {
         let isResized = false;
-        let heightBefore, widthBefore;
-        let heightAfter, widthAfter;
-        heightBefore = $(window).height();
-        widthBefore = $(window).width();
 
         function toggleFooterView() {
 
@@ -256,7 +243,7 @@ var Slider = (function() {
                 }
             }
 
-            function handleToggleOnLoad() {
+            function handleWindowSize() {
                 if (window.innerWidth >= 1280) {
                     $('.grid-slider-toggle').addClass('hide');
                     $('#grid-container').removeClass('hide');
@@ -265,25 +252,12 @@ var Slider = (function() {
                     toggleGridView();
                 }
             }
-
-            function handleToggleOnResize() {
-                heightAfter = $(window).height();
-                widthAfter = $(window).width();
-                if (widthBefore < 1280 && widthAfter >= 1280 || widthBefore >= 1280 && widthAfter < 1280) {
-                    toggleGridView();
-                    console.log('width before:'+widthBefore)
-                    console.log('width after:'+widthAfter)
-                }
-                widthBefore = widthAfter;
-            }
-
-            /** handling grid/slider toggle **/
             // on load
-            handleToggleOnLoad();
+            handleWindowSize();
 
             // on resize
             window.addEventListener('resize', function(event) {
-                handleToggleOnResize();
+                handleWindowSize();
             });
         }
 
@@ -326,6 +300,22 @@ var Slider = (function() {
             let activeColor = $('.art-crawl-item.highlight').css('background-color');
             $('#legend').css('background-color', activeColor);
         });
+    }
+
+    const onResize = function() {
+        let width;
+        width = $(window).width();
+        
+        $(window).resize(debounce(function () {
+            /**
+             * Because mobile browsers register scroll as window resize,
+             * this checks for only change in width
+             * https://stackoverflow.com/questions/17328742/mobile-chrome-fires-resize-event-on-scroll
+             * */
+            if ($(window).width() != width) {
+                splide.refresh();
+            }
+        }, 100, true));
     }
 
     return {
