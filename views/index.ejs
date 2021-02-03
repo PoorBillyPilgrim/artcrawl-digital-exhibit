@@ -76,11 +76,15 @@
             <ul class="splide__list">
                 <% for (let i = 0; i < data.length; i++) { %>
                   <% if (data[i]["Media"] === "Video") { %>
-                    <li class="splide__slide" data-splide-<%=data[i]["Media Upload Location"]%>="<%=data[i]["Media URL"]%>">
+                    <li class="splide__slide video" data-splide-<%=data[i]["Media Upload Location"]%>="<%=data[i]["Media URL"]%>">
+                      <img class="video" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/>
+                  <% } else if (data[i]["Media"] === "Audio") { %>
+                    <li class="splide__slide audio">
+                      <a href="/audio/<%=data[i]["Media URL"]%>" target="_blank"><img class="audio" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/></a>
                   <% } else { %>
                     <li class="splide__slide">
+                      <img class="" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/>
                   <% } %>
-                    <img class="" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>"/>
                     <p><em><%=data[i]['Title of Artwork']%></em>, <%=data[i]['First Name']%> <%=data[i]['Last Name']%>, <%=data[i]['Major']%></p>
                   </li>
                 <% } %>

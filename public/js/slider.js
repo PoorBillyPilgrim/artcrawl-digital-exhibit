@@ -173,9 +173,10 @@ var Slider = (function() {
 
     const openViewer = function() {
         $('.splide__slide').click(function () {
-            if(this.hasClass('splide__slide--has-video')) {
+            if($(this).hasClass('video') || $(this).hasClass('audio')) {
                 return;
             }
+            console.log(this)
             //let id = this.attributes["data-id"].value;
             let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
