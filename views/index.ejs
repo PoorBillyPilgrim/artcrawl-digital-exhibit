@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="/js/vendor/splide-2.4.21/dist/css/splide.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/css/splide-extension-video.min.css">
   <link rel="stylesheet" href="/style.css">
   <!-- Font Awesome 
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -74,10 +75,12 @@
           <div class="splide__track">
             <ul class="splide__list">
                 <% for (let i = 0; i < data.length; i++) { %>
-                  <li class="splide__slide">
-                    
+                  <% if (data[i]["Media"] === "Video") { %>
+                    <li class="splide__slide" data-splide-<%=data[i]["Media Upload Location"]%>="<%=data[i]["Media URL"]%>">
+                  <% } else { %>
+                    <li class="splide__slide">
+                  <% } %>
                     <img class="" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>"/>
-                    
                     <p><em><%=data[i]['Title of Artwork']%></em>, <%=data[i]['First Name']%> <%=data[i]['Last Name']%>, <%=data[i]['Major']%></p>
                   </li>
                 <% } %>
@@ -129,7 +132,7 @@
           <div id="grid" class="">
             <% for (let i = 0; i < data.length; i++) { %>
                 <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
-                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-media="<%= data[i]["Media"]%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="/images/thumbnails/<%= data[i]['Image File']%>" />
             </figure>
             <% } %>
@@ -168,6 +171,7 @@
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script type="text/javascript" src="/js/vendor/openseadragon.min.js"></script>
   <script type="text/javascript" src="/js/vendor/splide-2.4.21/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/js/splide-extension-video.min.js"></script>
   <script type="text/javascript" src="/js/grid.js"></script>
   <script type="text/javascript" src="/js/metadata.js"></script>
   <script type="text/javascript" src="/js/slider.js"></script>

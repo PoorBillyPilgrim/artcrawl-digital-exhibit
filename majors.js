@@ -31,3 +31,4 @@ for (let disc in colors) {
 }
 
 console.log(JSON.stringify(result));
+console.log(data.length)
