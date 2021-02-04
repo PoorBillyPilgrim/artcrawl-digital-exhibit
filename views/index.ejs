@@ -80,7 +80,9 @@
                       <img class="video" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/>
                   <% } else if (data[i]["Media"] === "Audio") { %>
                     <li class="splide__slide audio">
-                      <a href="/audio/<%=data[i]["Media URL"]%>" target="_blank"><img class="audio" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/></a>
+                        <a href="/audio/<%=i%>" target="_blank">
+                          <img class="audio" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/>
+                        </a>
                   <% } else { %>
                     <li class="splide__slide">
                       <img class="" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/>

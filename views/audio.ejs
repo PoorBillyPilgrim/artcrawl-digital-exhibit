@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- HTML Meta Tags -->
+        <meta charset="utf-8"/>
+        <title>Clough Art Crawl</title>
+        <meta name="description" content="The Clough Art Crawl features work from Georgia Tech students across several disciplines, majors, and degree levels.">
+        
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://art-crawl-exhibit.herokuapp.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Clough Art Crawl">
+        <meta property="og:description" content="The Clough Art Crawl features work from Georgia Tech students across several disciplines, majors, and degree levels.">
+        <meta property="og:image" content="https://art-crawl-exhibit.herokuapp.com/images/ogImage.png">
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="art-crawl-exhibit.herokuapp.com">
+        <meta property="twitter:url" content="https://art-crawl-exhibit.herokuapp.com/">
+        <meta name="twitter:title" content="Clough Art Crawl">
+        <meta name="twitter:description" content="The Clough Art Crawl features work from Georgia Tech students across several disciplines, majors, and degree levels.">
+        <meta name="twitter:image" content="https://art-crawl-exhibit.herokuapp.com/images/ogImage.png">
+        
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+                
+        
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">  
+        
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="/js/vendor/splide-2.4.21/dist/css/splide.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.4.6/dist/css/splide-extension-video.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <!-- Font Awesome 
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    </head>
+    <body>
+        <audio controls>
+            <source src="/audio/<%=data[id]["Media URL"]%>" type="audio/mpeg" data-id="<%=id%>">
+            <p>Your browser doesn't support HTML5 audio. Here is a <a href="/audio/<%=data[id]["Media URL"]%>">link to the audio</a> instead.</p>
+        </audio>
+    </body>
+</html>

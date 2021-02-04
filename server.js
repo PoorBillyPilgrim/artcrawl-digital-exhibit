@@ -18,8 +18,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('index', {
         data: data,
-        // randomPhotos: randomPhotos,
         majors: majors
+    });
+});
+app.get('/audio/:id', (req, res) => {
+    /*data.forEach(x => {
+        if (x["Media URL"] === req.params.file) {
+            let file = file;
+        }
+    });*/
+    res.render('audio', {
+        data: data,
+        id: req.params.id
     });
 });
 
