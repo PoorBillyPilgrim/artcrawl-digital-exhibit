@@ -103,8 +103,11 @@ var Slider = (function() {
         viewer = OpenSeadragon({
             id: 'openseadragon',
             prefixUrl: '/images/openseadragonNav/',
-            tileSources: [{
+            /*tileSources: [{
                 tileSource: '/images/dzi/' + id + '.dzi'
+            }],*/
+            tileSources: [{
+                tileSource: '/images/iiif/abellonia3/info.json'
             }],
             viewportMargins: {
                 right: right
