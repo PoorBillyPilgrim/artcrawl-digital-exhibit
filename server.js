@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const data = require('./data/data.json');
-const randomPhotos = require('./data/randomPhotos.json');
 const majors = require('./data/majors.json')
 const path = require('path');
 // const regex = /.(jpeg|jpg|png)/; this was needed for the actual art crawl submissions
