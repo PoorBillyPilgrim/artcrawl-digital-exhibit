@@ -1,0 +1,26 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "https://art-crawl-exhibit.herokuapp.com/images/iiif/cgeng6",
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "formats": [
+        "jpg"
+      ],
+      "qualities": [
+        "default"
+      ]
+    }
+  ],
+  "protocol": "http://iiif.io/api/image",
+  "tiles": [
+    {
+      "scaleFactors": [
+        1
+      ],
+      "width": 1022
+    }
+  ],
+  "width": 1224,
+  "height": 686
+}

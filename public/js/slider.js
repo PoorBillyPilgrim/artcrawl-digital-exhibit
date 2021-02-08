@@ -88,14 +88,18 @@ var Slider = (function() {
         return html;
     }
 
-    function initViewer(id) {
-        let right;
+    function initViewer(username) {
+        let right, iiif;
         if (window.innerWidth < 1200) {
             right = 0;
         } else {
             right = 300
         }
-
+        if (window.location.host === "localhost:3000") {
+            iiif = 'iiif_localhost';
+        } else {
+            iiif = 'iiif';
+        }
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
         $('#html-overlay').removeClass('hide');
@@ -103,12 +107,10 @@ var Slider = (function() {
         viewer = OpenSeadragon({
             id: 'openseadragon',
             prefixUrl: '/images/openseadragonNav/',
-            /*tileSources: [{
-                tileSource: '/images/dzi/' + id + '.dzi'
-            }],*/
             tileSources: [{
-                tileSource: '/images/iiif/abellonia3/info.json'
+                tileSource: '/images/' + iiif + '/' + username + '/info.json'
             }],
+            immediateRender: true,
             viewportMargins: {
                 right: right
             },
@@ -179,8 +181,6 @@ var Slider = (function() {
             if($(this).hasClass('video') || $(this).hasClass('audio')) {
                 return;
             }
-            console.log(this)
-            //let id = this.attributes["data-id"].value;
             let username = $('.art-crawl-item.highlight').attr('data-username');
             gridItemID = $('.art-crawl-item.highlight').attr('id');
 

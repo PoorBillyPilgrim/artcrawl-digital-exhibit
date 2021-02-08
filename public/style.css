@@ -562,7 +562,6 @@ input[type="search"] {
 
   .footer__btn {
     width: initial;
-    font-size: 5vh;
   }
   
   /* Grid */
@@ -579,12 +578,6 @@ input[type="search"] {
   /* Filters */
   .controls {
     height: 15vh;
-  }
-
-  #sort-group,
-  #color-group,
-  #filters-group {
-    display: initial;
   }
 
   #search {

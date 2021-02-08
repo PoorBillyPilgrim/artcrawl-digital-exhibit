@@ -1,0 +1,26 @@
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "http://localhost:3000/images/iiif_localhost/jcaldwell48",
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "formats": [
+        "jpg"
+      ],
+      "qualities": [
+        "default"
+      ]
+    }
+  ],
+  "protocol": "http://iiif.io/api/image",
+  "tiles": [
+    {
+      "scaleFactors": [
+        1
+      ],
+      "width": 1022
+    }
+  ],
+  "width": 1026,
+  "height": 1434
+}

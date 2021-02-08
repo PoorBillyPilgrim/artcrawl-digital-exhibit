@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Image xmlns="http://schemas.microsoft.com/deepzoom/2008"
   Format="jpeg"
-  Overlap="4"
-  TileSize="1022"
+  Overlap="0"
+  TileSize="512"
   >
   <Size 
     Height="2912"
