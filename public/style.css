@@ -683,7 +683,7 @@ input[type="search"] {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   /* Header */
   #header {
     height: var(--legend-xl);
@@ -757,13 +757,13 @@ input[type="search"] {
     margin: 1.75rem auto;
     max-width: 600px;
   }
+}
 
-  /*.splide__slide > img {
-    -o-object-fit: contain;
-    object-fit: contain;
-    height: auto;
-    max-height: 600px;
-  }*/
+@media (min-width: 1200px) and (max-width: 1263px) {
+  label[for="search"] {
+    width: 106%;
+    text-align: center;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1350px) {
@@ -773,7 +773,7 @@ input[type="search"] {
   }
   
   #sort-btn-3 {
-    border-top-width: 0;
+    border-top-width: 1px;
   }
 
   #color-btn {

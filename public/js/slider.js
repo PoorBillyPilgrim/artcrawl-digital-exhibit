@@ -48,7 +48,6 @@ var Slider = (function() {
         handleAbout();
         handleView(splide);
         renderColor();
-        //onResize();
     }
 
     function getHashParams(arr) {
@@ -250,7 +249,11 @@ var Slider = (function() {
 
             function toggleGridView() {
                 $('.grid-slider-toggle').removeClass('hide');
-                if (window.location.hash) {
+                if (window.innerWidth >= 1200) {
+                    $('.grid-slider-toggle').addClass('hide');
+                    $('#grid-container').removeClass('hide');
+                    shuffle.update();
+                } else if (window.location.hash) {
                     $('#grid-container').addClass('hide');
                     $('#slider-toggle').addClass('hide');
                     $('#about-toggle').addClass('slider-view');
@@ -264,7 +267,7 @@ var Slider = (function() {
             }
 
             function handleToggleOnLoad() {
-                if (window.innerWidth >= 1280) {
+                if (window.innerWidth >= 1200) {
                     $('.grid-slider-toggle').addClass('hide');
                     $('#grid-container').removeClass('hide');
                     shuffle.update();
@@ -276,7 +279,7 @@ var Slider = (function() {
             function handleToggleOnResize() {
                 heightAfter = $(window).height();
                 widthAfter = $(window).width();
-                if (widthBefore < 1280 && widthAfter >= 1280 || widthBefore >= 1280 && widthAfter < 1280) {
+                if (widthBefore < 1200 && widthAfter >= 1200 || widthBefore >= 1200 && widthAfter < 1200) {
                     toggleGridView();
                     console.log('width before:'+widthBefore)
                     console.log('width after:'+widthAfter)
