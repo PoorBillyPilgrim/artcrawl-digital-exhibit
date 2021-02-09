@@ -761,7 +761,7 @@ input[type="search"] {
 
 @media (min-width: 1199px) and (max-width: 1263px) {
   label[for="search"] {
-    width: 106%;
+    width: 110%;
     text-align: center;
   }
 }

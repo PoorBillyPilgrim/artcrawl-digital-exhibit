@@ -252,10 +252,12 @@ var Slider = (function() {
                 if (window.innerWidth >= 1200) {
                     $('.grid-slider-toggle').addClass('hide');
                     $('#grid-container').removeClass('hide');
+                    $('.slider').removeClass('hide');
                     shuffle.update();
                 } else if (window.location.hash) {
                     $('#grid-container').addClass('hide');
                     $('#slider-toggle').addClass('hide');
+                    $('#grid-toggle').removeClass('hide');
                     $('#about-toggle').addClass('slider-view');
                     $('.footer__btns').addClass('slider-view');
                 } else {
