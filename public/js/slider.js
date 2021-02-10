@@ -103,6 +103,7 @@ var Slider = (function() {
         $('#openseadragon-close').removeClass('hide');
         $('#html-overlay').removeClass('hide');
         $('#artcrawl-container').addClass('hide');
+        OpenSeadragon.pixelDensityRatio = 1;
         viewer = OpenSeadragon({
             id: 'openseadragon',
             prefixUrl: '/images/openseadragonNav/',
