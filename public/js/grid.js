@@ -4,7 +4,6 @@ const Grid = (function() {
         const sizer = element.querySelector('.sizer-element')
         shuffle = new Shuffle(element, {
             itemSelector: '.art-crawl-item',
-            isCentered: true,
             sizer: sizer,
             speed: 2600, // 2.6 seconds
             easing: 'cubic-bezier(.28,1.06,.54,.98)' // custom from https://cubic-bezier.com/#.28,1.06,.54,.98
