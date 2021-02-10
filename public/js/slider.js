@@ -108,7 +108,7 @@ var Slider = (function() {
             id: 'openseadragon',
             prefixUrl: '/images/openseadragonNav/',
             tileSources: [{
-                tileSource: '/images/' + iiif + '/' + username + '/info.json'
+                tileSource: '/images/dzi/' + username + '.dzi'
             }],
             immediateRender: true,
             viewportMargins: {
