@@ -35,13 +35,13 @@ Info and assets needed to power the app can be submitted via a Qualtrics survey,
 | ----------------- | ----------------- | -------------------- | -------------- |
 | Image - Full Size | .jpeg, .jpg, .png | Slider               | x              |
 | Image - Thumbnail | .jpg              | Grid                 |                |
-| Image - IIIF      | .jpg              | OpenSeadragon viewer |                |
+| Image - DZI       | .dzi              | OpenSeadragon viewer |                |
 | Audio             | .mp3, .ogg(?)     | `/audio/:id`         | x              |
 | Video             | n/a               | Slider               | x              |
 
 
-### Thumnbnails and IIIF
-Students submit full-sized copies of the images they would like to represent their art. I have written a script that will loop through a folder of these full-sized images and create a new folder with thumbnail and static, tiled images structured according to IIIF standards. 
+### Thumnbnails and DZI
+Students submit full-sized copies of the images they would like to represent their art. I have written a script that will loop through a folder of these full-sized images and create a new folder with thumbnail and static, tiled images structured according deep zoom folder structure specifications. 
 
 ---
 
@@ -66,7 +66,7 @@ Students submit full-sized copies of the images they would like to represent the
         ```
     3. Alphabetize `data.json`
 2. Create thumbnails (65 x 65) of images for grid
-3. Create `iiif` files for image viewer
+3. Create `.dzi` files for image viewer
 4. Compress width of full-sized image to 1080, height automatically adjusts.
 
 ---
@@ -75,4 +75,4 @@ Students submit full-sized copies of the images they would like to represent the
 ---
 
 ### Considerations
-1. IIIF server - currently experience performance issues with the OpenSeadragon viewer in Safari and Chrome on an iPhone 6. Possible that this issues extends to other mobile devices. Have tested different file types and configurations and am currently [seeking advice](https://github.com/openseadragon/openseadragon/issues/1938) from the developer. Performance may be boosted by hosting IIIF images on their own [dedicated IIIF server](https://iiif.io/apps-demos/).
+1. Separate server for assets
