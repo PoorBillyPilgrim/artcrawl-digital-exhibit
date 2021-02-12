@@ -99,13 +99,16 @@ var Slider = (function() {
                 return y = height / width;
             })
             .then(y => {
-                let right, bottom;
+                let x, right, bottom;
                 if (window.innerWidth < 1200) {
                     right = 0;
                     bottom = 150;
+                    x = 0;
                 } else {
                     right = 300;
                     bottom = 0;
+                    x = 1;
+                    y = 0;
                 }
                 $('#openseadragon').toggleClass('show');
                 $('#openseadragon-close').removeClass('hide');
@@ -125,7 +128,7 @@ var Slider = (function() {
                     },
                     overlays:[{
                         id: 'html-overlay',
-                        x: 0,
+                        x: x,
                         y: y,
                     }]
                 });
