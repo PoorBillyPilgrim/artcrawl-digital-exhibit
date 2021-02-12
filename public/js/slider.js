@@ -87,34 +87,50 @@ var Slider = (function() {
         return html;
     }
 
-    function initViewer(username) {
-        let right, iiif;
-        if (window.innerWidth < 1200) {
-            right = 0;
-        } else {
-            right = 300
-        }
-        $('#openseadragon').toggleClass('show');
-        $('#openseadragon-close').removeClass('hide');
-        $('#html-overlay').removeClass('hide');
-        $('#artcrawl-container').addClass('hide');
-        OpenSeadragon.pixelDensityRatio = 1;
-        viewer = OpenSeadragon({
-            id: 'openseadragon',
-            prefixUrl: '/images/openseadragonNav/',
-            tileSources: [{
-                tileSource: '/images/dzi/' + username + '.dzi'
-            }],
-            immediateRender: true,
-            viewportMargins: {
-                right: right
-            },
-            overlays:[{
-                id: 'html-overlay',
-                x: 1,
-                y: 0,
-            }]
-        });
+    async function initViewer(username) {
+        let y;
+        await fetch('/images/dzi/' + username + '.dzi')
+            .then(response => response.text())
+            .then(string => $.parseXML(string))
+            .then(xml => {
+                let sizeTag = xml.documentElement.firstElementChild.attributes;
+                let height = parseInt(sizeTag.Height.value);
+                let width = parseInt(sizeTag.Width.value);
+                return y = height / width;
+            })
+            .then(y => {
+                let right, bottom;
+                if (window.innerWidth < 1200) {
+                    right = 0;
+                    bottom = 150;
+                } else {
+                    right = 300;
+                    bottom = 0;
+                }
+                $('#openseadragon').toggleClass('show');
+                $('#openseadragon-close').removeClass('hide');
+                $('#html-overlay').removeClass('hide');
+                $('#artcrawl-container').addClass('hide');
+                OpenSeadragon.pixelDensityRatio = 1;
+                viewer = OpenSeadragon({
+                    id: 'openseadragon',
+                    prefixUrl: '/images/openseadragonNav/',
+                    tileSources: [{
+                        tileSource: '/images/dzi/' + username + '.dzi'
+                    }],
+                    immediateRender: true,
+                    viewportMargins: {
+                        right: right,
+                        bottom: bottom
+                    },
+                    overlays:[{
+                        id: 'html-overlay',
+                        x: 0,
+                        y: y,
+                    }]
+                });
+            })
+            .catch(err => console.log(err));
     }
 
     function debounce(func, wait, immediate) {
