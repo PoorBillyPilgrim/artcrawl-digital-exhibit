@@ -87,9 +87,9 @@ var Slider = (function() {
         return html;
     }
 
-    async function initViewer(username) {
+    function initViewer(username) {
         let y;
-        await fetch('/images/dzi/' + username + '.dzi')
+        fetch('/images/dzi/' + username + '.dzi')
             .then(response => response.text())
             .then(string => $.parseXML(string))
             .then(xml => {
