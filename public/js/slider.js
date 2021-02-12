@@ -94,11 +94,6 @@ var Slider = (function() {
         } else {
             right = 300
         }
-        if (window.location.host === "localhost:3000") {
-            iiif = 'iiif_localhost';
-        } else {
-            iiif = 'iiif';
-        }
         $('#openseadragon').toggleClass('show');
         $('#openseadragon-close').removeClass('hide');
         $('#html-overlay').removeClass('hide');
