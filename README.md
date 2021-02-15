@@ -24,13 +24,24 @@ On the back-end, the project is built on top of a simple Node.js server via [Exp
 
 ---
 
-
 ## Setup
+Below is a suggested workflow for obtaining, validating, and processing the user submitted data following the workflow I drafted as I experimented with the various data and media needed to create the prototype. In the interest of reducing the workload for IT&D, I would like to manage the intake of data which would 
 
-### Submission of User Data
-Info and assets needed to power the app can be submitted via a Qualtrics survey, for which we've created a [draft](https://gatech.co1.qualtrics.com/jfe/form/SV_6XAsY3VQ5IwQdzD). Considerations for data submitted by users includes validating and sanitizing the data, e.g. prevent cross-site scripting. Qualtrics provides some basic validation, e.g. setting max length/max characters on text submissions.
+### Workflow Outline
+Setting up the project for production in three steps:
+1. Acquire, sanitize, and validate student info and media files
+2. Organize student info as a `.json` file
+3. Create copies of student images for different uses within app
 
-## Assets 
+## Student Info and Media Files
+**Summary**: Receive student info and media in such a way that 1) the info can be efficiently validated and sanitized, and 2) the data can easily be converted to a `.json` file. 
+
+### Form Submission
+Info and media needed to power the app could be submitted via a Qualtrics survey, for which we've created a [draft](https://gatech.co1.qualtrics.com/jfe/form/SV_6XAsY3VQ5IwQdzD). Considerations for data submitted by users includes validating and sanitizing the data, e.g. prevent cross-site scripting. Qualtrics provides some basic validation, e.g. setting max length/max characters on text submissions.
+
+I am open to using an alternative to Qualtrics. I recognize that other alternatives may be more efficient and better equpiied at validation and sanititization. 
+
+### Media File Descriptions
 | Media Type        | Extensions        | Use                 | User Submitted? | 
 | ----------------- | ----------------- | -------------------- | -------------- |
 | Image - Full Size | .jpeg, .jpg, .png | Slider               | x              |
@@ -39,17 +50,13 @@ Info and assets needed to power the app can be submitted via a Qualtrics survey,
 | Audio             | .mp3, .ogg(?)     | `/audio/:id`         | x              |
 | Video             | n/a               | Slider               | x              |
 
-
-### Thumnbnails and DZI
-Students submit full-sized copies of the images they would like to represent their art. I have written a script that will loop through a folder of these full-sized images and create a new folder with thumbnail and static, tiled images structured according deep zoom folder structure specifications. 
-
 ---
 
-## Workflow
-1. Handle user data 
-    1. Sanitize/validate data
-    2. Create `data.json` file with objects representing artists and their data:
-        ```json
+## Organize Student Info as `.json`
+
+1. After validating and sanitizing data, create `data.json` file with objects representing artists and their data:
+
+    ```json
         {
             "Username": "String (50 char max)",
             "First Name": "String (50 char max)",
@@ -63,11 +70,23 @@ Students submit full-sized copies of the images they would like to represent the
             "Media URL": "String (for 'Audio' or 'Video' -- 100 char max)",
             "Image File": "File (extensions: .jpg, .jpeg, .png)"
         }
-        ```
-    3. Alphabetize `data.json`
-2. Create thumbnails (65 x 65) of images for grid
-3. Create `.dzi` files for image viewer
-4. Compress width of full-sized image to 1080, height automatically adjusts.
+    ```
+
+2. Alphabetize `data.json` using `./utils/sort.js`
+
+## Process Images
+Students submit full-sized copies of the images they would like to represent their art. After submission, three copies for each image will need to be created: a small 65px x 65 px thumbnail for the grid, deep zoom tiles for the OpenSeadragon viewer, and copy with a compressed width of 1080px for the slider.
+
+I have written a script (`./utils/images.js`) using [sharp](https://sharp.pixelplumbing.com/) - a Node.js image processing package - that creates these three additional image files.
+    
+Workflow:
+1. In `utils/`, create `artcrawl_full_size/` folder and add images submitted by students.
+2. Either create three other folders (`./dzi/`, and `./thumbnails/`, and `./artcrawl_1080/`) or direct script to write newly created images files to `../public/images/dzi/`, `../public/images/thumbnails/`, and `../public/images/artcrawl/`.
+3. From `utils` run the script
+    ```zsh
+    cd utils
+    node images.js
+    ````
 
 ---
 

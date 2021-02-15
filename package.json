@@ -19,6 +19,7 @@
     "node-fetch": "^2.6.1",
     "openseadragon": "^2.4.2",
     "randomcolor": "^0.6.2",
+    "sharp": "^0.27.1",
     "shufflejs": "^5.2.3",
     "unsplash-js": "^6.3.0"
   },
