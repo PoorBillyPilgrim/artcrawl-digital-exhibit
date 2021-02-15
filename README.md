@@ -25,7 +25,7 @@ On the back-end, the project is built on top of a simple Node.js server via [Exp
 ---
 
 ## Setup
-Below is a suggested workflow for obtaining, validating, and processing the user submitted data following the workflow I drafted as I experimented with the various data and media needed to create the prototype. In the interest of reducing the workload for IT&D, I would like to manage the intake of data.
+Below is a suggested workflow for obtaining, validating, and processing the user submitted data following the workflow I drafted as I experimented with the various data and media needed to create the prototype. In the interest of reducing the workload for IT&D, I would be happy to manage the setup for deployment process.
 
 ### Workflow Outline
 Setting up the project for production in three steps:
