@@ -395,6 +395,7 @@ label.active {
   padding: 0.5rem;
   background: var(--light-color);
   border: 1px solid var(--custom-dark);
+  z-index: 1000;
 }
 
 .help-card > p {
