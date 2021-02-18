@@ -103,7 +103,8 @@ const Grid = (function() {
 
             if (majorFilterBtn.classList.contains('active')) {
                 const majorHighlight = document.querySelector('.highlight').getAttribute('data-major');
-                return element.getAttribute('data-major') === majorHighlight && firstName.startsWith(searchText) || lastName.startsWith(searchText) || title.startsWith(searchText) || major.startsWith(searchText); // && finds first falsy value. 'data-major' therefore must go first
+                let majorFilter = element.getAttribute('data-major') === majorHighlight;
+                return majorFilter && firstName.startsWith(searchText) || majorFilter && lastName.startsWith(searchText) || majorFilter && title.startsWith(searchText) || majorFilter && major.startsWith(searchText); // && finds first falsy value. 'data-major' therefore must go first
             } else {
                 return firstName.startsWith(searchText) || lastName.startsWith(searchText) || title.indexOf(searchText) !== -1 || major.startsWith(searchText);
             }
