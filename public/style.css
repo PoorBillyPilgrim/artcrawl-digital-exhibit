@@ -13,7 +13,31 @@
 
 body {
   font-family: 'Amiri', serif;
-  background:  	var(--light-color);
+  background: var(--light-color);
+}
+
+body.audio-page {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -moz-user-focus: ignore;
+  background: var(--custom-dark);
+}
+
+body.audio-page > audio {
+  height: 40px;
+  width: 66%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  user-select: none;
+  -moz-user-focus: normal;
 }
 
 .btn,
