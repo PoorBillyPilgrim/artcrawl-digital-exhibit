@@ -770,6 +770,11 @@ input[type="search"] {
     margin-bottom: 0.5rem;
   }
 
+  .help-card {
+    bottom: 0;
+    top: 70px;
+  }
+
   /* About */
   #about-card {
     height: 90%;
