@@ -46,6 +46,7 @@ var Slider = (function() {
         openViewer();
         closeViewer(splide);
         handleAbout();
+        handleHelp();
         handleView(splide);
         renderColor();
     }
@@ -251,6 +252,13 @@ var Slider = (function() {
         $('i.fa-info-circle').click(function() {
             $('#about').toggleClass('hide');
         });
+    }
+
+    const handleHelp = function() {
+        $('i.help').click(function() {
+            //$(this + 'div.help-card').toggleClass('hide');
+            $(this).parent().children('div.help-card').toggleClass('hide');
+        })
     }
 
     const handleView = function(splide) {

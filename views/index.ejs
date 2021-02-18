@@ -99,7 +99,13 @@
         <div class="col-xl-12 order-sm-last order-xl-first">
           <div class="controls row">
             <fieldset id="sort-group" class="control col-lg col-xl-4 group">
-              <legend>shuffle</legend>
+              <div class="row justify-content-start justify-content-md-end">
+                <div class="help-card hide">
+                  <p>order the grid according to artist last name, artist major, or title of artwork.</p>
+                </div>
+                <legend>shuffle</legend>
+                <i class="help pl-1 fas fa-question-circle"></i>
+              </div>
               <div id="sort-options" class="btn-group flex-wrap options">
                 <label id="sort-btn-1" class="btn active">
                   <input type="radio" name="sort-value" value="last-name" /> name
@@ -113,16 +119,34 @@
               </div>
             </fieldset>
             <div id="color-group" class="control order-last col-lg-2 col-xl-2">
-              <label for="color-btn">color</label>
+              <div class="row justify-content-end">
+                <div class="help-card hide">
+                  <p>organize artwork using unique colors mapped to artist's major</p>
+                </div>
+                <label for="color-btn">color</label>
+                <i class="help pl-1 fas fa-question-circle"></i>
+              </div>
               <button id="color-btn" class="btn">college</button>
             </div>
             <form id="search-group" class="control col-lg col-xl-3 group">
-              <label for="search">artist, title, or major</label>
+              <div class="row justify-content-end">
+                <div class="help-card hide">
+                  <p>search for specific artwork by artist last name or title of artwork or browse by artworks by specific majors.</p>
+                </div>
+                <label for="search">search</label>
+                <i class="help pl-1 fas fa-question-circle"></i>
+              </div>
               <input id="search" type="search" autocomplete="off"/>
               <input type="search" style="display: none;"/>
             </form>
             <fieldset id="filters-group" class="control col-lg col-xl-3 group">
-              <legend>filter</legend>
+              <div class="row justify-content-start justify-content-md-end">
+                <div class="help-card hide">
+                  <p>select "major" to filter grid to display artworks according to the major of work currently highlighted in the grid.</p>
+                </div>
+                <legend>filter</legend>
+                <i class="help pl-1 fas fa-question-circle"></i>
+              </div>
                 <div id="filter-options" class="btn-group flex-wrap options">
                   <label class="btn active">
                     <input type="radio" name="filter-value" value="all" /> all
