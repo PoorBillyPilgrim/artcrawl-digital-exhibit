@@ -201,14 +201,18 @@ var Slider = (function() {
 
             let $ID = $('#' + gridItemID);
             let html = createHtmlOverlay($ID.attr('data-title'), $ID.attr('data-first-name') + ' ' + $ID.attr('data-last-name'), $ID.attr('data-major'), $ID.attr('data-artist-statement'));
-            $('#html-overlay').append(html);
 
             $('#hero').addClass('hide');
             $('#about').addClass('hide');
             $('#info').addClass('hide');
             $('#legend').addClass('hide');
 
-            initViewer(username);
+            if (username == undefined) {
+                return;
+            } else {
+                $('#html-overlay').append(html);
+                initViewer(username);
+            }
             
             history.pushState({'item_id': gridItemID}, 'Art Crawl', '#id=' + gridItemID); 
         });
