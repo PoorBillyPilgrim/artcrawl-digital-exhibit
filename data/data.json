@@ -30,6 +30,22 @@
     "Media": "Image"
   },
   {
+    "ResponseId": "R_R3KLWzp1o5Haksp",
+    "id": 1,
+    "First Name": "The",
+    "Last Name": "Avalanches",
+    "Username": "avalanches3",
+    "Major": "Music",
+    "College": "Ivan Allen College of Liberal Arts",
+    "Title of Artwork": "Because I'm Me",
+    "Artist Statement": "If she don't love me....",
+    "Media": "Video",
+    "Media URL": "https://vimeo.com/188656841",
+    "Video Platform": "Vimeo",
+    "Audio File": "",
+    "Image File": ""
+  },
+  {
     "Username": "savery9",
     "First Name": "Savannah",
     "Last Name": "Avery",
@@ -132,7 +148,7 @@
     "Title of Artwork": "This is a music video!",
     "Artist Statement": "This is a music video.",
     "Media": "Video",
-    "Media Upload Location": "youtube",
+    "Video Platform": "youtube",
     "Media URL": "https://www.youtube.com/watch?v=a0j22lecULw",
     "Image File": "gburdell.jpg"
   },
@@ -545,6 +561,22 @@
     "Media": "Image"
   },
   {
+    "ResponseId": "R_ugFrIoVqlTKYFPj",
+    "id": 2,
+    "First Name": "Adult",
+    "Last Name": "Jazz",
+    "Username": "ajazz3",
+    "Major": "Music",
+    "College": "Ivan Allen College of Liberal Arts",
+    "Title of Artwork": "Springful",
+    "Artist Statement": "And we hammered the death knell!!",
+    "Media": "Audio",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "ajazz3.mp3",
+    "Image File": ""
+  },
+  {
     "Username": "jjoiner33",
     "First Name": "Jhazzmyn",
     "Last Name": "Joiner",
@@ -562,7 +594,7 @@
     "Artist Statement": "Now this is music!",
     "Media": "Audio",
     "Media Upload Location": "html-video",
-    "Media URL": "tjones357.mp3",
+    "Audio File": "tjones357.mp3",
     "Image File": "tjones357.jpg"
   },
   {
@@ -880,6 +912,22 @@
     "Title of Artwork": "Calisto",
     "Image File": "aoreilly7.jpeg",
     "Media": "Image"
+  },
+  {
+    "ResponseId": "R_3KE1g2S8EgWQTdA",
+    "id": 0,
+    "First Name": "Manchester",
+    "Last Name": "Orchestra",
+    "Username": "morchestra1",
+    "Major": "Music",
+    "College": "Ivan Allen College of Liberal Arts",
+    "Title of Artwork": "Bed Head",
+    "Artist Statement": "Deaf notes and talking heads.",
+    "Media": "Video",
+    "Media URL": "https://youtu.be/-voZou1JllY",
+    "Video Platform": "YouTube",
+    "Audio File": "",
+    "Image File": ""
   },
   {
     "Username": "icheiffou3",
@@ -1222,6 +1270,22 @@
     "Title of Artwork": "catarata rio celeste",
     "Image File": "psvh3.jpg",
     "Media": "Image"
+  },
+  {
+    "ResponseId": "R_x4WIs1JsIYBn5SN",
+    "id": 3,
+    "First Name": "Leif",
+    "Last Name": "Vollebekk",
+    "Username": "lvollebekk3",
+    "Major": "Music",
+    "College": "Ivan Allen College of Liberal Arts",
+    "Title of Artwork": "Elegy",
+    "Artist Statement": "You were up to something, I was up to nothing.",
+    "Media": "Audio",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "lvollebekk3.mp3",
+    "Image File": "lvollebekk3.jpg"
   },
   {
     "Username": "swalters37",
