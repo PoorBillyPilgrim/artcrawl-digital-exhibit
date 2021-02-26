@@ -3,7 +3,7 @@
     --grid-items-lg: 50px;
     --grid-items-xl: 65px;
     --light-color: #FFFAFA;
-    --custom-dark: #171717;
+    --custom-dark: #262626;
     --legend-xs: 9vh;
     --legend-sm: 10vh;
     --legend-md: 7.5vh;
@@ -138,18 +138,17 @@ h2.header {
   margin-bottom: 0;
 }
 
-/* About */
-#about {
+/* Pop Up Messages */
+.pop-up {
+  position: absolute;
   width: 100%;
   height: 100vh;
-  z-index: 1001;
   top: 0;
   left: 0;
-  opacity: 0;
-  transition: opacity 1s linear;
 }
 
-#about-card {
+.pop-up > .card {
+  position: relative;
   border: solid 2px var(--custom-dark);
   background: var(--light-color);
   padding: 15px;
@@ -157,7 +156,8 @@ h2.header {
   width: auto;
 }
 
-#about-close {
+.pop-up-close {
+  position: absolute;
   top: 12px;
   right: 12px;
   font-size: 2rem;
@@ -165,8 +165,20 @@ h2.header {
   cursor: pointer;
 }
 
-#about-close:hover {
+.pop-up-close:hover {
   opacity: 0.5;
+}
+
+/* Error */
+.error-message {
+  z-index: 1003;
+}
+
+/* About */
+#about {
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 1s linear;
 }
 
 /* HTML Overlay for Viewer */
@@ -706,6 +718,10 @@ input[type="search"] {
   .controls > fieldset > legend {
     text-align: right;
   }
+
+  .help-card {
+    top: 70px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -774,7 +790,6 @@ input[type="search"] {
 
   .help-card {
     bottom: 0;
-    top: 70px;
   }
 
   /* About */
