@@ -10,7 +10,8 @@ const Grid = (function() {
         });
         
         const imgLoad = imagesLoaded(element);
-        imgLoad.on('always', onAlways);
+        imgLoad.on('done', onSuccess);
+        imgLoad.on('fail', onFail);
         
         // Sort, Search, and Filter
         addGridEvent('#sort-options', 'change', handleSortChange);
@@ -20,9 +21,25 @@ const Grid = (function() {
         
     }
 
-    const onAlways = function() {
-        console.log('all images are loaded');
+    const onSuccess = function() {
+        console.log('all images loaded');
     };
+
+    const onFail = function() {
+        let errMsg = `
+        <div class="error-message pop-up">
+            <div class="card">
+                <h2>Sorry!</h2>
+                <a id="" class="pop-up-close"><i class="fas fa-times"></i></a>    
+                <p>Some images did not load. Please reload this page.</p>
+            </div>
+        </div>
+        `;
+        $('#about').after(errMsg);
+        $('.error-message > .card > a').click(function() {
+            $('div.error-message').remove();
+        })
+    }
 
     const addGridEvent = function(shuffleInput, event, eventHandler) {
         const input = document.querySelector(shuffleInput);
