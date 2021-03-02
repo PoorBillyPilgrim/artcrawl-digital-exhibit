@@ -669,7 +669,7 @@ input[type="search"] {
 }
 
 /* displays all controls for tablets in portrait mode */
-@media (min-width: 576px) and (max-width: 991px) and (min-height: 600px) {
+@media (min-width: 576px) and (max-width: 1200px) and (min-height: 900px) {
   /* Header */
   #header {
     height: var(--legend-md);
