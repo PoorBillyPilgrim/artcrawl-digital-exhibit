@@ -679,6 +679,13 @@ input[type="search"] {
     width: var(--legend-md);
   }
 
+  /* Filters */
+  #sort-group, 
+  #color-group, 
+  #filters-group {
+    display: initial;
+  }
+
   /* Footer */
   .footer__btns {
     height: 12vh;
