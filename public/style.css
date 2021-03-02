@@ -542,7 +542,6 @@ input[type="search"] {
     height: 70vh;
   }
 
-
   /* Filters */
   .controls {
     height: 10vh;
@@ -552,9 +551,13 @@ input[type="search"] {
     position: relative;
     z-index: 1000;
   }
+}
 
-  #sort-group,
-  #color-group,
+/* displays all controls for tablets in portrait mode */
+@media (max-height: 600px) and (min-width: 576px) {
+  /* Filters */
+  #sort-group, 
+  #color-group, 
   #filters-group {
     display: none;
   }
@@ -664,6 +667,28 @@ input[type="search"] {
     height: 10vh;
   }
 }
+
+/* displays all controls for tablets in portrait mode */
+@media (min-width: 576px) and (max-width: 991px) and (min-height: 600px) {
+  /* Header */
+  #header {
+    height: var(--legend-md);
+  }
+
+  #legend {
+    width: var(--legend-md);
+  }
+
+  /* Footer */
+  .footer__btns {
+    height: 12vh;
+  }
+
+  .footer__btn {
+    font-size: 5vh;
+  }
+}
+
 
 /* Large Devices */
 @media (min-width: 992px) {
