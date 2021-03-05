@@ -5,7 +5,7 @@
 The digital Clough Art Crawl is an interactive digital art gallery serving as an alternative to the typically in-person, bi-annual event.
 
 On the front-end, the project uses 7 open source JavaScript libraries and 1 front-end framework:
-1. [OpenSeadragon - v.2.4.2](https://openseadragon.github.io/) to display high-resolution zoomable images and leverages the [International Image Interoperability Framework (IIIF)](https://iiif.io/) specifications to do so.  
+1. [OpenSeadragon - v.2.4.2](https://openseadragon.github.io/) to display high-resolution zoomable images and leverages the Deep Zoon tiles to do so.  
 2. [Splide.js - latest version](https://splidejs.com/) to create a touch-friendly and mobile-responsive image slider.
 3. [Splide.js video extension](https://splidejs.com/extension-video/) for adding videos to image slider.
 4. [Shuffle.js - latest version](https://vestride.github.io/Shuffle/) to create a sortable, filterable, and searchable interactive grid of images.
