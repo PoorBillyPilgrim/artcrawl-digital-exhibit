@@ -1,9 +1,39 @@
+@font-face {
+  font-family: "Abel";
+  src: url('/fonts/Abel/Abel-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('/fonts/Roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url('/fonts/Roboto/Roboto-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url('/fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url('/fonts/Roboto_Slab/static/RobotoSlab-SemiBold.ttf');
+  font-weight: 600;
+}
+
+/* Global */
 :root {
     --grid-items: 60px;
     --grid-items-lg: 50px;
     --grid-items-xl: 65px;
     --light-color: #FFFAFA;
     --custom-dark: #262626;
+    --gt-off-black: #262626;
     --legend-xs: 9vh;
     --legend-sm: 10vh;
     --legend-md: 7.5vh;
@@ -12,7 +42,8 @@
 }
 
 body {
-  font-family: 'Amiri', serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   background: var(--light-color);
 }
 
@@ -73,7 +104,7 @@ body.audio-page > audio {
   font-size: 0;
 }
 
-/* Hero */
+/* Landing Page */
 #hero {
   height: 100vh;
   width: 100%;
@@ -95,6 +126,9 @@ h1 {
   margin: auto;
   text-align: center;
   font-size: 7rem;
+  font-family: 'Abel', sans-serif;
+  line-height: 1;
+  color: var(--gt-off-black);
 }
 
 .h1-bg {
@@ -135,6 +169,7 @@ h1 {
 }
 
 h2.header {
+  font-family: "Abel", sans-serif;
   margin-bottom: 0;
 }
 
@@ -191,8 +226,9 @@ h2.header {
 }
 
 #html-overlay > p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   opacity: 0.8;
+  font-weight: 400;
 }
 
 #html-overlay > :first-child {
@@ -207,12 +243,12 @@ h2.header {
 
 #html-overlay > :nth-child(2),
 #html-overlay > :nth-child(3) {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Roboto', sans-serif;
   opacity: 0.5;
 }
 
 #html-overlay > :last-child {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 0;
 }
 
@@ -295,7 +331,7 @@ h2.header {
 
 .splide__slide > p {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   left: 0;
 }
 
@@ -363,6 +399,7 @@ label {
 #filter-options > label,
 #color-btn {
   padding: 5px;
+  font-weight: 300;
 }
 
 .controls > fieldset > legend {
