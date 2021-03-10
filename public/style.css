@@ -31,9 +31,10 @@
     --grid-items: 60px;
     --grid-items-lg: 50px;
     --grid-items-xl: 65px;
-    --light-color: #FFFAFA;
-    --custom-dark: #262626;
+    --gt-white: #fff;
     --gt-off-black: #262626;
+    --gt-off-black: #262626;
+    --gt-blktxt: #333;
     --legend-xs: 9vh;
     --legend-sm: 10vh;
     --legend-md: 7.5vh;
@@ -44,7 +45,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  background: var(--light-color);
+  color: var(--gt-blktxt);
+  background: var(--gt-white);
 }
 
 body.audio-page {
@@ -53,7 +55,7 @@ body.audio-page {
   margin: 0;
   padding: 0;
   -moz-user-focus: ignore;
-  background: var(--custom-dark);
+  background: var(--gt-off-black);
 }
 
 body.audio-page > audio {
@@ -91,7 +93,7 @@ body.audio-page > audio {
 
 .footer__btn {
   padding: 0 5px;
-  color: var(--custom-dark);
+  color: var(--gt-off-black);
   cursor: pointer;
 }
 
@@ -109,7 +111,7 @@ body.audio-page > audio {
   height: 100vh;
   width: 100%;
   z-index: 3;
-  background: var(--light-color);
+  background: var(--gt-white);
   opacity: 1;
   transition: opacity 1s linear;
 }
@@ -143,7 +145,7 @@ h1 {
   border: solid #000 5px;
   border-image-slice: 1;
   font-size: 1.5rem;
-  background: var(--light-color);
+  background: var(--gt-white);
 }
 
 #hero > div > div > button:hover {
@@ -184,8 +186,8 @@ h2.header {
 
 .pop-up > .card {
   position: relative;
-  border: solid 2px var(--custom-dark);
-  background: var(--light-color);
+  border: solid 2px var(--gt-off-black);
+  background: var(--gt-white);
   padding: 15px;
   margin: auto;
   width: auto;
@@ -196,7 +198,7 @@ h2.header {
   top: 12px;
   right: 12px;
   font-size: 2rem;
-  color: var(--custom-dark);
+  color: var(--gt-off-black);
   cursor: pointer;
 }
 
@@ -218,8 +220,8 @@ h2.header {
 
 /* HTML Overlay for Viewer */
 #html-overlay {
-  color: var(--light-color);
-  background-color: var(--custom-dark);
+  color: var(--gt-white);
+  background-color: var(--gt-off-black);
   margin-left: 0.5rem;
   padding: 1rem;
   max-width: 300px;
@@ -356,10 +358,10 @@ h2.header {
 
   i.gallery {
     position: relative;
-    color: var(--light-color);
+    color: var(--gt-white);
     font-size: 1.5rem;
     cursor: pointer;
-    text-shadow: 0 0 10px var(--custom-dark);
+    text-shadow: 0 0 10px var(--gt-off-black);
   }
   
   i.right {
@@ -424,26 +426,26 @@ label[for='color-btn'] {
 }
 
 label.btn {
-  border: 1.5px solid var(--custom-dark);
+  border: 1.5px solid var(--gt-off-black);
   transition: .15s ease-in;
 }
 
 label.btn:hover {
-  background-color: var(--custom-dark);
-  color: var(--light-color);
+  background-color: var(--gt-off-black);
+  color: var(--gt-white);
 } 
 
 label.active {
-  background-color: var(--custom-dark);
-  color: var(--light-color);
+  background-color: var(--gt-off-black);
+  color: var(--gt-white);
 }
 
 .help-card {
   position: absolute;
   bottom: 70px;
   padding: 0.5rem;
-  background: var(--light-color);
-  border: 1px solid var(--custom-dark);
+  background: var(--gt-white);
+  border: 1px solid var(--gt-off-black);
   z-index: 1000;
   height: 150px;
 }
@@ -489,7 +491,7 @@ input[type="search"] {
   background: -moz-linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
   background: -webkit-linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
   border: transparent;
-  color: var(--light-color);
+  color: var(--gt-white);
   opacity: 1;
   transition: opacity .15s ease-in;
 }
@@ -604,7 +606,7 @@ input[type="search"] {
 @media (min-width: 768px) {
   /* About */
   #about-card {
-    box-shadow: 1px 1px 50px -20px var(--custom-dark);
+    box-shadow: 1px 1px 50px -20px var(--gt-off-black);
   }
   
   /* Header */
