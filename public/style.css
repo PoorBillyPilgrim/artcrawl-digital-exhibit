@@ -208,7 +208,7 @@ h2.header {
 
 .pop-up-close {
   position: absolute;
-  top: 12px;
+  top: 1px;
   right: 12px;
   font-size: 2rem;
   color: var(--gt-off-black);
@@ -229,6 +229,14 @@ h2.header {
   z-index: 1001;
   opacity: 0;
   transition: opacity 1s linear;
+}
+
+#about-card {
+  padding-bottom: 30px;
+}
+
+#about-card > h2 {
+  font-size: 1.5rem;
 }
 
 .logos {
