@@ -159,11 +159,6 @@ h1 {
   border-image-source: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
 }
 
-/* Logos */
-.logos {
-  
-}
-
 /* Header */
 #header {
   height: var(--legend-xs);
