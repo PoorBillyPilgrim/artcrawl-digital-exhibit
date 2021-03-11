@@ -342,11 +342,19 @@ var Slider = (function() {
     }
 
     const renderColor = function() {
-        let colors = {"Industrial Design":{"count":3,"color":"#ef88e5"},"Computer Science":{"count":18,"color":"#e8bf5a"},"ECE":{"count":1,"color":"#63e89d"},"Music":{"count":4,"color":"#6fe554"},"BME":{"count":5,"color":"#a369c6"},"Mechanical Engineering":{"count":13,"color":"#c82ed1"},"Biomedical Engineering":{"count":10,"color":"#20c136"},"Physics and LMC":{"count":1,"color":"#3e03b5"},"Architecture":{"count":6,"color":"#6f62d1"},"Master of Architecture":{"count":1,"color":"#a1ef97"},"Literature, Music, and Communication":{"count":1,"color":"#dfc2fc"},"Chemical & Biomolecular Engineering":{"count":1,"color":"#5246d6"},"Industrial Engineering":{"count":3,"color":"#5542e5"},"LMC":{"count":1,"color":"#abf28c"},"Electrical Engineering":{"count":3,"color":"#a31204"},"Aerospace":{"count":1,"color":"#4379b7"},"Master of City and Regional Planning":{"count":1,"color":"#aebc2b"},"Neuroscience":{"count":5,"color":"#e54334"},"physics":{"count":1,"color":"#6343ad"},"Chemical and Biomolecular Engineering":{"count":1,"color":"#93f9c6"},"Computer Science (PhD)":{"count":1,"color":"#7ea6d3"},"Environmental Engineering":{"count":2,"color":"#f4a6c0"},"Aerospace Engineering":{"count":6,"color":"#a98fe0"},"CS":{"count":1,"color":"#54f7c9"},"Civil Engineering":{"count":3,"color":"#e50685"},"Architect":{"count":1,"color":"#b9f79e"},"Biochemistry":{"count":3,"color":"#50fcaf"},"ME":{"count":4,"color":"#6f18cc"},"Biomedical Engineering & ALIS":{"count":1,"color":"#85ea98"},"Industrial & Systems Engineering":{"count":1,"color":"#4cf7cf"},"Literature, Media and Communication":{"count":1,"color":"#4f46f4"},"Business Administration":{"count":5,"color":"#f49d8d"},"Chemical Engineering":{"count":2,"color":"#f4ade5"},"AE":{"count":1,"color":"#60a8db"},"Literature, Media, and Communication":{"count":1,"color":"#4cd347"},"Religion":{"count":1,"color":"#fc97e4"},"ARCHITECTURE":{"count":1,"color":"#74b8ed"},"Biology":{"count":4,"color":"#73e026"},"Computational Media":{"count":2,"color":"#f24dc6"},"Robotics":{"count":1,"color":"#f1f495"},"Music Technology":{"count":1,"color":"#9dfc92"},"Psychology":{"count":1,"color":"#749b00"},"Bioinformatics":{"count":1,"color":"#c262d6"},"English":{"count":1,"color":"#edc86a"},"Materials Science and Engineering":{"count":2,"color":"#ffefa3"},"Computer Engineer":{"count":1,"color":"#77cc3f"},"ALIS":{"count":1,"color":"#e2386e"},"M.S. Global Media and Cultures":{"count":1,"color":"#ddff49"},"Computer Engineering":{"count":2,"color":"#04873c"},"Mathematics":{"count":1,"color":"#a1f497"},"Physics":{"count":2,"color":"#7fefc4"},"BMED":{"count":1,"color":"#8968d1"},"HTS":{"count":1,"color":"#bc220b"},"MSE":{"count":1,"color":"#e0a272"},"EE":{"count":1,"color":"#4bedb4"},"Biomedical engineering":{"count":1,"color":"#3d81a0"},"Online Master of Science in Analytics":{"count":1,"color":"#ffb87f"}};
+        let colors = {
+            // Georgia Tech Branding -- Tertiary Colors -- https://brand.gatech.edu/brand/colors
+            'Scheller College of Business': {'color': '#002233'}, // Atlanta Fog - Tertiary Color
+            'College of Computing':{'color': '#4B8B9B'}, // Tower Patina - Tertiary Color
+            'College of Design':{'color': '#335161'}, // Blue 80 - Web/Digital Color
+            'College of Engineering':{'color': '#F95E10'}, // Horizon - Tertiary Color
+            'Ivan Allen College of Liberal Arts':{'color': '#AD4025'}, // Georgia Clay - Tertiary Color
+            'College of Science':{'color': '#F5D580'} // Buzz Gold 60 - Web/Digital Color
+        };
         let figures = document.querySelectorAll('.art-crawl-item');
         figures.forEach(figure => {
-            let major = figure.attributes.getNamedItem('data-major').value;
-            figure.style.backgroundColor = colors[major].color;
+            let college = figure.attributes.getNamedItem('data-college').value;
+            figure.style.backgroundColor = colors[college].color;
         });
 
         let id;
