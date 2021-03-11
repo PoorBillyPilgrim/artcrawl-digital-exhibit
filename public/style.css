@@ -159,6 +159,11 @@ h1 {
   border-image-source: linear-gradient(90deg, rgba(32,201,151,1) 5%, rgba(23,162,184,1) 100%);
 }
 
+/* Logos */
+.logos {
+  
+}
+
 /* Header */
 #header {
   height: var(--legend-xs);
@@ -172,6 +177,15 @@ h1 {
 h2.header {
   font-family: "Abel", sans-serif;
   margin-bottom: 0;
+}
+
+#header > a {
+  color: var(--gt-blktxt);
+}
+
+#header > a:hover {
+  text-decoration: none;
+  color: var(--gt-blktxt);
 }
 
 /* Pop Up Messages */
@@ -215,6 +229,16 @@ h2.header {
   z-index: 1001;
   opacity: 0;
   transition: opacity 1s linear;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 40px;
+  margin: 30px 10px;
 }
 
 /* HTML Overlay for Viewer */
@@ -618,9 +642,23 @@ input[type="search"] {
     width: var(--legend-md);
   }
 
+  #header > a {
+    color: var(--gt-blktxt);
+  }
+
   h2.header {
     padding-right: 15px;
   }
+
+  .logos {
+    justify-content: space-evenly;
+  }
+
+  .logo {
+    height: 50px;
+    margin: 30px 20px;
+  }
+ 
 
   /* Footer */
   .footer__btns {
