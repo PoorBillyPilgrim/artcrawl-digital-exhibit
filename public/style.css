@@ -33,7 +33,6 @@
     --grid-items-xl: 65px;
     --gt-white: #fff;
     --gt-off-black: #262626;
-    --gt-off-black: #262626;
     --gt-blktxt: #333;
     --legend-xs: 9vh;
     --legend-sm: 10vh;
@@ -448,6 +447,7 @@ label.active {
   border: 1px solid var(--gt-off-black);
   z-index: 1000;
   height: 150px;
+  margin-bottom: 25px;
 }
 
 .help-card > p {
