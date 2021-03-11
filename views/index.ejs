@@ -102,7 +102,7 @@
             <fieldset id="sort-group" class="control col-lg col-xl-4 group">
               <div class="row justify-content-start justify-content-md-end">
                 <div class="help-card hide">
-                  <p>order the grid according to artist last name, artist major, or title of artwork.</p>
+                  <p>shuffle the images by the artists' last names, majors, or titles of artwork.</p>
                 </div>
                 <legend>shuffle</legend>
                 <i class="help pl-1 fas fa-question-circle"></i>
@@ -122,7 +122,7 @@
             <div id="color-group" class="control order-last col-lg-2 col-xl-2">
               <div class="row justify-content-end">
                 <div class="help-card hide">
-                  <p>organize artwork using unique colors mapped to artist's major</p>
+                  <p>a color for each college at Georgia Tech</p>
                 </div>
                 <label for="color-btn">color</label>
                 <i class="help pl-1 fas fa-question-circle"></i>
@@ -132,7 +132,7 @@
             <form id="search-group" class="control col-lg col-xl-3 group">
               <div class="row justify-content-end">
                 <div class="help-card hide">
-                  <p>search for specific artwork by artist last name or title of artwork or browse by artworks by specific majors.</p>
+                  <p>search art by artist last name or title of artwork or filter by major.</p>
                 </div>
                 <label for="search">search</label>
                 <i class="help pl-1 fas fa-question-circle"></i>
@@ -143,7 +143,7 @@
             <fieldset id="filters-group" class="control col-lg col-xl-3 group">
               <div class="row justify-content-start justify-content-md-end">
                 <div class="help-card hide">
-                  <p>select "major" to filter grid to display artworks according to the major of work currently highlighted in the grid.</p>
+                  <p>"major" will filter artists that share the major as the currently highlighted artist.</p>
                 </div>
                 <legend>filter</legend>
                 <i class="help pl-1 fas fa-question-circle"></i>
@@ -163,7 +163,7 @@
           <div id="grid" class="">
             <% for (let i = 0; i < data.length; i++) { %>
                 <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
-                  data-major="<%= data[i]['Major'] %>" data-title="<%= data[i]['Title of Artwork'] %>" data-media="<%= data[i]["Media"]%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                  data-major="<%= data[i]['Major'] %>" data-college="<%=data[i]['College']%>" data-title="<%= data[i]['Title of Artwork'] %>" data-media="<%= data[i]["Media"]%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
                 <img src="/images/thumbnails/<%= data[i]['Image File']%>" />
             </figure>
             <% } %>
