@@ -12,6 +12,7 @@ function writeDataJSON() {
                 "Username": submissions[i]["Username"],
                 "Major": submissions[i]["Major"],
                 "College": submissions[i]["College"],
+                "Year": "2021",
                 "Title of Artwork": submissions[i]["Title of Artwork"],
                 "Artist Statement": submissions[i]["Artist Statement"],
                 "Media": submissions[i]["Media"],
