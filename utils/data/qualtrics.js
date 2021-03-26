@@ -26,6 +26,6 @@ function writeDataJSON() {
     return JSON.stringify(data, null, 2);
 }
 
-fs.writeFile('../data/qualtricsTest.json', writeDataJSON(), (err) => {
+fs.writeFile('../../data/qualtricsTest.json', writeDataJSON(), (err) => {
     console.log(err);
 });
