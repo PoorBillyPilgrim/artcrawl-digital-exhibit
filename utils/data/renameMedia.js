@@ -8,15 +8,37 @@ const submissions = require('../../data/qualtricsTest.json');
  * ROUTE THESE TO /public/
  * 
  */
-submissions.forEach(sub => {
-    if (sub["Audio File"] != "") {
-        fs.rename(`./qualtrics/audio/${sub.ResponseId}_${sub["Audio File"]}`, `./artcrawl/audio/${sub["Audio File"]}`, (err) => {
+/**
+ * 
+ * Not all submission image files were saved as username + extension
+ * Need to rename files so that they 
+ * ext = /([^.]*$)/ --> this only collects extension, doesn't include .
+ * 
+ */
+const data = [];
+function renameMedia() {
+    submissions.forEach(sub => {
+        if (sub["Audio File"] != "") {
+            fs.rename(`./qualtrics/audio/${sub.ResponseId}_${sub["Audio File"]}`, `./artcrawl/audio/${sub["Audio File"]}`, (err) => {
+                if (err) console.log(err);
+            })
+        }
+
+        if (sub["Image File"] == "") {return;}
+
+        let i = sub["Image File"].search(/([^.]*$)/),
+        ext = '.' + sub["Image File"].slice(i),
+        oldFile = sub["Image File"],
+        newFile = sub["Username"] + ext;
+        sub["Image File"] = newFile;
+        fs.rename(`../media/qualtrics/images/${sub.ResponseId}_${oldFile}`, `../media/artcrawl/images/${newFile}`, (err) => {
             if (err) console.log(err);
         })
-    }
-    if (sub["Image File"] == "") {return;}
-    fs.rename(`./qualtrics/images/${sub.ResponseId}_${sub["Image File"]}`, `./artcrawl/images/${sub["Image File"]}`, (err) => {
-        if (err) console.log(err);
+        data.push(sub)
     })
-})
+    return JSON.stringify(data, null, 2)
+}
 
+fs.writeFile('../../data/qualtricsTest.json', renameMedia(), (err) => {
+    console.log(err);
+});
