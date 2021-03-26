@@ -15,7 +15,8 @@
 8. Alphabetize `data.json` by running `/utils/data/sort.js`
 9. Qualtrics prepends the Reponse ID to each media file name. To rename files with username, run `/utils/data/renameMedia.js`
 10. Generate colors object for `renderColor()` by running `/utils/data/majors.js`
-11. Generate .dzi, thumbnails, and compressed images by running `/utils/media/images.js`
+11. Convert .pdf files to .jpg
+12. Generate .dzi, thumbnails, and compressed images by running `/utils/media/images.js`
 
 
 
