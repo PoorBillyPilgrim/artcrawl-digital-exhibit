@@ -349,11 +349,14 @@ var Slider = (function() {
             'College of Design':{'color': '#335161'}, // Blue 80 - Web/Digital Color
             'College of Engineering':{'color': '#F95E10'}, // Horizon - Tertiary Color
             'Ivan Allen College of Liberal Arts':{'color': '#AD4025'}, // Georgia Clay - Tertiary Color
-            'College of Science':{'color': '#F5D580'} // Buzz Gold 60 - Web/Digital Color
+            'College of Sciences':{'color': '#F5D580'} // Buzz Gold 60 - Web/Digital Color
         };
         let figures = document.querySelectorAll('.art-crawl-item');
         figures.forEach(figure => {
             let college = figure.attributes.getNamedItem('data-college').value;
+            if (colors[college] == undefined) {
+                console.log(college)
+            }
             figure.style.backgroundColor = colors[college].color;
         });
 
