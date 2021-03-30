@@ -19,44 +19,28 @@
     "Artist Statement": "COMMUNITY themed NEON ZM1350 panaplex display within a black acrylic and anodized aluminum housing",
     "Image File": "mah9.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Sciences"
   },
   {
     "Username": "basgari3",
     "First Name": "Bahar",
     "Last Name": "Asgari",
-    "Major": "ECE",
+    "Major": "Electrical and Computer Engineering",
     "Title of Artwork": "Together We Are Visible",
     "Artist Statement": "Four people are dancing together in a field of irises. They reflect each other's positive feelings to get visible and stronger.",
     "Image File": "basgari3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
-  },
-  {
-    "ResponseId": "R_R3KLWzp1o5Haksp",
-    "id": 1,
-    "First Name": "The",
-    "Last Name": "Avalanches",
-    "Username": "avalanches3",
-    "Major": "Music",
-    "College": "College of Engineering",
-    "Title of Artwork": "Because I'm Me",
-    "Artist Statement": "If she don't love me....",
-    "Media": "Video",
-    "Media URL": "https://vimeo.com/188656841",
-    "Video Platform": "Vimeo",
-    "Audio File": "",
-    "Image File": "avalanches3.jpg"
+    "College": "College of Engineering"
   },
   {
     "Username": "savery9",
     "First Name": "Savannah",
     "Last Name": "Avery",
-    "Major": "BME",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "A Dream in the Darkness",
     "Image File": "savery9.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "jbell71",
@@ -67,7 +51,7 @@
     "Artist Statement": "Getting outside was always a normal part of my life; but, at GT --through the ORGT community-- it has become part of who I am.",
     "Image File": "jbell71.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "abellonia3",
@@ -77,7 +61,7 @@
     "Title of Artwork": "Mont Blanc",
     "Image File": "abellonia3.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "ebolton8",
@@ -88,7 +72,7 @@
     "Artist Statement": "Alabama",
     "Image File": "ebolton8.png",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Computing"
   },
   {
     "Username": "bbove3",
@@ -98,18 +82,18 @@
     "Title of Artwork": "Kite Strings",
     "Image File": "bbove3.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "lboyter3",
     "First Name": "Loy",
     "Last Name": "Boyter",
-    "Major": "Physics and LMC",
+    "Major": "Physics",
     "Title of Artwork": "The Ghosts of Paris",
     "Artist Statement": "Paris is an international city, but these immigrants are not considered Parisians, or really people. They are ignored by society",
     "Image File": "lboyter3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Sciences"
   },
   {
     "Username": "cbrownell3",
@@ -119,7 +103,7 @@
     "Title of Artwork": "Blending In",
     "Image File": "cbrownell3.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Computing"
   },
   {
     "Username": "abryant44",
@@ -140,41 +124,28 @@
     "Artist Statement": "Image captured by Suraj Buddhavarapu in Naples, Italy (March 2019)",
     "Image File": "sbuddhavarapu6.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "mbunch6",
     "First Name": "Michelle",
     "Last Name": "Bunch",
-    "Major": "Master of Architecture",
+    "Major": "Architecture",
     "Title of Artwork": "S-Building",
     "Artist Statement": "S-Building's whimsical operable elements allow changing relationships between rooms to become visible in its immediate context.",
     "Image File": "mbunch6.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
-  },
-  {
-    "Username": "gburdell",
-    "First Name": "George",
-    "Last Name": "Burdell",
-    "Major": "Literature, Music, and Communication",
-    "Title of Artwork": "This is a music video!",
-    "Artist Statement": "This is a music video.",
-    "Media": "Video",
-    "Video Platform": "youtube",
-    "Media URL": "https://www.youtube.com/watch?v=a0j22lecULw",
-    "Image File": "gburdell.jpg",
-    "College": "Scheller College of Business"
+    "College": "College of Design"
   },
   {
     "Username": "kburgener6",
     "First Name": "Kate",
     "Last Name": "Burgener",
-    "Major": "Chemical & Biomolecular Engineering",
+    "Major": "Chemical and Biomolecular Engineering",
     "Title of Artwork": "Creeping Orange Lichen",
     "Image File": "kburgener6.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "jcaldwell48",
@@ -201,7 +172,7 @@
     "Username": "igonzale6",
     "First Name": "Ian",
     "Last Name": "Campbell Gonzalez",
-    "Major": "LMC",
+    "Major": "Literature, Media, and Communication",
     "Title of Artwork": "El Divino Nino",
     "Artist Statement": "Taken in Buritaca, Colombia",
     "Image File": "igonzale6.jpg",
@@ -217,39 +188,39 @@
     "Artist Statement": "Shot on film in Grindelwald, Switzerland.",
     "Image File": "mcaveney3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "ruthvik3",
     "First Name": "Ruthvik",
     "Last Name": "Chandrasekaran",
-    "Major": "Aerospace",
+    "Major": "Aerospace Engineering",
     "Title of Artwork": "On A Speck",
     "Artist Statement": "We are floating on a speck roughly thrice that size, fighting over our petty differences in believes, appearances and opinions.",
     "Image File": "ruthvik3.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "ychen3241",
     "First Name": "Grace",
     "Last Name": "Chen",
-    "Major": "Master of City and Regional Planning",
+    "Major": "City and Regional Planning",
     "Title of Artwork": "Coming soon",
     "Image File": "ychen3241.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Design"
   },
   {
     "Username": "schoi417",
     "First Name": "SooHoon",
     "Last Name": "Choi",
-    "Major": "BME",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "Indigenous Man",
     "Artist Statement": "Although I am not Filipino, growing up in the Philippines has made it my home.",
     "Image File": "schoi417.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "cchu67",
@@ -260,7 +231,7 @@
     "Artist Statement": "A series of 4 paintings that delves into modern issues and depictions of different mental states in a surreal manner.",
     "Image File": "cchu67.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "fclever3",
@@ -271,17 +242,17 @@
     "Artist Statement": "GA",
     "Image File": "fclever3.jpeg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Sciences"
   },
   {
     "Username": "acoenen3",
     "First Name": "Ashley",
     "Last Name": "Coenen",
-    "Major": "physics",
+    "Major": "Physics",
     "Title of Artwork": "Mer de sapins",
     "Image File": "acoenen3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Sciences"
   },
   {
     "Username": "pcolon7",
@@ -291,7 +262,7 @@
     "Title of Artwork": "Preciosa",
     "Image File": "pcolon7.png",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "scdc3",
@@ -301,17 +272,17 @@
     "Title of Artwork": "ocean III",
     "Image File": "scdc3.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "adas81",
     "First Name": "Abhishek",
     "Last Name": "Das",
-    "Major": "Computer Science (PhD)",
+    "Major": "Computer Science",
     "Title of Artwork": "Shelter",
     "Image File": "adas81.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Computing"
   },
   {
     "Username": "adaugherty7",
@@ -321,7 +292,7 @@
     "Title of Artwork": "Reflections",
     "Image File": "adaugherty7.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "mdelurgio3",
@@ -332,7 +303,7 @@
     "Artist Statement": "My pottery bridges art and design, with the aim of creating functional pieces to elevate everyday mundanity.",
     "Image File": "mdelurgio3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "ndeshmukh30",
@@ -342,17 +313,17 @@
     "Title of Artwork": "Roses of Vienna",
     "Image File": "ndeshmukh30.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "tdoudali3",
     "First Name": "Thaleia Dimitra",
     "Last Name": "Doudali",
-    "Major": "CS",
+    "Major": "Computer Science",
     "Title of Artwork": "Together We Go",
     "Image File": "tdoudali3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Computing"
   },
   {
     "Username": "sdupont3",
@@ -363,7 +334,7 @@
     "Artist Statement": "Of all the memorable parts about my trip abroad, nothing's better than the friends I made there. I'm really lucky to know them.",
     "Image File": "sdupont3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "adutta39",
@@ -374,7 +345,7 @@
     "Artist Statement": "Georgia",
     "Image File": "adutta39.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "edworkin3",
@@ -384,18 +355,18 @@
     "Title of Artwork": "Jessica the Lesser",
     "Image File": "edworkin3.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Computing"
   },
   {
     "Username": "ymep3",
     "First Name": "Yeimy",
     "Last Name": "Espino",
-    "Major": "Architect",
+    "Major": "Architecture",
     "Title of Artwork": "Life",
     "Artist Statement": "Yeimy Espino",
     "Image File": "ymep3.jpeg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "College of Design"
   },
   {
     "Username": "efalejczyk3",
@@ -405,17 +376,17 @@
     "Title of Artwork": "Up Before the Rest of the City",
     "Image File": "efalejczyk3.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Sciences"
   },
   {
     "Username": "mferoz6",
     "First Name": "Mariam",
     "Last Name": "Feroz",
-    "Major": "ME",
+    "Major": "Mechanical Engineering",
     "Title of Artwork": "acceptance",
     "Image File": "mferoz6.jpeg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "cflannelly3",
@@ -425,7 +396,7 @@
     "Title of Artwork": "Sleepsong",
     "Image File": "cflannelly3.png",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "jfu85",
@@ -435,28 +406,28 @@
     "Title of Artwork": "Tower",
     "Image File": "jfu85.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Computing"
   },
   {
     "Username": "efunnell3",
     "First Name": "Emelia",
     "Last Name": "Funnell",
-    "Major": "Biomedical Engineering & ALIS",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "Fútbol femenino",
     "Artist Statement": "La Plaza del Congreso, Buenos Aires, Argentina. May 28, 2019.",
     "Image File": "efunnell3.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "mgeller6",
     "First Name": "Maxim",
     "Last Name": "Geller",
-    "Major": "Industrial & Systems Engineering",
+    "Major": "Industrial Engineering",
     "Title of Artwork": "Tech Tower",
     "Image File": "mgeller6.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "cgeng6",
@@ -467,18 +438,18 @@
     "Artist Statement": "These simple geometries, based on the fabric of the southern architectural language creates an playscape for many uses.",
     "Image File": "cgeng6.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Design"
   },
   {
     "Username": "sgomes31",
     "First Name": "Sofia",
     "Last Name": "Gomes",
-    "Major": "Literature, Media and Communication",
+    "Major": "Literature, Media, and Communication",
     "Title of Artwork": "Embrace me",
     "Artist Statement": "To embrace yourself is to find the path within you own lines.",
     "Image File": "sgomes31.png",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "Ivan Allen College of Liberal Arts"
   },
   {
     "Username": "ngoredatar3",
@@ -488,7 +459,7 @@
     "Title of Artwork": "Refrain, 2019",
     "Image File": "ngoredatar3.png",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "agupta354",
@@ -499,7 +470,7 @@
     "Artist Statement": "Life in its physical form disappears but, it leaves behind imprints on your memory, which form your identity.",
     "Image File": "agupta354.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "kmh7",
@@ -530,7 +501,7 @@
     "Artist Statement": "The allure of love is an extension of our own identity; a relationship imbued with community; a sense of belonging in each other",
     "Image File": "thatridge3.jpeg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "zholderness3",
@@ -541,7 +512,7 @@
     "Artist Statement": "Growing Up seeks to capture the balance it takes to do a head stand.",
     "Image File": "zholderness3.jpeg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "mhoover32",
@@ -552,7 +523,7 @@
     "Artist Statement": "If Pikachu were to be created today, here is my artistic rendering of how her identity and style might change in 2020.",
     "Image File": "mhoover32.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "College of Computing"
   },
   {
     "Username": "khsu38",
@@ -562,17 +533,17 @@
     "Title of Artwork": "Ho-ho-ho-land",
     "Image File": "khsu38.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Computing"
   },
   {
     "Username": "tjackson86",
     "First Name": "Thomas",
     "Last Name": "Jackson",
-    "Major": "AE",
+    "Major": "Aerospace Engineering",
     "Title of Artwork": "Out in the dunes",
     "Image File": "tjackson86.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "ijain32",
@@ -583,7 +554,7 @@
     "Artist Statement": "Roy's Peak, Wanaka, New Zealand. Pacific Program, Jan 2020.",
     "Image File": "ijain32.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "Scheller College of Business"
   },
   {
     "Username": "jjajeh3",
@@ -593,18 +564,18 @@
     "Title of Artwork": "Together",
     "Image File": "jjajeh3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Computing"
   },
   {
     "Username": "ljarrel6",
     "First Name": "Laura",
     "Last Name": "Jarrel",
-    "Major": "BME",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "Plaza de Bocairent",
     "Artist Statement": "A sleepy afternoon in Bocairent, Valencia, Spain.",
     "Image File": "ljarrel6.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "bjarrett7",
@@ -615,23 +586,7 @@
     "Artist Statement": "I love colors, textures, mixing different media, utilizing trash, and creating fun compositions.",
     "Image File": "bjarrett7.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
-  },
-  {
-    "ResponseId": "R_ugFrIoVqlTKYFPj",
-    "id": 2,
-    "First Name": "Adult",
-    "Last Name": "Jazz",
-    "Username": "ajazz3",
-    "Major": "Music",
-    "College": "Scheller College of Business",
-    "Title of Artwork": "Springful",
-    "Artist Statement": "And we hammered the death knell!!",
-    "Media": "Audio",
-    "Media URL": "",
-    "Video Platform": "",
-    "Audio File": "ajazz3.mp3",
-    "Image File": "ajazz3.jpg"
+    "College": "College of Design"
   },
   {
     "Username": "jjoiner33",
@@ -641,20 +596,7 @@
     "Title of Artwork": "I am Love",
     "Image File": "jjoiner33.png",
     "Media": "Image",
-    "College": "College of Computing"
-  },
-  {
-    "Username": "tjones357",
-    "First Name": "Tyler",
-    "Last Name": "Jones",
-    "Major": "Religion",
-    "Title of Artwork": "Now this is music!",
-    "Artist Statement": "Now this is music!",
-    "Media": "Audio",
-    "Media Upload Location": "html-video",
-    "Audio File": "tjones357.mp3",
-    "Image File": "tjones357.jpg",
-    "College": "College of Computing"
+    "College": "Ivan Allen College of Liberal Arts"
   },
   {
     "Username": "kjoseph32",
@@ -665,13 +607,13 @@
     "Artist Statement": "Taken at the Chihuly Garden and Glass Museum in Seattle",
     "Image File": "kjoseph32.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "pkamat7",
     "First Name": "Prerana",
     "Last Name": "Kamat",
-    "Major": "ARCHITECTURE",
+    "Major": "Architecture",
     "Title of Artwork": "Parity",
     "Image File": "pkamat7.png",
     "Media": "Image",
@@ -686,7 +628,7 @@
     "Artist Statement": "Picture taken at Pittsburgh Pride's 2019 Walk the Moon Concert: a bubble of acceptance and love.",
     "Image File": "skhatri31.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "College of Sciences"
   },
   {
     "Username": "ckiernicki3",
@@ -697,7 +639,7 @@
     "Artist Statement": "i saw this cat waiting to be adopted - to be welcomed into a home where it belongs. sitting, waiting in isolation.",
     "Image File": "ckiernicki3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Design"
   },
   {
     "Username": "skim923",
@@ -708,7 +650,7 @@
     "Artist Statement": "The journey of a travel photographer",
     "Image File": "skim923.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Design"
   },
   {
     "Username": "mkindler3",
@@ -718,7 +660,7 @@
     "Title of Artwork": "Revelation",
     "Image File": "mkindler3.png",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "rkiriazes3",
@@ -728,7 +670,7 @@
     "Title of Artwork": "Georgia Peach",
     "Image File": "rkiriazes3.jpeg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "jknight43",
@@ -749,7 +691,7 @@
     "Artist Statement": "Each slice of our brain has layers. Layers of molecules and memory intertwine to form our fluid identities.",
     "Image File": "akrug6.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "Scheller College of Business"
   },
   {
     "Username": "akulkarni317",
@@ -760,7 +702,7 @@
     "Artist Statement": "Steamboat Springs, CO, August 2019",
     "Image File": "akulkarni317.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Sciences"
   },
   {
     "Username": "akushner6",
@@ -777,11 +719,11 @@
     "Username": "ili32",
     "First Name": "Ivan",
     "Last Name": "Li",
-    "Major": "ME",
+    "Major": "Mechanical Engineering",
     "Title of Artwork": "Joining In",
     "Image File": "ili32.jpeg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "rli369",
@@ -792,7 +734,7 @@
     "Artist Statement": "My abstract take on \"The Great Wave off Kanagawa\".",
     "Image File": "rli369.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Computing"
   },
   {
     "Username": "wliu88",
@@ -802,7 +744,7 @@
     "Title of Artwork": "A couple under the arch",
     "Image File": "wliu88.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "College of Computing"
   },
   {
     "Username": "sloop3",
@@ -813,7 +755,7 @@
     "Artist Statement": "Losing 10 pounds might have made my self-image tank. Sorry for cutting up the catalogs, Athleta.",
     "Image File": "sloop3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Computing"
   },
   {
     "Username": "cloyd6",
@@ -823,7 +765,7 @@
     "Title of Artwork": "북촌한옥 Village",
     "Image File": "cloyd6.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "vescarra3",
@@ -834,7 +776,7 @@
     "Artist Statement": "This piece explores the concept of the brain as the production center of complex thoughts -- where they blossom.",
     "Image File": "vescarra3.jpeg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "mmann33",
@@ -856,7 +798,7 @@
     "Artist Statement": "Keys are ordinary object that we often never pay attention to, but they can act as reminders that we belong in many places...",
     "Image File": "kmassa3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Design"
   },
   {
     "Username": "smcculler6",
@@ -866,7 +808,7 @@
     "Title of Artwork": "We",
     "Image File": "smcculler6.png",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Sciences"
   },
   {
     "Username": "pmehta77",
@@ -887,7 +829,7 @@
     "Title of Artwork": "Silhouettes of Florence in the Sunset",
     "Image File": "amendonca7.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "jmesser7",
@@ -897,7 +839,7 @@
     "Title of Artwork": "Living Under the Stars.",
     "Image File": "jmesser7.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "imiller34",
@@ -908,7 +850,7 @@
     "Artist Statement": "Structural yet abstract just like our communities, it is also filled with small details of my life, my identity within society's",
     "Image File": "imiller34.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "Scheller College of Business"
   },
   {
     "Username": "lmora7",
@@ -919,7 +861,7 @@
     "Artist Statement": "There's no better sense of belonging and community than being in nature, knowing you're a part of something much bigger.",
     "Image File": "lmora7.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Sciences"
   },
   {
     "Username": "smusa6",
@@ -930,7 +872,7 @@
     "Artist Statement": "Where there is love, there is belonging.",
     "Image File": "smusa6.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "anakirikanti3",
@@ -940,7 +882,7 @@
     "Title of Artwork": "Wanderlust",
     "Image File": "anakirikanti3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Sciences"
   },
   {
     "Username": "snavjivan3",
@@ -951,7 +893,7 @@
     "Artist Statement": "A generational contrast between two women appears on a dreary night at a local hawker center in Singapore.",
     "Image File": "snavjivan3.jpeg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Computing"
   },
   {
     "Username": "mneal33",
@@ -972,7 +914,7 @@
     "Artist Statement": "Three generations family posing for a picture. In Ethiopia, it is common children live close to their parents.",
     "Image File": "kneselu3.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Sciences"
   },
   {
     "Username": "rnichani3",
@@ -982,7 +924,7 @@
     "Title of Artwork": "The Paradox of Identity",
     "Image File": "rnichani3.png",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Sciences"
   },
   {
     "Username": "mniemczyk3",
@@ -993,7 +935,7 @@
     "Artist Statement": "In those woods, the line between who she was, and who she wanted to be, blurred a little.",
     "Image File": "mniemczyk3.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "Scheller College of Business"
   },
   {
     "Username": "aoreilly7",
@@ -1003,34 +945,18 @@
     "Title of Artwork": "Calisto",
     "Image File": "aoreilly7.jpeg",
     "Media": "Image",
-    "College": "Scheller College of Business"
-  },
-  {
-    "ResponseId": "R_3KE1g2S8EgWQTdA",
-    "id": 0,
-    "First Name": "Manchester",
-    "Last Name": "Orchestra",
-    "Username": "morchestra1",
-    "Major": "Music",
-    "College": "College of Design",
-    "Title of Artwork": "Bed Head",
-    "Artist Statement": "Deaf notes and talking heads.",
-    "Media": "Video",
-    "Media URL": "https://youtu.be/-voZou1JllY",
-    "Video Platform": "YouTube",
-    "Audio File": "",
-    "Image File": "morchestra1.jpg"
+    "College": "College of Computing"
   },
   {
     "Username": "icheiffou3",
     "First Name": "Ismael",
     "Last Name": "Oumarou Cheiffou",
-    "Major": "English",
+    "Major": "Literature, Media, and Communication",
     "Title of Artwork": "Identity",
     "Artist Statement": "I consider myself an upcycling designer.My clothes are made from recycled materials and this identity motivates me to design.",
     "Image File": "icheiffou3.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "Ivan Allen College of Liberal Arts"
   },
   {
     "Username": "mperrier3",
@@ -1050,18 +976,18 @@
     "Title of Artwork": "The art of camouflage.",
     "Image File": "rpineau3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Sciences"
   },
   {
     "Username": "pprabakaran8",
     "First Name": "Pooja",
     "Last Name": "Prabakaran",
-    "Major": "Computer Engineer",
+    "Major": "Computer Engineering",
     "Title of Artwork": "Spider Over Prague",
     "Artist Statement": "Spider and I watch a sunset over Prague",
     "Image File": "pprabakaran8.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "zrahman30",
@@ -1071,7 +997,7 @@
     "Title of Artwork": "Perishable Land - Agua Caliente Indian Reservation",
     "Image File": "zrahman30.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "srapoport3",
@@ -1088,11 +1014,11 @@
     "Username": "kreed43",
     "First Name": "Karissa",
     "Last Name": "Reed",
-    "Major": "ALIS",
+    "Major": "Applied Languages and Intercultural Studies",
     "Title of Artwork": "rooted",
     "Image File": "kreed43.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "Ivan Allen College of Liberal Arts"
   },
   {
     "Username": "wrobinson39",
@@ -1102,18 +1028,18 @@
     "Title of Artwork": "Belong Everywhere",
     "Image File": "wrobinson39.png",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Sciences"
   },
   {
     "Username": "mrodriguez86",
     "First Name": "Daniela",
     "Last Name": "Rodriguez",
-    "Major": "M.S. Global Media and Cultures",
+    "Major": "Global Media and Cultures",
     "Title of Artwork": "Solidarity in Days Off",
     "Artist Statement": "Women do not even need grass to share joyful meals outside, they just manage to it.",
     "Image File": "mrodriguez86.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "Ivan Allen College of Liberal Arts"
   },
   {
     "Username": "hromanos3",
@@ -1123,7 +1049,7 @@
     "Title of Artwork": "between blades",
     "Image File": "hromanos3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Sciences"
   },
   {
     "Username": "prosado3",
@@ -1144,7 +1070,7 @@
     "Title of Artwork": "Water under the bridge",
     "Image File": "aroy86.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Sciences"
   },
   {
     "Username": "aruss31",
@@ -1155,7 +1081,7 @@
     "Artist Statement": "Georgia",
     "Image File": "aruss31.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Sciences"
   },
   {
     "Username": "csabater3",
@@ -1166,7 +1092,7 @@
     "Artist Statement": "'Twelve Places' is a representation of the similarity and familiarity across distinct influences on our lives.",
     "Image File": "csabater3.png",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "asanseverino3",
@@ -1176,7 +1102,7 @@
     "Title of Artwork": "Snowy Slopes",
     "Image File": "asanseverino3.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "ssaravanan31",
@@ -1193,7 +1119,7 @@
     "Username": "asatinoff3",
     "First Name": "Ari",
     "Last Name": "Satinoff",
-    "Major": "ME",
+    "Major": "Mechanical Engineering",
     "Title of Artwork": "Hoodoo Man",
     "Image File": "asatinoff3.jpg",
     "Media": "Image",
@@ -1208,7 +1134,7 @@
     "Artist Statement": "This tree was standing lone in a barren, unforgiving landscape— rooted in its identity.",
     "Image File": "asawant9.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "pschuler6",
@@ -1219,7 +1145,7 @@
     "Artist Statement": "They're only 5, but they've already started developing identities and companionship. I hope they never stop being silly!",
     "Image File": "pschuler6.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "College of Computing"
   },
   {
     "Username": "vshah78",
@@ -1229,7 +1155,7 @@
     "Title of Artwork": "A Diaspora Story: Green Bills for Colorful Kites",
     "Image File": "vshah78.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Computing"
   },
   {
     "Username": "lshaheen3",
@@ -1240,7 +1166,7 @@
     "Artist Statement": "Alexa - play Wildflowers by Tom Petty. Or ~alternatively~ try out this playlist: https://tinyurl.com/artcrawl2020",
     "Image File": "lshaheen3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "sshaikh35",
@@ -1251,7 +1177,7 @@
     "Artist Statement": "Though beauty of modern America is that its essence is indefinable, here is my America as an Indian American.",
     "Image File": "sshaikh35.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Computing"
   },
   {
     "Username": "nshanmugan3",
@@ -1262,7 +1188,7 @@
     "Artist Statement": "\"The world is smaller than you think, and the people in it are more beautiful than you think.\" -Betram van Munster",
     "Image File": "nshanmugan3.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "ksingal3",
@@ -1272,7 +1198,7 @@
     "Title of Artwork": "Patterns of the Self against the World",
     "Image File": "ksingal3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Sciences"
   },
   {
     "Username": "esinner3",
@@ -1282,17 +1208,17 @@
     "Title of Artwork": "Christmas",
     "Image File": "esinner3.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "ismith43",
     "First Name": "Ian",
     "Last Name": "Smith",
-    "Major": "BME",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "豫园",
     "Image File": "ismith43.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "hhaufschild3",
@@ -1303,7 +1229,7 @@
     "Artist Statement": "Loosely inspired by John Donne’s Meditation 17.",
     "Image File": "hhaufschild3.jpg",
     "Media": "Image",
-    "College": "College of Engineering"
+    "College": "College of Sciences"
   },
   {
     "Username": "wsyre3",
@@ -1314,7 +1240,7 @@
     "Artist Statement": "Shelf growth of mushrooms in Germany's Black Forest",
     "Image File": "wsyre3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Computing"
   },
   {
     "Username": "kszabo3",
@@ -1324,7 +1250,7 @@
     "Title of Artwork": "Into the Woods",
     "Image File": "kszabo3.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "htam31",
@@ -1335,33 +1261,33 @@
     "Artist Statement": "Local parks are central to life in Japan. This photo captures a community celebration in Ishikawadai Park.",
     "Image File": "htam31.jpg",
     "Media": "Image",
-    "College": "College of Computing"
+    "College": "College of Engineering"
   },
   {
     "Username": "bfahed3",
     "First Name": "Brendan",
     "Last Name": "Tan-Fahed",
-    "Major": "BME",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "Sunset Over the Bridges of Florence",
     "Image File": "bfahed3.jpg",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Engineering"
   },
   {
     "Username": "jternullo3",
     "First Name": "Jennifer",
     "Last Name": "Ternullo",
-    "Major": "BMED",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "Golden Hour",
     "Image File": "jternullo3.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "arentz6",
     "First Name": "Alyssa",
     "Last Name": "Thompson",
-    "Major": "HTS",
+    "Major": "History, Technology, and Society",
     "Title of Artwork": "No Borders",
     "Artist Statement": "Inspired by space race era Soviet propaganda and the knowledge that we have far more in common than we have separating us.",
     "Image File": "arentz6.jpg",
@@ -1377,7 +1303,7 @@
     "Artist Statement": "I love this piece. Art keeps me grounded and this painting serves as a reminder of my creativity and sense of self.",
     "Image File": "pthompson64.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Computing"
   },
   {
     "Username": "cunachukwu3",
@@ -1387,33 +1313,17 @@
     "Title of Artwork": "'I Contain Multitudes'",
     "Image File": "cunachukwu3.png",
     "Media": "Image",
-    "College": "College of Design"
+    "College": "College of Sciences"
   },
   {
     "Username": "psvh3",
     "First Name": "Pearson",
     "Last Name": "Van Horn",
-    "Major": "ME",
+    "Major": "Mechanical Engineering",
     "Title of Artwork": "catarata rio celeste",
     "Image File": "psvh3.jpg",
     "Media": "Image",
-    "College": "College of Computing"
-  },
-  {
-    "ResponseId": "R_x4WIs1JsIYBn5SN",
-    "id": 3,
-    "First Name": "Leif",
-    "Last Name": "Vollebekk",
-    "Username": "lvollebekk3",
-    "Major": "Music",
-    "College": "Ivan Allen College of Liberal Arts",
-    "Title of Artwork": "Elegy",
-    "Artist Statement": "You were up to something, I was up to nothing.",
-    "Media": "Audio",
-    "Media URL": "",
-    "Video Platform": "",
-    "Audio File": "lvollebekk3.mp3",
-    "Image File": "lvollebekk3.jpg"
+    "College": "College of Engineering"
   },
   {
     "Username": "swalters37",
@@ -1423,17 +1333,17 @@
     "Title of Artwork": "\"So tell me about yourself.\"",
     "Image File": "swalters37.png",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "swhite88",
     "First Name": "Sharon",
     "Last Name": "White",
-    "Major": "MSE",
+    "Major": "Materials Science and Engineering",
     "Title of Artwork": "Colorful",
     "Image File": "swhite88.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "wxiao45",
@@ -1443,7 +1353,7 @@
     "Title of Artwork": "Squall",
     "Image File": "wxiao45.jpg",
     "Media": "Image",
-    "College": "Ivan Allen College of Liberal Arts"
+    "College": "College of Engineering"
   },
   {
     "Username": "sxie66",
@@ -1454,18 +1364,18 @@
     "Artist Statement": "2019  - Jaipur, India",
     "Image File": "sxie66.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Computing"
   },
   {
     "Username": "hxiong30",
     "First Name": "Haoyu",
     "Last Name": "Xiong",
-    "Major": "EE",
+    "Major": "Electrical Engineering",
     "Title of Artwork": "Skye",
     "Artist Statement": "Landscape from a Photographer's Perspective.",
     "Image File": "hxiong30.jpg",
     "Media": "Image",
-    "College": "Scheller College of Business"
+    "College": "College of Engineering"
   },
   {
     "Username": "xxu346",
@@ -1475,7 +1385,7 @@
     "Title of Artwork": "Door",
     "Image File": "xxu346.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "yyang779",
@@ -1486,13 +1396,13 @@
     "Artist Statement": "Taken in Beijing Hutong.",
     "Image File": "yyang779.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Engineering"
   },
   {
     "Username": "szm7",
     "First Name": "Samantha",
     "Last Name": "Zhan-Moodie",
-    "Major": "Biomedical engineering",
+    "Major": "Biomedical Engineering",
     "Title of Artwork": "Renaissance Chair",
     "Artist Statement": "Inspired by the History of Chairs class",
     "Image File": "szm7.jpg",
@@ -1503,11 +1413,11 @@
     "Username": "szheng98",
     "First Name": "Shuang",
     "Last Name": "Zheng",
-    "Major": "Online Master of Science in Analytics",
+    "Major": "Analytics",
     "Title of Artwork": "Melody",
     "Image File": "szheng98.jpg",
     "Media": "Image",
-    "College": "College of Science"
+    "College": "College of Computing"
   },
   {
     "Username": "ozheng3",
