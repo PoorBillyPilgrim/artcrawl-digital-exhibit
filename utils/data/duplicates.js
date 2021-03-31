@@ -31,15 +31,15 @@ const removeDups = () => {
 const mergeJSON = (subs) => {
     return new Promise((resolve, reject) => {
         let data = s21.concat(subs.s20)
-        //fs.writeFile(/* change test.json -> data.json */ 'test.json', JSON.stringify(data.sort(sortJSON), null, 2), (err) => console.log(err));
-        resolve(subs);
+        fs.writeFile(/* change test.json -> data.json */ 'test.json', JSON.stringify(data.sort(sortJSON), null, 2), (err) => {
+            err ? reject(err) : resolve(subs); 
+        });
+        
     })
 }
 
 const sortJSON = (a, b) => {
-    let nameA = a["Last Name"].toUpperCase();
-    let nameB = b["Last Name"].toUpperCase();
-    
+    let nameA = a["Last Name"].toUpperCase(), nameB = b["Last Name"].toUpperCase();
     return nameA > nameB ? 1 : nameB > nameA ? -1 : 0;
 }
 
