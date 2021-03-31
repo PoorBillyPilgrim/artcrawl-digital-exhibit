@@ -6,7 +6,6 @@ function writeDataJSON() {
         data.push(
             {
                 ResponseId: submissions[i].ResponseId,
-                id: i,
                 "First Name": submissions[i]["First Name"],
                 "Last Name": submissions[i]["Last Name"],
                 "Username": submissions[i]["Username"],
