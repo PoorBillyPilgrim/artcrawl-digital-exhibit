@@ -29,7 +29,6 @@ const Grid = (function() {
         let errMsg = `
         <div class="error-message pop-up">
             <div class="card">
-                <h1>THIS IS A TEST</h1>
                 <h2>Sorry!</h2>
                 <a id="" class="pop-up-close"><i class="fas fa-times"></i></a>    
                 <p>Some images did not load. Please reload this page.</p>

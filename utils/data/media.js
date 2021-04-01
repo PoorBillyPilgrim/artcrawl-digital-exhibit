@@ -36,8 +36,8 @@ function renameMedia() {
             fs.rename(`../media/qualtrics/images/${sub.ResponseId}_${oldFile}`, `../media/artcrawl/images/${newFile.toLowerCase()}`, (err) => {
                 if (err) console.log(err);
             });
-            data.push(sub)
         }
+        data.push(sub)
     })
     data.forEach(sub => {
         sub["Username"] = sub["Username"].toLowerCase();

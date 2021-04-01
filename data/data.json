@@ -43,6 +43,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_3NW06OVRi08ilRO",
+    "First Name": "Emily",
+    "Last Name": "Beatty",
+    "Username": "ebeatty6",
+    "Major": "Management",
+    "College": "Scheller College of Business",
+    "Year": "2021",
+    "Title of Artwork": "Views from the top",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "ebeatty6.jpeg"
+  },
+  {
     "Username": "jbell71",
     "First Name": "Jennifer",
     "Last Name": "Bell",
@@ -265,6 +281,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_3FWizRikMYNOBSM",
+    "First Name": "Cate",
+    "Last Name": "Crutcher",
+    "Username": "ccrutcher7",
+    "Major": "Industrial Design",
+    "College": "College of Design",
+    "Year": "2021",
+    "Title of Artwork": "moonscape3",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "ccrutcher7.jpg"
+  },
+  {
     "Username": "scdc3",
     "First Name": "Shashwati",
     "Last Name": "da Cunha",
@@ -462,6 +494,54 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_1Cm6DgfM1OM41c4",
+    "First Name": "Chase",
+    "Last Name": "Goulet",
+    "Username": "cgoulet3",
+    "Major": "Computational Media",
+    "College": "College of Computing",
+    "Year": "2021",
+    "Title of Artwork": "Midnight Pulsar Views",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "cgoulet3.jpg"
+  },
+  {
+    "ResponseId": "R_3wMDyc5fy56fPKV",
+    "First Name": "Vima",
+    "Last Name": "Gupta",
+    "Username": "vgupta345",
+    "Major": "",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Bucket of Regret",
+    "Artist Statement": "Grad school rejections can take a toll on you",
+    "Media": "",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "vgupta345.jpg"
+  },
+  {
+    "ResponseId": "R_2rpjUV94iMJOWrO",
+    "First Name": "Divyam",
+    "Last Name": "Gupta",
+    "Username": "dgupta92",
+    "Major": "Computer Science",
+    "College": "College of Computing",
+    "Year": "2021",
+    "Title of Artwork": "Negative < Positive < Duplicitous",
+    "Artist Statement": "I, an engineering student at Georgia Institute of Technology, am prey to availability bias. As a computer science student, coding lectures had colonized a large part of my brain with JAVA codes. On a long-awaited Friday night, I watched James DeMonaco’s ‘The Purge’ (American Dystopian Screen-Play).  And here was I, on a Sunday morning, listening to the ‘American Life Podcast on Bad Apples’ for my next class. On a deep critical thought, these three weekend snapshots amalgamated in such a way that I created this multimodal artwork to represent the transformation of human nature in the 21st-century world where everyone has a hidden chameleon inside. All humanity awaits is anarchy.  What are we taught? What does ethics say? Positivity wins over negativity. Right? Now, imagine the purge day - NO LAW, NO POLICE, NO GOVERNMENT. Would you stay positive? Or turn negative like a chameleon?    Welcome to the transformation of human nature. Part 1: The Negative Purity, does it exist? No. Being from a science background, I understand how the real world is full of mixtures, made of pure substances, but end up being impure. Similar is the scenario with humanity. There is always a bad apple in a basket of many. We all have this one person, who stands out, in its literal meaning. Identical is the case when we see the larger picture. There is a ‘b’ in a group of majority ‘d’s. But, the question is, will the ‘d’s try to change ‘b’? Part 2: The Positive The answer is yes! The positivity always wins over the negativity. Eventually, ‘b’ in a group will realize the potential growth with a positive attitude in life; and will try to change. However, it’s also said, ‘once a cheater always a cheater’. The negativity can never disappear; it can just bind up and be powerless. That is exactly what happens. ‘b’ in a group will never lose its character; but it will gain new positive qualities to present a fusion of ‘b’ and  ‘d’ i.e. - ‘ b ’.  Now, does the transformation end? No!  Part 3: The Duplicitous Transformation never ends. 21st-century society has seen a surprising version of human nature. People have developed similarities with particles in chemistry - dual-natured. ‘The Purge’ - what does it show? The 21st-century world awaits for the lawless day when they get a chance to exhibit the hidden powerless trait of negativity they have. I believe Halloween is just the beginning. The world has much more to see as coins wait for an opportunity to flip.    Artistic Approach:  Colors:  The color scheme of the letters plays a significant role in depicting the amalgamation of traits in this artwork. Positivity is presented with green, as it is something appreciated and preferred. Negativity is present with red, as it is something seen as a warning and danger. However, the new combination of traits that the so-called ‘civilized’ society has is something neutralized, i.e. green + red = yellowish-orange.  Fractals: The pattern in the artwork is never-ending, same as humanity. The transformation never ends. It may repeat, evolve, or even reproduce; but it cannot stop, just like the fractals. Code and Genetics: The artwork shows the small elements of science. From a black background giving a coding feel to the bright color combination depicting genetics, this artwork completely shows how it presents a natural way of how humans are wired to transform.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "dgupta92.png"
+  },
+  {
     "Username": "agupta354",
     "First Name": "Avani",
     "Last Name": "Gupta",
@@ -534,6 +614,22 @@
     "Image File": "khsu38.jpg",
     "Media": "Image",
     "College": "College of Computing"
+  },
+  {
+    "ResponseId": "R_3nUTPrusMNYJ7lQ",
+    "First Name": "Daniel",
+    "Last Name": "Hudadoff",
+    "Username": "dhudadoff6",
+    "Major": "Electrical Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Do you cast a shadow on your virtual background?",
+    "Artist Statement": "Shadow. An image projected. A man-made canvas. Where the image is sharp, the canvas is blurry, yet there is no depth between them. Music. The beauty of nature. These are the things that bring focus to my life. When the meeting is over, and the virtual background dissolves away, I am the image I leave behind. This photograph was taken under the Tech Tower pedestrian bridge.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "dhudadoff6.png"
   },
   {
     "Username": "tjackson86",
@@ -618,6 +714,22 @@
     "Image File": "pkamat7.png",
     "Media": "Image",
     "College": "College of Design"
+  },
+  {
+    "ResponseId": "R_10qGaY25JDAmTK5",
+    "First Name": "Nasreen",
+    "Last Name": "Khan",
+    "Username": "nkhan65",
+    "Major": "Materials Science and Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Birds of a Feather",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "nkhan65.jpg"
   },
   {
     "Username": "skhatri31",
@@ -716,6 +828,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_1mjT56llUjvimlZ",
+    "First Name": "Tamara",
+    "Last Name": "Lev",
+    "Username": "tlev3",
+    "Major": "Cybersecurity",
+    "College": "College of Sciences",
+    "Year": "2021",
+    "Title of Artwork": "it comes and goes in waves",
+    "Artist Statement": "This year has taught me the importance of connection to ones mind, body, and spirit.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "tlev3.jpeg"
+  },
+  {
     "Username": "ili32",
     "First Name": "Ivan",
     "Last Name": "Li",
@@ -735,6 +863,22 @@
     "Image File": "rli369.jpg",
     "Media": "Image",
     "College": "College of Computing"
+  },
+  {
+    "ResponseId": "R_di0oLxwybaFbJsZ",
+    "First Name": "Laney",
+    "Last Name": "Light",
+    "Username": "llight7",
+    "Major": "Digital Media",
+    "College": "College of Design",
+    "Year": "2021",
+    "Title of Artwork": "Noise",
+    "Artist Statement": "This interactive code-based piece is about connection to our auditory environment. What happens when we really listen to the noise or silence around us? The noise transforms into something beautiful, but only if you are quiet. Code available at https://editor.p5js.org/llight/sketches/qn9pFri4p",
+    "Media": "Video",
+    "Media URL": "https://www.youtube.com/watch?v=vauwPYy-5XM",
+    "Video Platform": "YouTube",
+    "Audio File": "",
+    "Image File": "llight7.png"
   },
   {
     "Username": "wliu88",
@@ -853,6 +997,22 @@
     "College": "Scheller College of Business"
   },
   {
+    "ResponseId": "R_XG7oQjBRmMIvt97",
+    "First Name": "Pablo",
+    "Last Name": "Mooradian",
+    "Username": "pmooradian3",
+    "Major": "Industrial Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Enigma",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "pmooradian3.jpeg"
+  },
+  {
     "Username": "lmora7",
     "First Name": "Laura",
     "Last Name": "Mora",
@@ -883,6 +1043,38 @@
     "Image File": "anakirikanti3.jpg",
     "Media": "Image",
     "College": "College of Sciences"
+  },
+  {
+    "ResponseId": "R_12b8yaYah3PO6Ho",
+    "First Name": "Sakshi",
+    "Last Name": "Nanda",
+    "Username": "snanda35",
+    "Major": "Urban Design",
+    "College": "College of Design",
+    "Year": "2021",
+    "Title of Artwork": "Work from home?",
+    "Artist Statement": "Storytelling session by a father during his lunch break at Dhobi Ghat- Mumbai. An example of a space with no home-office distinction, with more than 200 families residing and serving as one of the most extensive open-laundry facility. (Photograph taken in 2016)",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "snanda35.jpg"
+  },
+  {
+    "ResponseId": "R_WplZw7p1hyLLa5r",
+    "First Name": "Sakshi",
+    "Last Name": "Nanda",
+    "Username": "snanda35",
+    "Major": "Urban Design",
+    "College": "College of Design",
+    "Year": "2021",
+    "Title of Artwork": "Self portrait",
+    "Artist Statement": "In my thoughts, I look out of the window with sun gleaming over my face, I realize the power of light. Walking under the thick foliage, I am yet again looking at the light- always an admirer of the nature around me.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "snanda35.jpg"
   },
   {
     "Username": "snavjivan3",
@@ -938,14 +1130,20 @@
     "College": "Scheller College of Business"
   },
   {
-    "Username": "aoreilly7",
+    "ResponseId": "R_1n72Y85u9NHK0u2",
     "First Name": "Alexa",
     "Last Name": "O'Reilly",
+    "Username": "aoreilly7",
     "Major": "Computer Science",
-    "Title of Artwork": "Calisto",
-    "Image File": "aoreilly7.jpeg",
+    "College": "College of Computing",
+    "Year": "2021",
+    "Title of Artwork": "Flower",
+    "Artist Statement": "",
     "Media": "Image",
-    "College": "College of Computing"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "aoreilly7.jpeg"
   },
   {
     "Username": "icheiffou3",
@@ -957,6 +1155,54 @@
     "Image File": "icheiffou3.jpg",
     "Media": "Image",
     "College": "Ivan Allen College of Liberal Arts"
+  },
+  {
+    "ResponseId": "R_2xXmgYhpWVEHY95",
+    "First Name": "Abbygale",
+    "Last Name": "Owen",
+    "Username": "aowen41",
+    "Major": "Materials Science and Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Intersect",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "aowen41.png"
+  },
+  {
+    "ResponseId": "R_269bZv6gRLDAgNr",
+    "First Name": "Caleb",
+    "Last Name": "Page",
+    "Username": "cpage34",
+    "Major": "Mechanical Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "WesternDreams",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "cpage34.png"
+  },
+  {
+    "ResponseId": "R_1QhjwjMPwqTC3XQ",
+    "First Name": "Harini",
+    "Last Name": "Patel",
+    "Username": "hpatel385",
+    "Major": "Urban Design",
+    "College": "College of Design",
+    "Year": "2021",
+    "Title of Artwork": "Streetside tightrope walker",
+    "Artist Statement": "She is a young funambulist. On the streets, she does not know. The spotlight and the streelight, the audience and the passers by, the camera flashes and the speeding car's headlights. It is only the rope and her, as her feet connects and disconnects with each step.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "hpatel385.jpg"
   },
   {
     "Username": "mperrier3",
@@ -1000,15 +1246,20 @@
     "College": "College of Engineering"
   },
   {
-    "Username": "srapoport3",
+    "ResponseId": "R_XNvyMjOPC6OjOIV",
     "First Name": "Samuel",
     "Last Name": "Rapoport",
+    "Username": "srapoport3",
     "Major": "Aerospace Engineering",
-    "Title of Artwork": "Egg Noggin",
-    "Artist Statement": "The sun may rise, the roosters may sound. But only one man makes the party go round",
-    "Image File": "srapoport3.jpg",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "One Ran Under the Railroad Tracks",
+    "Artist Statement": "There is a light at the end of the tunnel. And everywhere else too",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "srapoport3.jpg"
   },
   {
     "Username": "kreed43",
@@ -1019,6 +1270,22 @@
     "Image File": "kreed43.jpg",
     "Media": "Image",
     "College": "Ivan Allen College of Liberal Arts"
+  },
+  {
+    "ResponseId": "R_2cbZMwbOQkSOatJ",
+    "First Name": "Kyle",
+    "Last Name": "Richardson",
+    "Username": "krichardson45",
+    "Major": "",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Glory Days",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "krichardson45.jpg"
   },
   {
     "Username": "wrobinson39",
@@ -1095,25 +1362,36 @@
     "College": "College of Engineering"
   },
   {
-    "Username": "asanseverino3",
+    "ResponseId": "R_xc3kWTxHUtWFPCV",
     "First Name": "Anthony",
     "Last Name": "Sanseverino",
+    "Username": "asanseverino3",
     "Major": "Civil Engineering",
-    "Title of Artwork": "Snowy Slopes",
-    "Image File": "asanseverino3.jpg",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "The Hive",
+    "Artist Statement": "The Future of Georgia Tech Learning Facilities",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "asanseverino3.jpg"
   },
   {
-    "Username": "ssaravanan31",
+    "ResponseId": "R_pJCTaYaQIkz0j1T",
     "First Name": "Sajni",
     "Last Name": "Saravanan",
+    "Username": "ssaravanan31",
     "Major": "Aerospace Engineering",
-    "Title of Artwork": "Ramen",
-    "Artist Statement": "A reflection of consumerism in college, inspired by Andy Warhol's Campbell's Soup Cans and Marilyn Monroe works.",
-    "Image File": "ssaravanan31.png",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Drake Equation",
+    "Artist Statement": "I don't know what y'all got up to on your Wellness Day, but mine went pretty well - I met Jeremy! He's a pretty cool guy, met him while shopping and he offered to accompany me home. Took him to meet all my friends and we partied together, it was a great night. I miss ya Jeremy, hopefully one day I'll graduate & finish my rocket and visit your place and meet your friends <3",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "ssaravanan31.jpg"
   },
   {
     "Username": "asatinoff3",
@@ -1126,15 +1404,20 @@
     "College": "College of Engineering"
   },
   {
-    "Username": "asawant9",
+    "ResponseId": "R_D7h4zPP3PwlQ4yR",
     "First Name": "Ajinkya",
     "Last Name": "Sawant",
+    "Username": "asawant9",
     "Major": "Aerospace Engineering",
-    "Title of Artwork": "Rooted",
-    "Artist Statement": "This tree was standing lone in a barren, unforgiving landscape— rooted in its identity.",
-    "Image File": "asawant9.jpg",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Closer to the Sun",
+    "Artist Statement": "",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "asawant9.jpg"
   },
   {
     "Username": "pschuler6",
@@ -1232,6 +1515,22 @@
     "College": "College of Sciences"
   },
   {
+    "ResponseId": "R_3hzp19ymCp74J3B",
+    "First Name": "Haley",
+    "Last Name": "Stumvoll",
+    "Username": "hstumvoll3",
+    "Major": "Electrical and Computer Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Music of Nature",
+    "Artist Statement": "Long walks in the woods with my camera, listening to the birds sing and bugs chatter, was what kept me going in the early days of the pandemic. Through being isolated and alone, nature reminded me that there is always beauty in the world.",
+    "Media": "Audio",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "hstumvoll3.mp3",
+    "Image File": "hstumvoll3.jpg"
+  },
+  {
     "Username": "wsyre3",
     "First Name": "William",
     "Last Name": "Syre",
@@ -1284,6 +1583,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_2Pvc9ssN4NzOuwA",
+    "First Name": "Taylor",
+    "Last Name": "Thompson",
+    "Username": "tthompson95",
+    "Major": "Civil Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "At last",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "tthompson95.jpeg"
+  },
+  {
     "Username": "arentz6",
     "First Name": "Alyssa",
     "Last Name": "Thompson",
@@ -1326,14 +1641,20 @@
     "College": "College of Engineering"
   },
   {
-    "Username": "swalters37",
+    "ResponseId": "R_ZvPBboUFjEs67iF",
     "First Name": "Samuel",
     "Last Name": "Walters",
+    "Username": "swalters37",
     "Major": "Mechanical Engineering",
-    "Title of Artwork": "\"So tell me about yourself.\"",
-    "Image File": "swalters37.png",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Winding and Unwinding",
+    "Artist Statement": "",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "swalters37.png"
   },
   {
     "Username": "swhite88",
@@ -1378,6 +1699,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_1DwO5NyQMZIIRdu",
+    "First Name": "Nick",
+    "Last Name": "Xu",
+    "Username": "jxu479",
+    "Major": "Architecture",
+    "College": "College of Design",
+    "Year": "2021",
+    "Title of Artwork": "In Motion",
+    "Artist Statement": "“In Motion” features a high-speed rail train moving from one place to another. The artwork reveals my continued growth, independence from home, and adaptation into a new place. The yellow shape where the train is coming from represents the shape of my home province in China - Henan. The brown shape underneath the train represents the shape of my home state in America - Maryland. I used tape while painting to separate the different colors in the background, giving a sense of rapidness to the train. The background also makes the artwork more abstract and geometric, consistent with the overall concept and shapes of the province/state. The artwork shows that, having already traveled from China to the USA, I am on a journey that only moves forward and continues, thereby linking and connecting the world in my own way.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "jxu479.jpg"
+  },
+  {
     "Username": "xxu346",
     "First Name": "Xinjing",
     "Last Name": "Xu",
@@ -1410,6 +1747,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_31TLBp4hpbbvMiI",
+    "First Name": "Oliver",
+    "Last Name": "Zheng",
+    "Username": "ozheng3",
+    "Major": "",
+    "College": "College of Computing",
+    "Year": "2021",
+    "Title of Artwork": "Connection In Progress",
+    "Artist Statement": "For every connection, there is a path of getting there.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "ozheng3.jpg"
+  },
+  {
     "Username": "szheng98",
     "First Name": "Shuang",
     "Last Name": "Zheng",
@@ -1420,14 +1773,19 @@
     "College": "College of Computing"
   },
   {
-    "Username": "ozheng3",
-    "First Name": "Oliver",
-    "Last Name": "Zheng",
-    "Major": "Computer Science",
-    "Title of Artwork": "Flying Dreams Together",
-    "Artist Statement": "Each person has a dream he/she truly wants to pursue, and in pursuing those dreams, we reveal ourselves to the world.",
-    "Image File": "ozheng3.jpg",
+    "ResponseId": "R_XvQovNiODz6aUSd",
+    "First Name": "Marlene",
+    "Last Name": "Zhou",
+    "Username": "mzhou303",
+    "Major": "Computational Media",
+    "College": "College of Computing",
+    "Year": "2021",
+    "Title of Artwork": "Written in blood",
+    "Artist Statement": "This is an interpretation of the connection between Black and Asian women through the violence we experience.",
     "Media": "Image",
-    "College": "College of Computing"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "mzhou303.png"
   }
 ]

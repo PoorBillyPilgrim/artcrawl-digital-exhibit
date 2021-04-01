@@ -6,24 +6,19 @@ const fs = require('fs'),
     dups21 = [];
 
 s21.forEach(sub => { usernames21.push(sub["Username"].toLowerCase()) });
-console.log(usernames21)
 
 const removeDups = () => {
     return new Promise((resolve, reject) => {
         s20.forEach((sub20, idx) => {
-            s21.forEach(sub21 => {
-                if (sub21["Username"].toLowerCase() === sub20["Username"]) {
-                    dups20.push(sub20);
-                    dups21.push(sub21);
-                    s20.splice(idx, 1);
-                }
-            })
+            if(s21.some(sub21 => sub21["Username"].toLowerCase() === sub20["Username"])) {
+                dups20.push(sub20);
+                s20.splice(idx, 1);
+            }
         })
-        console.log('Spring 2020 + Dups: ' + (parseInt(s20.length) + parseInt(s21.length)));
+        //console.log('Spring 2020 + Dups: ' + (parseInt(s20.length) + parseInt(s21.length)));
         resolve({
             s20: s20, // Spring 2020 submissions with duplicates removed
-            dups20: dups20, // Spring 2020 duplicates that were removed from s20
-            dups21: dups21 // Spring 2021 subs that will replace 2020 duplicates
+            dups20: dups20 // Spring 2020 duplicates that were removed from s20
         });
     })
 }
@@ -44,8 +39,11 @@ const sortJSON = (a, b) => {
 }
 
 removeDups()
-    .then(subs => mergeJSON(subs))
     .then(subs => {
+        mergeJSON(subs)
+    })
+    .then(subs => {
+        console.log(subs)
         subs.dups20.forEach(sub => {
             // need to remove duplicate images from:
             // /public/images/artcrawl
