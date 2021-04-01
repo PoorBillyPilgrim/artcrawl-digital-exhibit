@@ -8,7 +8,7 @@ const sharp = require('sharp');
  * 
  */
 let image = {
-    username: 'ssaravanan31',
+    username: 'aowen41',
     ext: '.jpg',
 }
 image.fileName = image.username + image.ext;
