@@ -1,4 +1,5 @@
 # Qualtrics Workflow
+## NOTE: start with March 31, 2021 7:36 PM Submission 
 1. Download CSV and media files from Qualtrics
 2. Save CSV to `Desktop/qualtrics/data/`
 3. media to `Desktop/qualtrics/media/` and rename `/Audio File/` as `/media/` and `/Image File/` as `/images/`
