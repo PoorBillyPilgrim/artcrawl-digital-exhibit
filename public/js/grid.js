@@ -101,8 +101,26 @@ const Grid = (function() {
             return element.getAttribute('data-major') === highlight.getAttribute('data-major');
         }
 
+        function filterByImage(element) {
+            return element.getAttribute('data-media') === 'Image';
+        }
+
+        function filterByAudio(element) {
+            return element.getAttribute('data-media') === 'Audio';
+        }
+
+        function filterByVideo(element) {
+            return element.getAttribute('data-media') === 'Video';
+        }
+
         if (value === 'major') {
             shuffle.filter(filterByMajor);
+        } else if (value === 'image') {
+            shuffle.filter(filterByImage);
+        } else if (value === 'audio') {
+            shuffle.filter(filterByAudio);
+        } else if (value === 'video') {
+            shuffle.filter(filterByVideo);
         } else {
             shuffle.filter();
         }
