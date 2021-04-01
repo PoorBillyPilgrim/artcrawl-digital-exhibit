@@ -79,7 +79,6 @@ body.audio-page > div {
   top: 90px;
 }
 
-
 .btn,
 #search {
   border-radius: 0;
@@ -518,6 +517,21 @@ input[type="search"] {
   border-left-width: 0;
 }
 
+#major-filter,
+#image-filter,
+#video-filter {
+  border-left-width: 0;
+}
+
+#audio-filter,
+#video-filter {
+  border-top-width: 0;
+}
+
+#filters-group {
+  z-index: 3; /* to sit on top of footer that spans entire page */
+}
+
 /* Color Button */
 #color-btn {
   width: 100%;
@@ -711,6 +725,15 @@ input[type="search"] {
   #search {
     width: 100%;
   }
+
+  #image-filter {
+    border-right-width: 0;
+  }
+
+  #audio-filter, 
+  #video-filter {
+    border-top-width: 1px;
+  }
 }
 
 /* iPhone 6/7/8 Plus, iPhone X/XS - Landscape */
@@ -879,6 +902,7 @@ input[type="search"] {
 
   #grid-container {
     height: 82.5vh;
+    margin-top: -100px;
   }
 
   .grid-col {
@@ -912,6 +936,17 @@ input[type="search"] {
     bottom: 0;
   }
 
+  #image-filter,
+  #audio-filter,
+  #video-filter {
+    border-top-width: 0;
+  }
+
+  #image-filter,
+  #video-filter {
+    border-left-width: 1px;
+  }
+
   /* About */
   #about-card {
     height: 90%;
@@ -935,14 +970,67 @@ input[type="search"] {
   }
 }
 
+@media (min-width: 1312px) {
+  #image-filter {
+    border-right-width: 1px;
+    border-top-width: 1px;
+  }
+  
+  #image-filter, #video-filter {
+    border-left-width: 0;
+  }
+}
+
+@media (min-width: 1718px) {
+  #video-filter {
+    border-left-width: 1px;
+  }
+
+  #audio-filter {
+      border-left-width: 0;
+      border-top-width: 1px;
+  }
+}
+
 @media (min-width: 1800px) {
+
+  #artcrawl-container {
+    margin: auto;
+    width: 90%;
+  }
+
+  #legend {
+    margin-left: 15px;
+  }
+
+  /* Filters */
+  #audio-filter {
+    border-left-width: 1px;
+    border-right-width: 0;
+    border-top-width: 0;
+  }
 
   .sizer-element {
         width: var(--grid-items-xl);
     }
     
-    .art-crawl-item > img {
-        height: var(--grid-items-xl);
-        width: var(--grid-items-xl);
-    }
+  .art-crawl-item > img {
+      height: var(--grid-items-xl);
+      width: var(--grid-items-xl);
+  }
+}
+
+@media (min-width: 1900px) {
+  #audio-filter {
+    border-left-width: 0;
+    border-right-width: 1px;
+    border-top-width: 1px;
+  }
+}
+
+
+@media (min-width: 2500px) {
+  #artcrawl-container {
+    width: 70%;
+  }
 }
