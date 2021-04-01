@@ -1,6 +1,6 @@
 const fs = require('fs'),
-    s20 = require('../../data/data.json'), // change data.json -> 2020.json
-    s21 = require('../../data/qualtricsTest.json'), // change qualtrics.json -> 2021.json
+    s20 = require('./2020.json'), // change data.json -> 2020.json
+    s21 = require('./2021.json'), // change qualtrics.json -> 2021.json
     usernames21 = [],
     dups20 = [],
     dups21 = [];
@@ -31,7 +31,7 @@ const removeDups = () => {
 const mergeJSON = (subs) => {
     return new Promise((resolve, reject) => {
         let data = s21.concat(subs.s20)
-        fs.writeFile(/* change test.json -> data.json */ 'test.json', JSON.stringify(data.sort(sortJSON), null, 2), (err) => {
+        fs.writeFile('test.json', JSON.stringify(data.sort(sortJSON), null, 2), (err) => {
             err ? reject(err) : resolve(subs); 
         });
         
