@@ -60,3 +60,4 @@ removeDups()
             fs.rmdir(`../../public/images/dzi/${sub["Username"]}_files`, {recursive: true}, (err) => {console.log(err)})
         })
     })
+    .catch(err => console.log(err));
