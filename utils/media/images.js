@@ -7,14 +7,14 @@ const sharp = require('sharp');
  * UPDATE FOLDER NAMES
  * 
  */
-fs.readdir('./artcrawl_full_size/', (err, files) => {
+fs.readdir('./artcrawl/images/', (err, files) => {
     files.forEach(file => {
         let i = file.search(/\./),
-        ext = file.slice(i);
+        ext = file.slice(i),
         username = file.slice(0, i),
         promises = [],
-        sharpStream = sharp(`./artcrawl_full_size/${file}`);
-        const logErr = (file, err) => { console.log(`${file}:${err}`)}
+        sharpStream = sharp(`./artcrawl/images/${file}`);
+        const logErr = (file, err) => { console.log(`${file}: ${err}`)}
         
         // Thumbnails
         promises.push(
@@ -23,7 +23,7 @@ fs.readdir('./artcrawl_full_size/', (err, files) => {
                 .resize(65, 65, {
                     fit: 'fill'
                 })
-                .toFile(`./thumbnails/${username}${ext}`)
+                .toFile(`./artcrawl/thumbnails/${file}`)
                 .catch(err => logErr(file, err))
         );
         
@@ -37,7 +37,7 @@ fs.readdir('./artcrawl_full_size/', (err, files) => {
                     size: 512,
                     overlap: 1
                 })
-                .toFile(`./dzi/${username}.dz`)
+                .toFile(`./artcrawl/dzi/${username}.dz`)
                 .catch(err => logErr(file, err))
         );
 
@@ -46,14 +46,15 @@ fs.readdir('./artcrawl_full_size/', (err, files) => {
             sharpStream
                 .clone()
                 .resize(1080)
-                .toFile(`./artcrawl_1080/${username}${ext}`)
+                .toFile(`./artcrawl/1080/${username}${ext}`)
                 .catch(err => logErr(file, err))
         );
 
         Promise.all(promises)
-        .then(res => { console.log(`${file}`, res); })
-        .catch(err => {
-            console.error(`Error processing ${file}, let's clean it up`, err);
-        });
+            .then(res => { console.log(`${file}`, res); })
+            .catch(err => {
+                console.error(`Error processing ${file}, let's clean it up`, err);
+            });
     });
 });
+
