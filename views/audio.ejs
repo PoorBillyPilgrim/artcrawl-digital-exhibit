@@ -47,5 +47,9 @@
             <source src="/audio/<%=data[id]["Audio File"]%>" type="audio/mpeg" data-id="<%=id%>">
             <p>Your browser doesn't support HTML5 audio. Here is a <a href="/audio/<%=data[id]["Audio File"]%>">link to the audio</a> instead.</p>
         </audio>
+        <div>
+            <p><em><%=data[id]['Title of Artwork']%></em>, <%=data[id]['First Name']%> <%=data[id]['Last Name']%></p>
+            <p><%=data[id]["Artist Statement"]%></p>
+        </div>
     </body>
 </html>

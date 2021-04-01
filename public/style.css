@@ -54,14 +54,13 @@ body.audio-page {
   margin: 0;
   padding: 0;
   -moz-user-focus: ignore;
-  background: var(--gt-off-black);
 }
 
-body.audio-page > audio {
+body.audio-page > audio,
+body.audio-page > div {
   height: 40px;
   width: 66%;
   position: absolute;
-  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -71,6 +70,15 @@ body.audio-page > audio {
   user-select: none;
   -moz-user-focus: normal;
 }
+
+body.audio-page > audio {
+  top: 0;
+}
+
+body.audio-page > div {
+  top: 90px;
+}
+
 
 .btn,
 #search {

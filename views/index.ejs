@@ -92,7 +92,7 @@
                     <li class="splide__slide">
                       <img class="" data-id="<%=i%>" data-splide-lazy="/images/artcrawl/<%= data[i]['Image File'] %>" data-media="<%= data[i]["Media"]%>"/>
                   <% } %>
-                    <p><em><%=data[i]['Title of Artwork']%></em>, <%=data[i]['First Name']%> <%=data[i]['Last Name']%>, <%=data[i]['Major']%>, Spring <%= data[i]["Year"] === '2021' ? '2021' : '2020' %></p>
+                    <p><em><%=data[i]['Title of Artwork']%></em>, <%=data[i]['First Name']%> <%=data[i]['Last Name']%>, <%=data[i]['Major']%>, <% if (data[i]["ProjectURL"]) { %><a href="<%=data[i]["ProjectURL"]%>" target="_blank">Project, </a><%}%> Spring <%= data[i]["Year"] === '2021' ? '2021' : '2020' %></p>
                   </li>
                 <% } %>
             </ul>
