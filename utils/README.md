@@ -12,10 +12,7 @@
     cp Desktop/qualtrics/media/ Documents/projects/art-crawl-exhibit/utils/media/
     ```
 7. Rewrite `qualtrics.json` as `2021.json` by running `/utils/data/json.js` & rewrite `data.json` as `2022.json`
-8. Using `/utils/data/duplicates.js`, weed out duplicates from `2020.json`, remove duplicates from `/public/images/git `, combine `2020.json` and `2021.json`, alphabetize, and save as `data.json`
-9. Convert `.pdf`s to `.jpg`s
-10. Qualtrics prepends the Reponse ID to each media file name. To rename files with username, run `/utils/data/renameMedia.js`
+8. Using `/utils/data/duplicates.js`, weed out duplicates from `2020.json`, remove duplicates from `/public/images/`, combine `2020.json` and `2021.json`, alphabetize, and save as `data.json`
+9. Convert `.pdf`s to `.jpg`s using `/utils/data/pdf.js`
+10. Qualtrics prepends the Reponse ID to each media file name. To rename files with username, run `/utils/data/media.js`
 11. Generate .dzi, thumbnails, and compressed images by running `/utils/media/images.js`
-
-
-
