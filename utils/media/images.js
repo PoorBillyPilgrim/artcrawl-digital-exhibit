@@ -7,13 +7,13 @@ const sharp = require('sharp');
  * UPDATE FOLDER NAMES
  * 
  */
-fs.readdir('./artcrawl/images/', (err, files) => {
+fs.readdir('./artcrawl/images/need_processing', (err, files) => {
     files.forEach(file => {
         let i = file.search(/\./),
         ext = file.slice(i),
         username = file.slice(0, i),
         promises = [],
-        sharpStream = sharp(`./artcrawl/images/${file}`);
+        sharpStream = sharp(`./artcrawl/images/need_processing/${file}`);
         const logErr = (file, err) => { console.log(`${file}: ${err}`)}
         
         // Thumbnails
@@ -51,7 +51,12 @@ fs.readdir('./artcrawl/images/', (err, files) => {
         );
 
         Promise.all(promises)
-            .then(res => { console.log(`${file}`, res); })
+            .then(res => { 
+                console.log(`${file}`, res);
+                fs.rename(`./artcrawl/images/need_processing/${file}`, `./artcrawl/images/${file}`, (err) => {
+                    if (err) console.log(err);
+                });
+            })
             .catch(err => {
                 console.error(`Error processing ${file}, let's clean it up`, err);
             });

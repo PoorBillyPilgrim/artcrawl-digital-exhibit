@@ -26,8 +26,13 @@ const removeDups = () => {
 const mergeJSON = (subs) => {
     return new Promise((resolve, reject) => {
         let data = s21.concat(subs.s20)
-        fs.writeFile('test.json', JSON.stringify(data.sort(sortJSON), null, 2), (err) => {
-            err ? reject(err) : resolve(subs); 
+        let dups = subs.dups20
+        fs.writeFile('data.json', JSON.stringify(data.sort(sortJSON), null, 2), (err) => {
+             if (err) {
+                 reject(err)
+             } else {
+                 resolve(dups); 
+             }
         });
         
     })
@@ -41,9 +46,6 @@ const sortJSON = (a, b) => {
 removeDups()
     .then(subs => {
         mergeJSON(subs)
-    })
-    .then(subs => {
-        console.log(subs)
         subs.dups20.forEach(sub => {
             // need to remove duplicate images from:
             // /public/images/artcrawl

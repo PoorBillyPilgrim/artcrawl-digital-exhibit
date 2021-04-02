@@ -2,7 +2,7 @@ const fs = require('fs');
 const submissions2021 = require('./qualtrics.json');
 const data = [];
 function write2021JSON() {
-    for (let i = 2; i < submissions2021.length; i++) { // start at 2 to skip over first 2 irrelavent entries populated by Qualtrics
+    for (let i = 0; i < submissions2021.length; i++) { // start at 2 if need to skip over first 2 irrelavent entries populated by Qualtrics
         data.push(
             {
                 ResponseId: submissions2021[i].ResponseId,

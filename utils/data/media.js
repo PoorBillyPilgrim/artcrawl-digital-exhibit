@@ -1,5 +1,5 @@
 const fs = require('fs');
-const submissions = require('./test.json');
+const submissions = require('./data.json');
 
 
 /**
@@ -19,6 +19,7 @@ const data = [];
 function renameMedia() {
     submissions.forEach(sub => {
         if (sub["Year"] == '2021') {
+            // need to add audio file name change
             if (sub["Audio File"] != "") {
                 fs.rename(`../media/qualtrics/audio/${sub.ResponseId}_${sub["Audio File"]}`, `../media/artcrawl/audio/${sub["Audio File"]}`, (err) => {
                     if (err) console.log(err);
