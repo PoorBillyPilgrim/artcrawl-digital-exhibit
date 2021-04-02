@@ -8,14 +8,14 @@ const sharp = require('sharp');
  * 
  */
 let image = {
-    username: 'snanda35',
+    username: 'ljarrel6',
     ext: '.jpg',
 }
 image.fileName = image.username + image.ext;
 
 
 promises = [],
-sharpStream = sharp(`./artcrawl/images/${image.fileName}`);
+sharpStream = sharp(`./artcrawl/images/need_processing/${image.fileName}`);
 const logErr = (file, err) => { console.log(`${file}: ${err}`)}
 
 // Thumbnails
@@ -53,7 +53,12 @@ promises.push(
 );
 
 Promise.all(promises)
-    .then(res => { console.log(`${image.fileName}`, res); })
+    .then(res => { 
+        console.log(`${image.fileName}`, res);
+        fs.rename(`./artcrawl/images/need_processing/${image.fileName}`, `./artcrawl/images/${image.fileName}`, (err) => {
+            if (err) console.log(err);
+        });
+    })
     .catch(err => {
         console.error(`Error processing ${image.fileName}, let's clean it up`, err);
     });

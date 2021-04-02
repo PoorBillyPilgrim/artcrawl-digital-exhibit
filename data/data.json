@@ -701,15 +701,21 @@
     "College": "College of Computing"
   },
   {
-    "Username": "ljarrel6",
+    "ResponseID": "R_3PjmtSM4FtvCzdN",
     "First Name": "Laura",
     "Last Name": "Jarrel",
+    "Username": "ljarrel6",
+    "Email": "ljarrel6@gatech.edu",
+    "Year": "2021",
     "Major": "Biomedical Engineering",
-    "Title of Artwork": "Plaza de Bocairent",
-    "Artist Statement": "A sleepy afternoon in Bocairent, Valencia, Spain.",
-    "Image File": "ljarrel6.jpg",
+    "College": "College of Engineering",
+    "Title of Artwork": "Mina with Succulents",
+    "Artist Statement": "My friend and room mate, Mina. Thank you for keeping me company through hard times.",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "ljarrel6.jpg"
   },
   {
     "Username": "bjarrett7",
