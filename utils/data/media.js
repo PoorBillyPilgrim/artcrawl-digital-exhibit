@@ -34,7 +34,7 @@ function renameMedia() {
             oldFile = (ext == '.pdf') ? sub["Image File"].replace('pdf', 'png') : sub["Image File"];
 
             sub["Image File"] = newFile.toLowerCase();
-            fs.rename(`../media/qualtrics/images/${sub.ResponseId}_${oldFile}`, `../media/artcrawl/images/${newFile.toLowerCase()}`, (err) => {
+            fs.rename(`../media/qualtrics/images/${sub.ResponseId}_${oldFile}`, `../media/artcrawl/images/need_processing/${newFile.toLowerCase()}`, (err) => {
                 if (err) console.log(err);
             });
         }
@@ -46,6 +46,6 @@ function renameMedia() {
     return JSON.stringify(data, null, 2)
 }
 
-fs.writeFile('../../data/qualtricsTest.json', renameMedia(), (err) => {
+fs.writeFile('../../data/data.json', renameMedia(), (err) => {
     console.log(err);
 });

@@ -8,6 +8,7 @@ data.forEach(sub => {
     ext = sub["Image File"].slice(i).toLowerCase();
     
     if (ext === "pdf") {
+        
         let pdf = sub["ResponseId"] + '_' + sub["Image File"];
         let pdfImage = new PDFImage(`../media/qualtrics/images/${pdf}`);
 
