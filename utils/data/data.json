@@ -271,14 +271,20 @@
     "College": "College of Sciences"
   },
   {
-    "Username": "pcolon7",
+    "ResponseId": "R_3G7mvgdBZ5WaDvN",
     "First Name": "Paola",
     "Last Name": "Colon",
+    "Username": "pcolon7",
     "Major": "Industrial Engineering",
-    "Title of Artwork": "Preciosa",
-    "Image File": "pcolon7.png",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "FaceTime",
+    "Artist Statement": "",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "FaceTime (Art Crawl 2021).pdf"
   },
   {
     "ResponseId": "R_3FWizRikMYNOBSM",
@@ -443,14 +449,20 @@
     "College": "College of Engineering"
   },
   {
-    "Username": "cflannelly3",
+    "ResponseId": "R_263K20c6P47gEcN",
     "First Name": "Conor",
     "Last Name": "Flannelly",
+    "Username": "cflannelly3",
     "Major": "Biomedical Engineering",
-    "Title of Artwork": "Sleepsong",
-    "Image File": "cflannelly3.png",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "General Relativity",
+    "Artist Statement": "",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "General Relativity.pdf"
   },
   {
     "Username": "jfu85",
@@ -886,7 +898,7 @@
     "Media URL": "",
     "Video Platform": "",
     "Audio File": "",
-    "Image File": "Lanzillotta_OdetotheIdleCables_Spring2021CloughArtCrawl.pdf"
+    "Image File": "llanzillotta3.png"
   },
   {
     "ResponseId": "R_1mjT56llUjvimlZ",
@@ -905,14 +917,20 @@
     "Image File": "tlev3.jpeg"
   },
   {
-    "Username": "ili32",
+    "ResponseId": "R_DH2JG1wG3AiRu9j",
     "First Name": "Ivan",
     "Last Name": "Li",
+    "Username": "ili32",
     "Major": "Mechanical Engineering",
-    "Title of Artwork": "Joining In",
-    "Image File": "ili32.jpeg",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Hagar and Ishmael",
+    "Artist Statement": "",
     "Media": "Image",
-    "College": "College of Engineering"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "61A3EB1A-BA8E-497D-8784-40CF8A2BE35A.jpeg"
   },
   {
     "Username": "rli369",
@@ -1091,6 +1109,38 @@
     "College": "Scheller College of Business"
   },
   {
+    "ResponseId": "R_3k1Fq7QRVkV09Tm",
+    "First Name": "Mariam",
+    "Last Name": "Misabishvili",
+    "Username": "mmisabishvili",
+    "Major": "Biomedical Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Holding onto the past",
+    "Artist Statement": "Meaningful relationships and connections are one of the things that make life fulfilling, however it can often be toxic to dwell on the past. We often put all our energy just to maintain a connection that can no longer exist on its own. It is important to know when to stop fighting for someone and let go with peace.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "mmisabishvili3.jpg"
+  },
+  {
+    "ResponseId": "R_3sbmWLR7oj7mMgL",
+    "First Name": "Jennifer",
+    "Last Name": "Molnar",
+    "Username": "jmolnar6",
+    "Major": "Robotics",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Character leitmotif - A mystery the library cannot answer",
+    "Artist Statement": "The silence of my apartment led to a lot of late-night sessions at the piano, which started to speak to me more and more. Some of the songs that emerged were inspired by stories and characters I and my friends invented together over Zoom to keep our social lives alive during the pandemic. This one was for a realistically studious character who poured himself into his books but who really wanted to know more about his absent family. His theme, though simple, felt relevant. It's one of my favorites.",
+    "Media": "Video",
+    "Media URL": "https://youtu.be/b5azHu0AJnY",
+    "Video Platform": "YouTube",
+    "Audio File": "",
+    "Image File": "piano_song.PNG"
+  },
+  {
     "ResponseId": "R_XG7oQjBRmMIvt97",
     "First Name": "Pablo",
     "Last Name": "Mooradian",
@@ -1155,15 +1205,20 @@
     "Image File": "snanda35.jpg"
   },
   {
-    "Username": "snavjivan3",
+    "ResponseId": "R_1et54kfnn4CBkJS",
     "First Name": "Sarthak",
     "Last Name": "Navjivan",
+    "Username": "snavjivan3",
     "Major": "Computer Science",
-    "Title of Artwork": "The Present and The Past",
-    "Artist Statement": "A generational contrast between two women appears on a dreary night at a local hawker center in Singapore.",
-    "Image File": "snavjivan3.jpeg",
+    "College": "College of Computing",
+    "Year": "2021",
+    "Title of Artwork": "The Language of Connection",
+    "Artist Statement": "To me, connection is best entailed by the universal language that represents us all: music. In this piece, I used the timeless art of film photography to capture a modest yet joyous street performer, showing how accessible the language of music is to us all. Though the power of digital media allows us to always be connected through music, I can't wait for life after the pandemic, when we can enjoy the passion and intricacies that live music delivers.",
     "Media": "Image",
-    "College": "College of Computing"
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "snavjivan3.jpeg"
   },
   {
     "Username": "mneal33",
@@ -1238,7 +1293,7 @@
     "Media URL": "",
     "Video Platform": "",
     "Audio File": "",
-    "Image File": "Lost in the Woods.png"
+    "Image File": "gosullivan8.png"
   },
   {
     "Username": "icheiffou3",
@@ -1314,6 +1369,22 @@
     "Video Platform": "",
     "Audio File": "",
     "Image File": "hpatel385.jpg"
+  },
+  {
+    "ResponseId": "R_31yEWUDQBYroijB",
+    "First Name": "Adele",
+    "Last Name": "Payman",
+    "Username": "apayman3",
+    "Major": "Aerospace Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "Manuscript",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "adelepayman_poem.png"
   },
   {
     "Username": "mperrier3",
@@ -1439,7 +1510,7 @@
     "Media URL": "",
     "Video Platform": "",
     "Audio File": "",
-    "Image File": "Intertwined.jpg"
+    "Image File": "jdmello6.jpg"
   },
   {
     "Username": "mrodriguez86",
@@ -1680,6 +1751,22 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_2tDmI0Iag0yagyN",
+    "First Name": "John",
+    "Last Name": "Spencer",
+    "Username": "jspencer37",
+    "Major": "Environmental Engineering",
+    "College": "College of Engineering",
+    "Year": "2021",
+    "Title of Artwork": "For I Am A Cage In Search Of A Bird",
+    "Artist Statement": "After being forced into isolation over the past year, we all know how easy it is to sit idly by and watch the days blur together. As a result, we have become increasingly divorced from ourselves, reaching for unattainable ideals while at the same time ostracizing our flaws. This piece grapples with the idea of accepting ourselves as we are and attempting to reconnect with every facet of ourselves, because we are all still healing.",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "Triptych Connection.jpg"
+  },
+  {
     "Username": "hhaufschild3",
     "First Name": "Haley",
     "Last Name": "Steele",
@@ -1744,7 +1831,7 @@
     "Last Name": "Tan",
     "Username": "ptan43",
     "Email": "ptan43@gatech.edu",
-    "Year":"2021",
+    "Year": "2021",
     "Major": "Computer Science",
     "College": "College of Computing",
     "Title of Artwork": "Apart",
@@ -1753,7 +1840,7 @@
     "Media URL": "",
     "Video Platform": "",
     "Audio File": "",
-    "Image File": "clough_connect_Apr2021.png"
+    "Image File": "ptan43.png"
   },
   {
     "Username": "bfahed3",

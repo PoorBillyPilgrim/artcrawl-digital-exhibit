@@ -45,6 +45,7 @@ const sortJSON = (a, b) => {
 
 removeDups()
     .then(subs => {
+        console.log(subs.dups20)
         mergeJSON(subs)
         subs.dups20.forEach(sub => {
             // need to remove duplicate images from:

@@ -872,6 +872,23 @@
     "College": "College of Engineering"
   },
   {
+    "ResponseId": "R_PBa0P2Uk0LVxTkl",
+    "First Name": "Lindsey",
+    "Last Name": "Lanzillotta",
+    "Username": "llanzillotta3",
+    "Email": "llanzillotta3@gatech.edu",
+    "Year": "2021",
+    "Major": "Mechanical Engineering",
+    "College": "College of Engineering",
+    "Title of Artwork": "Ode to the Idle Cables",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "llanzillotta3.png"
+  },
+  {
     "ResponseId": "R_1mjT56llUjvimlZ",
     "First Name": "Tamara",
     "Last Name": "Lev",
@@ -1207,6 +1224,23 @@
     "Image File": "aoreilly7.jpeg"
   },
   {
+    "ResponseId": "R_3qr0i2hL7JZlTga",
+    "First Name": "Gwyn",
+    "Last Name": "O'Sullivan",
+    "Username": "gosullivan8",
+    "Email": "gosullivan8@gatech.edu",
+    "Year": "2021",
+    "Major": "Biomedical Engineering",
+    "College": "College of Engineering",
+    "Title of Artwork": "Lost in the Woods",
+    "Artist Statement": "Sometimes finding a connection is just taking a moment to breathe on a hike",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "gosullivan8.png"
+  },
+  {
     "Username": "icheiffou3",
     "First Name": "Ismael",
     "Last Name": "Oumarou Cheiffou",
@@ -1389,6 +1423,23 @@
     "Image File": "wrobinson39.png",
     "Media": "Image",
     "College": "College of Sciences"
+  },
+  {
+    "ResponseId": "R_2D5k5WLToODiRHf",
+    "First Name": "Jane",
+    "Last Name": "Rodrigues",
+    "Username": "jdmello6",
+    "Email": "jrodrigues@gatech.edu",
+    "Year": "2021",
+    "Major": "Architecture",
+    "College": "College of Design",
+    "Title of Artwork": "Intertwined",
+    "Artist Statement": "",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "jdmello6.jpg"
   },
   {
     "Username": "mrodriguez86",
@@ -1686,6 +1737,23 @@
     "Image File": "htam31.jpg",
     "Media": "Image",
     "College": "College of Engineering"
+  },
+  {
+    "ResponseId": "R_vOBV6oPqgOQ8tWN",
+    "First Name": "Phoebe Siew Lin",
+    "Last Name": "Tan",
+    "Username": "ptan43",
+    "Email": "ptan43@gatech.edu",
+    "Year": "2021",
+    "Major": "Computer Science",
+    "College": "College of Computing",
+    "Title of Artwork": "Apart",
+    "Artist Statement": "I showcase the state outlines of where I am and where I came from, where I have left people I love. Separated by water, space, land, and connected via technology as illustrated by the phone notation. The red highlights the persons' locations on the map. I explore light and darkness to express emotional highs and lows; the dark tan-yellow background was used to capture illness and the pandemic with the lime green strokes for treatment, cure, and positive highlight. ",
+    "Media": "Image",
+    "Media URL": "",
+    "Video Platform": "",
+    "Audio File": "",
+    "Image File": "ptan43.png"
   },
   {
     "Username": "bfahed3",
