@@ -136,7 +136,7 @@
             <form id="search-group" class="control col-lg col-xl-2 group">
               <div class="row justify-content-end">
                 <div class="help-card hide">
-                  <p>search art by artist last name or title of artwork or filter by major.</p>
+                  <p>filter by name, title, major, or year.</p>
                 </div>
                 <label for="search">search</label>
                 <i class="help pl-1 fas fa-question-circle"></i>
@@ -176,7 +176,7 @@
           <div id="grid" class="">
             <% for (let i = 0; i < data.length; i++) { %>
                 <figure id="<%=i%>" class="art-crawl-item gallery" data-groups='["<%= data[i]['Major'] %>"]' data-username="<%= data[i]['Username'].toLowerCase()%>" data-first-name="<%= data[i]["First Name"] %>" data-last-name="<%= data[i]['Last Name'] %>"
-                  data-major="<%= data[i]['Major'] %>" data-college="<%=data[i]['College']%>" data-title="<%= data[i]['Title of Artwork'] %>" data-media="<%= data[i]["Media"]%>" data-artist-statement="<%= data[i]['Artist Statement'] %>">
+                  data-major="<%= data[i]['Major'] %>" data-college="<%=data[i]['College']%>" data-title="<%= data[i]['Title of Artwork'] %>" data-media="<%= data[i]["Media"]%>" data-artist-statement="<%= data[i]['Artist Statement'] %>" data-year="<%= data[i]["Year"] === '2021' ? '2021' : '2020' %>">
                 <img src="/images/thumbnails/<%= data[i]['Image File']%>" />
             </figure>
             <% } %>
