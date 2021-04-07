@@ -135,13 +135,14 @@ const Grid = (function() {
             const lastName = element.getAttribute('data-last-name').toLowerCase();
             const title = element.getAttribute('data-title').toLowerCase();
             const major = element.getAttribute('data-major').toLowerCase();
+            const year = element.getAttribute('data-year');
 
             if (majorFilterBtn.classList.contains('active')) {
                 const majorHighlight = document.querySelector('.highlight').getAttribute('data-major');
                 let majorFilter = element.getAttribute('data-major') === majorHighlight;
                 return majorFilter && firstName.startsWith(searchText) || majorFilter && lastName.startsWith(searchText) || majorFilter && title.startsWith(searchText) || majorFilter && major.startsWith(searchText); // && finds first falsy value. 'data-major' therefore must go first
             } else {
-                return firstName.startsWith(searchText) || lastName.startsWith(searchText) || title.indexOf(searchText) !== -1 || major.startsWith(searchText);
+                return firstName.startsWith(searchText) || lastName.startsWith(searchText) || title.indexOf(searchText) !== -1 || major.startsWith(searchText) || year.startsWith(searchText);
             }
         });
     }
